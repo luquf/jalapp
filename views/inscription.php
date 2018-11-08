@@ -35,7 +35,7 @@
 				<h1>
 					Me Connecter 
 				</h1>
-    			<form method="post" action="../controllers/inscription.php">
+    			<form method="post" action="../controllers/connexion.php">
     			<p>
             		<input type="email" name="email" id="email" placeholder="Email" size="30" maxlength="20" />
         		</p>

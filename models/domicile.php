@@ -1,7 +1,6 @@
 <?php
 
 require 'db.php';
-require __DIR__.'/../config.php';
 
 
 function getDomiciles($userid) {
