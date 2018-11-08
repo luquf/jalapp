@@ -2,23 +2,36 @@
 
 require __DIR__.'/../models/user.php';
 
-$nom = $prenom = $email = $adresse = $pays = $ville = $telephone = $cle_client = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom = test_input($_POST["nom"]);
-    $prenom = test_input($_POST["prénom"]);
-    $email = test_input($_POST["email"]);
-    $adresse = test_input($_POST["adresse"]);
-    $pays = test_input($_POST["pays"]);
-    $ville = test_input($_POST["ville"]);
-    $telephone = test_input($_POST["tel"]);
-    $cle_client = test_input($_POST["cle"]);
+if (!(isset($_POST['cle']))) {
+    $email = $mot_de_passe = "";
 
-    $mdp = generatePassword();
-    // send mail with password
-    $utililsateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, false);
-    setUser($utililsateur);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") 
+    {
+        $email = test_input($_POST["email"]);
+        $mot_de_passe = test_input($_POST["pass"]);
+    }
+} 
 
+else {
+    $nom = $prenom = $email = $adresse = $pays = $ville = $telephone = $cle_client = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nom = test_input($_POST["nom"]);
+        $prenom = test_input($_POST["prénom"]);
+        $email = test_input($_POST["email"]);
+        $adresse = test_input($_POST["adresse"]);
+        $pays = test_input($_POST["pays"]);
+        $ville = test_input($_POST["ville"]);
+        $telephone = test_input($_POST["tel"]);
+        $cle_client = test_input($_POST["cle"]);
+
+        $mdp = generatePassword();
+        // send mail with password
+        $utililsateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, false);
+        setUser($utililsateur);
+
+    }
 }
 
 
