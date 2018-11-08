@@ -112,9 +112,8 @@ CREATE TABLE `utilisateurs` (
   `mdp` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `adresse` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ville` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `code` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `pays` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `naissance` date NOT NULL,
+  `telephone` varchar(10)COLLATE utf8mb4_unicode_ci NOT NULL,
   `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -161,7 +160,7 @@ ALTER TABLE `utilisateurs`
 -- 
 
 INSERT INTO `utilisateurs` 
-  VALUES('dcb96fe3-1023-49f9-a886-2f292bb91441', 'Berton', 'Leo', 'leoantoineberton@gmail.com', '', '14 bis rue Louis Leroux', 'Carrieres sur seine', '78420', 'France', '1997-07-16', 1);
+  VALUES('dcb96fe3-1023-49f9-a886-2f292bb91441', 'Berton', 'Leo', 'leoantoineberton@gmail.com', '', '14 bis rue Louis Leroux', 'Carrieres sur seine', 'France', '0651458429', 1);
 
 --
 -- Donnees de test pour la table `doniciles`

@@ -107,18 +107,18 @@ function emailExistsInDatabase($email) {
 // insert a user in the database
 function setUser($user) {
     $db = connectDB();
-    $stmt = $db->prepare('INSERT INTO `utilisateurs` VALUES(:cle, :nom, :prenom, :email, :mdp, :adresse, :ville, :code, :pays, :naissance, :administrateur)');
+    $stmt = $db->prepare('INSERT INTO `utilisateurs` VALUES(:cle, :nom, :prenom, :email, :mdp, :adresse, :ville, :pays, :telephone, :administrateur)');
     $stmt->bindParam(':cle', $user['0']);
     $stmt->bindParam(':nom', $user['1']);
     $stmt->bindParam(':prenom', $user['2']);
     $stmt->bindParam(':email', $user['3']);
-    $stmt->bindParam(':mdp', hashPassword($user['4']));
+    $pass = hashPassword($user['4']);
+    $stmt->bindParam(':mdp', $pass);
     $stmt->bindParam(':adresse', $user['5']);
     $stmt->bindParam(':ville', $user['6']);
-    $stmt->bindParam(':code', $user['7']);
-    $stmt->bindParam(':pays', $user['8']);
-    $stmt->bindParam(':naissance', $user['9']);
-    $stmt->bindParam(':administrateur', $user['10']);
+    $stmt->bindParam(':pays', $user['7']);
+    $stmt->bindParam(':telephone', $user['8']);
+    $stmt->bindParam(':administrateur', $user['9']);
     
     $data = $stmt->execute();
     return $data;
