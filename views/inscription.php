@@ -35,7 +35,7 @@
 				<h1>
 					Me Connecter 
 				</h1>
-    			<form method="post" action="../controllers/inscription.php" name="Connexion">
+    			<form method="post" action="../controllers/connexion.php">
     			<p>
             		<input type="email" name="email" id="email" placeholder="Email" size="30" maxlength="20" />
         		</p>
@@ -47,14 +47,14 @@
        				<input type="checkbox" name="souvenir" id="souvenir" />
        			</p>
         		<p>
-        			<input type="submit" value="Connexion"/>
+        			<input type="submit" value="Valider"/>
    				</p>
    			</div>
 			<div class="inscription">  
 				<h1>
 					M'Inscrire
 				</h1>
-				<form method="post" action="../controllers/inscription.php" name="Inscription">
+				<form method="post" action="traitement.php">
 				<p>
             		<input type="text" name="nom" id="nom" placeholder="Nom" size="40" maxlength="30" />
         		</p>
@@ -92,7 +92,7 @@
             		<input type="text" name="cle" id="cle" placeholder="Clé client (unique)" size="40" maxlength="20" />
         		</p>
         		<p>
-        			<input type="submit" value="Inscription"/>
+        			<input type="submit" value="Valider"/>
    				</p>
    			</div>
 
