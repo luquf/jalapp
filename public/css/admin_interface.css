@@ -1,0 +1,81 @@
+body
+{
+	background-color: grey;
+	color: white;
+	background: url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed no-repeat center;
+	background-size: auto;
+}
+#bandeau
+{
+	background-color: #3A2D8C;
+	opacity : 0.9;
+	display: flex;
+	width: 100%;
+	height: 100%;
+    color: #FFF;
+	justify-content: space-between;
+}
+.deconnexion 
+{
+    margin-right: 2%;
+}
+.logo
+{
+	margin-left: 2%;
+}
+#rechercher
+{
+    float : right;
+    border : none;
+    margin-right: 5%;
+    margin-top: 2%;
+    font-size : 17px
+}
+#tableau
+{
+    background-color: #3A2D8C;
+    margin-top: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+	opacity: 0.9;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: left;
+	padding-left: 4%;
+	padding-right: 4%;
+    padding-bottom: 5%;
+}
+table
+{
+    margin-top: 2%;
+    width : 100%;
+    border-collapse: collapse;
+}
+th
+{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #1c0f80;
+    width: 15%;
+    border-left : 1px solid white;
+    border-right : 1px solid white;
+
+}
+td
+{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #1c0f80;
+    width: 15%;
+    border-bottom: 1px solid white;
+    border-left : 1px solid white;
+    border-right : 1px solid white;
+}
+.button
+{
+    background-color: #1c0f80;
+    border-color: #1c0f80;
+    box-shadow: #1c0f80;
+    float: right;
+    color: white;
+}

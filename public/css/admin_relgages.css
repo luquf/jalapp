@@ -1,0 +1,46 @@
+body
+{
+	background-color: grey;
+	color: white;
+	background: url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed no-repeat center;
+	background-size: auto;
+}
+#bandeau
+{
+	background-color: #3A2D8C;
+	opacity : 0.9;
+	display: flex;
+	width: 100%;
+	height: 100%;
+    color: #FFF;
+	justify-content: space-between;
+}
+.deconnexion 
+{
+    margin-right: 2%;
+}
+.logo
+{
+	margin-left: 2%;
+}
+
+#tableau
+{
+    background-color: #3A2D8C;
+    margin-top: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+	opacity: 0.9;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	padding-left: 4%;
+	padding-right: 4%;
+    padding-bottom: 5%;
+}
+#reglages
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
