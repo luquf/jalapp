@@ -1,29 +1,14 @@
-/*
-<?php
-session_start();
-
-lignes dessous pas obligatoire
-$_SESSION['prenom']='jean';
-$_SESSION['nom']='depuont';
-$_SESSION['prenom']='24';
-?> 
-
-pour la deconnexion : 
-session_destroy();
-
-cookie :
-<?php
-setcookie('pseudo','M@teo21',time() + 365*24*3600, null, null, false, true);
-?>
-*/
-
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../public/css/piece1.css" /> 
-		<title>Domisep: Domicile > Pièce 1</title>
+		<link rel="stylesheet" href="../public/css/domicile.css" />
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+		<title>Domisep: Domicile > Pièce </title>
+   
 	</head>
 
 	<body>
@@ -36,46 +21,95 @@ setcookie('pseudo','M@teo21',time() + 365*24*3600, null, null, false, true);
 		
 			<div class="aide">
 				<p>
-				</br>				
+				</br>	
+                    <a href= "Deconnexion.php" style="color: #fff; text-decoration : underline;">Déconnexion</a>			
 					<a href= "aide_accueil.php" style="color: #fff; text-decoration: underline;">Aide/Nous Contacter </a> 
 				</p>
-			</div>
+            </div>
+</div>
 
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('ul.tabs').each(function(){
+					var $active, $content, $links = $(this).find('a');
+					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+					$active.addClass('active');
+
+					$content = $($active[0].hash);
+
+					$links.not($active).each(function () {
+						$(this.hash).hide();
+					});
+
+					$(this).on('click', 'a', function(e){
+						$active.removeClass('active');
+						$content.hide();
+
+						$active = $(this);
+						$content = $(this.hash);
+
+						$active.addClass('active');
+						$content.show();
+
+						e.preventDefault();
+					});
+				});
+			});
+        </script>
+	
+	<div class= 'tabs'>
+		<ul class='tabs'>
+			<li><a href='#tab1'>Domicile 1</a></li>
+			<li><a href='#tab2'>Domicile 2</a></li>
+            <li><a href='#tab3'>Domicile 3</a></li>
+            <li><input class='button' type="button"  value='+' onclick="openModal()"/></li>
+		</ul>
+		    
+	<div class= 'tabs'>
+		<ul class='tabs'>
+			<li><a href='#tab1'>Pièce 1</a></li>
+			<li><a href='#tab2'>Pièce 2</a></li>
+            <li><a href='#tab3'>Pièce 3</a></li>
+            <li><input class='button' type="button"  value='+' onclick="openModal()"/></li>
+        </ul>
+
+
+        <div id = "modal">
+  			 <h1> Ajout Pièce</h1>
+			   <div class="infos"> 
+                </br>
+                        <p>
+                            <input type="type" name="type" id="type" placeholder="Type de Pièce : " size="30" maxlength="20"/>
+                            <input type="submit" value="Valider"/>
+                        </p>
+
+                        <p>
+                            <input type="capteurs" name="capteurs" id="capteurs" placeholder="Nombre de capteurs" size="30" maxlength="30" />
+                            <input type="submit" value="Valider"/>
+                        </p>
+                        
+        </div>
+
+		<button id ="close" onclick ="closeModal()">X</button>
+		<button id ="validation" onclick ="closeModal()">Valider</button>
+    	</div>
+    	<script src="app.js" type="text/javascript"></script>
+        
+        <div id='tab1'>
+			<h3>Liste des Capteurs</h3>
+			<p>
+            </p>
 		</div>
-		<div id="onglet">
-    		<ul>
-        		<li><a href="#container" rel="url1">Domicile 1</a></li> 
-        		<li><a href="#container" rel="url2">Domicile 2</a></li> 
-    		</ul>
-		</div>
-
-		<div id="container"></div>
-			
-
-		<script type="text/javascript">
-			function loadit( element)
-			{
-				var container = document.getElementById('container');
-				container.src=element.rel;
-
-				var tabs=document.getElementById('tabs').getElementsByTagName("a");
-				for (var i=0; i < tabs.length; i++)
-				{
-					if(tabs[i].rel == element.rel) 
-						tabs[i].className="selected";
-					else
-						tabs[i].className="";
-				}
-			}
-
-			function startit()
-			{
-				var tabs=document.getElementById('tabs').getElementsByTagName("a");
-				var container = document.getElementById('container');
-				container.src = tabs[0].rel;
-			}
-
-			window.onload=startit;
-
-		</script>
-		<div class="bouton"><a href="#">Lampe 1 </a></div>
+		<div id='tab2'>
+			<h3>Liste des Capteurs</h3>
+			<p>
+            </p>		</div>
+		<div id='tab3'>
+			<h3>Liste des Capteurs</h3>
+			<p>
+            </p>		</div>
+        </div>
+	</body>
+</html>

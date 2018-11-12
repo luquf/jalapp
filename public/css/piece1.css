@@ -1,10 +1,10 @@
 body
 {
-	background-color: grey;
-	color: white;
-	background-color : #F6F1F1;
+	background-color: #F6F1F1;
+	color: fff;
 	background-size: auto;
 }
+
 #bandeau
 {
 	background-color: #3A2D8C;
@@ -12,8 +12,8 @@ body
 	display: flex;
 	width: 100%;
 	height: 100%;
-	color: #FFF;
 	justify-content: space-between;
+	color: #FFF;
 }
 .logo
 {
@@ -21,126 +21,130 @@ body
 }
 .aide
 {
-	margin-left: 5%;
 	margin-right: 2%;
-	font-size: 1em;
+	font-size: 1.05em;
 	color: #FFF;
 	text-decoration: none;
 }
-#content
-{
-    margin-left:24px;
-    margin-right:24px;
+#tab1 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
 }
 
-#onglet ul
-{
-    font: normal 14px arial, sans, sans-serif;
-    -list-style-type: none;
-    border-bottom: 1px solid gray;
-    margin: 0;
-    padding-left:0;
-    padding-right:0;
-    padding-bottom: 26px;
+#tab2 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
+}
+#tab3 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
 }
 
-#onglet ul li 
-{
-    display: inline;
-    float: left;
-    height: 24px;
-    min-width:80px;
-    text-align:center;
-    padding:0;
-    margin: 1px 0px 0px 0px;
-    border: 1px solid gray;
+.tabs li {
+    list-style:none;
+    display:inline;
 }
 
-#onglet ul li.selected 
-{
-    border-bottom: 1px solid #fff;
-    background-color: #fff;
+.tabs a {
+    padding:5px 10px;
+    display:inline-block;
+    background:#fff;
+    color:#3A2D8C;
+    text-decoration:none;
+}
+
+.tabs a.active {
+    background:#3A2D8C;
+    color:#fff;
+}
+h3{
+    color: #FFF;
+}
+.tabs .button{
+    font-size: 1.2em;
+    background-color: white;
+    border: none;
+    padding-top: 2.2px;
+    padding-bottom: 3.7px;
+    padding-left: 9px;
+    padding-right: 9px;
 }
 
 
-#onglet ul li a 
-{
-    float: left;
-    color: #666;
-    text-decoration: none;
-    padding: 4px;
-    text-align:center;
-    background-color:#eee;
-    min-width:80px;
-    border-bottom: 1px solid gray;
+#button_modal{
+	background-color: #3A2D8C;
+	opacity: 0.9;
+	background-attachment: fixed;
+	border: none;
+	font-size: 1250%;
+	color: white;
+	position:absolute;
+	cursor: pointer;
+    left: 50%;
+    top: 50%;
+    width: 20%;
+    height: 40%;
+    margin-left: -10%; /* Cette valeur doit être la moitié négative de la valeur du width */
+    margin-top: -8%; /* Cette valeur doit être la moitié négative de la valeur du height */
 }
 
-#onglet ul li a.selected
-{
-    color: #000;
-    font-weight:bold;
-    background-color: #fff;
-    border-bottom: 1px solid #fff;
-}
+#modal {
+    height: 300px;
+    width: 60%;
+	background-color:white ;
+	opacity: 0.9;
+    text-align: center;
+    color: black;
+	position: absolute;
+	left: 20%;
+	transition: 0.5s;
+	top: -400px;
 
-#onglet ul li a:hover
-{
-    color: #000;
-    font-weight:bold;
-    background-color: #fff;
-}
-#onglet ul li a:active
-{
-	color:#F6F1F1;
-}
-#container 
-{
-    background: #F6F1F1;
-    border:1px solid gray;
-    border-top: none;
-    height:350px;
-    width:100%;
-    padding:0;
-    margin:0;
-    left:0;
-    top:0;	
-}
 
-iframe
-{
-    border:none;
-    margin:0;
-    padding:0;
 
 }
-.bouton
-{
-display: block;
-width: 100px;
-padding: 5px 3px;
-text-align: center;
-border: 4px solid grey;
-border-radius: 6px;
-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
-background-color: #fff;
+
+
+#close {
+    height : 15px;
+    width : 15px;
+    background-color : none;
+    color : black;
+    font-size: 10px;
+    border : none;
+	cursor : pointer;
+	top : 0px;
+	right : 14px;
+	position : absolute;
+
 }
- 
- 
-.bouton:visited
-{
-padding: 6px 4px;
-background: linear-gradient(top, #fff 0%, #2ae205 2% ,##1db245 100%);
-background:-webkit-linear-gradient(top, #fff 0%, #2ae205 2% ,#1db245 100%);
-background:-moz-linear-gradient(top, #fff 0%, #2ae205 2% ,##1db245 100%);
-background:-o-linear-gradient(top, #fff 0%, #2ae205 2% ,##1db245 100%);
-background:-ms-linear-gradient(top, #fff 0%, #2ae205 2% ,##1db245 100%);
+
+#validation {
+    height : 50px;
+    width : 300px;
+    background-color : #3A2D8C;
+    color : #ffffff;
+    font-size:20px;
+    border : none;
+    cursor : pointer;
+
 }
- 
-.bouton a
-{
-color: grey;
-font: 17px "Tahoma", sans-serif;
-font : weigth:bold;
-text-decoration:none;
-text-shadow: 0 -1px 0 rgba (0,0,0,0.4);
+.textboutton{
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	margin-top: 31%;
+	margin-left: 42%;
+
+
+
 }
