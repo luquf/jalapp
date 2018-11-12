@@ -15,4 +15,4 @@ ATTENTION: toutes les commandes à exécuter dans le terminal peuvent être exec
 - Ecrivez votre code dans le repertoire git.
 - Si vos modifications incluent des nouveaux fichiers, il faut les faire suivre par le repertoire git, exécuter <i>"git add ."</i> pour tous les ajouter ou <i>"git add fichier1 fichier2..."</i>
 - Il faut ensuite enregistrer vos modifications, exécuter <i>"git commit . -m 'message d'information'"</i> pour tout enregistrer ou <i>"git commit fichier1 fichier2... -m 'message d'information'"</i>
-- Enfin, il faut envoyer vos commits vers le serveur, exécuter <i>"git push origin nom_de_la_branche"</i>devollepement
+- Enfin, il faut envoyer vos commits vers le serveur, exécuter <i>"git push origin nom_de_la_branche"</i>
