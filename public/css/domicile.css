@@ -82,13 +82,13 @@ h3{
 
 #button_modal{
 	background-color: #3A2D8C;
-	opacity : 0.9;
+	opacity: 0.9;
 	background-attachment: fixed;
 	border: none;
 	font-size: 1250%;
-	color : white;
+	color: white;
 	position:absolute;
-	cursor : pointer;
+	cursor: pointer;
     left: 50%;
     top: 50%;
     width: 20%;
@@ -98,16 +98,16 @@ h3{
 }
 
 #modal {
-    height : 300px;
-    width : 60%;
-	background-color :white ;
-	opacity : 0.9;
-    text-align : center;
-    color : black;
-	position : absolute;
-	left : 20%;
-	transition : 0.5s;
-	top : -400px;
+    height: 300px;
+    width: 60%;
+	background-color:white ;
+	opacity: 0.9;
+    text-align: center;
+    color: black;
+	position: absolute;
+	left: 20%;
+	transition: 0.5s;
+	top: -400px;
 
 
 
@@ -118,8 +118,8 @@ h3{
     height : 15px;
     width : 15px;
     background-color : none;
-    color : black
-    font-size:10px;
+    color : black;
+    font-size: 10px;
     border : none;
 	cursor : pointer;
 	top : 0px;
