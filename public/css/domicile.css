@@ -78,3 +78,73 @@ h3{
     padding-left: 9px;
     padding-right: 9px;
 }
+
+
+#button_modal{
+	background-color: #3A2D8C;
+	opacity : 0.9;
+	background-attachment: fixed;
+	border: none;
+	font-size: 1250%;
+	color : white;
+	position:absolute;
+	cursor : pointer;
+    left: 50%;
+    top: 50%;
+    width: 20%;
+    height: 40%;
+    margin-left: -10%; /* Cette valeur doit être la moitié négative de la valeur du width */
+    margin-top: -8%; /* Cette valeur doit être la moitié négative de la valeur du height */
+}
+
+#modal {
+    height : 300px;
+    width : 60%;
+	background-color :white ;
+	opacity : 0.9;
+    text-align : center;
+    color : black;
+	position : absolute;
+	left : 20%;
+	transition : 0.5s;
+	top : -400px;
+
+
+
+}
+
+
+#close {
+    height : 15px;
+    width : 15px;
+    background-color : none;
+    color : black
+    font-size:10px;
+    border : none;
+	cursor : pointer;
+	top : 0px;
+	right : 14px;
+	position : absolute;
+
+}
+
+#validation {
+    height : 50px;
+    width : 300px;
+    background-color : #3A2D8C;
+    color : #ffffff;
+    font-size:20px;
+    border : none;
+    cursor : pointer;
+
+}
+.textboutton{
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	margin-top: 31%;
+	margin-left: 42%;
+
+
+
+}
