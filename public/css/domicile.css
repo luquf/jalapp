@@ -33,7 +33,14 @@ body
     width:90%;
     background:#3A2D8C;
 }
+#tab1.1 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
 
+}
 #tab2 {
     margin-left: 40px;
     margin-right: 40px;
@@ -49,6 +56,50 @@ body
     background:#3A2D8C;
 }
 
+.tab1.1 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
+}
+#tab1.2 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
+}
+#tab1.3 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
+}
+
+#tab2.1 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
+}
+#tab2.2 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
+}
+
+#tab3.1 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
+}
 .tabs li {
     list-style:none;
     display:inline;
@@ -66,9 +117,8 @@ body
     background:#3A2D8C;
     color:#fff;
 }
-h3{
-    color: #FFF;
-}
+
+
 .tabs .button{
     font-size: 1.2em;
     background-color: white;
@@ -79,6 +129,15 @@ h3{
     padding-right: 9px;
 }
 
+#add_piece{
+    background-color: #F6F1F1;
+    border: none;
+    margin-left: 45%;
+    font-size: 2em;
+    border-radius: 50%;
+    width :50px;
+    height:50px;
+}
 
 #button_modal{
 	background-color: #3A2D8C;
