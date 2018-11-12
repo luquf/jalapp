@@ -62,7 +62,8 @@
 		<ul class='tabs'>
 			<li><a href='#tab1'>Domicile 1</a></li>
 			<li><a href='#tab2'>Domicile 2</a></li>
-			<li><a href='#tab3'>Domicile 3</a></li>
+            <li><a href='#tab3'>Domicile 3</a></li>
+            <li><input class='button' type="button"  value='+' onclick="javascript:location.href='inscription.php'"/></li>
 		</ul>
 		<div id='tab1'>
 			<h3>Liste des Pièces</h3>

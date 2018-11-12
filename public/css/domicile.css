@@ -69,3 +69,12 @@ body
 h3{
     color: #FFF;
 }
+.tabs .button{
+    font-size: 1.2em;
+    background-color: white;
+    border: none;
+    padding-top: 2.2px;
+    padding-bottom: 3.7px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
