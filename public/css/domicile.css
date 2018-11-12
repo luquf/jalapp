@@ -1,0 +1,82 @@
+body
+{
+	background-color: #AAA;
+	color: white;
+	background-size: auto;
+}
+
+#bandeau
+{
+	background-color: #3A2D8C;
+	opacity : 0.9;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+	color: #FFF;
+}
+.logo
+{
+	margin-left: 2%;
+}
+.aide
+{
+	margin-right: 2%;
+	font-size: 1.05em;
+	color: #FFF;
+	text-decoration: none;
+}
+
+#ul_onglets{
+    margin:0%;
+    padding:0px 0px 0px 5px;
+    }
+    .onglet{
+    float: left;
+    margin:5px 2px 0 5px;
+    padding:5px 10px ;
+    border:1px solid #AAA;
+    border-bottom:none;
+    border-radius:5px 5px 0 0;
+    -webkit-border-radius:4px 4px 0 0;
+    -moz-border-radius:4px 4px 0 0;
+    color:#555;
+    cursor: pointer;
+    list-style: none;
+    background: #EEE;
+
+    }
+ 
+    .onglet_selectionner{
+    float: left;
+    margin:5px 2px -5px 5px;
+    padding:5px 10px ;
+    border:1px solid #AAA;
+    border-bottom:2px solid white;
+    border-radius:5px 5px 0 0;
+    -webkit-border-radius:4px 4px 0 0;
+    -moz-border-radius:4px 4px 0 0;
+    color:#555;
+    cursor: pointer;
+    font-weight:bold;
+    list-style: none;
+    } 
+    
+    .contenu-onglet{
+    clear: both;
+    background-color:white;
+    margin-top:-1px;
+    padding:5px;
+    border:1px solid #AAA;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    color:#555;
+    cursor: text;
+
+    }
+    #conteneur-onglet{
+    width: 100%;
+    margin: auto;
+    }
+    
