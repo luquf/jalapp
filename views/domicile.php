@@ -2,8 +2,13 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../public/css/domicile.css" /> 
+		<link rel="stylesheet" href="../public/css/domicile.css" />
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 		<title>Domisep: Domicile > Pièce 1</title>
+   
 	</head>
 
 	<body>
@@ -24,39 +29,63 @@
 </div>
 
 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('ul.tabs').each(function(){
+					var $active, $content, $links = $(this).find('a');
+					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+					$active.addClass('active');
 
+					$content = $($active[0].hash);
 
-<div class="onglet">
-    <script type="text/javascript">
-    function BasculeElement(_this){
-    var Onglet_li = document.getElementById('ul_onglets').getElementsByTagName('li');
-    if(Onglet_li[])
-    for(var i = 0; i < Onglet_li.length; i++){
-    if(Onglet_li[i].id){
-    if(Onglet_li[i].id == _this.id){
-        Onglet_li[i].className = 'onglet_selectionner';
-        document.getElementById('#' + _this.id).style.display = 'block';
-    }
-    else{
-        Onglet_li[i].className = 'onglet';
-        document.getElementById('#' + Onglet_li[i].id).style.display = 'none';
-    }
-    }
-    } 
-    }
-</script>
-    <ul id="ul_onglets">
-    <li id="1" class="onglet_selectionner" onclick="BasculeElement(this);">Domicile 1</li>
-    <li id="2" class="onglet" onclick="BasculeElement(this);">Domicile 2</li>
-    <li id="2" class="onglet" onclick="BasculeElement(this);">+</li>
-</ul>
+					$links.not($active).each(function () {
+						$(this.hash).hide();
+					});
 
-    <div id="conteneur-onglet">
-    <div id="#1" class="contenu-onglet"><a href="aide_accueil.php" style="color: black; text-decoration: underline;">Aide/Nous Contacter </a> </div>
-    <div id="#2" class="contenu-onglet" style="display: none;">Liste des pièces Domicile 2</div>
-    <div id="#3" class="contenu-onglet" style="display: none;"><a href
-</div>
-    </div>
+					$(this).on('click', 'a', function(e){
+						$active.removeClass('active');
+						$content.hide();
 
-</body>
+						$active = $(this);
+						$content = $(this.hash);
+
+						$active.addClass('active');
+						$content.show();
+
+						e.preventDefault();
+					});
+				});
+			});
+		</script>
+	<div class= 'tabs'>
+		<ul class='tabs'>
+			<li><a href='#tab1'>Domicile 1</a></li>
+			<li><a href='#tab2'>Domicile 2</a></li>
+			<li><a href='#tab3'>Domicile 3</a></li>
+		</ul>
+		<div id='tab1'>
+			<h3>Liste des Pièces</h3>
+			<p>
+            <a href= "piece1.php" style= "background: #3A2D8C; color: white; text-decoration : underline;">Pièce 1</a>			
+            </br>
+            <a href= "piece2.php" style="background: #3A2D8C; color: white; text-decoration : underline;">Pièce 2</a>			
+        </br>
+        <a href= "piece3.php" style="background: #3A2D8C; color: white; text-decoration : underline;">Pièce 3</a>			    
+        </p>
+		</div>
+		<div id='tab2'>
+			<h3>Liste des Pièces</h3>
+			<p>
+            <a href= "piece1.php" style= "background: #3A2D8C; color: white; text-decoration : underline;">Pièce 1</a>			
+            </br>
+            <a href= "piece2.php" style="background: #3A2D8C; color: white; text-decoration : underline;">Pièce 2</a>			
+            </p>		</div>
+		<div id='tab3'>
+			<h3>Liste des Pièces</h3>
+			<p>
+            <a href= "piece1.php" style= "background: #3A2D8C; color: white; text-decoration : underline;">Pièce 1</a>			
+            </p>		</div>
+        </div>
+	</body>
 </html>

@@ -1,7 +1,7 @@
 body
 {
-	background-color: #AAA;
-	color: white;
+	background-color: #F6F1F1;
+	color: fff;
 	background-size: auto;
 }
 
@@ -26,57 +26,46 @@ body
 	color: #FFF;
 	text-decoration: none;
 }
+#tab1 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
+}
 
-#ul_onglets{
-    margin:0%;
-    padding:0px 0px 0px 5px;
-    }
-    .onglet{
-    float: left;
-    margin:5px 2px 0 5px;
-    padding:5px 10px ;
-    border:1px solid #AAA;
-    border-bottom:none;
-    border-radius:5px 5px 0 0;
-    -webkit-border-radius:4px 4px 0 0;
-    -moz-border-radius:4px 4px 0 0;
-    color:#555;
-    cursor: pointer;
-    list-style: none;
-    background: #EEE;
+#tab2 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
+}
+#tab3 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:10px;
+    width:90%;
+    background:#3A2D8C;
+}
 
-    }
- 
-    .onglet_selectionner{
-    float: left;
-    margin:5px 2px -5px 5px;
-    padding:5px 10px ;
-    border:1px solid #AAA;
-    border-bottom:2px solid white;
-    border-radius:5px 5px 0 0;
-    -webkit-border-radius:4px 4px 0 0;
-    -moz-border-radius:4px 4px 0 0;
-    color:#555;
-    cursor: pointer;
-    font-weight:bold;
-    list-style: none;
-    } 
-    
-    .contenu-onglet{
-    clear: both;
-    background-color:white;
-    margin-top:-1px;
-    padding:5px;
-    border:1px solid #AAA;
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    color:#555;
-    cursor: text;
+.tabs li {
+    list-style:none;
+    display:inline;
+}
 
-    }
-    #conteneur-onglet{
-    width: 100%;
-    margin: auto;
-    }
-    
+.tabs a {
+    padding:5px 10px;
+    display:inline-block;
+    background:#fff;
+    color:#3A2D8C;
+    text-decoration:none;
+}
+
+.tabs a.active {
+    background:#3A2D8C;
+    color:#fff;
+}
+h3{
+    color: #FFF;
+}
