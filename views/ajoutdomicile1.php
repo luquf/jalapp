@@ -7,6 +7,10 @@
 	</head>
 
 	<body>
+
+	</div>
+
+
 		<div id="bandeau">
 			<div class="logo">
 				<p>
@@ -28,14 +32,42 @@
 					<a href="accueil.php" style="color: #fff; text-decoration: none;"> Déconnexion </a>
 			</div>
 			
-		</div>
 
-		<div>
-			<div>
-				<input type="button" class="boutton" value="+" onclick="msg()">
-			</div>
-			<div class="textboutton"> Ajouter un domicile </div>
-			</div>
+
+
+
+
 
 		</div>
+		<div class="button_container">
+        <button id = button_modal onclick="openModal()">+ </button>
+ 	    </div>
+
+		<div class="textboutton"> Ajouter un domicile </div>
+		</div>
+		<div id = "modal">
+  			 <h1> Ajout Domicile</h1>
+			   <div class="infos"> 
+                </br>
+                        <p>
+                            <input type="type" name="type" id="type" placeholder="Type de domicile : " size="30" maxlength="20"/>
+                            <input type="submit" value="Valider"/>
+                        </p>
+                        <p>
+                            <input type="rooms" name="rooms" id="rooms" placeholder="Nombre de pièces : " size="30" maxlength="20"/>
+                            <input type="submit" value="Valider"/>
+                        </p>
+			
+                        <p>
+                            <input type="capteurs" name="capteurs" id="capteurs" placeholder="Nombre de capteurs" size="30" maxlength="30" />
+                            <input type="submit" value="Valider"/>
+                        </p>
+                        
+
+
+		<button id ="close" onclick ="closeModal()">X</button>
+		<button id ="validation" onclick ="closeModal()">Valider</button>
+    	</div>
+    	<script src="app.js" type="text/javascript"></script>
+
 	</body>
