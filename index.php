@@ -1,7 +1,10 @@
 <?php
  
 require __DIR__."/models/user.php";
-use Lcobucci\JWT\Builder;
+
+require __DIR__.'/vendor/lcobucci/jwt/src/Builder.php';
+require __DIR__.'/vendor/lcobucci/jwt/src/Parser.php';
+
 if(!isset($_COOKIE["conn_token"])) {
     // set empty cookie
     $cookie_name = "conn_token";

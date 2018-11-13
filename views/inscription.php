@@ -35,12 +35,12 @@
 				<h1>
 					Me Connecter 
 				</h1>
-    			<form method="post" action="../controllers/connexion.php">
+    			<form method="post" action="../controllers/authentification.php">
     			<p>
-            		<input type="email" name="email" id="email" placeholder="Email" size="30" maxlength="20" />
+            		<input type="email" name="email1" id="email1" placeholder="Email" size="30" maxlength="100" />
         		</p>
         		<p>
-            		<input type="password" name="pass" id="pass" placeholder="Mot de Passe" size="30" maxlength="20" />
+            		<input type="password" name="pass" id="pass" placeholder="Mot de Passe" size="30" maxlength="100" />
         		</p>
    				<p>
       		 		Se souvenir de moi
@@ -54,7 +54,7 @@
 				<h1>
 					M'Inscrire
 				</h1>
-				<form method="post" action="../controllers/inscription.php">
+				<form method="post" action="../controllers/authentification.php">
 				<p>
             		<input type="text" name="nom" id="nom" placeholder="Nom" size="40" maxlength="30" />
         		</p>
@@ -62,7 +62,7 @@
             		<input type="text" name="prénom" id="prénom" placeholder="Prénom" size="40" maxlength="30" />
         		</p>
     			<p>
-            		<input type="email" name="email" id="email" placeholder="Email" size="40" maxlength="30" />
+            		<input type="email" name="email2" id="email2" placeholder="Email" size="40" maxlength="30" />
         		</p>
         		<p>
             		<input type="text" name="adresse" id="adresse" placeholder="Adresse" size="40" maxlength="40" />
