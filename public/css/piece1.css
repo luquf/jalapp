@@ -61,6 +61,11 @@ body
     color:#3A2D8C;
     text-decoration:none;
 }
+.retour
+{
+    margin-top: 10px;
+    margin-left: 40px;
+}
 
 .tabs a.active {
     background:#3A2D8C;
@@ -144,7 +149,44 @@ h3{
 	color: white;
 	margin-top: 31%;
 	margin-left: 42%;
+}
 
+#add_capteur{
+    background-color: #F6F1F1;
+    border: none;
+    margin-left: 45%;
+    font-size: 2em;
+    border-radius: 50%;
+    width :50px;
+    height:50px;
+}
 
+#button_modal{
+	background-color: #3A2D8C;
+	opacity: 0.9;
+	background-attachment: fixed;
+	border: none;
+	font-size: 1250%;
+	color: white;
+	position:absolute;
+	cursor: pointer;
+    left: 50%;
+    top: 50%;
+    width: 20%;
+    height: 40%;
+    margin-left: -10%; /* Cette valeur doit être la moitié négative de la valeur du width */
+    margin-top: -8%; /* Cette valeur doit être la moitié négative de la valeur du height */
+}
 
+#modal {
+    height: 300px;
+    width: 60%;
+	background-color:white ;
+	opacity: 0.9;
+    text-align: center;
+    color: black;
+	position: absolute;
+	left: 20%;
+	transition: 0.5s;
+	top: -400px;
 }

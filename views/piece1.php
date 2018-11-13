@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../public/css/domicile.css" />
+		<link rel="stylesheet" href="../public/css/piece1.css" />
         <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -59,14 +59,9 @@
 			});
         </script>
 	
-	<div class= 'tabs'>
-		<ul class='tabs'>
-			<li><a href='#tab1'>Domicile 1</a></li>
-			<li><a href='#tab2'>Domicile 2</a></li>
-            <li><a href='#tab3'>Domicile 3</a></li>
-            <li><input class='button' type="button"  value='+' onclick="openModal()"/></li>
-		</ul>
-		    
+	<div class="retour">
+	<a href= "domicile.php" style="color: #3A2D8C ; text-decoration : underline;"> < Retour</a>
+		</div>
 	<div class= 'tabs'>
 		<ul class='tabs'>
 			<li><a href='#tab1'>Pièce 1</a></li>
@@ -94,22 +89,50 @@
 
 		<button id ="close" onclick ="closeModal()">X</button>
 		<button id ="validation" onclick ="closeModal()">Valider</button>
-    	</div>
+		</div>
+		
+		<div id = "modal1">
+  			 <h1> Ajout Capteur</h1>
+			   <div class="infos"> 
+                </br>
+                        <p>
+                            <input type="type" name="type" id="type" placeholder="Type de Pièce : " size="30" maxlength="20"/>
+                            <input type="submit" value="Valider"/>
+                        </p>
+
+                        <p>
+                            <input type="capteurs" name="capteurs" id="capteurs" placeholder="Nombre de capteurs" size="30" maxlength="30" />
+                            <input type="submit" value="Valider"/>
+                        </p>
+                        
+        </div>
+
+		<button id ="close" onclick ="closeModal1()">X</button>
+		<button id ="validation" onclick ="closeModal1()">Valider</button>
+		</div>
+		
+
     	<script src="app.js" type="text/javascript"></script>
         
         <div id='tab1'>
 			<h3>Liste des Capteurs</h3>
 			<p>
-            </p>
+			</p>
+			<button id="add_capteur" onclick="openModal1()"> + </button>
+
 		</div>
 		<div id='tab2'>
 			<h3>Liste des Capteurs</h3>
 			<p>
-            </p>		</div>
+			</p>
+			<button id="add_capteur" onclick="openModal1()"> + </button>
+		</div>
 		<div id='tab3'>
 			<h3>Liste des Capteurs</h3>
 			<p>
-            </p>		</div>
+			</p>
+			<button id="add_capteur" onclick="openModal1()"> + </button>
+		</div>
         </div>
 	</body>
 </html>

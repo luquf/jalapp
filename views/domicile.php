@@ -58,90 +58,7 @@
 				});
 			});
         </script>
-        <script>
-			$(document).ready(function(){
-				$('ul.tab1').each(function(){
-					var $active, $content, $links = $(this).find('a');
-					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
-					$active.addClass('active');
-
-					$content = $($active[0].hash);
-
-					$links.not($active).each(function () {
-						$(this.hash).hide();
-					});
-
-					$(this).on('click', 'a', function(e){
-						$active.removeClass('active');
-						$content.hide();
-
-						$active = $(this);
-						$content = $(this.hash);
-
-						$active.addClass('active');
-						$content.show();
-
-						e.preventDefault();
-					});
-				});
-			});
-		</script>
-		<script>
-			$(document).ready(function(){
-				$('ul.tab2').each(function(){
-					var $active, $content, $links = $(this).find('a');
-					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
-					$active.addClass('active');
-
-					$content = $($active[0].hash);
-
-					$links.not($active).each(function () {
-						$(this.hash).hide();
-					});
-
-					$(this).on('click', 'a', function(e){
-						$active.removeClass('active');
-						$content.hide();
-
-						$active = $(this);
-						$content = $(this.hash);
-
-						$active.addClass('active');
-						$content.show();
-
-						e.preventDefault();
-					});
-				});
-			});
-		</script>
-		<script>
-			$(document).ready(function(){
-				$('ul.tab3').each(function(){
-					var $active, $content, $links = $(this).find('a');
-					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
-					$active.addClass('active');
-
-					$content = $($active[0].hash);
-
-					$links.not($active).each(function () {
-						$(this.hash).hide();
-					});
-
-					$(this).on('click', 'a', function(e){
-						$active.removeClass('active');
-						$content.hide();
-
-						$active = $(this);
-						$content = $(this.hash);
-
-						$active.addClass('active');
-						$content.show();
-
-						e.preventDefault();
-					});
-				});
-			});
-        </script>
+        
 	<div class= 'tabs'>
 		<ul class='tabs'>
 			<li><a href='#tab1'>Domicile 1</a></li>
@@ -154,24 +71,19 @@
         <div id = "modal">
   			 <h1> Ajout Domicile</h1>
 			   <div class="infos"> 
-
-				<p>
-                            <input type="name" name="name" id="name" placeholder="Nom du domicile : " size="30" maxlength="20"/>
-                        
+                </br>
+                        <p>
+                            <input type="type" name="type" id="type" placeholder="Type de domicile : " size="30" maxlength="20"/>
+                            <input type="submit" value="Valider"/>
                         </p>
                         <p>
-                            <input type="address" name="address" id="address" placeholder="Adresse : " size="30" maxlength="20"/>
-                        
+                            <input type="rooms" name="rooms" id="rooms" placeholder="Nombre de pièces : " size="30" maxlength="20"/>
+                            <input type="submit" value="Valider"/>
                         </p>
 			
                         <p>
-                            <input type="town" name="town" id="town" placeholder="Ville : " size="30" maxlength="30" />
-                        
-                        </p>
-
-						<p>
-                            <input type="country" name="country" id="country" placeholder="Pays : " size="30" maxlength="30" />
-                        
+                            <input type="capteurs" name="capteurs" id="capteurs" placeholder="Nombre de capteurs" size="30" maxlength="30" />
+                            <input type="submit" value="Valider"/>
                         </p>
                         
         </div>
@@ -182,30 +94,42 @@
     	<script src="app.js" type="text/javascript"></script>
         
         <div id='tab1'>
-		<ul class='tab1'>
-			<li><a href='#tab1.1'>Pièce 1</a></li>
-			<li><a href='#tab1.2'>Pièce 2</a></li>
-            <li><a href='#tab1.3'>Pièce 3</a></li>
-		</ul>
-		<br />
-		<button id="add_piece" onclick="#"> + </button>
-		</div>
-		<div id='tab2'>
-		<ul class='tab2'>
-			<li><a href='#tab2.1'>Pièce 1</a></li>
-			<li><a href='#tab2.2'>Pièce 2</a></li>
-		</ul>
-		<br />
-		<button id="add_piece" onclick="#"> + </button>
-		</div>
-		<div id='tab3'>
-		<ul class='tab3'>
-			<li><a href='#tab3.1'>Pièce 1</a></li>
-		</ul>
-		<br />
-		<button id="add_piece" onclick="#"> + </button>
-		</div>
+			<h3> Liste des capteurs </h3>
+			<p>
+			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 1</a>
+			<br/>
+			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 2</a>
+			<br/>
+			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 3</a>
+		</p>
 
+		<button id="add_piece" onclick="#"> + </button>
+		
+		</div>
+		
+		<div id='tab2'>
+			<h3> Liste des capteurs </h3>
+			<p>
+			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 1</a>
+			<br/>
+			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 2</a>
+			<br/>
+		</p>
+
+		<button id="add_piece" onclick="#"> + </button>
+		
+		</div>
+		
+		<div id='tab3'>
+			<h3> Liste des capteurs </h3>
+			<p>
+			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 1</a>
+			<br/>
+		</p>
+
+		<button id="add_piece" onclick="#"> + </button>
+		
         </div>
 	</body>
+
 </html>

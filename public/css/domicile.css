@@ -33,14 +33,7 @@ body
     width:90%;
     background:#3A2D8C;
 }
-#tab1.1 {
-    margin-left: 40px;
-    margin-right: 40px;
-    padding:10px;
-    width:90%;
-    background:#3A2D8C;
 
-}
 #tab2 {
     margin-left: 40px;
     margin-right: 40px;
@@ -55,50 +48,9 @@ body
     width:90%;
     background:#3A2D8C;
 }
-
-.tab1.1 {
-    margin-left: 40px;
-    margin-right: 40px;
-    padding:10px;
-    width:90%;
-    background:#3A2D8C;
-}
-#tab1.2 {
-    margin-left: 40px;
-    margin-right: 40px;
-    padding:10px;
-    width:90%;
-    background:#3A2D8C;
-}
-#tab1.3 {
-    margin-left: 40px;
-    margin-right: 40px;
-    padding:10px;
-    width:90%;
-    background:#3A2D8C;
-}
-
-#tab2.1 {
-    margin-left: 40px;
-    margin-right: 40px;
-    padding:10px;
-    width:90%;
-    background:#3A2D8C;
-}
-#tab2.2 {
-    margin-left: 40px;
-    margin-right: 40px;
-    padding:10px;
-    width:90%;
-    background:#3A2D8C;
-}
-
-#tab3.1 {
-    margin-left: 40px;
-    margin-right: 40px;
-    padding:10px;
-    width:90%;
-    background:#3A2D8C;
+h3 
+{
+    color: #FFF;
 }
 .tabs li {
     list-style:none;
