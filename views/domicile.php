@@ -154,19 +154,24 @@
         <div id = "modal">
   			 <h1> Ajout Domicile</h1>
 			   <div class="infos"> 
-                </br>
-                        <p>
-                            <input type="type" name="type" id="type" placeholder="Type de domicile : " size="30" maxlength="20"/>
-                            <input type="submit" value="Valider"/>
+
+				<p>
+                            <input type="name" name="name" id="name" placeholder="Nom du domicile : " size="30" maxlength="20"/>
+                        
                         </p>
                         <p>
-                            <input type="rooms" name="rooms" id="rooms" placeholder="Nombre de pièces : " size="30" maxlength="20"/>
-                            <input type="submit" value="Valider"/>
+                            <input type="address" name="address" id="address" placeholder="Adresse : " size="30" maxlength="20"/>
+                        
                         </p>
 			
                         <p>
-                            <input type="capteurs" name="capteurs" id="capteurs" placeholder="Nombre de capteurs" size="30" maxlength="30" />
-                            <input type="submit" value="Valider"/>
+                            <input type="town" name="town" id="town" placeholder="Ville : " size="30" maxlength="30" />
+                        
+                        </p>
+
+						<p>
+                            <input type="country" name="country" id="country" placeholder="Pays : " size="30" maxlength="30" />
+                        
                         </p>
                         
         </div>
