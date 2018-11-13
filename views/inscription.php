@@ -54,7 +54,7 @@
 				<h1>
 					M'Inscrire
 				</h1>
-				<form method="post" action="traitement.php">
+				<form method="post" action="../controllers/inscription.php">
 				<p>
             		<input type="text" name="nom" id="nom" placeholder="Nom" size="40" maxlength="30" />
         		</p>

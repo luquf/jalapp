@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `capteurs` (
   `id_capteur` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nom` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` enum('HUM','FUM','TEMP','') COLLATE utf8mb4_unicode_ci NOT NULL,
   `etat` enum('ON','OFF','','') COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_piece` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
@@ -44,7 +43,6 @@ CREATE TABLE `capteurs` (
 
 CREATE TABLE `controleurs` (
   `id_controleur` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nom` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` enum('LUM','CH','VOL','') COLLATE utf8mb4_unicode_ci NOT NULL,
   `etat` int(11) NOT NULL,
   `id_piece` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
@@ -177,13 +175,6 @@ INSERT INTO `domiciles`
 
 INSERT INTO `pieces` 
   VALUES('b0c744e8-b561-46fc-bc13-171cfa581102', 'Domicile 1', '7b6bb39c-cf71-4593-adba-ca03aebca46a');
-
-
-INSERT INTO `capteurs`
-  VALUES('sxekhgj46hje', 'nom_capteur', 'HUM', 'ON', 'b0c744e8-b561-46fc-bc13-171cfa581102');
-
-INSERT INTO `controleurs`
-  VALUES('sxekhgj46hje', 'nom_capteur', 'LUM', 9, 'b0c744e8-b561-46fc-bc13-171cfa581102');
 
 COMMIT;
 
