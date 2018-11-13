@@ -23,7 +23,9 @@
 			</div>
         </div>
 
+
         
+                
         <div id="tableau" >
 
             <table class="identification">
@@ -38,10 +40,13 @@
                 </tr>
                 </thead>
             </table>
+        </div>
 
             <br>
             <br>
-        </div>
+
+
+    <div class="principal">        
 
         <div>
 
@@ -64,7 +69,7 @@
 
  
                     
-                    <input type="button" value="Domicile 1" onClick="AfficherMasquerPieces()"/>
+                    <input class="domiciles" type="button" value="Domicile 1" onClick="AfficherMasquerPieces()"/>
 
         </div>
 
@@ -91,19 +96,18 @@
                             </script>
 
 
-                <input type="button" value="Pièce 1" onClick="AfficherMasquerCapteurs()" />
+                <input class="pieces" type="button" value="Pièce 1" onClick="AfficherMasquerCapteurs()" />
                 <br>
-                <input type="button" value="Pièce 2" onClick="AfficherMasquerCapteurs()" />
+                <input class="pieces" type="button" value="Pièce 2" onClick="AfficherMasquerCapteurs()" />
                 <br>
-                <input type="button" value="Pièce 3" onClick="AfficherMasquerCapteurs()" />
+                <input class="pieces" type="button" value="Pièce 3" onClick="AfficherMasquerCapteurs()" />
 
 
         </div>
+    </div>
 
-
-
-
-
+        <br>
+        <br>
 
 
         <div id="capteurs" style="display:none;">

@@ -41,15 +41,11 @@ table
 {
     margin-top: 2%;
     width : 100%;
-    border-collapse: collapse;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border :none;
     text-align: center;
 }
 
-.thead{
-    border-bottom: 1px solid white;
-}
+
 
 
 
@@ -57,21 +53,17 @@ th
 {
     padding-top: 1%;
     padding-bottom: 1%;
-    background-color: #1c0f80;
     width: 15%;
-    border-left : 1px solid white;
-    border-right : 1px solid white;
+    border: none;
+
 
 }
 td
 {
     padding-top: 1%;
     padding-bottom: 1%;
-    background-color: #1c0f80;
     width: 15%;
-    border-bottom: 1px solid white;
-    border-left : 1px solid white;
-    border-right : 1px solid white;
+    border: none;
 }
 .button
 {
@@ -83,8 +75,47 @@ td
 
 }
 
+#tableau{
+    background-color: #3A2D8C;
+    opacity: 0.9;
+}
 
-input[type=button]{
-    padding-left: 25%;
-    color: green;
+.principal{
+    background-color: #3A2D8C;
+    opacity: 0.9;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.domiciles{
+    margin-left: 2.5%;
+    border-style: none;
+    color: white;
+    font-size: large;
+    background-color: #3A2D8C;
+    opacity: 0.9;
+}
+
+.domiciles:focus{
+    font-weight: bold;
+    border: none;
+}
+
+.pieces{
+    margin-left: 5%;
+    border-style: none;
+    color: white;
+    font-size: medium;
+    background-color: #3A2D8C;
+    opacity: 0.9;
+}
+
+.pieces:focus{
+    font-weight: bold;
+    border: 0px;
+}
+
+#capteurs{
+    background-color: #3A2D8C;
+    opacity: 0.9;
 }
