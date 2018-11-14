@@ -151,7 +151,8 @@ h3{
 	margin-left: 42%;
 }
 
-#add_capteur{
+#add_capteur
+{
     background-color: #F6F1F1;
     border: none;
     margin-left: 45%;
@@ -161,24 +162,9 @@ h3{
     height:50px;
 }
 
-#button_modal{
-	background-color: #3A2D8C;
-	opacity: 0.9;
-	background-attachment: fixed;
-	border: none;
-	font-size: 1250%;
-	color: white;
-	position:absolute;
-	cursor: pointer;
-    left: 50%;
-    top: 50%;
-    width: 20%;
-    height: 40%;
-    margin-left: -10%; /* Cette valeur doit être la moitié négative de la valeur du width */
-    margin-top: -8%; /* Cette valeur doit être la moitié négative de la valeur du height */
-}
 
-#modal {
+
+#modal1 {
     height: 300px;
     width: 60%;
 	background-color:white ;

@@ -103,9 +103,33 @@
 			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 3</a>
 		</p>
 
-		<button id="add_piece" onclick="#"> + </button>
-		
+		<input id='add_piece' type="button"  value='+' onclick="openmodal1()"/>
 		</div>
+		<div id = "modal1">
+  			 <h1> Ajout Pièce</h1>
+			   <div class="infos"> 
+                <br/>
+                        <p>
+                            <input type="type" name="type" id="type" placeholder="Type de Pièce : " size="30" maxlength="20"/>
+                            <input type="submit" value="Valider"/>
+                        </p>
+                        <p>
+                            <input type="rooms" name="rooms" id="rooms" placeholder="Nombre de capteurs : " size="30" maxlength="20"/>
+                            <input type="submit" value="Valider"/>
+                        </p>
+			
+                        <p>
+                            <input type="capteurs" name="capteurs" id="capteurs" placeholder="titre 3" size="30" maxlength="30" />
+                            <input type="submit" value="Valider"/>
+                        </p>
+                        
+        		</div>
+
+		<button id ="close" onclick ="closemodal1()">X</button>
+		<button id ="validation" onclick ="closemodal1()">Valider</button>
+		</div>
+		<script src="app1.js" type="text/javascript"></script>
+
 		
 		<div id='tab2'>
 			<h3> Liste des capteurs </h3>
@@ -116,7 +140,7 @@
 			<br/>
 		</p>
 
-		<button id="add_piece" onclick="#"> + </button>
+		<button id="add_piece" onclick="openModal1()"> + </button>
 		
 		</div>
 		
@@ -127,7 +151,7 @@
 			<br/>
 		</p>
 
-		<button id="add_piece" onclick="#"> + </button>
+		<button id="add_piece" onclick="openModal1()"> + </button>
 		
         </div>
 	</body>
