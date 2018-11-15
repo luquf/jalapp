@@ -2,8 +2,11 @@
 
 require __DIR__.'/../models/user.php';
 
-require __DIR__.'/../vendor/lcobucci/jwt/src/Builder.php';
-require __DIR__.'/../vendor/lcobucci/jwt/src/Parser.php';
+require __DIR__."/../vendor/autoload.php";
+
+require "mail.php";
+
+$secret_key = "SecretSecret123@";
 
 $nom = $prenom = $email = $adresse = $pays = $ville = $telephone = $cle_client = ""; //inscription
 $email = $mot_de_passe = ""; // connexion
@@ -18,18 +21,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $ville = test_input($_POST["ville"]);
         $telephone = test_input($_POST["tel"]);
         $cle_client = test_input($_POST["cle"]);
-        $mdp = generatePassword();
-        echo $mdp;
-         // send mail with password
-        $utililsateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, false);
-        setUser($utililsateur);
+        $mdp = generatePassword();        
+        $utilisateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, false);
+        setUser($utilisateur);
+        sendPassword($mdp, $email);
      } else { //connexion
         $email = test_input($_POST["email1"]);
         $mot_de_passe = test_input($_POST["pass"]);
         $ok = checkCredentials($email, $mot_de_passe);
         if ($ok) { // credentials are validated
             $cookie_name = "conn_token";
-            $token = generateJWT($email, $mot_de_passe);
+            $token = generateJWT($email, $mot_de_passe, $secret_key);
             $cookie_value = $token;
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
             header('Location: ../views/ajoutdomicile1.php');
@@ -60,23 +62,31 @@ function generatePassword($length = 8) {
      return $result;
 }
  
-function generateJWT($uid, $email, $password) {
-    $token = (new Builder())->setIssuer('http://lcoalhost') // Configures the issuer (iss claim)
-                        ->setAudience('http://localhost') // Configures the audience (aud claim)
-                        ->setId('secretkey', true) // Configures the id (jti claim), replicating as a header item
-                        ->setIssuedAt(time()) // Configures the time that the token was issue (iat claim)
-                        ->setNotBefore(time() + 60) // Configures the time that the token can be used (nbf claim)
-                        ->setExpiration(time() + 3600) // Configures the expiration time of the token (exp claim)
-                        ->set('uid', 1) // Configures a new claim, called "uid"
-                        ->getToken(); // Retrieves the generated token
-    echo $token;
+function generateJWT($email, $password, $secret) {
+    $builder = new ReallySimpleJWT\TokenBuilder();
+    $token = $builder->addPayload(['key' => 'email', 'value' => $email])
+        ->addPayload(['key' => 'password', 'value' => $password])
+        ->setSecret($secret)
+        ->setExpiration(time() + 3600)
+        ->setIssuer("http://localhost")
+        ->build();
     return $token;
 }
  
-function decryptToken($tok) {
-    $token = (new Parser())->parse((string) $tok);
-    $token->getHeaders();
-    $token->getClaims(); 
-    $data = array($token->getHeader('email', $token->getHeader('password')));
-    return $data;
-} 
+function decryptToken($token, $secret) {
+    /*$validator = new ReallySimpleJWT\TokenValidator;
+    $validator->splitToken($tok)
+        ->validateExpiration()
+        ->validateSignature($secret);
+    $payload = $validator->getPayload();
+    $header = $validator->getHeader();
+    return $payload; */
+    try {
+        $result = ReallySimpleJWT\Token::validate($token, $secret);
+        return true;
+    } catch (Exception $e) {
+        return false;
+    }
+    return false;
+}
+
