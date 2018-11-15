@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mdp = generatePassword();        
         $utilisateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, false);
         setUser($utilisateur);
-        sendPassword($mdp, $email);
+        sendPassword($mdp, $email, $prenom, $nom);
      } else { //connexion
         $email = test_input($_POST["email1"]);
         $mot_de_passe = test_input($_POST["pass"]);
