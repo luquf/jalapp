@@ -209,3 +209,101 @@ h3{
 	top: -400px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#button_modalpop{
+	background-color: #3A2D8C;
+	opacity : 0.9;
+	background-attachment: fixed;
+	border: none;
+	font-size: 100%;
+	color : white;
+	position:absolute;
+	cursor : pointer;
+    left: 5%;
+    top: 45%;
+    width: 5%;
+    HEIGHT : 8%;
+ /* Cette valeur doit être la moitié négative de la valeur du height */
+}
+
+
+#modalpop
+{
+	background-color: white;
+	color : black;
+	margin-top: 2%;
+	margin-left: 16%;
+	margin-right: 16%;	
+	bottom : 10%;
+	top : 10%;	
+	opacity: 0.9;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	display : none;
+	position: absolute;
+	border-radius: 8px;
+
+}	
+#modalpop .infos
+{
+	margin-left: 5%;
+	margin-right:5%;
+	opacity: 1;
+	 
+}
+#modalpop .modif_infos
+{
+	margin-left: 5%;
+	margin-right: 5%;
+	opacity: 1;
+}
+
+
+#fermer {
+    height : 15px;
+    width : 15px;
+    background-color : none;
+    color : black;
+    font-size:10px;
+    border : none;
+	cursor : pointer;
+	top : 0px;
+	right : 14px;
+	position : absolute;
+
+}
+
+#valider {
+	height : 50px;
+    width : 300px;
+    background-color : #3A2D8C;
+    color : #ffffff;
+    font-size:20px;
+    border : none;
+    cursor : pointer;
+
+}
