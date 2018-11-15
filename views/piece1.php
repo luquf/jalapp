@@ -96,87 +96,105 @@
 
 
 		<div id='tab1'>
+
+			<div class="flex_titres">
+					<h3> Liste des capteurs </h3>
+
+					<h3> Informations Pièce </h3>
+
+			</div>
+
+			<br><br>
+
+
 			<div class="flex">
-			<h3> Liste des capteurs </h3>
+
+				<br> <br>					
+				<div class="gauche">
+
+						<div class="boutton">
+								<input type="button" name="boutton1" class="boutton_image">
+								<p class="boutton_texte"> Lampe 1 </p>
 
 
-	<!-- POPUP ARTHUR -->
+														<!-- POPUP ARTHUR -->
 
-			
-			<div class="button_container">
-        <button id = button_modalpop onclick="openModal2()"> infos capteurs </button>
- 	    </div>
+																	
+															<div class="button_container">
+														        <button id = button_modalpop onclick="openModal2()"> infos capteurs </button>
+														 	    </div>
 
-		<div id = "modalpop">
+																<div id = "modalpop">
 
-            <div class="infos">
-                <h2> 
-                    Historique
-                </h2>  
-</br>
-                        <p>
-						12/11/2018 15:44 : ON
-                        </p>
-                        <p>
-						12/11/2018 12:12 : OFF
-                       
-                        </p>
-			
-                        <p>
-						12/11/2018 11:42 : ON    
-						</p>
-                        <p> 
-						11/11/2018 23:45 : OFF    
-                      
-                        </p>
-                        <p>
-						11/11/2018 18:00 : ON  
-                         
-                        </p>
-                        <p>
-						11/11/2018 14:00 : OFF
-                        
-                        </p>
-                        
-                </div>
-            <div class="modif_infos">
-                <h2> 
-                    Consommation Ampoule 4
-                </h2>  
-				<p>
-					 <img src="conso_ampoule." alt = "Conso ampoule" title = "Conso Ampoule" style="width: 400px; height: auto;" /> 
-				</p>
-            </div>                  
+														            <div class="infos">
+														                <h2> 
+														                    Historique
+														                </h2>  
+															</br>
+														                        <p>
+																				12/11/2018 15:44 : ON
+														                        </p>
+														                        <p>
+																				12/11/2018 12:12 : OFF
+														                       
+														                        </p>
+																	
+														                        <p>
+																				12/11/2018 11:42 : ON    
+																				</p>
+														                        <p> 
+																				11/11/2018 23:45 : OFF    
+														                      
+														                        </p>
+														                        <p>
+																				11/11/2018 18:00 : ON  
+														                         
+														                        </p>
+														                        <p>
+																				11/11/2018 14:00 : OFF
+														                        
+														                        </p>
+														                        
+														                </div>
+														            <div class="modif_infos">
+														                <h2> 
+														                    Consommation Ampoule 4
+														                </h2>  
+																		<p>
+																			 <img src="conso_ampoule." alt = "Conso ampoule" title = "Conso Ampoule" style="width: 400px; height: auto;" /> 
+																		</p>
+														            </div>                  
 
 
-		<button id ="fermer" onclick ="closeModal2()">X</button>
-		<button id ="valider" onclick ="closeModal2()">Valider</button>
-		</div>
-		
-		<script src="app2.js" type="text/javascript"></script>
-		
- <!-- Fin partie popup arthur --> 
+																<button id ="fermer" onclick ="closeModal2()">X</button>
+																<button id ="valider" onclick ="closeModal2()">Valider</button>
+																</div>
+																
+																<script src="app2.js" type="text/javascript"></script>
+																
+														  <!-- Fin partie popup arthur --> 
+						</div>
 
-			<br> <br>					
-				<div class="gauche" name="Liste des Capteurs">
+						<div class="boutton">
+							<input type="button" name="boutton2" class="boutton_image">
+							<p class="boutton_texte"> Lampe 2 </p>
+						</div>
 
-						<div class="boutton_capteur">
-							<div>
-								<input type="button" name="boutton1" class="boutton">
-							</div>
-							<div>
-								<input type="button" name="boutton2">
-							</div>
-							<div>
-								<input type="button" name="boutton3">
-							</div>
-							<div>
-								<input type="button" name="boutton4">
-							</div>
+						<div class="boutton">
+							<input type="button" name="boutton3" class="boutton_image">
+							<p class="boutton_texte"> Volets 1 </p>
+						</div>
+
+						<div class="boutton">
+							<input type="button" name="boutton4" class="boutton_image">
+							<p class="boutton_texte"> Volets 2 </p>
 						</div>
 				</div>
+				
 
-				<div class="droite" name="Informations Capteur">
+				<div class="droite">
+
+					<img src="conso_ampoule.jpg">
 
 				</div>
 
@@ -189,7 +207,7 @@
 			</div>
 
 
-		</div>
+		</div> 
 
 
 

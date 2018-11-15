@@ -26,6 +26,7 @@ body
 	color: #FFF;
 	text-decoration: none;
 }
+
 #tab1 {
     margin-left: 40px;
     margin-right: 40px;
@@ -34,34 +35,65 @@ body
     background:#3A2D8C;
 }
 
-.flex{
+
+.flex_titres{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
 
 }
 
-.boutton_capteur{
+.flex{
+    display: flex;
+    flex-direction: row;
+        justify-content: space-around;
+
+
+}
+
+
+
+.gauche{
+    margin-left: -15%;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-
-
-}
-
-.gauche{
-    padding-left: 10%;
+    justify-content: space-around;
 
 }
 
 .droite{
+    margin-right: -5%;
 
-    padding-right: 75%;
 }
 
-.boutton{
-    width: 1%;
+.boutton_image{
+    width: 75px;
+    height: 75px;
+    border-color: none;
+    border-radius: 20px;
+    background-image: url(../public/assets/ampoule.png);
+    background-repeat: no-repeat; 
+    background-position: 5px 5px;
+    background-attachment: fixed;
 
+
+
+}
+.boutton{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.boutton_image:active{
+    border-color : green;
+    background-color: green
+}
+
+.boutton_texte{
+    color:white;
+    text-align: center;
 }
 
 
