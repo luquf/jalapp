@@ -7,7 +7,11 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-		<title>Domisep: Domicile </title>
+  <script
+  src="https://code.jquery.com/jquery-1.9.1.min.js"
+  integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+  crossorigin="anonymous"></script>
+  		<title>Domisep: Domicile </title>
    
 	</head>
 
@@ -55,6 +59,7 @@
 
 						e.preventDefault();
 					});
+
 				});
 			});
         </script>
@@ -89,10 +94,30 @@
         </div>
 
 		<button id ="close" onclick ="closeModal()">X</button>
-		<button id ="validation" onclick ="closeModal()">Valider</button>
+		<button id ="validation" >Valider</button>
     	</div>
     	<script src="app.js" type="text/javascript"></script>
-        
+        <script>
+			$(document).ready(function() {
+    			$("div#tabs").tabs();
+
+    			$("button#validation").click(function() {
+
+        			var num_tabs = $("div#tabs ul li").length + 1;
+
+        			$("div#tabs ul").append(
+            			"<li><a href='#tab" + num_tabs + "'>Domicile " + num_tabs + "</a></li>"
+        			);
+			$("div#tabs").append(
+            	"<div id='tab" + num_tabs + "'>Domicile " + num_tabs + "</div>"
+        	);
+        	$("div#tabs").tabs("refresh");
+    			});                    
+			});
+
+</script>
+
+
         <div id='tab1'>
 			<h3> Liste des capteurs </h3>
 			<p>

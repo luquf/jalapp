@@ -1,5 +1,6 @@
 {
     "require": {
-        "lcobucci/jwt": "^3.2"
+        "rbdwllr/reallysimplejwt": "^1.0",
+        "phpmailer/phpmailer": "^6.0"
     }
 }

@@ -28,7 +28,7 @@
                 Réglages
             </h1>
             <p>	
-			    <a href= "accueil.php" style="color: #fff; text-decoration: underline;">Retour </a> 
+			    <a href= "admin_interface.php" style="color: #fff; text-decoration: underline;">Retour </a> 
                 </p>
                 <form method="post" action="admin_reglages.php">
                         <p>
