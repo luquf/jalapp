@@ -34,6 +34,37 @@ body
     background:#3A2D8C;
 }
 
+.flex{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.boutton_capteur{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+}
+
+.gauche{
+    padding-left: 10%;
+
+}
+
+.droite{
+
+    padding-right: 75%;
+}
+
+.boutton{
+    width: 1%;
+
+}
+
+
 #tab2 {
     margin-left: 40px;
     margin-right: 40px;
@@ -47,6 +78,7 @@ body
     padding:10px;
     width:90%;
     background:#3A2D8C;
+
 }
 
 .tabs li {
@@ -176,3 +208,4 @@ h3{
 	transition: 0.5s;
 	top: -400px;
 }
+

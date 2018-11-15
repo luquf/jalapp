@@ -89,26 +89,65 @@
 		<button id ="close" onclick ="closeModal()">X</button>
 		<button id ="validation" onclick ="closeModal()">Valider</button>
 		</div>
-		</div>
+	</div>
 
 		
 		<div id='tab1'>
-			<h3>Liste des Capteurs</h3>
-			<p>
-			<input id='add_capteur' type="button"  value='+' onclick="openModal1()"/>
-			</p>
+			<div class="flex">
+			<h3> Liste des capteurs </h3>
+			<br> <br>					
+				<div class="gauche" name="Liste des Capteurs">
+
+						<div class="boutton_capteur">
+							<div>
+								<input type="button" name="boutton1" class="boutton">
+							</div>
+							<div>
+								<input type="button" name="boutton2">
+							</div>
+							<div>
+								<input type="button" name="boutton3">
+							</div>
+							<div>
+								<input type="button" name="boutton4">
+							</div>
+						</div>
+				</div>
+
+				<div class="droite" name="Informations Capteur">
+
+				</div>
+
+			</div>
+
+			<div>
+				<p>
+				<input id='add_capteur' type="button"  value='+' onclick="openModal1()"/>
+				</p>
+			</div>
+
+
 		</div>
+
+
+
+		
+
 		<div id='tab2'>
 			<h3>Liste des Capteurs</h3>
 			<p>
 			<input id='add_capteur' type="button"  value='+' onclick="openModal1()"/>
 		</p>
 		</div>
+
 		<div id='tab3'>
 			<h3>Liste des Capteurs</h3>
 			<p>
 			<input id='add_capteur' type="button"  value='+' onclick="openModal1()"/>
 		</p>
+		</div>
+
+				
 		</div>
 
 		<div id = "modal1">																																								
