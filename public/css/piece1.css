@@ -33,6 +33,7 @@ body
     padding:10px;
     width:90%;
     background:#3A2D8C;
+    flex-wrap: wrap;
 }
 
 

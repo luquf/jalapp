@@ -30,7 +30,7 @@
             <p>	
 			    <a href= "admin_interface.php" style="color: #fff; text-decoration: underline;">Retour </a> 
                 </p>
-                <form method="post" action="admin_reglages.php">
+                <form method="post" action="../controllers/admin_reglage.php">
                         <p>
                             <input type="email" name="email" id="email" placeholder="Modifier l'adresse email" size="30" maxlength="20" />
                             <input type="submit" value="Valider"/>

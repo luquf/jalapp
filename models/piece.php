@@ -28,3 +28,5 @@ function removePiece($pieceid) {
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
     return $data;
 }
+
+?>

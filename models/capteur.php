@@ -28,3 +28,5 @@ function removeCapteur($capteurid) {
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
     return $data;
 }
+
+?>

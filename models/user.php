@@ -122,3 +122,5 @@ function setUser($user) {
     $data = $stmt->execute();
     return $data;
 }
+
+?>

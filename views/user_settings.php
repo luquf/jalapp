@@ -55,6 +55,8 @@
 
                 </h2>  
                 </br>
+                <form method="post" action="../controllers/user_reglage.php">
+
                         <p>
                             <input type="name" name="name" id="name" placeholder="Modifier le nom" size="30" maxlength="20"/>
                             <input type="submit" value="Valider"/>
