@@ -34,6 +34,7 @@ body
     width:90%;
     background:#3A2D8C;
     flex-wrap: wrap;
+
 }
 
 
@@ -48,11 +49,7 @@ body
     display: flex;
     flex-direction: row;
         justify-content: space-around;
-
-
 }
-
-
 
 .gauche{
     margin-left: -15%;
@@ -73,6 +70,8 @@ body
     height: 75px;
     border-color: none;
     border-radius: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
     background-image: url(../public/assets/ampoule.png);
     background-repeat: no-repeat; 
     background-position: 5px 5px;
@@ -91,11 +90,23 @@ body
     border-color : green;
     background-color: green
 }
-
-.boutton_texte{
+.boutton_image select{
+    border-color : green;
+    background-color: green
+}
+.button_texte{
+    background-color: #3A2D8C;
+    display: flex;
+    flex-direction: row;
     color:white;
     text-align: center;
+    background-color: #3A2D8C;
+    margin-left: 8px;
+    margin-right: 20px;
+    border : 1px;
+    border-radius:50%;
 }
+
 
 
 #tab2 {
@@ -208,13 +219,7 @@ h3{
     cursor : pointer;
 
 }
-.textboutton{
-	font-size: 30px;
-	font-weight: bold;
-	color: white;
-	margin-top: 31%;
-	margin-left: 42%;
-}
+
 
 #add_capteur
 {
@@ -242,41 +247,16 @@ h3{
 	top: -400px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#button_modalpop{
-	background-color: #3A2D8C;
-	opacity : 0.9;
-	background-attachment: fixed;
-	border: none;
-	font-size: 100%;
-	color : white;
-	position:absolute;
-	cursor : pointer;
-    left: 5%;
-    top: 45%;
-    width: 5%;
-    HEIGHT : 8%;
+.button_modalpop{
+    background-color: #3A2D8C;
+    margin-top: 2%;
+    padding-top: 0%;
+    border: 2px;
+    color : white;
+    border : 1px;
+    border-color: white ;
+    padding-right: 9px;
+    font-style: italic;
  /* Cette valeur doit être la moitié négative de la valeur du height */
 }
 

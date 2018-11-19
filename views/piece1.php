@@ -93,8 +93,6 @@
 
     	
 
-
-
 		<div id='tab1'>
 
 			<div class="flex_titres">
@@ -112,83 +110,112 @@
 				<br> <br>					
 				<div class="gauche">
 
+				
 						<div class="boutton">
 								<input type="button" name="boutton1" class="boutton_image">
-								<p class="boutton_texte"> Lampe 1 </p>
+								<div class="button_texte"> 
+									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
+									<p>
+										 Lampe 1
+									</p>
+		</div>
 
 
-														<!-- POPUP ARTHUR -->
+<!-- POPUP ARTHUR -->
 
-																	
-															<div class="button_container">
-														        <button id = button_modalpop onclick="openModal2()"> infos capteurs </button>
-														 	    </div>
+														
 
-																<div id = "modalpop">
+<div id = "modalpop">
 
-														            <div class="infos">
-														                <h2> 
-														                    Historique
-														                </h2>  
-															</br>
-														                        <p>
-																				12/11/2018 15:44 : ON
-														                        </p>
-														                        <p>
-																				12/11/2018 12:12 : OFF
+    <div class="infos">
+    <h2> 
+        Historique
+    </h2>  
+</br>
+    <p>
+		12/11/2018 15:44 : ON
+	</p>
+    <p>
+		12/11/2018 12:12 : OFF
 														                       
-														                        </p>
-																	
-														                        <p>
-																				12/11/2018 11:42 : ON    
-																				</p>
-														                        <p> 
-																				11/11/2018 23:45 : OFF    
-														                      
-														                        </p>
-														                        <p>
-																				11/11/2018 18:00 : ON  
+    </p>
+							
+    <p>
+		12/11/2018 11:42 : ON    
+	</p>
+	<p> 
+		11/11/2018 23:45 : OFF    
+													                      
+	</p>
+	<p>
+		11/11/2018 18:00 : ON  
 														                         
-														                        </p>
-														                        <p>
-																				11/11/2018 14:00 : OFF
+	</p>
+	<p>
+		11/11/2018 14:00 : OFF
 														                        
-														                        </p>
+	</p>
 														                        
-														                </div>
-														            <div class="modif_infos">
-														                <h2> 
-														                    Consommation Ampoule 4
-														                </h2>  
-																		<p>
-																			 <img src="conso_ampoule." alt = "Conso ampoule" title = "Conso Ampoule" style="width: 400px; height: auto;" /> 
-																		</p>
-														            </div>                  
+</div>
+<div class="modif_infos">
+	<h2> 
+    	Consommation Ampoule 4
+	</h2>  
+	<p>
+		<img src="conso_ampoule." alt = "Conso ampoule" title = "Conso Ampoule" style="width: 400px; height: auto;" /> 
+	</p>
+</div>                  
 
 
-																<button id ="fermer" onclick ="closeModal2()">X</button>
-																<button id ="valider" onclick ="closeModal2()">Valider</button>
-																</div>
+<button id ="fermer" onclick ="closeModal2()">X</button>
+<button id ="valider" onclick ="closeModal2()">Valider</button>
+</div>
 																
-																<script src="app2.js" type="text/javascript"></script>
+<script src="app2.js" type="text/javascript"></script>
 																
-														  <!-- Fin partie popup arthur --> 
-						</div>
+<!-- Fin partie popup arthur --> 
 
-						<div class="boutton">
+
+</div>
+
+
+						<div class="button">
 							<input type="button" name="boutton2" class="boutton_image">
-							<p class="boutton_texte"> Lampe 2 </p>
+							<div class="button_texte"> 
+									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
+									<p>
+										 Lampe 2
+									</p>
+		</div>
 						</div>
 
 						<div class="boutton">
 							<input type="button" name="boutton3" class="boutton_image">
-							<p class="boutton_texte"> Volets 1 </p>
+							<div class="button_texte"> 
+									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
+									<p>
+										 Volet 1
+									</p>
+		</div>
 						</div>
 
-						<div class="boutton">
+						<div class="button">
 							<input type="button" name="boutton4" class="boutton_image">
-							<p class="boutton_texte"> Volets 2 </p>
+							<div class="button_texte"> 
+									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
+									<p>
+										Volet 2
+									</p>
+		</div>
+								</div>
+
+						<div>
+							<p>
+							<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
+							</p>
 						</div>
+
+
 				</div>
 				
 
@@ -200,32 +227,28 @@
 
 			</div>
 
-			<div>
-				<p>
-				<input id='add_capteur' type="button"  value='+' onclick="openModal1()"/>
-				</p>
-			</div>
+			
 
 
 		</div> 
 
 
-
-		
-
-		<div id='tab2'>
+<div id='tab2'>
 			<h3>Liste des Capteurs</h3>
 			<p>
-			<input id='add_capteur' type="button"  value='+' onclick="openModal1()"/>
+			<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
 		</p>
 		</div>
 
 		<div id='tab3'>
 			<h3>Liste des Capteurs</h3>
 			<p>
-			<input id='add_capteur' type="button"  value='+' onclick="openModal1()"/>
+			<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
 		</p>
 		</div>
+		
+
+		
 
 				
 		</div>
@@ -246,8 +269,8 @@
                         
         		</div>
 
-		<button id ="close" onclick ="closeModal1()">X</button>
-		<button id ="validation" onclick ="closeModal1()">Valider</button>
+		<button id ="close" onclick ="closemodal1()">X</button>
+		<button id ="validation" onclick ="closemodal1()">Valider</button>
 		</div>
 		</div>
 		
