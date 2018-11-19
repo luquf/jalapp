@@ -1,18 +1,18 @@
 <?php
 
-require __DIR__.'/../controllers/authentification.php';
+// require __DIR__.'/../controllers/authentification.php';
 
-if(!isset($_COOKIE['conn_token'])) {
-    header('Location: inscription.php');
-} else {
-	$cipher_content = $_COOKIE['conn_token'];
-	//$decipher_content = decryptToken($cipher_content, $secret_key);
-	$ok = decryptToken($cipher_content, $secret_key);
-	//echo gettype($decipher_content);
-	if (!$ok) {
-		header('Location: accueil.php');
-	}
-}
+// if(!isset($_COOKIE['conn_token'])) {
+//     header('Location: inscription.php');
+// } else {
+// 	$cipher_content = $_COOKIE['conn_token'];
+// 	//$decipher_content = decryptToken($cipher_content, $secret_key);
+// 	$ok = decryptToken($cipher_content, $secret_key);
+// 	//echo gettype($decipher_content);
+// 	if (!$ok) {
+// 		header('Location: accueil.php');
+// 	}
+// }
 ?>
 
 <!DOCTYPE html>
@@ -135,6 +135,7 @@ if(!isset($_COOKIE['conn_token'])) {
 									<p>
 										 Lampe 1
 									</p>
+									<input class ="delete" type="button" value="X" onclick="deletediv(this);">
 		</div>
 
 
@@ -203,6 +204,8 @@ if(!isset($_COOKIE['conn_token'])) {
 									<p>
 										 Lampe 2
 									</p>
+									<input class ="delete" type="button" value="X" onclick="deletediv(this);">
+
 		</div>
 						</div>
 
@@ -213,6 +216,8 @@ if(!isset($_COOKIE['conn_token'])) {
 									<p>
 										 Volet 1
 									</p>
+									<input class ="delete" type="button" value="X" onclick="deletediv(this);">
+
 		</div>
 						</div>
 
@@ -223,6 +228,8 @@ if(!isset($_COOKIE['conn_token'])) {
 									<p>
 										Volet 2
 									</p>
+									<input class ="delete" type="button" value="X" onclick="deletediv(this);">
+
 		</div>
 								</div>
 
