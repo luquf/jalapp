@@ -42,7 +42,7 @@ body
 	width: 100%;
 	height: 100%;
 	justify-content: space-between;
-	color: #FFF;
+	color: #fff;
 	border-radius: 10px;
 }
 .logo
@@ -58,21 +58,7 @@ body
 }
 
 .input {
-	padding: 7px;
+	padding: 10px;
 	border-radius: 5px;
 	border: none;
-}
-
-@media only screen and (max-width: 600px) {
-    #bandeau
-	{
-		background-color: #ffffff;
-		opacity : 0.9;
-		display: flex;
-		width: 100%;
-		height: 100%;
-		justify-content: space-between;
-		color: #FFF;
-		border-radius: 10px;
-	}
 }

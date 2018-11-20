@@ -4,6 +4,7 @@ body
 	color: white;
 	background: url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed no-repeat center;
 	background-size: auto;
+	font-family: Helvetica;
 }
 #bandeau
 {
