@@ -75,30 +75,27 @@
                 <form method="post" action="../controllers/user_reglage.php">
 
                         <p>
-                            <input type="name" name="name" id="name" placeholder="Modifier le nom" size="30" maxlength="20"/>
-                            <input type="submit" value="Valider"/>
+                            <input type="name" name="name" id="name" placeholder="Nom" size="30" maxlength="20"/>
                         </p>
                         <p>
-                            <input type="surname" name="surname" id="surname" placeholder="Modifier le prénom" size="30" maxlength="20"/>
-                            <input type="submit" value="Valider"/>
-                        </p>
-			
-                        <p>
-                            <input type="email" name="email" id="email" placeholder="Modifier l'adresse email" size="30" maxlength="30" />
-                            <input type="submit" value="Valider"/>
+                            <input type="surname" name="surname" id="surname" placeholder="Prénom" size="30" maxlength="20"/>
                         </p>
                         <p>
-                            <input type="password" name="pass" id="pass" placeholder="Modifier le Mot de Passe" size="30" maxlength="20" />
-                            <input type="submit" value="Valider"/>
+                            <input type="email" name="email" id="email" placeholder="Email" size="30" maxlength="30" />
                         </p>
                         <p>
-                            <input type="address" name="address" id="address" placeholder="Modifier l'adresse" size="30" maxlength="20"/>
-                            <input type="submit" value="Valider"/>
+                            <input type="password" name="old_pass" id="old_pass" placeholder="Ancien mot de passe" size="30" maxlength="20" />
                         </p>
                         <p>
-                            <input type="ville" name="ville" id="ville" placeholder="Modifier la ville " size="30" maxlength="20"/>
-                            <input type="submit" value="Valider"/>
+                            <input type="password" name="new_pass" id="new_pass" placeholder="Nouveau mot de passe" size="30" maxlength="20" />
                         </p>
+                        <p>
+                            <input type="address" name="address" id="address" placeholder="Adresse" size="30" maxlength="20"/>
+                        </p>
+                        <p>
+                            <input type="ville" name="ville" id="ville" placeholder="Ville" size="30" maxlength="20"/>
+                        </p>
+                        <input type="submit" value="Valider"/>
                         
             </div>
 </div>

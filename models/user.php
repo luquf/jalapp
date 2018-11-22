@@ -27,7 +27,7 @@ function getUserByEmail($email) {
     $stmt = $db->prepare('SELECT * FROM `utilisateurs` WHERE email=?');
     $stmt->execute(array($email));
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
-    return $data;
+    return $data;1
 }
 
 // removes a user according to the $email given in parameter
@@ -119,6 +119,51 @@ function setUser($user) {
     $stmt->bindParam(':telephone', $user['8']);
     $stmt->bindParam(':administrateur', $user['9']);
     
+    $data = $stmt->execute();
+    return $data;
+}
+
+function setNom($nom, $id) {
+    $db = connectDB();
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET nom=:nom where $cle=:id');
+    $stmt->bindParam(':nom', $nom);
+    $stmt->bindParam(':id', $id);    
+    $data = $stmt->execute();
+    return $data;
+}
+
+function setPrenom($prenom, $id) {
+    $db = connectDB();
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET prenom=:prenom where $cle=:id');
+    $stmt->bindParam(':prenom', $prenom);
+    $stmt->bindParam(':id', $id);    
+    $data = $stmt->execute();
+    return $data;
+}
+
+function setAdresse($adresse, $id) {
+    $db = connectDB();
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET adresse=:adresse where $cle=:id');
+    $stmt->bindParam(':adresse', $adresse);
+    $stmt->bindParam(':id', $id);    
+    $data = $stmt->execute();
+    return $data;
+}
+
+function setEmail($email, $id) {
+    $db = connectDB();
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET email=:email where $cle=:id');
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':id', $id);    
+    $data = $stmt->execute();
+    return $data;
+}  
+
+function setVille($ville, $id) {
+    $db = connectDB();
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET ville=:ville where $cle=:id');
+    $stmt->bindParam(':ville', $ville);
+    $stmt->bindParam(':id', $id);    
     $data = $stmt->execute();
     return $data;
 }

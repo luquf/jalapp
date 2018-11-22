@@ -21,7 +21,7 @@
 			<div class="aide">
 				<p>
 				</br>	
-					<select name="Langue" id="Langue" >
+					<select class="input" name="Langue" id="Langue" style="margin-right: 10px;">
 						<option value="Français">Français</option>
 						<option value="English">English</option>
 						</select>
@@ -42,17 +42,17 @@
 				</h1>
     			<form method="post" action="../controllers/authentification.php">
     			<p>
-            		<input type="email" name="email1" id="email1" placeholder="Email" size="30" maxlength="100" />
+            		<input class="input" type="email" name="email1" id="email1" placeholder="Email" size="30" maxlength="100" />
         		</p>
         		<p>
-            		<input type="password" name="pass" id="pass" placeholder="Mot de Passe" size="30" maxlength="100" />
+            		<input class="input" type="password" name="pass" id="pass" placeholder="Mot de Passe" size="30" maxlength="100" />
         		</p>
    				<p>
       		 		Se souvenir de moi
        				<input type="checkbox" name="souvenir" id="souvenir" />
        			</p>
         		<p>
-        			<input type="submit" value="Valider"/>
+        			<input class="input" type="submit" value="Valider"/>
    				</p>
    			</div>
 			<div class="inscription">  
@@ -61,25 +61,25 @@
 				</h1>
 				<form method="post" action="../controllers/authentification.php">
 				<p>
-            		<input type="text" name="nom" id="nom" placeholder="Nom" size="40" maxlength="30" />
+            		<input class="input" type="text" name="nom" id="nom" placeholder="Nom" size="40" maxlength="30" />
         		</p>
         		<p>
-            		<input type="text" name="prénom" id="prénom" placeholder="Prénom" size="40" maxlength="30" />
+            		<input class="input" type="text" name="prénom" id="prénom" placeholder="Prénom" size="40" maxlength="30" />
         		</p>
     			<p>
-            		<input type="email" name="email2" id="email2" placeholder="Email" size="40" maxlength="30" />
+            		<input class="input" type="email" name="email2" id="email2" placeholder="Email" size="40" maxlength="30" />
         		</p>
         		<p>
-            		<input type="text" name="adresse" id="adresse" placeholder="Adresse" size="40" maxlength="40" />
+            		<input class="input" type="text" name="adresse" id="adresse" placeholder="Adresse" size="40" maxlength="40" />
         		</p>
         		<p>
-       				<select name="pays" id="pays" >
+       				<select class="input" name="pays" id="pays" >
            			<option value="Pays">Pays</option>
           			<option value="france">France</option>
        				</select>
         		</p>
         		<p>
-       				<select name="ville" id="ville" >
+       				<select class="input" name="ville" id="ville" >
            			<option value="Ville">Ville</option>
           			<option value="Paris">Paris</option>
            			<option value="Lyon">Lyon</option>
@@ -91,13 +91,13 @@
        				</select>
         		</p>
         		<p>
-            		<input type="tel" name="tel" id="tel" placeholder="Numéro de Téléphone" size="40" maxlength="10" />
+            		<input class="input" type="tel" name="tel" id="tel" placeholder="Numéro de Téléphone" size="40" maxlength="10" />
         		</p>
         		<p>
-            		<input type="text" name="cle" id="cle" placeholder="Clé client (unique)" size="40" maxlength="20" />
+            		<input class="input" type="text" name="cle" id="cle" placeholder="Clé client (unique)" size="40" maxlength="20" />
         		</p>
         		<p>
-        			<input type="submit" value="Valider"/>
+        			<input class="input" type="submit" value="Valider"/>
    				</p>
    			</div>
 
