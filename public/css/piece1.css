@@ -33,40 +33,30 @@ body
     padding:10px;
     width:90%;
     background:#3A2D8C;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 
 }
 
 
-.flex_titres{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-}
-
-.flex{
-    display: flex;
-    flex-direction: row;
-        justify-content: space-around;
-}
-
-.gauche{
-    width: 50%;
-    margin-left: 0%;
+.gauche .boutton .boutton_image .boutton_image:active .boutton_texte .button{
+    margin-top: 5%;
+    margin-left: 3%;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
+    width: 50%;
+
 
 }
 
 .droite{
-    margin-right: -3%;
+    margin-left: 3%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-
+    justify-content: right;
+    width: 40%;
 }
 
 .boutton_image{
@@ -95,7 +85,7 @@ body
     background-color: #3A2D8C;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     color:white;
     text-align: left;
     background-color: #3A2D8C;

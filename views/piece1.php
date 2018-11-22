@@ -112,26 +112,14 @@
 
 		<div id='tab1'>
 
-			<div class="flex_titres">
-					<h3> Liste des capteurs </h3>
-
-					<h3> Informations Pièce </h3>
-
-			</div>
-
-			<br><br>
-
-
-			<div class="flex">
-
 				<br> <br>					
 				<div class="gauche" id=gauche>
 
-				
+						<h3> Liste des capteurs </h3>
+
 						<div class="boutton" id="button1">
 								<input type="button" name="boutton1" class="boutton_image">
-								<br/>
-								<br/>
+								
 								<div class="boutton_texte"> 
 									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
 									<p>
@@ -143,9 +131,7 @@
 
 						<div class="boutton" id="button2">
 							<input type="button" name="boutton2" class="boutton_image">
-		<br/>
 							<div class="boutton_texte"> 
-								<br/>
 								<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
 								<p>
 									 Lampe 2
@@ -156,7 +142,6 @@
 
 						<div class="boutton" id="button3">
 							<input type="button" name="boutton3" class="boutton_image">
-		<br/>
 							<div class="boutton_texte"> 
 									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
 									<p>
@@ -215,11 +200,12 @@
 			
 
 				<div class="droite">
+				<h3> Informations Pièce </h3>
 
-					<img src="conso_ampoule.jpg">
+
+					<img src="conso_ampoule.JPG" style="width:500px ; height: 400">
 
 				</div>
-
 			</div>
 
 
@@ -287,7 +273,6 @@
     	Consommation Ampoule 4
 	</h2>  
 	<p>
-		<img src="conso_ampoule." alt = "Conso ampoule" title = "Conso Ampoule" style="width: 400px; height: auto;" /> 
 	</p>
 </div>                  
 
