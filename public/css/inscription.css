@@ -1,64 +1,139 @@
-body
-{
-	background-color: grey;
-	color: white;
-	background: url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed no-repeat center;
-	background-size: auto;
-	font-family: helvetica;
+
+
+@media only screen and (min-width: 10px) {
+	body
+	{
+		background-color: grey;
+		color: white;
+		background: url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed no-repeat center;
+		background-size: auto;
+		font-family: helvetica;
+	}
+	
+	#conteneur
+	{
+		background-color: #3A2D8C;
+		margin-left: 20%;
+		margin-right: 20%;
+		padding: 2%;
+		opacity: 0.9;
+		display: flex;
+		flex-wrap:wrap;
+		justify-content: center;
+		border-radius: 10px;
+	}
+	
+	.connexion
+	{
+		margin-left: auto;
+		margin-right: auto;
+		opacity: 1;	
+	}
+	.inscription
+	{
+		margin-left:auto;
+		margin-right: auto;
+		opacity: 1;
+	}
+	
+	#bandeau
+	{
+		background-color: #3A2D8C;
+		opacity : 0.9;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		margin-bottom: 5%;
+		justify-content: space-between;
+		color: #fff;
+		border-radius: 10px;
+	}
+	.logo
+	{
+		margin-left: 2%;
+	}
+	.aide
+	{		
+		margin-right: 2%;
+		font-size: 1.05em;
+		color: #FFF;
+		text-decoration: none;
+	}
+	
+	.input {
+		padding: 10px;
+		border-radius: 5px;
+		border: none;
+	}
+	
 }
 
-#conteneur
-{
-	background-color: #3A2D8C;
-	margin-top: 2.5%;
-	margin-left: 25%;
-	margin-right: 25%;
-	padding: 2%;
-	opacity: 0.9;
-	display: flex;
-	flex-wrap:wrap;
-	justify-content: center;
-	border-radius: 10px;
+@media only screen and (max-width: 1000px) {
+	#conteneur
+	{
+		background-color: #3A2D8C; 
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 2%;
+		opacity: 0.9;
+		display: flex;
+		flex-wrap:wrap;
+		flex-direction: column;
+		justify-content: center;
+		border-radius: 10px;
+	}
 
-}
-.connexion
-{
-	margin-left: auto;
-	margin-right: auto;
-	opacity: 1;	
-}
-.inscription
-{
-	margin-left:auto;
-	margin-right: auto;
-	opacity: 1;
+	body
+	{
+		background-color: grey;
+		color: white;
+		background: url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed no-repeat center;
+		background-size: auto;
+		font-family: helvetica;
+	}
+
+	.connexion
+	{
+		margin-left: auto;
+		margin-right: auto;
+		opacity: 1;	
+	}
+	.inscription
+	{
+		margin-left:auto;
+		margin-right: auto;
+		opacity: 1;
+	}
+	
+	#bandeau
+	{
+		background-color: #3A2D8C;
+		opacity : 0.9;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		margin-bottom: 5%;
+		justify-content: space-between;
+		color: #fff;
+		border-radius: 10px;
+	}
+	.logo
+	{
+		margin-left: 2%;
+	}
+	.aide
+	{		
+		margin-right: 2%;
+		font-size: 1.05em;
+		color: #FFF;
+		text-decoration: none;
+	}
+	
+	.input {
+		padding: 10px;
+		border-radius: 5px;
+		border: none;
+	}
 }
 
-#bandeau
-{
-	background-color: #3A2D8C;
-	opacity : 0.9;
-	display: flex;
-	width: 100%;
-	height: 100%;
-	justify-content: space-between;
-	color: #fff;
-	border-radius: 10px;
-}
-.logo
-{
-	margin-left: 2%;
-}
-.aide
-{
-	margin-right: 2%;
-	font-size: 1.05em;
-	color: #FFF;
-	text-decoration: none;
-}
 
-.input {
-	padding: 10px;
-	border-radius: 5px;
-	border: none;
-}

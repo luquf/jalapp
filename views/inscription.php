@@ -30,10 +30,7 @@
 			</div>
 			
 		</div>
-	</br>
-</br>
-</br>
-</br>
+
 
 		<div id="conteneur">
 			<div class="connexion"> 
@@ -61,16 +58,16 @@
 				</h1>
 				<form method="post" action="../controllers/authentification.php">
 				<p>
-            		<input class="input" type="text" name="nom" id="nom" placeholder="Nom" size="40" maxlength="30" />
+            		<input class="input" type="text" name="nom" id="nom" placeholder="Nom" size="30" maxlength="30" />
         		</p>
         		<p>
-            		<input class="input" type="text" name="prénom" id="prénom" placeholder="Prénom" size="40" maxlength="30" />
+            		<input class="input" type="text" name="prénom" id="prénom" placeholder="Prénom" size="30" maxlength="30" />
         		</p>
     			<p>
-            		<input class="input" type="email" name="email2" id="email2" placeholder="Email" size="40" maxlength="30" />
+            		<input class="input" type="email" name="email2" id="email2" placeholder="Email" size="30" maxlength="30" />
         		</p>
         		<p>
-            		<input class="input" type="text" name="adresse" id="adresse" placeholder="Adresse" size="40" maxlength="40" />
+            		<input class="input" type="text" name="adresse" id="adresse" placeholder="Adresse" size="30" maxlength="40" />
         		</p>
         		<p>
        				<select class="input" name="pays" id="pays" >
@@ -91,10 +88,10 @@
        				</select>
         		</p>
         		<p>
-            		<input class="input" type="tel" name="tel" id="tel" placeholder="Numéro de Téléphone" size="40" maxlength="10" />
+            		<input class="input" type="tel" name="tel" id="tel" placeholder="Numéro de Téléphone" size="30" maxlength="10" />
         		</p>
         		<p>
-            		<input class="input" type="text" name="cle" id="cle" placeholder="Clé client (unique)" size="40" maxlength="20" />
+            		<input class="input" type="text" name="cle" id="cle" placeholder="Clé client (unique)" size="30" maxlength="20" />
         		</p>
         		<p>
         			<input class="input" type="submit" value="Valider"/>

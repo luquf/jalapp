@@ -27,7 +27,7 @@ function getUserByEmail($email) {
     $stmt = $db->prepare('SELECT * FROM `utilisateurs` WHERE email=?');
     $stmt->execute(array($email));
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
-    return $data;1
+    return $data;
 }
 
 // removes a user according to the $email given in parameter
