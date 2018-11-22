@@ -30,10 +30,7 @@
 			</div>
 			
 		</div>
-	</br>
-</br>
-</br>
-</br>
+
 
 		<div id="conteneur">
 			<div class="connexion"> 
