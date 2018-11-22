@@ -125,18 +125,125 @@
 			<div class="flex">
 
 				<br> <br>					
-				<div class="gauche">
+				<div class="gauche" id=gauche>
 
 				
-						<div class="boutton">
+						<div class="boutton" id="button1">
 								<input type="button" name="boutton1" class="boutton_image">
-								<div class="button_texte"> 
+								<br/>
+								<br/>
+								<div class="boutton_texte"> 
 									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
 									<p>
 										 Lampe 1
 									</p>
-									<input class ="delete" type="button" value="X" onclick="deletediv(this);">
+									<input class ="delete" type="button" value="X" onclick="deletediv1(this);">
+								</div>
+						</div>
+
+						<div class="boutton" id="button2">
+							<input type="button" name="boutton2" class="boutton_image">
+		<br/>
+							<div class="boutton_texte"> 
+								<br/>
+								<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
+								<p>
+									 Lampe 2
+								</p>
+								<input class ="delete" type="button" value="X" onclick="deletediv2(this);">
+							</div>
+						</div>
+
+						<div class="boutton" id="button3">
+							<input type="button" name="boutton3" class="boutton_image">
+		<br/>
+							<div class="boutton_texte"> 
+									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
+									<p>
+										 Volet 1
+									</p>
+									<input class ="delete" type="button" value="X" onclick="deletediv3(this);">
+							</div>
+						</div>
+
+						<div class="boutton" id="button4">
+							<input type="button" name="boutton4" class="boutton_image">
+							<div class="boutton_texte"> 
+									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
+									<p>
+										Volet 2
+									</p>
+									<input class ="delete" type="button" value="X" onclick="deletediv4(this);">
+							</div>
+						</div>
+
+						<div>
+							<p>
+							<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
+							</p>
+						</div>
+
+
+				</div>
+
+				<script>
+					function deletediv1(child)
+					{
+						var parent = document.getElementById("gauche");
+						var child = document.getElementById("button1");
+						parent.removeChild(child);
+					}
+					function deletediv2(child)
+					{
+						var parent = document.getElementById("gauche");
+						var child = document.getElementById("button2");
+						parent.removeChild(child);
+					}
+					function deletediv3(child)
+					{
+						var parent = document.getElementById("gauche");
+						var child = document.getElementById("button3");
+						parent.removeChild(child);
+					}
+					function deletediv4(child)
+					{
+						var parent = document.getElementById("gauche");
+						var child = document.getElementById("button4");
+						parent.removeChild(child);
+					}
+				</script>
+			
+
+				<div class="droite">
+
+					<img src="conso_ampoule.jpg">
+
+				</div>
+
+			</div>
+
+
+
+
+		</div> 
 		</div>
+
+
+		<div id='tab2'>
+			<h3>Liste des Capteurs</h3>
+			<p>
+			<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
+			</p>
+		</div>
+
+		<div id='tab3'>
+			<h3>Liste des Capteurs</h3>
+			<p>
+			<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
+			</p>
+		</div>
+
+
 
 
 <!-- POPUP ARTHUR -->
@@ -194,88 +301,7 @@
 <!-- Fin partie popup arthur --> 
 
 
-</div>
 
-
-						<div class="button">
-							<input type="button" name="boutton2" class="boutton_image">
-							<div class="button_texte"> 
-									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
-									<p>
-										 Lampe 2
-									</p>
-									<input class ="delete" type="button" value="X" onclick="deletediv(this);">
-
-		</div>
-						</div>
-
-						<div class="boutton">
-							<input type="button" name="boutton3" class="boutton_image">
-							<div class="button_texte"> 
-									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
-									<p>
-										 Volet 1
-									</p>
-									<input class ="delete" type="button" value="X" onclick="deletediv(this);">
-
-		</div>
-						</div>
-
-						<div class="button">
-							<input type="button" name="boutton4" class="boutton_image">
-							<div class="button_texte"> 
-									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
-									<p>
-										Volet 2
-									</p>
-									<input class ="delete" type="button" value="X" onclick="deletediv(this);">
-
-		</div>
-								</div>
-
-						<div>
-							<p>
-							<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
-							</p>
-						</div>
-
-
-				</div>
-				
-
-				<div class="droite">
-
-					<img src="conso_ampoule.jpg">
-
-				</div>
-
-			</div>
-
-			
-
-
-		</div> 
-
-
-<div id='tab2'>
-			<h3>Liste des Capteurs</h3>
-			<p>
-			<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
-		</p>
-		</div>
-
-		<div id='tab3'>
-			<h3>Liste des Capteurs</h3>
-			<p>
-			<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
-		</p>
-		</div>
-		
-
-		
-
-				
-		</div>
 
 		<div id = "modal1">																																								
   			 <h1> Ajout Capteur</h1>
