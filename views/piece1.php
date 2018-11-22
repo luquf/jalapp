@@ -81,11 +81,11 @@
 		</div>
 
 	<div class= 'tabs'>
-		<ul class='tabs'>
+		<ul class='tabs' id='tabs'>
 			<li><a href='#tab1'>Pièce 1</a></li>
 			<li><a href='#tab2'>Pièce 2</a></li>
             <li><a href='#tab3'>Pièce 3</a></li>
-            <li><input class='button' type="button"  value='+' onclick="openModal()"/></li>
+            <li id="add"><input class='button' type="button"  value='+' onclick="openModal()"/></li>
         </ul>
 
         <div id = "modal">
@@ -107,19 +107,24 @@
 		<button id ="validation" onclick ="closeModal()">Valider</button>
 		</div>
 	</div>
+<script >
+var para=document.creatElement("li");
+var node = document.creatTextNode("$nomPiece");
+para.appendChild(node);
 
+var element = document.getElementById('tabs');
+var child = document.getElementById("add");
+element.insertBefore(para,child);
+</script>
     	
 
 		<div id='tab1'>
-
-				<br> <br>					
+			<h3> Liste des capteurs </h3>	
+			<br/>
+				<div class="container">
 				<div class="gauche" id=gauche>
-
-						<h3> Liste des capteurs </h3>
-
 						<div class="boutton" id="button1">
 								<input type="button" name="boutton1" class="boutton_image">
-								
 								<div class="boutton_texte"> 
 									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
 									<p>
@@ -128,7 +133,6 @@
 									<input class ="delete" type="button" value="X" onclick="deletediv1(this);">
 								</div>
 						</div>
-
 						<div class="boutton" id="button2">
 							<input type="button" name="boutton2" class="boutton_image">
 							<div class="boutton_texte"> 
@@ -139,7 +143,6 @@
 								<input class ="delete" type="button" value="X" onclick="deletediv2(this);">
 							</div>
 						</div>
-
 						<div class="boutton" id="button3">
 							<input type="button" name="boutton3" class="boutton_image">
 							<div class="boutton_texte"> 
@@ -150,7 +153,6 @@
 									<input class ="delete" type="button" value="X" onclick="deletediv3(this);">
 							</div>
 						</div>
-
 						<div class="boutton" id="button4">
 							<input type="button" name="boutton4" class="boutton_image">
 							<div class="boutton_texte"> 
@@ -161,16 +163,12 @@
 									<input class ="delete" type="button" value="X" onclick="deletediv4(this);">
 							</div>
 						</div>
-
 						<div>
 							<p>
 							<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
 							</p>
 						</div>
-
-
 				</div>
-
 				<script>
 					function deletediv1(child)
 					{
@@ -198,21 +196,16 @@
 					}
 				</script>
 			
-
+				</div>
 				<div class="droite">
 				<h3> Informations Pièce </h3>
 
+					<img src="conso_ampoule.JPG" style="width:500px" >
 
-					<img src="conso_ampoule.JPG" style="width:500px ; height: 400">
-
-				</div>
-			</div>
-
-
-
-
-		</div> 
 		</div>
+				</div>
+
+		
 
 
 		<div id='tab2'>
