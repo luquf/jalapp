@@ -10,17 +10,16 @@ body
 #conteneur
 {
 	background-color: #3A2D8C;
-	margin-top: 2.5%;
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: 20%;
+	margin-right: 20%;
 	padding: 2%;
 	opacity: 0.9;
 	display: flex;
 	flex-wrap:wrap;
 	justify-content: center;
 	border-radius: 10px;
-
 }
+
 .connexion
 {
 	margin-left: auto;
@@ -50,7 +49,7 @@ body
 	margin-left: 2%;
 }
 .aide
-{
+{		
 	margin-right: 2%;
 	font-size: 1.05em;
 	color: #FFF;
@@ -61,4 +60,24 @@ body
 	padding: 10px;
 	border-radius: 5px;
 	border: none;
+}
+
+
+@media screen and (min-width: 320px) {
+	
+}
+
+
+@media screen and (max-width: 600px) {
+
+}
+
+
+@media screen and (max-width: 1024px) {
+	
+}
+
+
+@media screen and (max-width: 1440px) {
+	
 }

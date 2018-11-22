@@ -2,7 +2,8 @@
 
 require __DIR__.'/../models/user.php';
 
-require __DIR__."/../vendor/autoload.php";
+require __DIR__.'/../lib/ReallySimpleJWT/src/TokenBuilder.php';
+require __DIR__.'/../lib/ReallySimpleJWT/src/Token.php';
 
 require "mail.php";
 
