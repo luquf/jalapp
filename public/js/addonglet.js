@@ -1,9 +1,9 @@
 
-
 function addonglet(){
-    document.getElementById ("modal").style.top = "-400px"
-
     var ul = document.getElementById("tabs");
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode("domicile 4"));
-}    
+    var children = ul.children.length 
+    li.setAttribute("id", "tab"+children)
+    li.appendChild(document.createTextNode("Pièce "+children));
+    ul.appendChild(li)
+}
