@@ -104,18 +104,10 @@
         		</div>
 
 		<button id ="close" onclick ="closeModal()">X</button>
-		<button id ="validation" onclick ="closeModal()">Valider</button>
+		<button id ="validation" onclick ="addonglet()">Valider</button>
 		</div>
 	</div>
-<script >
-var para=document.creatElement("li");
-var node = document.creatTextNode("$nomPiece");
-para.appendChild(node);
 
-var element = document.getElementById('tabs');
-var child = document.getElementById("add");
-element.insertBefore(para,child);
-</script>
     	
 
 		<div id='tab1'>
@@ -275,6 +267,7 @@ element.insertBefore(para,child);
 </div>
 																
 <script src="app2.js" type="text/javascript"></script>
+<script src="../public/js/addonglet.js" type="text/javascript"></script>
 																
 <!-- Fin partie popup arthur --> 
 
