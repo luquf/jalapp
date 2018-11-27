@@ -1,18 +1,11 @@
 <?php
 
-// require __DIR__.'/../controllers/authentification.php';
+session_start();
 
-// if(!isset($_COOKIE['conn_token'])) {
-//     header('Location: inscription.php');
-// } else {
-// 	$cipher_content = $_COOKIE['conn_token'];
-// 	//$decipher_content = decryptToken($cipher_content, $secret_key);
-// 	$ok = decryptToken($cipher_content, $secret_key);
-// 	//echo gettype($decipher_content);
-// 	if (!$ok) {
-// 		header('Location: accueil.php');
-// 	}
+// if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+//     header("Location: views/inscription.php");
 // }
+
 ?>
 
 <!DOCTYPE html>
