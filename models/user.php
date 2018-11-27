@@ -168,4 +168,13 @@ function setVille($ville, $id) {
     return $data;
 }
 
+function isNew($email) {
+    $db = connectDB();
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET ville=:ville where $cle=:id');
+    $stmt->bindParam(':ville', $ville);
+    $stmt->bindParam(':id', $id);    
+    $data = $stmt->execute();
+    return $data;
+}
+
 ?>

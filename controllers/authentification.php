@@ -1,11 +1,10 @@
 <?php
 
+session_start();
+
 require __DIR__.'/../models/user.php';
 
-require __DIR__.'/../lib/ReallySimpleJWT/src/TokenBuilder.php';
-require __DIR__.'/../lib/ReallySimpleJWT/src/Token.php';
-
-require "mail.php";
+//require "mail.php";
 
 $secret_key = "SecretSecret123@";
 
@@ -25,22 +24,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mdp = generatePassword();        
         $utilisateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, false);
         setUser($utilisateur);
-        sendPassword($mdp, $email, $prenom, $nom);
+        echo $mdp;
+        // header('Location: ../views/inscription.php');
+        //sendPassword($mdp, $email, $prenom, $nom);
      } else { //connexion
         $email = test_input($_POST["email1"]);
         $mot_de_passe = test_input($_POST["pass"]);
         $ok = checkCredentials($email, $mot_de_passe);
         if ($ok) { // credentials are validated
-            $cookie_name = "conn_token";
-            $token = generateJWT($email, $mot_de_passe, $secret_key);
-            $cookie_value = $token;
-            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+            $connected = $_SESSION['connected'];
+            if (!isset($connected) || $connected == "false") {
+                $_SESSION['connected'] = "true";
+                $data = getUserByEmail($email);
+                $_SESSION['user_id'] = $data[0]; 
+            }
             header('Location: ../views/ajoutdomicile1.php');
         } else { // credentials are false
-            // set empty cookie
-            $cookie_name = "conn_token";
-            $cookie_value = "";
-            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+            $_SESSION['connected'] = "false";
             header('Location: ../views/accueil.php');
         }
    }
@@ -62,32 +62,15 @@ function generatePassword($length = 8) {
     }
      return $result;
 }
- 
-function generateJWT($email, $password, $secret) {
-    $builder = new ReallySimpleJWT\TokenBuilder();
-    $token = $builder->addPayload(['key' => 'email', 'value' => $email])
-        ->addPayload(['key' => 'password', 'value' => $password])
-        ->setSecret($secret)
-        ->setExpiration(time() + 3600)
-        ->setIssuer("http://localhost")
-        ->build();
-    return $token;
-}
- 
-function decryptToken($token, $secret) {
-    /*$validator = new ReallySimpleJWT\TokenValidator;
-    $validator->splitToken($tok)
-        ->validateExpiration()
-        ->validateSignature($secret);
-    $payload = $validator->getPayload();
-    $header = $validator->getHeader();
-    return $payload; */
-    try {
-        $result = ReallySimpleJWT\Token::validate($token, $secret);
+
+function isAuthenticated() {
+    if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
         return true;
-    } catch (Exception $e) {
+    } else {
         return false;
     }
-    return false;
 }
 
+function logout() {
+    return session_destroy();
+}
