@@ -76,8 +76,7 @@ session_start();
 	<div class= 'tabs'>
 		<ul class='tabs' id='tabs'>
 			<li><a href='#tab1'>Pièce 1</a></li>
-			<li><a href='#tab2'>Pièce 2</a></li>
-            <li><a href='#tab3'>Pièce 3</a></li>
+		
             <li id="add"><input class='button' type="button"  value='+' onclick="openModal()"/></li>
         </ul>
 

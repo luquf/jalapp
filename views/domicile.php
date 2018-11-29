@@ -77,8 +77,7 @@ session_start();
 	<div class= 'tabs'>
 		<ul class='tabs'>
 			<li><a href='#tab1'>Domicile 1</a></li>
-			<li><a href='#tab2'>Domicile 2</a></li>
-            <li><a href='#tab3'>Domicile 3</a></li>
+			
             <li><input class='button' type="button"  value='+' onclick="openModal()"/></li>
         </ul>
 
@@ -133,9 +132,7 @@ session_start();
 			<p>
 			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 1</a>
 			<br/>
-			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 2</a>
-			<br/>
-			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 3</a>
+			
 		</p>
 
 		<input id='add_piece' type="button"  value='+' onclick="openmodal1()"/>
@@ -166,29 +163,7 @@ session_start();
 		<script src="app1.js" type="text/javascript"></script>
 
 		
-		<div id='tab2'>
-			<h3> Liste des capteurs </h3>
-			<p>
-			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 1</a>
-			<br/>
-			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 2</a>
-			<br/>
-		</p>
-
-		<button id="add_piece" onclick="openModal1()"> + </button>
 		
-		</div>
-		
-		<div id='tab3'>
-			<h3> Liste des capteurs </h3>
-			<p>
-			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 1</a>
-			<br/>
-		</p>
-
-		<button id="add_piece" onclick="openModal1()"> + </button>
-		
-        </div>
 	</body>
 
 </html>
