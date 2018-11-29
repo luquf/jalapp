@@ -1,52 +1,137 @@
-body
-{
-	background-color: grey;
-	color: white;
-	background: url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed no-repeat center;
-	background-size: auto;
-}
-#bandeau
-{
-	background-color: #3A2D8C;
-	opacity : 0.9;
-	display: flex;
-	width: 100%;
-	height: 100%;
-	justify-content: space-between;
-	color: #FFF;
-}
-.logo
-{
-	margin-left: 2%;
+@media only screen and (min-width: 300px) {
+	* {
+		margin: 0 auto;
+	}
+	body
+	{
+		background-color: grey;
+		color: #515659;
+		background: url("../assets/wallpaper.png") fixed no-repeat center;
+		background-size: cover;
+		font-family: Helvetica;
+	}
+	#bandeau
+	{
+		background-color: #ffffff;
+		opacity : 0.9;
+		display: flex;
+		width: 100%;
+		height: 100px;
+		justify-content: space-between;
+		color: #515659;
+		margin-bottom: 2%; 
+	}
+	.logo
+	{
+		margin-left: 2%;
+		width: 10%; 
+		height: auto;
 
+	}
+	#FAQ
+	{
+		background-color: #ffffff;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding-bottom: 5%;
+		opacity: 0.8;
+		display: flex;
+		flex-wrap:wrap;
+		justify-content: justify;
+		padding-right: 4%;
+		padding-left: 4%;
+		padding-top: 3%;
+		padding-bottom: 3%;
+		border-radius: 10px;
+		color: #515659;
+	}
+	h2
+	{
+		font-size: 3em;
+		margin-bottom: 2%;
+	}
+	
+	.inscription, .inscription:visited
+	{
+		margin-left: 5%;
+		margin-right: 2%;
+		font-size: 1.2em;
+		color: #515659;
+		text-decoration: none;
+		color: #FFFFFF;
+
+	}
+	.inscription select {
+		font-size: 1.2em;
+		border-radius: 5px;
+	}
+	.connexion {
+		text-decoration: none;
+	}
 }
-#FAQ
-{
-	background-color: #3A2D8C;
-	margin-left: 5%;
-	margin-right: 5%;
-	padding-bottom: 5%;
-	opacity: 0.9;
-	display: flex;
-	flex-wrap:wrap;
-	justify-content: justify;
-	padding-left: 4%;
-	padding-right: 4%;
+
+@media only screen and (max-width: 1000px) {
+	body
+	{
+		background-color: grey;
+		color: #515659;
+		background: url("../assets/wallpaper.png") fixed no-repeat center;
+		background-size: cover;
+		font-family: Helvetica;
+	}
+	#bandeau
+	{
+		background-color: #ffffff;
+		opacity : 0.9;
+		display: flex;
+		width: 100%;
+		height: 120px;
+		justify-content: space-between;
+		color: #515659;
+		margin-bottom: 5%;
+		font-size: 1.5rem;
+	}
+	.logo
+	{
+		margin-left: 2%;
+		width: 90px; 
+		height: auto;
+
+	}
+	#FAQ
+	{
+		background-color: #ffffff;
+		margin-left: 3%;
+		margin-right: 3%;
+		padding-bottom: 5%;
+		opacity: 0.8;
+		display: flex;
+		flex-wrap:wrap;
+		justify-content: justify;
+		padding-left: 4%;
+		padding-right: 4%;
+		border-radius: 10px;
+		color: #515659;
+	}
+
+	h2
+	{
+		font-size: 3em;
+		margin-bottom: 3%;
+	}
+
+	.inscription
+	{
+		margin-left: 5%;
+		margin-right: 2%;
+		font-size: 1em;
+		color: #FFF;
+		text-decoration: none;
+	}
+	.connexion {
+		text-decoration: none;
+	}
 }
-h2
-{
-	font-size: 3em;
-}
-.retour
-{
-	font-size: 1.3em;
-	padding: 1%;
-}
-.inscription
-{
-	margin-left: 5%;
-	margin-right: 2%;
-	font-size: 1em;
-	color: #FFF;
-	text-decoration: none;
-}
+
+
+

@@ -51,12 +51,13 @@
         		<p>
         			<input class="input" type="submit" value="Valider"/>
    				</p>
+				   </form>
    			</div>
 			<div class="inscription">  
 				<h1>
 					M'Inscrire
 				</h1>
-				<form method="post" action="../controllers/authentification.php">
+				<form method="post" action="../controllers/inscription.php">
 				<p>
             		<input class="input" type="text" name="nom" id="nom" placeholder="Nom" size="30" maxlength="30" />
         		</p>
@@ -96,6 +97,7 @@
         		<p>
         			<input class="input" type="submit" value="Valider"/>
    				</p>
+				   </form>
    			</div>
 
 	</body>
