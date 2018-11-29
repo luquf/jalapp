@@ -6,6 +6,13 @@ session_start();
 //     header("Location: views/inscription.php");
 // }
 
+require __DIR__.'/../models/domicile.php';
+
+$dom = getDomiciles($_SESSION['user_id']);
+if (!isset($dom[0][0])) {
+	header('Location: ../views/ajoutdomicile1.php');
+}
+
 ?>
 
 <!DOCTYPE html>
