@@ -7,26 +7,32 @@
 	</head>
 
 	<body>
-		<div id="bandeau">
+	<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep"  /> 
+					<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" /> 
 				</p>
 			</div>
-			<div class="aide">
+			<div id = "domisep">
+			<h1>
+			DOMISEP
+			</h1>
+			</div>
+			<div class="inscription">
 				<p>
 				</br>	
-					<select name="Langue" id="Langue" >
-						<option value="Français">Français</option>
-						<option value="">English</option>
-					</select>
-					<a href="inscription.php" style="color:#fff;"> Connexion/Inscription </a>
-					<a href= "aide_accueil.php" style="color: #fff; text-decoration: none;">Aide </a> 
+				<select name="Langue" id="Langue" >
+					<option value="Français">Français</option>
+					<option value="Anglais">English</option>
+				</select>
+				<a class="connexion" href="inscription.php"> Connexion</a>	
+				<a class= "aide" href= "aide_accueil.php" >Aide </a>
+
 				</p>
 			</div>
-
 		</div>
-	</br>
+
+			</br>
 </br>
 </br>
 </br>

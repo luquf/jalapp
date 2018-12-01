@@ -1,43 +1,83 @@
+@media only screen and (min-width: 300px) {
+	* {
+		margin: 0 auto;
+}
 body
 {
 	background-color: grey;
-	color: white;
-	background: url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed no-repeat center;
-	background-size: auto;
-	font-family: Helvetica;
-}
+	color: #515659;
+	background: url("../assets/wallpaper.png") fixed no-repeat center;
+	background-size: cover;
+	font-family: Helvetica;}
 #bandeau
 {
-	background-color: #3A2D8C;
+	background-color: #ffffff;
 	opacity : 0.9;
 	display: flex;
 	width: 100%;
-	height: 100%;
-	color: #FFF;
+	height: 90px;
 	justify-content: space-between;
+	color: #515659;
+	margin-bottom: 2%; 
 }
 .logo
 {
-	margin-left: 2%;
 	width: 10%; 
+	height: auto;
+	margin : 1%;
+	margin-left : 2%;
+	margin-top :0.8%;
 }
-.aide
+#domisep
+	{
+	font-size: 1.4em;
+	font-family : Helvetica	;
+	color : #304045;
+	margin-left : -320px;
+	margin-top : 20px;
+
+	}
+
+.inscription, .inscription:visited
 {
-	margin-left: 5%;
-	margin-right: 2%;
-	font-size: 1em;
-	color: #FFF;
+	margin-top : 0.5%;
+	margin-right: 1%;
+	font-size: 1.2em;
+	color: #515659;
 	text-decoration: none;
+	color: #FFFFFF;
+
 }
-h1
+.inscription select {
+	font-size: 1.2em;
+	border-radius: 5px;
+	padding-right: 1%;
+	color: #515659;
+}
+.connexion {
+	text-decoration: none;
+	color: #515659;
+	font-size : 1.2em;
+}
+.aide 
+{
+	text-decoration: none;
+	font-size : 1.2em;
+	color: #515659;
+	text-decoration: none;	
+}
+#slogan h1
 {
 	font-size: 5em;
 	font-weight: bold;
 	text-align: center;
+	color : #ffffff;
+
 }
 #apropos
 {
-	background-color: #3A2D8C;
+	padding-top : 20px;
+	background-color: #ffffff;
 	margin-left: 5%;
 	margin-right: 5%;
 	opacity: 0.9;
@@ -47,8 +87,121 @@ h1
 	padding-left: 4%;
 	padding-right: 4%;
 	padding-bottom: 5%;
+	border-radius : 10px;
 }
-h2
+
+#apropos h2
 {
 	font-size: 3em;
+	padding-bottom: 25px;
+}
+
+
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+	* {
+		margin: 0 auto;
+}
+body
+{
+	background-color: grey;
+	color: #515659;
+	background: url("../assets/wallpaper.png") fixed no-repeat center;
+	background-size: cover;
+	font-family: Helvetica;}
+
+
+	#bandeau
+	{
+		background-color: #ffffff;
+		opacity : 0.9;
+		display: flex;
+		width: 100%;
+		height : 120px;
+		justify-content: space-between;
+		color: #515659;
+		font-size: 1.5rem;
+	}
+
+	.logo
+	{
+		width: 20%; 
+		margin : 2%;
+
+	}
+	#domisep 
+	 {
+		margin-left : -250px;
+		margin-top : 25px;
+		font-size : 1.3em;
+	 }
+	h2
+	{
+		font-size: 3em;
+		margin-bottom: 3%;
+	}
+
+.inscription, .inscription:visited
+{
+	margin-top : 0.5%;
+	margin-right: 1%;
+	font-size: 1em;
+	color: #515659;
+	text-decoration: none;
+	color: #FFFFFF;
+
+}
+.inscription select {
+	font-size: 1.2em;
+	border-radius: 5px;
+	padding-right: 1%;
+	color: #515659;
+}
+.connexion {
+	text-decoration: none;
+	color: #515659;
+	font-size : 1.2em;
+}
+.aide 
+{
+	text-decoration: none;
+	font-size : 1.2em;
+	color: #515659;
+	text-decoration: none;	
+}
+#slogan h1
+{
+	font-size: 5em;
+	font-weight: bold;
+	text-align: center;
+	color : #ffffff;
+
+}
+#apropos
+{
+	padding-top : 20px;
+	background-color: #ffffff;
+	margin-left: 5%;
+	margin-right: 5%;
+	opacity: 0.9;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: justify;
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-bottom: 5%;
+	border-radius : 10px;
+}
+
+#apropos h2
+{
+	font-size: 3em;
+	padding-bottom: 25px;
+}
+
 }

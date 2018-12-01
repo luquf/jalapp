@@ -36,10 +36,34 @@
 		font-size: 1.4em;
 		font-family : Helvetica	;
 		color : #304045;
-		margin-left : -510px;
+		margin-left : -330px;
 		margin-top : 20px;
 
 	}
+
+	.inscription, .inscription:visited
+	{
+		margin-top : 0.5%;
+		margin-right: 2%;
+		font-size: 1.2em;
+		color: #515659;
+		text-decoration: none;
+
+
+	}
+	.inscription select {
+		font-size: 1.2em;
+		border-radius: 5px;
+		padding-right: 1%;
+		color: #515659;
+	}
+	.connexion {
+		text-decoration: none;
+		font-size : 1.2em;
+		color: #515659;
+	}
+
+
 	#FAQ
 	{
 		background-color: #ffffff;
@@ -64,25 +88,7 @@
 		margin-bottom: 2%;
 	}
 	
-	.inscription, .inscription:visited
-	{
-		margin-top : 0.5%;
-		margin-right: 2%;
-		font-size: 1.2em;
-		color: #515659;
-		text-decoration: none;
-		color: #FFFFFF;
 
-	}
-	.inscription select {
-		font-size: 1.2em;
-		border-radius: 5px;
-		padding-right: 1%;
-	}
-	.connexion {
-		text-decoration: none;
-		font-size : 1.2em;
-	}
 }
 
 
@@ -116,6 +122,32 @@
 		margin : 2%;
 
 	}
+	
+
+	#domisep 
+	 {
+		margin-left : -250px;
+		margin-top : 25px;
+		font-size : 1.3em;
+	 }
+	h2
+	{
+		font-size: 3em;
+		margin-bottom: 3%;
+	}
+
+	.inscription
+	{
+
+		font-size: 1.2em;
+		color: #FFF;
+		text-decoration: none;
+	}
+	.connexion {
+		text-decoration: none;
+		font-size : 1.2em;
+	}
+
 	#FAQ
 	{
 		background-color: #ffffff;
@@ -136,30 +168,6 @@
 	{
 		font-size: 5em;
 		margin-bottom: 2%;
-	}
-
-	#domisep 
-	 {
-		margin-left : -250px;
-		margin-top : 25px;
-		font-size : 1.3em;
-	 }
-	h2
-	{
-		font-size: 3em;
-		margin-bottom: 3%;
-	}
-
-	.inscription
-	{
-		margin-right: 2%;
-		font-size: 1.2em;
-		color: #FFF;
-		text-decoration: none;
-	}
-	.connexion {
-		text-decoration: none;
-		font-size : 1.2em;
 	}
 }
 
