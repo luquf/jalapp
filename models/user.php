@@ -1,6 +1,6 @@
 <?php
 
-require 'db.php';
+require_once "db.php";
 
 
 // returns all the users in the database

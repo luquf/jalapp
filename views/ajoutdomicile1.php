@@ -3,7 +3,7 @@
 session_start();
 
 // if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-//     header("Location: views/inscription.php");
+//     header("Location: inscription.php");
 // }
 
 ?>
@@ -24,7 +24,7 @@ session_start();
 		<div id="bandeau">
 
 			<div class="logo">
-				<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" /> 
+				<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" /> 
 			</div>
 
 			<div id="bandeau_droite">
@@ -38,13 +38,13 @@ session_start();
 					</div>
 
 					<div>
-						<a href= "aide_accueil.php" style="color: #fff; text-decoration: none;" class="aide">Aide </a>
+						<a href= "aide_accueil.php" style="text-decoration: none;" class="aide">Aide </a>
 					</div>
 
 				</div>
 
 				<div class="deconnexion">
-					<a href="accueil.php" style="color: #fff; text-decoration: none;"> Déconnexion </a>
+					<a href="inscription.php" style="text-decoration: none;"> Déconnexion </a>
 				</div>
 			</div>
 			

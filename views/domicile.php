@@ -6,12 +6,12 @@ session_start();
 //     header("Location: views/inscription.php");
 // }
 
-require __DIR__.'/../models/domicile.php';
+// require_once __DIR__.'/../models/domicile.php';
 
-$dom = getDomiciles($_SESSION['user_id']);
-if (!isset($dom[0][0])) {
-	header('Location: ../views/ajoutdomicile1.php');
-}
+// $dom = getDomiciles($_SESSION['user_id']);
+// if (!isset($dom[0][0])) {
+// 	header('Location: ../views/ajoutdomicile1.php');
+// }
 
 ?>
 
@@ -83,7 +83,13 @@ if (!isset($dom[0][0])) {
         
 	<div class= 'tabs'>
 		<ul class='tabs'>
-			<li><a href='#tab1'>Domicile 1</a></li>
+		<?php
+			require_once __DIR__.'/../controllers/domicile.php';
+			$domiciles = getDomicilesController($_SESSION['user_id']);
+			foreach ($domiciles as $val) {
+				echo "<li><a href='#".str_replace(' ', '', $val[1])."'>".$val[1]."</a></li>";	
+			}
+			?>
 			
             <li><input class='button' type="button"  value='+' onclick="openModal()"/></li>
         </ul>
@@ -92,19 +98,10 @@ if (!isset($dom[0][0])) {
         <div id = "modal">
   			 <h1> Ajout Domicile</h1>
 			   <div class="infos"> 
-                </br>
+				</br>
+				<form method="post" action="../controllers/domicile.php">
                         <p>
-                            <input type="type" name="type" id="type" placeholder="Type de domicile : " size="30" maxlength="20"/>
-                            <input type="submit" value="Valider"/>
-                        </p>
-                        <p>
-                            <input type="rooms" name="rooms" id="rooms" placeholder="Nombre de pièces : " size="30" maxlength="20"/>
-                            <input type="submit" value="Valider"/>
-                        </p>
-			
-                        <p>
-                            <input type="capteurs" name="capteurs" id="capteurs" placeholder="Nombre de capteurs" size="30" maxlength="30" />
-                            <input type="submit" value="Valider"/>
+                            <input type="type" name="name" id="name" placeholder="Type de domicile : " size="30" maxlength="20"/>
                         </p>
                         
         </div>

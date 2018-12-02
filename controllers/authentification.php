@@ -17,17 +17,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mot_de_passe = test_input($_POST["pass"]);
     $ok = checkCredentials($email, $mot_de_passe);
     if ($ok) { // credentials are validated
-        echo "ok";
-        $connected = $_SESSION['connected'];
-        if (!isset($connected) || $connected == "false") {
-            $_SESSION['connected'] = "true";
-            $data = getUserByEmail($email);
-            $_SESSION['user_id'] = $data[0][0]; 
-        } 
-        header('Location: ../views/ajoutdomicile1.php');
+        $_SESSION['connected'] = "true"; 
+        $data = getUserByEmail($email);
+        $_SESSION['user_id'] = $data[0][0];
+        $domiciles = hasDomiciles();
+        if ($domiciles) {
+            header('Location: ../views/domicile.php');
+        } else {
+            header('Location: ../views/ajoutdomicile1.php');
+        }
     } else { // credentials are false
         $_SESSION['connected'] = "false";
-        header('Location: ../views/accueil.php');
+        // header('Location: ../views/accueil.php');
     }
 }
  
@@ -37,7 +38,16 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
- 
+
+
+function hasDomiciles() {
+    $dom = getDomiciles($_SESSION['user_id']);
+    if (!isset($dom[0][0])) {
+        return false;
+    }
+    return true;
+}
+
 
 function isAuthenticated() {
     if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {

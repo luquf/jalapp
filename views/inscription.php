@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+session_destroy();
 
 ?>
 
@@ -15,7 +17,7 @@
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" /> 
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 100%; height: auto;" /> 
 				</p>
 			</div>
 			<div class="aide">

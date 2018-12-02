@@ -3,6 +3,7 @@
 session_start();
 
 require __DIR__.'/../models/user.php';
+require 'mail.php';
 
 $nom = $prenom = $email = $adresse = $pays = $ville = $telephone = $cle_client = ""; 
 $secret_key = "SecretSecret123@";
@@ -19,9 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mdp = generatePassword();        
     $utilisateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, false);
     setUser($utilisateur);
-    echo $mdp;
-    // header('Location: ../views/inscription.php');
-    //sendPassword($mdp, $email, $prenom, $nom);
+    sendPassword($email, $nom, $prenom, $mdp);
+    header('Location: ../views/inscription.php');
 }
 
 

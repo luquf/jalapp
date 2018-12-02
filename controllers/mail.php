@@ -1,26 +1,19 @@
 <?php
 
-require __DIR__.'/../lib/mail.php';
+require __DIR__.'/../vendor/autoload.php';
 
-$mail = new PHPmailer();
-$mail->isSMTP(); // Paramétrer le Mailer pour utiliser SMTP 
-$mail->Host = 'smtp.gmail.com'; // Spécifier le serveur SMTP
-$mail->SMTPAuth = true; // Activer authentication SMTP
-$mail->Username = 'domisep.no.reply@gmail.com'; // Votre adresse email d'envoi
-$mail->Password = 'Jala123?'; // Le mot de passe de cette adresse email
-$mail->SMTPSecure = 'ssl'; // Accepter SSL
-$mail->Port = 465;
-
-$mail->setFrom('from@example.com', 'Mailer'); // Personnaliser l'envoyeur
-$mail->addAddress('leoantoineberton@gmail.com', 'Leo'); // Ajouter le destinataire
-
-$mail->Subject = 'Here is the subject';
-$mail->Body = 'This is the HTML message body';
-
-if(!$mail->send()) {
-    echo 'Erreur, message non envoyé.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
- } else {
-    echo 'Le message a bien été envoyé !';
- }
-?>
+function sendPassword($email, $nom, $prenom, $password) {
+    $mail = new PHPMailer\PHPMailer\PHPMailer;                             
+    $mail->isSMTP();                                      
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;                               
+    $mail->Username = 'domisep.no.reply@gmail.com';       
+    $mail->Password = 'Jala123?';                          
+    $mail->SMTPSecure = 'tls';                            
+    $mail->Port = 587;                                    
+    $mail->setFrom('domisep.no.reply@gmail.com', 'Domisep');
+    $mail->addAddress($email, $premom." ".$nom);     
+    $mail->Subject = 'Bienvenue chez Domisep';
+    $mail->Body    = 'Bonjour '.$prenom.', bienvenue chez Domisep. Voici votre mot de passe: '.$password;
+    $mail->send();   
+}
