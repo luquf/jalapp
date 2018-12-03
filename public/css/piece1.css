@@ -153,6 +153,15 @@ h3{
     padding-right: 9px;
 }
 
+.tabs .btn{
+    font-size: 1.2em;
+    background-color: white;
+    border: none;
+    padding-top: 2.2px;
+    padding-bottom: 3.7px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
 
 #button_modal{
 	background-color: #3A2D8C;

@@ -107,7 +107,7 @@ session_start();
         </div>
 
 		<button id ="close" onclick ="closeModal()">X</button>
-		<button id ="validation" >Valider</button>
+		<button id ="validation" oncmick="addonglet()" >Valider</button>
     	</div>
     	<script src="app.js" type="text/javascript"></script>
         <script>
@@ -165,6 +165,7 @@ session_start();
 		<button id ="validation" onclick ="closemodal1()">Valider</button>
 		</div>
 		<script src="app1.js" type="text/javascript"></script>
+		<script src="../public/js/addonglet.js" type="text/javascript"></script>
 
 		
 		

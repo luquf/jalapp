@@ -12,6 +12,7 @@ session_start();
 <html>
 	<head>
 		<meta charset="utf-8"/>
+		<script src="../public/js/addonglet.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="../public/css/piece1.css" />
         <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -259,7 +260,6 @@ session_start();
 </div>
 																
 <script src="app2.js" type="text/javascript"></script>
-<script src="../public/js/addonglet.js" type="text/javascript"></script>
 																
 <!-- Fin partie popup arthur --> 
 
