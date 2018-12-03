@@ -20,23 +20,23 @@ session_start();
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" /> 
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" />
 				</p>
 			</div>
 
 			<div class="deconnexion">
 				<p>
-                </br>	
-					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a> 
+                </br>
+					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a>
 				</p>
 			</div>
         </div>
 
         <div id="tableau" >
             <div class="infos">
-                <h2> 
+                <h2>
                     Informations
-                </h2>  
+                </h2>
 </br>
                         <p>
                             Nom : Demuijnck
@@ -44,11 +44,11 @@ session_start();
                         <p>
                             Prénom : Arthur
                         </p>
-			
+
                         <p>
-                            email : arthurdemuijnck@gmail.com 
+                            email : arthurdemuijnck@gmail.com
                         </p>
-                        <p> 
+                        <p>
                             Mot de Passe : supersuper
                         </p>
                         <p>
@@ -57,13 +57,13 @@ session_start();
                         <p>
                             Ville : Maubeuge
                         </p>
-                        
+
                 </div>
             <div class="modif_infos">
-                <h2> 
-                    Modifier les informations 
+                <h2>
+                    Modifier les informations
 
-                </h2>  
+                </h2>
                 </br>
                 <form method="post" action="../controllers/user_reglage.php">
 
@@ -89,11 +89,9 @@ session_start();
                             <input type="ville" name="ville" id="ville" placeholder="Ville" size="30" maxlength="20"/>
                         </p>
                         <input type="submit" value="Valider"/>
-                        
+
             </div>
 </div>
 
             </body>
             </html>
-
-

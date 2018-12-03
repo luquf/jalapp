@@ -17,27 +17,27 @@ session_destroy();
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 100%; height: auto;" /> 
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 100%; height: auto;" />
 				</p>
 			</div>
 			<div class="aide">
 				<p>
-				</br>	
+				</br>
 					<select class="input" name="Langue" id="Langue" style="margin-right: 10px;">
 						<option value="Français">Français</option>
 						<option value="English">English</option>
 						</select>
-					<a href= "aide_accueil.php" style="color: #fff; text-decoration: none;">Aide </a> 
+					<a href= "aide_accueil.php" style="color: #fff; text-decoration: none;">Aide </a>
 				</p>
 			</div>
-			
+
 		</div>
 
 
 		<div id="conteneur">
-			<div class="connexion"> 
+			<div class="connexion">
 				<h1>
-					Me Connecter 
+					Me Connecter
 				</h1>
     			<form method="post" action="../controllers/authentification.php">
     			<p>
@@ -55,7 +55,7 @@ session_destroy();
    				</p>
 				   </form>
    			</div>
-			<div class="inscription">  
+			<div class="inscription">
 				<h1>
 					M'Inscrire
 				</h1>

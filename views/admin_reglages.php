@@ -20,13 +20,13 @@ session_start();
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" /> 
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" />
 				</p>
 			</div>
 			<div class="deconnexion">
 				<p>
-                </br>	
-					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a> 
+                </br>
+					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a>
 				</p>
 			</div>
         </div>
@@ -36,8 +36,8 @@ session_start();
             <h1>
                 Réglages
             </h1>
-            <p>	
-			    <a href= "admin_interface.php" style="color: #fff; text-decoration: underline;">Retour </a> 
+            <p>
+			    <a href= "admin_interface.php" style="color: #fff; text-decoration: underline;">Retour </a>
                 </p>
                 <form method="post" action="../controllers/admin_reglage.php">
                         <p>

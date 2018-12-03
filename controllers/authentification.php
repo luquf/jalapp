@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else { // credentials are false
         $_SESSION['connected'] = "false";
-        // header('Location: ../views/accueil.php');
+        header('Location: ../views/inscription.php');
     }
 }
  

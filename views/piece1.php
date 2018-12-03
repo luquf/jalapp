@@ -19,22 +19,22 @@ session_start();
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 		<title>Domisep: Domicile > Pièce </title>
-   
+
 	</head>
 
 	<body>
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" /> 
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" />
 				</p>
 			</div>
-		
+
 			<div class="aide">
 				<p>
-				</br>	
-                    <a href= "Deconnexion.php" style="color: #fff; text-decoration : underline;">Déconnexion</a>			
-					<a href= "aide_accueil.php" style="color: #fff; text-decoration: underline;">Aide/Nous Contacter </a> 
+				</br>
+                    <a href= "Deconnexion.php" style="color: #fff; text-decoration : underline;">Déconnexion</a>
+					<a href= "aide_accueil.php" style="color: #fff; text-decoration: underline;">Aide/Nous Contacter </a>
 				</p>
             </div>
 </div>
@@ -69,7 +69,7 @@ session_start();
 				});
 			});
         </script>
-	
+
 	<div class="retour">
 	<a href= "domicile.php" style="color: #3A2D8C ; text-decoration : underline;"> < Retour</a>
 		</div>
@@ -77,13 +77,13 @@ session_start();
 	<div class= 'tabs'>
 		<ul class='tabs' id='tabs'>
 			<li><a href='#tab1'>Pièce 1</a></li>
-		
+
             <li id="add"><input class='button' type="button"  value='+' onclick="openModal()"/></li>
         </ul>
 
         <div id = "modal">
   			 <h1> Ajout Pièce</h1>
-			   <div class="infos"> 
+			   <div class="infos">
                 </br>
                         <p>
                             <input type="type" name="type" id="type" placeholder="Type de Pièce : " size="30" maxlength="20"/>
@@ -93,7 +93,7 @@ session_start();
                         <p>
                             <input type="capteurs" name="capteurs" id="capteurs" placeholder="Nombre de capteurs" size="30" maxlength="30" />
                             <input type="submit" value="Valider"/>
-                        </p>          
+                        </p>
         		</div>
 
 		<button id ="close" onclick ="closeModal()">X</button>
@@ -101,16 +101,16 @@ session_start();
 		</div>
 	</div>
 
-    	
+
 
 		<div id='tab1'>
-			<h3> Liste des capteurs </h3>	
+			<h3> Liste des capteurs </h3>
 			<br/>
 				<div class="container">
 				<div class="gauche" id=gauche>
 						<div class="boutton" id="button1">
 								<input type="button" name="boutton1" class="boutton_image">
-								<div class="boutton_texte"> 
+								<div class="boutton_texte">
 									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
 									<p>
 										 Lampe 1
@@ -120,7 +120,7 @@ session_start();
 						</div>
 						<div class="boutton" id="button2">
 							<input type="button" name="boutton2" class="boutton_image">
-							<div class="boutton_texte"> 
+							<div class="boutton_texte">
 								<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
 								<p>
 									 Lampe 2
@@ -130,7 +130,7 @@ session_start();
 						</div>
 						<div class="boutton" id="button3">
 							<input type="button" name="boutton3" class="boutton_image">
-							<div class="boutton_texte"> 
+							<div class="boutton_texte">
 									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
 									<p>
 										 Volet 1
@@ -140,7 +140,7 @@ session_start();
 						</div>
 						<div class="boutton" id="button4">
 							<input type="button" name="boutton4" class="boutton_image">
-							<div class="boutton_texte"> 
+							<div class="boutton_texte">
 									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
 									<p>
 										Volet 2
@@ -180,7 +180,7 @@ session_start();
 						parent.removeChild(child);
 					}
 				</script>
-			
+
 				</div>
 				<div class="droite">
 				<h3> Informations Pièce </h3>
@@ -190,7 +190,7 @@ session_start();
 		</div>
 				</div>
 
-		
+
 
 
 		<div id='tab2'>
@@ -212,63 +212,63 @@ session_start();
 
 <!-- POPUP ARTHUR -->
 
-														
+
 
 <div id = "modalpop">
 
     <div class="infos">
-    <h2> 
+    <h2>
         Historique
-    </h2>  
+    </h2>
 </br>
     <p>
 		12/11/2018 15:44 : ON
 	</p>
     <p>
 		12/11/2018 12:12 : OFF
-														                       
+
     </p>
-							
+
     <p>
-		12/11/2018 11:42 : ON    
-	</p>
-	<p> 
-		11/11/2018 23:45 : OFF    
-													                      
+		12/11/2018 11:42 : ON
 	</p>
 	<p>
-		11/11/2018 18:00 : ON  
-														                         
+		11/11/2018 23:45 : OFF
+
+	</p>
+	<p>
+		11/11/2018 18:00 : ON
+
 	</p>
 	<p>
 		11/11/2018 14:00 : OFF
-														                        
+
 	</p>
-														                        
+
 </div>
 <div class="modif_infos">
-	<h2> 
+	<h2>
     	Consommation Ampoule 4
-	</h2>  
+	</h2>
 	<p>
 	</p>
-</div>                  
+</div>
 
 
 <button id ="fermer" onclick ="closeModal2()">X</button>
 <button id ="valider" onclick ="closeModal2()">Valider</button>
 </div>
-																
+
 <script src="app2.js" type="text/javascript"></script>
-																
-<!-- Fin partie popup arthur --> 
+
+<!-- Fin partie popup arthur -->
 
 
 
 
-		<div id = "modal1">																																								
+		<div id = "modal1">
   			 <h1> Ajout Capteur</h1>
-			   <div class="infos"> 
+			   <div class="infos">
                 </br>
                         <p>
                             <input type="type" name="type" id="type" placeholder="Type de Capteur : " size="30" maxlength="20"/>
@@ -279,19 +279,19 @@ session_start();
                             <input type="capteurs" name="capteurs" id="capteurs" placeholder="titre 2" size="30" maxlength="30" />
                             <input type="submit" value="Valider"/>
                         </p>
-                        
+
         		</div>
 
 		<button id ="close" onclick ="closemodal1()">X</button>
 		<button id ="validation" onclick ="closemodal1()">Valider</button>
 		</div>
 		</div>
-		
+
 
     	<script src="app.js" type="text/javascript"></script>
 		<script src="app1.js" type="text/javascript"></script>
 
-        
+
         </div>
 	</body>
 </html>

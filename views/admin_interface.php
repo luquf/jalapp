@@ -20,20 +20,20 @@ session_start();
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" /> 
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" />
 				</p>
 			</div>
 
 			<div class="deconnexion">
 				<p>
-                </br>	
-                    <a href="admin_reglages.php" style="color : #fff; text-decoration : underline;">Préférences</a>			
-					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a> 
+                </br>
+                    <a href="admin_reglages.php" style="color : #fff; text-decoration : underline;">Préférences</a>
+					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a>
 				</p>
 			</div>
         </div>
 
-        
+
         <div id="tableau" >
             <input type="text" id="rechercher" onkeyup="tri()" placeholder="Rechercher..">
                         <table>
@@ -52,7 +52,7 @@ session_start();
             <table id="table">
                 <tbody>
                     <script type="text/javascript">
-                            function deleteRow(r) 
+                            function deleteRow(r)
                             {
                                 var i = r.parentNode.parentNode.rowIndex;
                                 document.getElementById("table").deleteRow(i);
@@ -146,7 +146,7 @@ session_start();
                                   } else {
                                     tr[i].style.display = "none";
                                   }
-                                }       
+                                }
                               }
                             }
                     </script>
@@ -154,6 +154,6 @@ session_start();
 
                 </tbody>
             </table>
-            
+
         </div>
 	</br>

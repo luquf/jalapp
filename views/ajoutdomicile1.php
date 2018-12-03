@@ -24,7 +24,7 @@ session_start();
 		<div id="bandeau">
 
 			<div class="logo">
-				<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" /> 
+				<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
 			</div>
 
 			<div id="bandeau_droite">
@@ -47,7 +47,7 @@ session_start();
 					<a href="inscription.php" style="text-decoration: none;"> Déconnexion </a>
 				</div>
 			</div>
-			
+
 
 		</div>
 
@@ -59,19 +59,19 @@ session_start();
 			</div>
 
 			<div class="textboutton"> Ajouter un domicile </div>
-			
+
 		</div>
 
 			<div id = "modal">
 				<h1> Ajout Domicile</h1>
-				<div class="infos"> 
+				<div class="infos">
 						<form method="post" action="../controllers/domicile.php">
 							<p>
 								<input type="name" name="name" id="name" placeholder="Nom du domicile : " size="30" maxlength="20"/>
-							
+
 							</p>
-						
-							
+
+
 
 
 			<button id ="close" onclick ="closeModal()">X</button>

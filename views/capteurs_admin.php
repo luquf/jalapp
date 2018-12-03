@@ -20,22 +20,22 @@ session_start();
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" /> 
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" />
 				</p>
 			</div>
 
 			<div class="deconnexion">
 				<p>
-                </br>	
-                    <a href="admin_reglages.php" style="color : #fff; text-decoration : underline;">Préférences</a>			
-					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a> 
+                </br>
+                    <a href="admin_reglages.php" style="color : #fff; text-decoration : underline;">Préférences</a>
+					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a>
 				</p>
 			</div>
         </div>
          <td><a href= "admin_interface.php" style="color: #fff; text-decoration: underline;">retour liste utilisateur </a></td>
 
-        
-                
+
+
         <div id="tableau" >
 
             <table class="identification">
@@ -56,7 +56,7 @@ session_start();
             <br>
 
 
-    <div class="principal">        
+    <div class="principal">
 
         <div>
 
@@ -64,27 +64,27 @@ session_start();
                     <script type="text/javascript">
                     /* Voici la fonction javascript qui change la propriété "display"
                     pour afficher ou non le div selon que ce soit "none" ou "block". */
-                     
+
                     function AfficherMasquerPieces()
                     {
                     divInfo = document.getElementById('pieces');
-                     
+
                     if (divInfo.style.display == 'none')
                     divInfo.style.display = 'block';
                     else
                     divInfo.style.display = 'none';
-                     
+
                     }
                     </script>
 
- 
-                    
+
+
                     <input class="domiciles" type="button" value="Domicile 1" onClick="AfficherMasquerPieces()"/>
 
         </div>
 
-                                         
-        
+
+
         <div id="pieces" style="display:none;">
 
 
@@ -92,16 +92,16 @@ session_start();
                              <script type="text/javascript">
                             /* Voici la fonction javascript qui change la propriété "display"
                             pour afficher ou non le div selon que ce soit "none" ou "block". */
-                             
+
                             function AfficherMasquerCapteurs()
                             {
                             divInfo = document.getElementById('capteurs');
-                             
+
                             if (divInfo.style.display == 'none')
                             divInfo.style.display = 'block';
                             else
                             divInfo.style.display = 'none';
-                             
+
                             }
                             </script>
 

@@ -29,4 +29,12 @@ function removeDomicileByID($id) {
     return $data;
 }
 
+function getPieces($id) {
+    $db = connectDB();
+    $stmt = $db->prepare("SELECT * FROM `pieces` WHERE id_domicile=?");
+    $stmt->execute(array($id));
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
 ?>
