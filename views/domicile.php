@@ -10,7 +10,7 @@ session_start();
 
 // $dom = getDomiciles($_SESSION['user_id']);
 // if (!isset($dom[0][0])) {
-// 	header('Location: ../views/ajoutdomicile1.php');
+//     header('Location: ../views/ajoutdomicile1.php');
 // }
 
 ?>
@@ -29,22 +29,22 @@ session_start();
   integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
   crossorigin="anonymous"></script>
   		<title>Domisep: Domicile </title>
-   
+
 	</head>
 
 	<body>
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" /> 
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 100%; height: auto;" />
 				</p>
 			</div>
-		
+
 			<div class="aide">
 				<p>
-				</br>	
-                    <a href= "Deconnexion.php" style="color: #fff; text-decoration : underline;">Déconnexion</a>			
-					<a href= "aide_accueil.php" style="color: #fff; text-decoration: underline;">Aide/Nous Contacter </a> 
+				</br>
+                    <a href= "Deconnexion.php" style="color: #fff; text-decoration : underline;">Déconnexion</a>
+					<a href= "aide_accueil.php" style="color: #fff; text-decoration: underline;">Aide/Nous Contacter </a>
 				</p>
             </div>
 </div>
@@ -80,30 +80,30 @@ session_start();
 				});
 			});
         </script>
-        
+
 	<div class= 'tabs'>
 		<ul class='tabs'>
 		<?php
-			require_once __DIR__.'/../controllers/domicile.php';
-			$domiciles = getDomicilesController($_SESSION['user_id']);
-			foreach ($domiciles as $val) {
-				echo "<li><a href='#".str_replace(' ', '', $val[1])."'>".$val[1]."</a></li>";	
-			}
-			?>
-			
+require_once __DIR__ . '/../controllers/domicile.php';
+$domiciles = getDomicilesController($_SESSION['user_id']);
+foreach ($domiciles as $val) {
+    echo "<li><a href='#" . str_replace(' ', '', $val[1]) . "'>" . $val[1] . "</a></li>";
+}
+?>
+
             <li><input class='button' type="button"  value='+' onclick="openModal()"/></li>
         </ul>
 
 
         <div id = "modal">
   			 <h1> Ajout Domicile</h1>
-			   <div class="infos"> 
+			   <div class="infos">
 				</br>
 				<form method="post" action="../controllers/domicile.php">
                         <p>
                             <input type="type" name="name" id="name" placeholder="Type de domicile : " size="30" maxlength="20"/>
                         </p>
-                        
+
         </div>
 
 		<button id ="close" onclick ="closeModal()">X</button>
@@ -125,25 +125,24 @@ session_start();
             	"<div id='tab" + num_tabs + "'>Domicile " + num_tabs + "</div>"
         	);
         	$("div#tabs").tabs("refresh");
-    			});                    
+    			});
 			});
 
 </script>
-
 
         <div id='tab1'>
 			<h3> Liste des capteurs </h3>
 			<p>
 			<a href= "piece1.php" style="background-color: #3A2D8C; color: #fff; text-decoration : underline;">Pièce 1</a>
 			<br/>
-			
+
 		</p>
 
 		<input id='add_piece' type="button"  value='+' onclick="openmodal1()"/>
 		</div>
 		<div id = "modal1">
   			 <h1> Ajout Pièce</h1>
-			   <div class="infos"> 
+			   <div class="infos">
                 <br/>
                         <p>
                             <input type="type" name="type" id="type" placeholder="Type de Pièce : " size="30" maxlength="20"/>
@@ -153,12 +152,12 @@ session_start();
                             <input type="rooms" name="rooms" id="rooms" placeholder="Nombre de capteurs : " size="30" maxlength="20"/>
                             <input type="submit" value="Valider"/>
                         </p>
-			
+
                         <p>
                             <input type="capteurs" name="capteurs" id="capteurs" placeholder="titre 3" size="30" maxlength="30" />
                             <input type="submit" value="Valider"/>
                         </p>
-                        
+
         		</div>
 
 		<button id ="close" onclick ="closemodal1()">X</button>
@@ -167,8 +166,6 @@ session_start();
 		<script src="app1.js" type="text/javascript"></script>
 		<script src="../public/js/addonglet.js" type="text/javascript"></script>
 
-		
-		
 	</body>
 
 </html>
