@@ -26,15 +26,15 @@ session_start();
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" />
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep"  />
 				</p>
 			</div>
 
 			<div class="aide">
 				<p>
 				</br>
-                    <a href= "Deconnexion.php" style="color: #fff; text-decoration : underline;">Déconnexion</a>
-					<a href= "aide_accueil.php" style="color: #fff; text-decoration: underline;">Aide/Nous Contacter </a>
+                    <a href= "Deconnexion.php" style="color: #515659; text-decoration : underline;">Déconnexion</a>
+					<a href= "aide_accueil.php" style="color: #515659; text-decoration: underline;">Aide/Nous Contacter </a>
 				</p>
             </div>
 </div>
@@ -71,15 +71,11 @@ session_start();
         </script>
 
 	<div class="retour">
-	<a href= "domicile.php" style="color: #3A2D8C ; text-decoration : underline;"> < Retour</a>
+	<a href= "domicile.php" style="color: #fff ; text-decoration : underline;"> < Retour</a>
 		</div>
 
 	<div class= 'tabs'>
-		<ul class='tabs' id='tabs'>
-			<li><a href='#tab1'>Pièce 1</a></li>
 
-            <li id="add"><input class='button' type="button"  value='+' onclick="openModal()"/></li>
-        </ul>
 
         <div id = "modal">
   			 <h1> Ajout Pièce</h1>
@@ -97,7 +93,7 @@ session_start();
         		</div>
 
 		<button id ="close" onclick ="closeModal()">X</button>
-		<button id ="validation" onclick ="addonglet()">Valider</button>
+		<button id ="validation" onclick ="closeModal()">Valider</button>
 		</div>
 	</div>
 
@@ -193,19 +189,7 @@ session_start();
 
 
 
-		<div id='tab2'>
-			<h3>Liste des Capteurs</h3>
-			<p>
-			<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
-			</p>
-		</div>
 
-		<div id='tab3'>
-			<h3>Liste des Capteurs</h3>
-			<p>
-			<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
-			</p>
-		</div>
 
 
 

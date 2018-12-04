@@ -12,7 +12,7 @@ function sendPassword($email, $nom, $prenom, $password) {
     $mail->SMTPSecure = 'tls';                            
     $mail->Port = 587;                                    
     $mail->setFrom('domisep.no.reply@gmail.com', 'Domisep');
-    $mail->addAddress($email, $premom." ".$nom);     
+    $mail->addAddress($email, $prenom." ".$nom);     
     $mail->Subject = 'Bienvenue chez Domisep';
     $mail->Body    = 'Bonjour '.$prenom.', bienvenue chez Domisep. Voici votre mot de passe: '.$password;
     $mail->send();   
