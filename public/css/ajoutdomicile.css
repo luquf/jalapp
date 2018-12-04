@@ -24,9 +24,9 @@
 
 	.logo
 	{
-		width: 10%; 
-		height: auto;
-		margin : 1%;
+		height: 0,1%;
+		width: auto; 
+		margin-bottom : 0.8%;
 		margin-left : 2%;
 		margin-top :0.8%;
 
@@ -51,6 +51,7 @@
 		justify-content: space-around;
 		margin-top: auto;
 		margin-bottom: auto;
+		padding-right: 1%;
 
 	}
 
