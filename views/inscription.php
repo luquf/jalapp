@@ -17,18 +17,11 @@ session_destroy();
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 100%; height: auto;" />
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"/>
 				</p>
 			</div>
 			<div class="aide">
-				<p>
-				</br>
-					<select class="input" name="Langue" id="Langue" style="margin-right: 10px;">
-						<option value="Français">Français</option>
-						<option value="English">English</option>
-						</select>
-					<a href= "aide_accueil.php" style="color: #fff; text-decoration: none;">Aide </a>
-				</p>
+					<a href= "aide_accueil.php">Aide </a>
 			</div>
 
 		</div>
@@ -46,12 +39,8 @@ session_destroy();
         		<p>
             		<input class="input" type="password" name="pass" id="pass" placeholder="Mot de Passe" size="30" maxlength="100" />
         		</p>
-   				<p>
-      		 		Se souvenir de moi
-       				<input type="checkbox" name="souvenir" id="souvenir" />
-       			</p>
         		<p>
-        			<input class="input" type="submit" value="Valider"/>
+        			<input class="input" type="submit" value="Se connecter"/>
    				</p>
 				   </form>
    			</div>
@@ -85,7 +74,6 @@ session_destroy();
            			<option value="Lyon">Lyon</option>
            			<option value="Marseille">Marseille</option>
            			<option value="Lille">Lille</option>
-           			<option value="Carrière-sur-Seine">Carrière-sur-Seine</option>
            			<option value="Bordeaux">Bordeaux</option>
            			<option value="Nantes">Nantes</option>
        				</select>
@@ -97,7 +85,7 @@ session_destroy();
             		<input class="input" type="text" name="cle" id="cle" placeholder="Clé client (unique)" size="30" maxlength="20" />
         		</p>
         		<p>
-        			<input class="input" type="submit" value="Valider"/>
+        			<input class="input" type="submit" value="S'inscrire"/>
    				</p>
 				   </form>
    			</div>

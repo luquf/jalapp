@@ -5,18 +5,21 @@
 	{
 		background-color: grey;
 		color: white;
-		background: url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed no-repeat center;
-		background-size: auto;
+		background: url("../assets/wallpaper.png") fixed no-repeat center;
+		background-size: cover;
 		font-family: helvetica;
+		margin: 0;
+		padding: 0;
 	}
 	
 	#conteneur
 	{
-		background-color: #3A2D8C;
+		background-color: #ffffff;
+		color: #304045;
 		margin-left: 20%;
 		margin-right: 20%;
 		padding: 2%;
-		opacity: 0.9;
+		opacity: 0.8;
 		display: flex;
 		flex-wrap:wrap;
 		justify-content: center;
@@ -38,32 +41,38 @@
 	
 	#bandeau
 	{
-		background-color: #3A2D8C;
+		background-color: #ffffff;
 		opacity : 0.9;
 		display: flex;
 		width: 100%;
 		height: 100%;
 		margin-bottom: 5%;
 		justify-content: space-between;
-		color: #fff;
-		border-radius: 10px;
+		color: #304045;
 	}
 	.logo
 	{
-		margin-left: 2%;
+		margin-left : 2%;		
+	}
+	#logo {
+		width: 25%;
+		height: auto;
 	}
 	.aide
 	{		
 		margin-right: 2%;
 		font-size: 1.05em;
-		color: #FFF;
+		color: #304045;
 		text-decoration: none;
 	}
 	
 	.input {
 		padding: 10px;
 		border-radius: 5px;
+		width: 90%;
 		border: none;
+		color: #304045;
+		border: 1px solid grey;
 	}
 	
 }
@@ -71,24 +80,23 @@
 @media only screen and (max-width: 1000px) {
 	#conteneur
 	{
-		background-color: #3A2D8C; 
+		background-color: #ffffff; 
 		margin-left: 5%;
 		margin-right: 5%;
-		padding: 2%;
-		opacity: 0.9;
-		display: flex;
-		flex-wrap:wrap;
-		flex-direction: column;
-		justify-content: center;
+		opacity: 0.8;
+		display: block;
 		border-radius: 10px;
+		text-align: center;
+		height: 80%;
+		padding-top: 5%
 	}
 
 	body
 	{
 		background-color: grey;
 		color: white;
-		background: url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed no-repeat center;
-		background-size: auto;
+		background: url("../assets/wallpaper.png") fixed no-repeat center;
+		background-size: cover;
 		font-family: helvetica;
 	}
 
@@ -107,32 +115,41 @@
 	
 	#bandeau
 	{
-		background-color: #3A2D8C;
+		background-color: #ffffff;
 		opacity : 0.9;
 		display: flex;
 		width: 100%;
 		height: 100%;
 		margin-bottom: 5%;
 		justify-content: space-between;
-		color: #fff;
-		border-radius: 10px;
+		color: #304045;
 	}
 	.logo
 	{
-		margin-left: 2%;
+		max-width: 30%;
+		height: auto;
+		margin : 1%;
+		margin-left : 2%;
+		margin-top :0.8%;
+	}
+	#logo {
+		width: 100%;
+		height: auto;
 	}
 	.aide
 	{		
 		margin-right: 2%;
 		font-size: 1.05em;
-		color: #FFF;
-		text-decoration: none;
+		color: #304045;
+		
 	}
-	
 	.input {
 		padding: 10px;
 		border-radius: 5px;
 		border: none;
+		color: #304045;
+		border: 1px solid #304045;
+		width: 75%;
 	}
 }
 
