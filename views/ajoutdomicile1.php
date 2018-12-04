@@ -24,34 +24,34 @@ session_start();
 		<div id="bandeau">
 
 			<div class="logo">
-				<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" />
+				<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
 			</div>
 
 			<div id="bandeau_droite">
 
 				<div class="aide">
-					<!-- <div>
+					<div>
 						<select name="Langue" id="Langue" >
 							<option value="Français">Français</option>
 							<option value="English">English</option>
 						</select>
-					</div> -->
+					</div>
 
 					<div>
-						<a href= "aide_accueil.php" style="text-decoration: none;" class="aide"> Aide </a>
+						<a href= "aide_accueil.php" style="text-decoration: none;" class="aide">Aide </a>
 					</div>
 
 				</div>
 
 				<div class="deconnexion">
-					<a href="inscription.php" id="deconnexion"> Déconnexion </a>
+					<a href="inscription.php" style="text-decoration: none;"> Déconnexion </a>
 				</div>
 			</div>
 
 
 		</div>
 
-
+</br></br></br></br>
 		<div class="boutton">
 
 			<div class="button_container">
