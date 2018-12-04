@@ -16,42 +16,30 @@
 		opacity : 1;
 		display: flex;
 		width: 100%;
-		height: 90px;
+		height: 100%;
 		justify-content: space-between;
 		color: #515659;
 		margin-bottom: 2%; 
 	}
 	.logo
 	{
-	
-		width: 10%; 
-		height: auto;
-		margin : 1%;
-		margin-left : 2%;
+		margin-bottom : 0.8%;
 		margin-top :0.8%;
-
+		margin-left : 2%;
+	}
+	#logo{
+		width : 25%;
+		height : auto;
 	}
 
-	.inscription, .inscription:visited
-	{
-		margin-top : 0.5%;
-		margin-right: 2%;
-		font-size: 1.2em;
-		color: #515659;
-		text-decoration: none;
 
-
-	}
-	.inscription select {
-		font-size: 1.2em;
-		border-radius: 5px;
-		padding-right: 1%;
-		color: #515659;
-	}
 	.connexion {
 		text-decoration: none;
 		font-size : 1.2em;
 		color: #515659;
+		margin : 2%;
+		margin-top : 2.5%;
+
 	}
 
 
@@ -82,12 +70,7 @@
 		margin-bottom: 2%;
 	}
 	
-
 }
-
-
-
-
 
 
 @media only screen and (max-width: 1000px) {
@@ -105,49 +88,46 @@
 		opacity : 0.9;
 		display: flex;
 		width: 100%;
-		height : 120px;
+		height : 100%;
 		justify-content: space-between;
 		color: #515659;
 		font-size: 1.5rem;
 	}
 	.logo
 	{
-		width: 20%; 
-		margin : 2%;
-
+		margin-bottom : 0.8%;
+		margin-top :0.8%;
+		margin-left : 2%;
 	}
-	
+	#logo{
+		width : 50%;
+		height : auto;
+	}
 	h2
 	{
 		font-size: 3em;
 		margin-bottom: 3%;
 	}
-
-	.inscription
-	{
-
-		font-size: 1.2em;
-		color: #FFF;
-		text-decoration: none;
-	}
 	.connexion {
 		text-decoration: none;
 		font-size : 1.2em;
+		margin-top : 3.5%;
 	}
-
 	#FAQ
 	{
-		background-color: #ffffff;
+		margin-top : 8%;
 		margin-left: 4%;
 		margin-right: 4%;
 		padding-bottom: 5%;
+		padding-left: 5%;
+		padding-right: 5%;
 		opacity: 0.8;
+		background-color: #ffffff;
 		display: flex;
 		flex-wrap:wrap;
 		justify-content: justify;
 		text-align:justify;
-		padding-left: 3%;
-		padding-right: 3%;
+		
 		border-radius: 10px;
 		color: #515659;
 		font-size : 1em;

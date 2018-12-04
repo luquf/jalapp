@@ -11,17 +11,17 @@
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" /> 
+					<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" id = "logo" alt = "Logo Domisep" title = "Logo Domisep" /> 
 				</p>
 			</div>
 
-			<div class="inscription">
+			<div class="connexion">
 				<p>
-				</br>	
-				<select name="Langue" id="Langue" >
+
+				<!-- <select name="Langue" id="Langue" >
 					<option value="Français">Français</option>
 					<option value="Anglais">English</option>
-				</select>
+				</select> -->
 				<a class="connexion" href="inscription.php"> Connexion</a>	
 				</p>
 			</div>

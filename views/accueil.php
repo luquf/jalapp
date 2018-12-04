@@ -10,17 +10,17 @@
 	<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style = "width : 300% ; height : auto"  /> 
+					<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" /> 
 				</p>
 			</div>
 
-			<div class="inscription">
+			<div class="connexion">
 				<p>
-				</br>	
-				<select name="Langue" id="Langue" >
+
+				<!-- <select name="Langue" id="Langue" >
 					<option value="Français">Français</option>
 					<option value="Anglais">English</option>
-				</select>
+				</select> -->
 				<a class="connexion" href="inscription.php"> Connexion</a>	
 				<a class= "aide" href= "aide_accueil.php" >Aide </a>
 
@@ -28,23 +28,14 @@
 			</div>
 		</div>
 
-			</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+
 		<div id="slogan">
 			<h1>
 				Domisep : La domotique en un clic !
 			</h1>
 		</div>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-</br></br></br></br></br></br>
+
+		
 		<div id="apropos">
 			<h2>
 				A propos

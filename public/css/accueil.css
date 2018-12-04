@@ -8,27 +8,31 @@ body
 	color: #515659;
 	background: url("../assets/wallpaper.png") fixed no-repeat center;
 	background-size: cover;
-	font-family: Helvetica;}
+	font-family: Helvetica;
+}
+
 #bandeau
 {
 	background-color: #ffffff;
 	opacity : 1;
 	display: flex;
 	width: 100%;
-	height: 90px;
+	height: 100%;
 	justify-content: space-between;
 	color: #515659;
 	margin-bottom: 2%; 
 }
 .logo
 {
-	max-width: 100%;
-	height: 50px;
-	margin : 1%;
 	margin-left : 2%;
-	margin-top :0.8%;
-}
+	margin-top : 0.8%;
+	margin-bottom : 0.8%;
 
+}
+#logo {
+	width : 25%;
+	height : auto;
+}
 
 
 .inscription, .inscription:visited
@@ -38,7 +42,7 @@ body
 	font-size: 1.2em;
 	color: #515659;
 	text-decoration: none;
-	color: #FFFFFF;
+
 
 }
 .inscription select {
@@ -117,7 +121,7 @@ body
 		opacity : 0.9;
 		display: flex;
 		width: 100%;
-		height : 120px;
+		height : 100%;
 		justify-content: space-between;
 		color: #515659;
 		font-size: 1.5rem;
@@ -125,10 +129,14 @@ body
 
 	.logo
 	{
-		max-height: 100%;
-		width: 20%; 
-		margin : 2%;
+		margin-left : 2%;
+		margin-top : 0.8%;
+		margin-bottom : 0.8%;
 
+	}
+	#logo {
+	width : 50%;
+	height : auto;
 	}
 
 	h2
@@ -147,12 +155,7 @@ body
 	color: #FFFFFF;
 
 }
-.inscription select {
-	font-size: 1.2em;
-	border-radius: 5px;
-	padding-right: 1%;
-	color: #515659;
-}
+
 .connexion {
 	text-decoration: none;
 	color: #515659;
