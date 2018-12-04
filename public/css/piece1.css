@@ -1,9 +1,13 @@
+
+
 body
 {
 	background: url("../assets/wallpaper.png") fixed no-repeat center;
 	color: #515659;
     background-size: cover;
-	font-family: Helvetica;
+    font-family: Helvetica;
+    margin : 0%;
+    padding:0%;
 }
 
 #bandeau
@@ -19,28 +23,21 @@ body
 }
 .logo
 {
-    width: 10%; 
-	height: auto;
-	margin : 1%;
+	margin : 0.2%;
 	margin-left : 2%;
-    margin-top :0.8%;
+    margin-top :0.2%;
 }
-#domisep
-	{
-	font-size: 1.4em;
-	font-family : Helvetica	;
-	color : #304045;
-	margin-left : -320px;
-	margin-top : 20px;
-
-	}
+#logo
+{
+    width:25%;
+    height: auto;
+}
 
 .aide
 {
-	margin-right: 2%;
-	font-size: 1.05em;
+	font-size: 1em;
 	color: #515659;
-	text-decoration: none;
+    text-decoration: none;
 }
 
 #tab1 {

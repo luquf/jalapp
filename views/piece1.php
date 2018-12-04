@@ -26,13 +26,12 @@ session_start();
 		<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep"  />
+					<a href="accueil.php"> <img src="../public/assets/logo.png" id="logo" alt = "Logo Domisep" title = "Logo Domisep"  />
 				</p>
 			</div>
 
 			<div class="aide">
 				<p>
-				</br>
                     <a href= "Deconnexion.php" style="color: #515659; text-decoration : underline;">Déconnexion</a>
 					<a href= "aide_accueil.php" style="color: #515659; text-decoration: underline;">Aide/Nous Contacter </a>
 				</p>
