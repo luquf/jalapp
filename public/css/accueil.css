@@ -22,21 +22,14 @@ body
 }
 .logo
 {
-	width: 10%; 
-	height: auto;
+	max-width: 100%;
+	height: 50px;
 	margin : 1%;
 	margin-left : 2%;
 	margin-top :0.8%;
 }
-#domisep
-	{
-	font-size: 1.4em;
-	font-family : Helvetica	;
-	color : #304045;
-	margin-left : -320px;
-	margin-top : 20px;
 
-	}
+
 
 .inscription, .inscription:visited
 {
@@ -132,16 +125,12 @@ body
 
 	.logo
 	{
+		max-height: 100%;
 		width: 20%; 
 		margin : 2%;
 
 	}
-	#domisep 
-	 {
-		margin-left : -250px;
-		margin-top : 25px;
-		font-size : 1.3em;
-	 }
+
 	h2
 	{
 		font-size: 3em;

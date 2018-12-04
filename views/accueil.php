@@ -10,14 +10,10 @@
 	<div id="bandeau">
 			<div class="logo">
 				<p>
-					<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" /> 
+					<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style = "width : 300% ; height : auto"  /> 
 				</p>
 			</div>
-			<div id = "domisep">
-			<h1>
-			DOMISEP
-			</h1>
-			</div>
+
 			<div class="inscription">
 				<p>
 				</br>	

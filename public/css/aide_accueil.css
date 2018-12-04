@@ -31,14 +31,6 @@
 		margin-top :0.8%;
 
 	}
-	#domisep
-	{
-		font-size: 1.4em;
-		font-family : Helvetica	;
-		color : #304045;
-		margin-left : -330px;
-		margin-top : 20px;
-	}
 
 	.inscription, .inscription:visited
 	{
@@ -125,13 +117,6 @@
 
 	}
 	
-
-	#domisep 
-	 {
-		margin-left : -250px;
-		margin-top : 25px;
-		font-size : 1.3em;
-	 }
 	h2
 	{
 		font-size: 3em;
