@@ -24,34 +24,20 @@ session_start();
 		<div id="bandeau">
 
 			<div class="logo">
-				<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
+				<a href="accueil.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
 			</div>
 
 			<div id="bandeau_droite">
-
-				<div class="aide">
-					<div>
-						<select name="Langue" id="Langue" >
-							<option value="Français">Français</option>
-							<option value="English">English</option>
-						</select>
+					<div class="aide">
+						<a href= "aide_accueil.php"> Aide </a>
 					</div>
-
-					<div>
-						<a href= "aide_accueil.php" style="text-decoration: none;" class="aide">Aide </a>
-					</div>
-
-				</div>
-
 				<div class="deconnexion">
-					<a href="inscription.php" style="text-decoration: none;"> Déconnexion </a>
+					<a href="inscription.php"> Déconnexion </a>
 				</div>
 			</div>
 
 
 		</div>
-
-</br></br></br></br>
 		<div class="boutton">
 
 			<div class="button_container">
@@ -70,10 +56,6 @@ session_start();
 								<input type="name" name="name" id="name" placeholder="Nom du domicile : " size="30" maxlength="20"/>
 
 							</p>
-
-
-
-
 			<button id ="close" onclick ="closeModal()">X</button>
 			<button id ="validation" onclick ="closeModal()">Valider</button>
 			</div>
