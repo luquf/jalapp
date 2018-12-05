@@ -10,17 +10,19 @@
 		background-size: cover;
 		font-family: Helvetica;
 	}
-	#bandeau
+
+#bandeau
 	{
-		background-color: #ffffff;
-		opacity : 1;
-		display: flex;
-		width: 100%;
-		height: 100%;
-		justify-content: space-between;
-		color: #515659;
-		margin-bottom: 2%; 
+	background-color: #ffffff;
+	opacity : 1;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+	color: #515659;
+	margin-bottom: 2%; 
 	}
+
 	.logo
 	{
 		margin-bottom : 0.8%;
@@ -32,16 +34,35 @@
 		height : auto;
 	}
 
-
+	.bandeau-droite
+	{
+		display : flex;
+		justify-content : space-around;
+		flex-direction: row;
+		align-items: flex-end;
+		flex-wrap : nowrap;
+		padding : 2%;
+		
+	
+	}
 	.connexion {
 		text-decoration: none;
-		font-size : 1.1em;
 		color: #515659;
-		margin : 2%;
-		margin-top : 2.5%;
-
+		font-size : 1.1em;
+		margin-top : auto;
+		margin-bottom : auto;
+		margin-right : 18%;
 	}
+	#slogan h1
+{
+	font-size: 4em;
+	font-weight: bold;
+	text-align: center;
+	color : #ffffff;
+	margin-top : 5%;
+	margin-bottom : 5%;
 
+}
 
 	#FAQ
 	{
@@ -57,17 +78,15 @@
 		padding-left: 4%;
 		padding-top: 3%;
 		padding-bottom: 3%;
-		padding-bottom: 5%;
+		padding-bottom: 2%;
 		margin-left: 8%;
 		margin-right: 8%;
 		border-radius: 10px;
+		margin-bottom : 7%;
+
 		
 	}
-	h2
-	{
-		font-size: 3em;
-		margin-bottom: 2%;
-	}
+
 	
 }
 
@@ -112,11 +131,14 @@
 		font-size : 1.2em;
 		margin-top : 3.5%;
 	}
+
+
 	#FAQ
 	{
 		margin-top : 8%;
 		margin-left: 4%;
 		margin-right: 4%;
+		margin-bottom : 7%;
 		padding-bottom: 5%;
 		padding-left: 5%;
 		padding-right: 5%;

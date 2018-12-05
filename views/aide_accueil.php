@@ -10,27 +10,31 @@
 	<body>
 		<div id="bandeau">
 			<div class="logo">
-				<p>
+				
 					<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" id = "logo" alt = "Logo Domisep" title = "Logo Domisep" /> 
-				</p>
+				
 			</div>
 
-			<div class="connexion">
-				<p>
+			<div class="bandeau-droite">
+			
 
 				<!-- <select name="Langue" id="Langue" >
 					<option value="Français">Français</option>
 					<option value="Anglais">English</option>
 				</select> -->
 				<a class="connexion" href="inscription.php"> Connexion</a>	
-				</p>
+				
 			</div>
 		</div>
 
+		<div id="slogan">
+			<h1>
+				FAQ Domisep
+			</h1>
+		</div>
+
 		<div id="FAQ">
-			<h2>
-				FAQ
-			</h2>
+	
 
 				<p>
 					Unde Rufinus ea tempestate praefectus praetorio ad discrimen trusus est ultimum. ire enim ipse compellebatur ad militem, quem exagitabat inopia simul et feritas, et alioqui coalito more in ordinarias dignitates asperum semper et saevum, ut satisfaceret atque monstraret, quam ob causam annonae convectio sit impedita.
