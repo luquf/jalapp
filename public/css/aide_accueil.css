@@ -28,14 +28,14 @@
 		margin-left : 2%;
 	}
 	#logo{
-		width : 25%;
+		width : 20%;
 		height : auto;
 	}
 
 
 	.connexion {
 		text-decoration: none;
-		font-size : 1.2em;
+		font-size : 1.1em;
 		color: #515659;
 		margin : 2%;
 		margin-top : 2.5%;
@@ -53,14 +53,13 @@
 		text-align:justify;
 		color: #515659;
 		font-size : 1.4em;
-
 		padding-right: 4%;
 		padding-left: 4%;
 		padding-top: 3%;
 		padding-bottom: 3%;
 		padding-bottom: 5%;
-		margin-left: 5%;
-		margin-right: 5%;
+		margin-left: 8%;
+		margin-right: 8%;
 		border-radius: 10px;
 		
 	}
@@ -127,7 +126,6 @@
 		flex-wrap:wrap;
 		justify-content: justify;
 		text-align:justify;
-		
 		border-radius: 10px;
 		color: #515659;
 		font-size : 1em;
