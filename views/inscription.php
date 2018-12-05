@@ -16,15 +16,21 @@ session_destroy();
 	<body>
 		<div id="bandeau">
 			<div class="logo">
-				<p>
+				
 					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"/>
-				</p>
+		
 			</div>
+
+			<div class=bandeau-droite>
+
 			<div class="aide">
-					<a href= "aide_accueil.php">Aide </a>
+					<a href= "aide_accueil.php"style="text-decoration:none">Aide </a>
 			</div>
 
 		</div>
+		
+		</div>
+
 
 
 		<div id="conteneur">

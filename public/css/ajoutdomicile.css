@@ -11,12 +11,11 @@
 	#bandeau
 	{
 		background-color: #ffffff;
-		opacity : 0.9;
+		opacity : 1;
 		display: flex;
 		flex-direction: row;
 		width: 100%;
 		height: 100%;
-		color: #515659;
 		justify-content: space-between;
 		margin-bottom: 5%;
 	}
