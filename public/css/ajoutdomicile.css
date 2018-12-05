@@ -121,24 +121,24 @@
 	}
 
 	#modal {
-		height : 300px;
-		width : 60%;
+		height : 200px;
+		width : 40%;
 		background-color :white ;
-		opacity : 0.9;
+		opacity : 1;
 		text-align : center;
-		color : black;
+		color : #515659;
 		position : absolute;
-		left : 20%;
+		margin-left : 30%;
 		transition : 0.5s;
 		top : -400px;
 	}
 
 
 	#close {
-		height : 15px;
-		width : 15px;
-		background-color : none;
-		color : black;
+		height : 20px;
+		width : 20px;
+		background-color : white;
+		color : #515659;
 		font-size:10px;
 		border : none;
 		cursor : pointer;
@@ -150,12 +150,13 @@
 
 	#validation {
 		height : 50px;
-		width : 300px;
-		background-color : #3A2D8C;
+		width : 100px;
+		background-color : #515659;
 		color : #ffffff;
 		font-size:20px;
 		border : none;
 		cursor : pointer;
+		border-radius : 5px;
 
 	}
 }

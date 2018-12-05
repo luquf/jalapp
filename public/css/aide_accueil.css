@@ -53,15 +53,13 @@
 		margin-bottom : auto;
 		margin-right : 18%;
 	}
-	#slogan h1
-{
+	#slogan h1{
 	font-size: 4em;
 	font-weight: bold;
 	text-align: center;
 	color : #ffffff;
 	margin-top : 5%;
 	margin-bottom : 5%;
-
 }
 
 	#FAQ
@@ -82,12 +80,8 @@
 		margin-left: 8%;
 		margin-right: 8%;
 		border-radius: 10px;
-		margin-bottom : 7%;
-
-		
+		margin-bottom : 7%;		
 	}
-
-	
 }
 
 
