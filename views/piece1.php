@@ -25,17 +25,16 @@ session_start();
 	<body>
 		<div id="bandeau">
 			<div class="logo">
-				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep"  />
-				</p>
+			
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"  />
+			
 			</div>
 
-			<div class="aide">
-				<p>
-				</br>
-                    <a href= "Deconnexion.php" style="color: #515659; text-decoration : underline;">Déconnexion</a>
-					<a href= "aide_accueil.php" style="color: #515659; text-decoration: underline;">Aide/Nous Contacter </a>
-				</p>
+			<div class="bandeau-droite">
+				
+                    <a href= "Deconnexion.php"  class = "deconnexion" >Déconnexion</a>
+					<a href= "aide_accueil.php" class = "aide">Aide </a>
+		
             </div>
 </div>
 

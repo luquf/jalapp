@@ -184,18 +184,17 @@ h3
 }
 
 #modal {
-    height: 300px;
-    width: 60%;
-	background-color:white ;
-	opacity: 0.9;
-    text-align: center;
-    color: black;
-	position: absolute;
-	left: 20%;
-	transition: 0.5s;
-	top: -400px;
-
-
+    height : 200px;
+    width : 40%;
+    background-color :white ;
+    opacity : 1;
+    text-align : center;
+    color : #515659;
+    position : absolute;
+    margin-left : 30%;
+    transition : 0.5s;
+    top : -400px;
+    border-radius : 5px;
 
 }
 
