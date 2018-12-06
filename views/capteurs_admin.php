@@ -19,20 +19,21 @@ session_start();
 	<body>
 		<div id="bandeau">
 			<div class="logo">
-				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" />
-				</p>
+			
+					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" id="logo"/>
+				
 			</div>
 
-			<div class="deconnexion">
-				<p>
-                </br>
-                    <a href="admin_reglages.php" style="color : #fff; text-decoration : underline;">Préférences</a>
-					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a>
-				</p>
+			<div class="bandeau-droite">
+			
+            
+                    <a href="admin_reglages.php" class = "preferences" >Préférences</a>
+					<a href= "accueil.php" class= "deconnexion">Déconnexion </a>
+		
 			</div>
         </div>
-         <td><a href= "admin_interface.php" style="color: #fff; text-decoration: underline;">retour liste utilisateur </a></td>
+
+         <a href= "admin_interface.php" class = "retour" style ="text-decoration: none"> retour liste utilisateur </a>
 
 
 
