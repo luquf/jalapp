@@ -19,15 +19,14 @@ session_start();
 	<body>
 		<div id="bandeau">
 			<div class="logo">
-				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" />
-				</p>
+		
+					<a href="accueil.php"> <img src="../public/assets/logo.png" id ="logo" alt = "Logo Domisep" title = "Logo Domisep"  />
+			
 			</div>
-			<div class="deconnexion">
-				<p>
-                </br>
-					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a>
-				</p>
+			<div class="bandeau-droite">
+			
+					<a href= "accueil.php" class = "deconnexion">Déconnexion </a>
+			
 			</div>
         </div>
 
