@@ -62,7 +62,9 @@ body
 		margin-left: 20%;
 		margin-right: 20%;
 		padding: 2%;
-		opacity: 1;
+		padding-right: 5%;
+		padding-left: 5%;
+		opacity: 0.9;
 		display: flex;
 		flex-wrap:wrap;
 		justify-content: center;
@@ -71,27 +73,47 @@ body
 		margin-top : 7%;
 	}
 
+
 	.input {
 		padding: 10px;
 		border-radius: 5px;
-		width: 90%;
+		width: 45%;
 		border: none;
 		color: #304045;
 		border: 1px solid grey;
-	
+		font-size: 0.8em;
+		box-sizing: content-box;
+		margin-top: 1%;
+	}
+	.input.input.button {
+		margin-top: 5%
 	}
 	.inscription
 	{
-		margin-left:auto;
-		margin-right: auto;
-		opacity: 1;
+		margin-left:2%;
+		margin-right: 4%;
+		opacity: 0.9;	
+		font-size: 2em;
+		text-align: center;
 	}
 	
 	.connexion
 	{
-		margin-left: auto;
-		margin-right: auto;
-		opacity: 1;	
+		margin-left:2%;
+		margin-right: 3%;
+		opacity: 0.9;	
+		font-size: 2em;
+		text-align: center;
+	}
+
+	.aide a:visited {
+		text-decoration: none;
+		color: #515659;
+	}
+	
+	.aide a {
+		text-decoration: none;
+		color: #515659;
 	}
 }
 
@@ -99,8 +121,8 @@ body
 	#conteneur
 	{
 		background-color: #ffffff; 
-		margin-left: 5%;
-		margin-right: 5%;
+		margin-left: 2%;
+		margin-right: 2%;
 		opacity: 0.8;
 		display: block;
 		border-radius: 10px;
@@ -122,13 +144,15 @@ body
 	{
 		margin-left: auto;
 		margin-right: auto;
-		opacity: 1;	
+		opacity: 1;
+		font-size: 1.4em;	
 	}
 	.inscription
 	{
 		margin-left:auto;
 		margin-right: auto;
 		opacity: 1;
+		font-size: 1.4em;
 	}
 	
 	#bandeau
@@ -138,7 +162,7 @@ body
 		display: flex;
 		width: 100%;
 		height: 100%;
-		margin-bottom: 5%;
+		margin-bottom: 2%;
 		justify-content: space-between;
 		color: #304045;
 	}
@@ -157,17 +181,34 @@ body
 	.aide
 	{		
 		margin-right: 2%;
-		font-size: 1.05em;
+		font-size: 1.5em;
 		color: #304045;
 		
 	}
+
+	.aide a:visited {
+		text-decoration: none;
+		color: #515659;
+	}
+	
+	.aide a {
+		text-decoration: none;
+		color: #515659;
+	}
+
 	.input {
-		padding: 10px;
+		padding: 20px;
 		border-radius: 5px;
 		border: none;
 		color: #304045;
 		border: 1px solid #304045;
 		width: 75%;
+		font-size: 3em;
+	}
+
+	.input.button {
+		margin-top: 5%;
+		margin-bottom: 10%;
 	}
 }
 

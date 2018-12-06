@@ -155,29 +155,6 @@ ALTER TABLE `utilisateurs`
 
 
 
--- 
--- Donnees test pour la table `utilisateurs`
--- 
-
-INSERT INTO `utilisateurs` 
-  VALUES('dcb96fe3-1023-49f9-a886-2f292bb91441', 'Berton', 'Leo', 'leoantoineberton@gmail.com', '', '14 bis rue Louis Leroux', 'Carrieres sur seine', 'France', '0651458429', 1);
-
---
--- Donnees de test pour la table `doniciles`
---
-
-INSERT INTO `domiciles` 
-  VALUES('7b6bb39c-cf71-4593-adba-ca03aebca46a', 'Domicile 1', 'dcb96fe3-1023-49f9-a886-2f292bb91441');
-
---
--- Donnees de test pour la table `pieces`
---
-
-INSERT INTO `pieces` 
-  VALUES('b0c744e8-b561-46fc-bc13-171cfa581102', 'Domicile 1', '7b6bb39c-cf71-4593-adba-ca03aebca46a');
-
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
