@@ -17,21 +17,20 @@ session_start();
 	</head>
 
 	<body>
-		<div id="bandeau">
-			<div class="logo">
-				<p>
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" style="width: 150px; height: auto;" />
-				</p>
-			</div>
 
-			<div class="deconnexion">
-				<p>
-                </br>
-                    <a href="admin_reglages.php" style="color : #fff; text-decoration : underline;">Préférences</a>
-					<a href= "accueil.php" style="color: #fff; text-decoration: underline;">Déconnexion </a>
-				</p>
-			</div>
-        </div>
+    <div id="bandeau">
+				<div class="logo">
+					<a href="accueil.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
+				</div>
+
+                <div class="bandeau_droite">
+                    <a href="admin_reglages.php" class="parametres"> Paramètres </a>
+                    <a href="accueil.php" class="deconnexion"> Déconnexion </a>
+                </div>
+			    
+
+
+		</div>
 
 
         <div id="tableau" >
@@ -58,8 +57,9 @@ session_start();
                                 document.getElementById("table").deleteRow(i);
                             }
                     </script>
+
                     <tr>
-                        <td><a href= "capteurs_admin.php" style="color: #fff; text-decoration: underline;">0000000001 </a></td>
+                        <td><a href= "capteurs_admin.php"> 0000000001 </a></td>
                         <td>Nom 1</td>
                         <td>Prenom 1</td>
                         <td>Téléphone 1</td>
@@ -67,8 +67,9 @@ session_start();
                         <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
+
                     <tr>
-                        <td><a href= "capteurs_admin.php" style="color: #fff; text-decoration: underline;">0000000002 </a></td>
+                        <td><a href= "capteurs_admin.php">0000000002 </a></td>
                         <td>Nom 2</td>
                         <td>Prenom 2</td>
                         <td>Téléphone 2</td>
@@ -76,8 +77,9 @@ session_start();
                         <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
+
                     <tr>
-                        <td><a href= "capteurs_admin.php" style="color: #fff; text-decoration: underline;">0000000003 </a></td>
+                        <td><a href= "capteurs_admin.php">0000000003 </a></td>
                         <td>Nom 3</td>
                         <td>Prenom 3</td>
                         <td>Téléphone 3</td>
@@ -85,8 +87,9 @@ session_start();
                         <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
+
                     <tr>
-                        <td><a href= "capteurs_admin.php" style="color: #fff; text-decoration: underline;">0000000004 </a></td>
+                        <td><a href= "capteurs_admin.php">0000000004 </a></td>
                         <td>Nom 4</td>
                         <td>Prenom 4</td>
                         <td>Téléphone 4</td>
@@ -94,8 +97,9 @@ session_start();
                         <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
+
                     <tr>
-                        <td><a href= "capteurs_admin.php" style="color: #fff; text-decoration: underline;">0000000005 </a> </td>
+                        <td><a href= "capteurs_admin.php">0000000005 </a> </td>
                         <td>Nom 5</td>
                         <td>Prenom 5</td>
                         <td>Téléphone 5</td>
@@ -103,8 +107,9 @@ session_start();
                         <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
+
                     <tr>
-                        <td><a href= "capteurs_admin.php" style="color: #fff; text-decoration: underline;">0000000006 </a> </td>
+                        <td><a href= "capteurs_admin.php">0000000006 </a> </td>
                         <td>Nom 6</td>
                         <td>Prenom 6</td>
                         <td>Téléphone 6</td>
@@ -113,7 +118,7 @@ session_start();
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
                     <tr>
-                        <td><a href= "capteurs_admin.php" style="color: #fff; text-decoration: underline;">0000000007 </a></td>
+                        <td><a href= "capteurs_admin.php">0000000007 </a></td>
                         <td>Nom 7</td>
                         <td>Prenom 7</td>
                         <td>Téléphone 7</td>
@@ -121,8 +126,9 @@ session_start();
                         <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
+
                     <tr>
-                        <td><a href= "capteurs_admin.php" style="color: #fff; text-decoration: underline;">0000000008 </a></td>
+                        <td><a href= "capteurs_admin.php">0000000008 </a></td>
                         <td>Nom 8</td>
                         <td>Prenom 8</td>
                         <td>Téléphone 8</td>
@@ -130,6 +136,7 @@ session_start();
                         <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
+
                     <script>
                             function tri() {
                               var input, filter, table, tr, td, i;
