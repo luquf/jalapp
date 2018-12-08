@@ -21,12 +21,12 @@ session_start();
 		<div id="bandeau">
 			<div class="logo">
 		
-					<a href="accueil.php"> <img src="../public/assets/logo.png" id ="logo" alt = "Logo Domisep" title = "Logo Domisep"  />
+					<a href="domicile.php"> <img src="../public/assets/logo.png" id ="logo" alt = "Logo Domisep" title = "Logo Domisep"  />
 			
 			</div>
 			<div class="bandeau-droite">
 			
-					<a href= "accueil.php" class = "deconnexion">Déconnexion </a>
+					<a href= "inscription.php" class = "deconnexion">Déconnexion </a>
 			
 			</div>
         </div>
