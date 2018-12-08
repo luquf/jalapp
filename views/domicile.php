@@ -48,9 +48,9 @@ session_start();
 						<div class="settings">
 							<a href= "user_settings.php"> Réglages </a>
 						</div>
-						<div class="deconnexion">
-							<a href="inscription.php"> Déconnexion </a>
-						</div>
+					<div class="deconnexion">
+						<a href="inscription.php"> Déconnexion </a>
+					</div>
 			</div>
 
 
@@ -98,30 +98,42 @@ session_start();
 			// }
 		?>
 
-            <li class="button-add"><input class='button' type="button"  value='+' onclick="openModal()"/></li>
+            <li class="button-add"><input id='button' type="button"  value='+'/></li>
         </ul>
 
-<div class="modal1" id="myModal">
-			<div class="modal-content">
-				<span class="close">&times;</span>
-    			<h2>Ajouter une pièce</h2>
-				<form method="post" action="../controllers/piece.php">
-                        <input type="type" name="name" id="name" placeholder="Nom de la pièce : " size="30" maxlength="20"/>
-						<button id ="validation1" type="submit">Valider</button>
-			  </div>
-			</div>
-        <div id = "modal">
-  			 <h1> Ajout Domicile</h1>
-			   <div class="infos">
+
+        <div class="modal2" id="myModal2">
+			<div class="modal-content2">
+				<span class="close2">&times;</span>
+    			<h2>Ajouter un domicile</h2>
 				<form method="post" action="../controllers/domicile.php">
-                        <p>
-                            <input type="type" name="name" id="name" placeholder="Type de domicile : " size="30" maxlength="20"/>
-                        </p>
+                        <input type="type" name="name" id="name" placeholder="Nom du domicile : " size="30" maxlength="20"/>
+						<button id ="validation2" type="submit">Valider</button>
+				</form>
+			</div>
+		</div>
 
-        	</div>
 
-			<button id ="close" onclick ="closeModal()">X</button>
-			<button id ="validation" onclick="addonglet()" >Valider</button>
+		<script>
+		var modal1 = document.getElementById('myModal2');
+		var button = document.getElementById("button");
+		var span = document.getElementsByClassName("close2")[0];
+		button.onclick = function() {
+   			modal2.style.display = "block";
+		}
+		span.onclick = function() {
+    		modal2.style.display = "none";
+		}
+		validation2.onclick()=function(){
+			modal2.style.display="none";
+		}
+		
+		window.onclick = function(event) {
+    		if (event.target == modal2) {
+        		modal2.style.display = "none";
+    		}
+		}
+		</script>
 		</div>
 	</div>
 		
@@ -151,8 +163,17 @@ session_start();
 			<h3> Liste des pièces </h3>
 			<input id='add_piece' type="button"  value='+' />
 		</div>
-		
-		
+		<div class="modal1" id="myModal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+    			<h2>Ajouter une pièce</h2>
+				<form method="post" action="../controllers/piece.php">
+                        <input type="type" name="name" id="name" placeholder="Nom de la pièce : " size="30" maxlength="20"/>
+						<button id ="validation1" type="submit">Valider</button>
+				</form>
+			  </div>
+			</div>
+
 
 		<script>
 		var modal1 = document.getElementById('myModal');

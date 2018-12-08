@@ -42,25 +42,45 @@ session_start();
 		<div class="boutton">
 
 			<div class="button_container">
-			<button id = "button_modal" onclick="openModal()">+ </button>
+			<button id = "button_modal">+ </button>
 			</div>
 
 			<div class="textboutton"> Ajouter un domicile </div>
 
 		</div>
 
-			<div id = "modal">
-				<h1> Ajout Domicile</h1>
-				<div class="infos">
-						<form method="post" action="../controllers/domicile.php">
-							<p>
-								<input type="name" name="name" id="name" placeholder="Nom du domicile : " size="30" maxlength="20"/>
-
-							</p>
-			<button id ="close" onclick ="closeModal()">X</button>
-			<button id ="validation" onclick ="closeModal()">Valider</button>
+			<div class="modal1" id="myModal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+    			<h2>Ajouter un domicile</h2>
+				<form method="post" action="../controllers/domicile.php">
+                        <input type="type" name="name" id="name" placeholder="Nom du domicile : " size="30" maxlength="20"/>
+						<button id ="validation1" type="submit">Valider</button>
+				</form>
+			  </div>
 			</div>
-			<script src="app.js" type="text/javascript"></script>
+
+
+		<script>
+		var modal1 = document.getElementById('myModal');
+		var button = document.getElementById("button_modal");
+		var span = document.getElementsByClassName("close")[0];
+		button.onclick = function() {
+   			modal1.style.display = "block";
+		}
+		span.onclick = function() {
+    		modal1.style.display = "none";
+		}
+		validation1.onclick()=function(){
+			modal1.style.display="none";
+		}
+		
+		window.onclick = function(event) {
+    		if (event.target == modal1) {
+        		modal1.style.display = "none";
+    		}
+		}
+		</script>
 
 
 </body>

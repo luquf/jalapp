@@ -120,46 +120,49 @@
 		margin-bottom: 10%;
 	}
 
-	#modal {
-		height : 200px;
-		width : 40%;
-		background-color :white ;
-		opacity : 1;
-		text-align : center;
-		color : #515659;
-		position : absolute;
-		margin-left : 30%;
-		transition : 0.5s;
-		top : -400px;
+	
+	.modal1 {
+		display: none; 
+		position: fixed;
+		z-index: 1; 
+		padding-top: 100px; 
+		left: 0;
+		top: 0;
+		width: 100%; 
+		height: 100%; 
+		overflow: auto; 
+		background-color: rgb(0,0,0); 
+		background-color: rgba(0,0,0,0.4); 
+	}
+	
+	.modal-content {
+		background-color: #fefefe;
+		text-align:center;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 20%;
+	}
+	#name{
+		margin-bottom: 5%;
+	}
+	.close {
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+	h2{
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
 	}
 
-
-	#close {
-		height : 20px;
-		width : 20px;
-		background-color : white;
-		color : #515659;
-		font-size:10px;
-		border : none;
-		cursor : pointer;
-		top : 0px;
-		right : 14px;
-		position : absolute;
-
-	}
-
-	#validation {
-		height : 50px;
-		width : 100px;
-		background-color : #515659;
-		color : #ffffff;
-		font-size:20px;
-		border : none;
-		cursor : pointer;
-		border-radius : 5px;
-
-	}
-}
 
 @media only screen and (max-width: 1000px) {
 	body
@@ -268,42 +271,44 @@
 		margin-bottom: 10%;
 	}
 
-	#modal {
-		height : 300px;
-		width : 60%;
-		background-color :white ;
-		opacity : 0.9;
-		text-align : center;
-		color : black;
-		position : absolute;
-		left : 20%;
-		transition : 0.5s;
-		top : -400px;
+	.modal1 {
+		display: none; 
+		position: fixed;
+		z-index: 1; 
+		padding-top: 100px; 
+		left: 0;
+		top: 0;
+		width: 100%; 
+		height: 100%; 
+		overflow: auto; 
+		background-color: rgb(0,0,0); 
+		background-color: rgba(0,0,0,0.4); 
 	}
-
-
-	#close {
-		height : 15px;
-		width : 15px;
-		background-color : none;
-		color : black;
-		font-size:10px;
-		border : none;
-		cursor : pointer;
-		top : 0px;
-		right : 14px;
-		position : absolute;
-
+	
+	.modal-content {
+		background-color: #fefefe;
+		text-align:center;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 20%;
 	}
-
-	#validation {
-		height : 50px;
-		width : 300px;
-		background-color : #3A2D8C;
-		color : #ffffff;
-		font-size:20px;
-		border : none;
-		cursor : pointer;
-
+	#name{
+		margin-bottom: 5%;
 	}
-}
+	.close {
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+	h2{
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
