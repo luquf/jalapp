@@ -1,7 +1,4 @@
 @media only screen and (min-width: 300px) {
-	* {
-		margin: 0 auto;
-	}
 	body
 	{
 		background-color: grey;
@@ -9,6 +6,7 @@
 		background: url("../assets/wallpaper.png") fixed no-repeat center;
 		background-size: cover;
 		font-family: Helvetica;
+		margin: 0 auto;
 	}
 
 #bandeau

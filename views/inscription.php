@@ -34,12 +34,22 @@ session_destroy();
 		</div>
 
 
-
+		<div id="slogan">
+			<h1>
+				Connectez-vous !
+			</h1>
+		</div>
 		<div id="conteneur">
 			<div class="connexion">
 				<h1 class="titre">
 					<i class="fa fa-sign-in-alt fa-sm"></i> Connexion
 				</h1>
+				<?php
+				$error = $_GET['error'];
+				if (isset($error) && $error == "credentials") {
+					echo "<p style='color:red'>Email ou mot de passe erroné.</p>";
+				}
+				?>
     			<form class="conn-form" method="post" action="../controllers/authentification.php">
             		<input class="input" type="email" name="email1" id="email1" placeholder="email@example.com" size="30" maxlength="100" />
             		<input class="input" type="password" name="pass" id="pass" placeholder="********" size="30" maxlength="100" />
@@ -50,6 +60,12 @@ session_destroy();
 				<h1 class="titre">
 				<i class="fa fa-user-alt fa-xs"></i> Inscription
 				</h1>
+				<?php
+				$error = $_GET['error'];
+				if (isset($error) && $error == "alreadyexists") {
+					echo "<p style='color:red'>Cet email existe déjà.</p>";
+				}
+				?>
 				<form method="post" action="../controllers/inscription.php">
             		<input class="input" type="text" name="nom" id="nom" placeholder="Nom" size="30" maxlength="30" />
             		<input class="input" type="text" name="prénom" id="prénom" placeholder="Prenom" size="30" maxlength="30" />

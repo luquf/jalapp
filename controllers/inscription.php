@@ -17,11 +17,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ville = test_input($_POST["ville"]);
     $telephone = test_input($_POST["tel"]);
     $cle_client = test_input($_POST["cle"]);
-    $mdp = generatePassword();        
-    $utilisateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, false);
-    setUser($utilisateur);
-    sendPassword($email, $nom, $prenom, $mdp);
-    header('Location: ../views/inscription.php');
+    $mdp = generatePassword(); 
+    $exists = emailExistsInDatabase($email);
+    if ($exists) {
+        header('Location: ../views/inscription.php?error=alreadyexists');    
+    } else {
+        $utilisateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, false);
+        setUser($utilisateur);
+        sendPassword($email, $nom, $prenom, $mdp);
+        header('Location: ../views/inscription.php');
+    }      
 }
 
 
