@@ -85,11 +85,11 @@ session_start();
 	<div>
 		<ul class='tabs'>
 		<?php
-			require_once __DIR__ . '/../controllers/domicile.php';
-			$domiciles = getDomicilesController($_SESSION['user_id']);
-			foreach ($domiciles as $val) {
-				echo "<li><a href='#" . str_replace(' ', '', $val[1]) . "'>" . $val[1] . "</a></li>";
-			}
+			// require_once __DIR__ . '/../controllers/domicile.php';
+			// $domiciles = getDomicilesController($_SESSION['user_id']);
+			// foreach ($domiciles as $val) {
+			// 	echo "<li><a href='#" . str_replace(' ', '', $val[1]) . "'>" . $val[1] . "</a></li>";
+			// }
 		?>
 
             <li class="button-add"><input class='button' type="button"  value='+' onclick="openModal()"/></li>
@@ -99,7 +99,6 @@ session_start();
         <div id = "modal">
   			 <h1> Ajout Domicile</h1>
 			   <div class="infos">
-				</br>
 				<form method="post" action="../controllers/domicile.php">
                         <p>
                             <input type="type" name="name" id="name" placeholder="Type de domicile : " size="30" maxlength="20"/>
@@ -108,7 +107,7 @@ session_start();
         	</div>
 
 			<button id ="close" onclick ="closeModal()">X</button>
-			<button id ="validation" oncmick="addonglet()" >Valider</button>
+			<button id ="validation" onclick="addonglet()" >Valider</button>
 		</div>
 	</div>
 		
@@ -136,10 +135,39 @@ session_start();
 
         <div id='tab1'>
 			<h3> Liste des pièces </h3>
-			<input id='add_piece' type="button"  value='+' onclick="openmodal1()"/>
+			<input id='add_piece' type="button"  value='+' />
 		</div>
-		<script src="app1.js" type="text/javascript"></script>
-		<script src="../public/js/addonglet.js" type="text/javascript"></script>
+		
+		<div class="modal1" id="myModal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+    			<h2>Ajouter une pièce</h2>
+				<form method="post" action="../controllers/piece.php">
+                        <input type="type" name="name" id="name" placeholder="Nom de la pièce : " size="30" maxlength="20"/>
+						<button id ="validation1" >Valider</button>
+  			</div>
+		</div>
+
+		<script>
+		var modal1 = document.getElementById('myModal');
+		var button = document.getElementById("add_piece");
+		var span = document.getElementsByClassName("close")[0];
+		button.onclick = function() {
+   			modal1.style.display = "block";
+		}
+		span.onclick = function() {
+    		modal1.style.display = "none";
+		}
+		validation1.onclick()=function(){
+			modal1.style.display="none";
+		}
+		
+		window.onclick = function(event) {
+    		if (event.target == modal1) {
+        		modal1.style.display = "none";
+    		}
+		}
+		</script>
 
 	</body>
 
