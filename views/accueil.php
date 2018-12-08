@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="../public/css/accueil.css" />
+		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
 		<title>Domisep : Accueil</title>
 	</head>
 
@@ -22,7 +23,7 @@
 					<option value="Anglais">English</option>
 				</select> -->
 				<a class="connexion" href="inscription.php"> Connexion</a>	
-				<a class= "aide" href= "aide_accueil.php" >Aide </a>
+				<a class= "aide" href= "aide_accueil.php">Aide </a>
 
 		
 			</div>

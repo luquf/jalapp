@@ -13,6 +13,7 @@ session_start();
 	<head>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="../public/css/ajoutdomicile.css" />
+		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
 		<title>Domisep : Ajout d'un premier domicile</title>
 	</head>
 

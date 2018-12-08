@@ -59,42 +59,49 @@ body
 {
 		background-color: #ffffff;
 		color: #304045;
-		margin-left: 20%;
-		margin-right: 20%;
-		padding: 2%;
+		margin-left: 15%;
+		margin-right: 15%;
+		padding: 3%;
 		padding-right: 5%;
-		padding-left: 5%;
+		padding-left: 2%;
 		opacity: 0.9;
 		display: flex;
 		flex-wrap:wrap;
 		justify-content: center;
 		border-radius: 10px;
 		margin-bottom : 3%;
-		margin-top : 7%;
+		margin-top : 2%;
+		padding-bottom: 5%;
 	}
 
 
 	.input {
 		padding: 10px;
 		border-radius: 5px;
-		width: 45%;
+		width: 100%;
 		border: none;
 		color: #304045;
 		border: 1px solid grey;
-		font-size: 0.8em;
+		font-size: 0.7em;
 		box-sizing: content-box;
-		margin-top: 1%;
+		display: inline-block;
+		margin-top: 3%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.input.input.button {
-		margin-top: 5%
+		margin-top: 7%
 	}
 	.inscription
 	{
 		margin-left:2%;
 		margin-right: 4%;
 		opacity: 0.9;	
-		font-size: 2em;
+		font-size: 1.4em;
 		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	
 	.connexion
@@ -102,8 +109,10 @@ body
 		margin-left:2%;
 		margin-right: 3%;
 		opacity: 0.9;	
-		font-size: 2em;
+		font-size: 1.4em;
 		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.aide a:visited {

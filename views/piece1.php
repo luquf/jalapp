@@ -14,6 +14,7 @@ session_start();
 		<meta charset="utf-8"/>
 		<script src="../public/js/addonglet.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="../public/css/piece1.css" />
+		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
         <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
