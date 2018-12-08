@@ -14,7 +14,7 @@ session_start();
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="../public/css/ajoutdomicile.css" />
 		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-		<title>Domisep : Ajout d'un premier domicile</title>
+		<title>Domisep : Ajout domicile</title>
 	</head>
 
 	<body>

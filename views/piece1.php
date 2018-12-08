@@ -15,268 +15,81 @@ session_start();
 		<script src="../public/js/addonglet.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="../public/css/piece1.css" />
 		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-        <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-		<title>Domisep: Domicile > Pièce </title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js'></script>
+		<title>Domisep: Pièce </title>
 
 	</head>
 
 	<body>
 		<div id="bandeau">
 			<div class="logo">
-			
+
 					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"  />
-			
+
 			</div>
 
 			<div class="bandeau-droite">
-				
-                    <a href= "inscription.php"  class = "deconnexion" >Déconnexion</a>
-					<a href= "aide_accueil.php" class = "aide">Aide </a>
-		
+
+					<a href= "aide_accueil.php" class = "aide"> Aide </a>
+                    <a href= "inscription.php"  class = "deconnexion" > Déconnexion</a>
+
             </div>
-</div>
-
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$('ul.tabs').each(function(){
-					var $active, $content, $links = $(this).find('a');
-					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
-					$active.addClass('active');
-
-					$content = $($active[0].hash);
-
-					$links.not($active).each(function () {
-						$(this.hash).hide();
-					});
-
-					$(this).on('click', 'a', function(e){
-						$active.removeClass('active');
-						$content.hide();
-
-						$active = $(this);
-						$content = $(this.hash);
-
-						$active.addClass('active');
-						$content.show();
-
-						e.preventDefault();
-					});
-				});
-			});
-        </script>
-
-	<div class="retour">
-	<br/>
-	<a href= "domicile.php" style="color: #fff ; text-decoration : underline;"> < Retour</a>
 		</div>
 
-	<div class= 'tabs'>
-
-
-        <div id = "modal">
-  			 <h1> Ajout Pièce</h1>
-			   <div class="infos">
-                </br>
-                        <p>
-                            <input type="type" name="type" id="type" placeholder="Type de Pièce : " size="30" maxlength="20"/>
-                            <input type="submit" value="Valider"/>
-                        </p>
-
-                        <p>
-                            <input type="capteurs" name="capteurs" id="capteurs" placeholder="Nombre de capteurs" size="30" maxlength="30" />
-                            <input type="submit" value="Valider"/>
-                        </p>
-        		</div>
-
-		<button id ="close" onclick ="closeModal()">X</button>
-		<button id ="validation" onclick ="closeModal()">Valider</button>
+		<div id="slogan">
+			<h1>
+				Je contrôle mes capteurs !
+			</h1>
 		</div>
-	</div>
 
-
-
+		</div>
 		<div id='tab1'>
-			<h3> Liste des capteurs </h3>
-			<br/>
-				<div class="container">
-				<div class="gauche" id=gauche>
-						<div class="boutton" id="button1">
-								<input type="button" name="boutton1" class="boutton_image">
-								<div class="boutton_texte">
-									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
-									<p>
-										 Lampe 1
-									</p>
-									<input class ="delete" type="button" value="X" onclick="deletediv1(this);">
-								</div>
-						</div>
-						<div class="boutton" id="button2">
-							<input type="button" name="boutton2" class="boutton_image">
-							<div class="boutton_texte">
-								<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
-								<p>
-									 Lampe 2
-								</p>
-								<input class ="delete" type="button" value="X" onclick="deletediv2(this);">
-							</div>
-						</div>
-						<div class="boutton" id="button3">
-							<input type="button" name="boutton3" class="boutton_image">
-							<div class="boutton_texte">
-									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
-									<p>
-										 Volet 1
-									</p>
-									<input class ="delete" type="button" value="X" onclick="deletediv3(this);">
-							</div>
-						</div>
-						<div class="boutton" id="button4">
-							<input type="button" name="boutton4" class="boutton_image">
-							<div class="boutton_texte">
-									<input type="button" value="i" class="button_modalpop" onclick="openModal2()">
-									<p>
-										Volet 2
-									</p>
-									<input class ="delete" type="button" value="X" onclick="deletediv4(this);">
-							</div>
-						</div>
-						<div>
-							<p>
-							<input id='add_capteur' type="button"  value='+' onclick="openmodal1()"/>
-							</p>
-						</div>
-				</div>
-				<script>
-					function deletediv1(child)
-					{
-						var parent = document.getElementById("gauche");
-						var child = document.getElementById("button1");
-						parent.removeChild(child);
-					}
-					function deletediv2(child)
-					{
-						var parent = document.getElementById("gauche");
-						var child = document.getElementById("button2");
-						parent.removeChild(child);
-					}
-					function deletediv3(child)
-					{
-						var parent = document.getElementById("gauche");
-						var child = document.getElementById("button3");
-						parent.removeChild(child);
-					}
-					function deletediv4(child)
-					{
-						var parent = document.getElementById("gauche");
-						var child = document.getElementById("button4");
-						parent.removeChild(child);
-					}
-				</script>
-
-				</div>
-				<div class="droite">
-				<h3> Informations Pièce </h3>
-
-					<img src="conso_ampoule.JPG" style="width:500px" >
-
+			<div class="sensors-left">
+				<h1 class="titre"><i class="fa fa-hdd"></i> Capteurs</h1>
+					<ul>
+						<li>test</li>
+					</ul>
+						<input id='add_capteur' type="button"  value='+' />
+			</div>
 		</div>
-				</div>
+		<div class="modal1" id="myModal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+    			<h2>Ajouter un capteur</h2>
+				<form method="post" action="../controllers/capteur.php">
+						<input class="input" type="text" name="name" id="name" placeholder="Nom du capteur" size="30" maxlength="40"/>
+						<select class="input" id="capteur" name="capteur">
+							<option value="hum">Capteur d'humidité</option>
+							<option value="temp">Capteur de température</option>
+							<option value="fum">Capteur de fumée</option>
+							<option value="lum">Controleur de luminosité</option>
+							<option value="vol">Controleur de volet</option>
+							<option value="ch">Controleur de chauffage</option>
+						</select>
+						<button id ="validation1" type="submit">valider</button>
+				</form>
+			  </div>
+			</div>
 
 
+		<script>
+		var modal1 = document.getElementById('myModal');
+		var button = document.getElementById("add_capteur");
+		var span = document.getElementsByClassName("close")[0];
+		button.onclick = function() {
+   			modal1.style.display = "block";
+		}
+		span.onclick = function() {
+    		modal1.style.display = "none";
+		}		
+		window.onclick = function(event) {
+    		if (event.target == modal1) {
+        		modal1.style.display = "none";
+    		}
+		}
+		</script>
 
-
-
-
-
-
-
-<!-- POPUP ARTHUR -->
-
-
-
-<div id = "modalpop">
-
-    <div class="infos">
-    <h2>
-        Historique
-    </h2>
-</br>
-    <p>
-		12/11/2018 15:44 : ON
-	</p>
-    <p>
-		12/11/2018 12:12 : OFF
-
-    </p>
-
-    <p>
-		12/11/2018 11:42 : ON
-	</p>
-	<p>
-		11/11/2018 23:45 : OFF
-
-	</p>
-	<p>
-		11/11/2018 18:00 : ON
-
-	</p>
-	<p>
-		11/11/2018 14:00 : OFF
-
-	</p>
-
-</div>
-<div class="modif_infos">
-	<h2>
-    	Consommation Ampoule 4
-	</h2>
-	<p>
-	</p>
-</div>
-
-
-<button id ="fermer" onclick ="closeModal2()">X</button>
-<button id ="valider" onclick ="closeModal2()">Valider</button>
-</div>
-
-<script src="app2.js" type="text/javascript"></script>
-
-<!-- Fin partie popup arthur -->
-
-
-
-
-		<div id = "modal1">
-  			 <h1> Ajout Capteur</h1>
-			   <div class="infos">
-                </br>
-                        <p>
-                            <input type="type" name="type" id="type" placeholder="Type de Capteur : " size="30" maxlength="20"/>
-                            <input type="submit" value="Valider"/>
-                        </p>
-
-                        <p>
-                            <input type="capteurs" name="capteurs" id="capteurs" placeholder="titre 2" size="30" maxlength="30" />
-                            <input type="submit" value="Valider"/>
-                        </p>
-
-        		</div>
-
-		<button id ="close" onclick ="closemodal1()">X</button>
-		<button id ="validation" onclick ="closemodal1()">Valider</button>
-		</div>
-		</div>
-
-
-    	<script src="app.js" type="text/javascript"></script>
-		<script src="app1.js" type="text/javascript"></script>
-
-
-        </div>
 	</body>
 </html>

@@ -56,39 +56,7 @@ if (!isset($dom[0][0])) {
 
 
 		</div>
-
-
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<!-- <script>
-			$(document).ready(function(){
-				$('ul.tabs').each(function(){
-					var $active, $content, $links = $(this).find('a');
-					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
-					$active.addClass('active');
-
-					$content = $($active[0].hash);
-
-					$links.not($active).each(function () {
-						$(this.hash).hide();
-					});
-
-					$(this).on('click', 'a', function(e){
-						$active.removeClass('active');
-						$content.hide();
-
-						$active = $(this);
-						$content = $(this.hash);
-
-						$active.addClass('active');
-						$content.show();
-
-						e.preventDefault();
-					});
-
-				});
-			});
-        </script> -->
-
 	<div>
 		<ul class='tabs'>
 		<?php
@@ -143,7 +111,7 @@ if (!isset($dom[0][0])) {
 			<ul>
 				<?php
 					foreach ($pieces as $piece) {
-						echo "<li>".$piece[1]."</li>";
+						echo "<li class='list-pieces'><a href='piece1.php?piece=".$piece[0]."'>".$piece[1]."<a></li>";
 					}
 				?>
 			</ul>
