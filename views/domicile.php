@@ -20,6 +20,7 @@ session_start();
 	<head>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="../public/css/domicile.css" />
+		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
         <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

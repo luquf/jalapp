@@ -13,6 +13,7 @@ session_start();
 	<head>
 		<meta charset="utf-8"/>
         <link rel="stylesheet" href="../public/css/capteurs_admin.css" />
+        <link rel="icon" type="image/png" href="../public/assets/favicon.png" />
 		<title>Domisep : Liste des capteurs</title>
 	</head>
 
