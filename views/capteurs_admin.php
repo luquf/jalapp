@@ -21,7 +21,7 @@ session_start();
 		<div id="bandeau">
 			<div class="logo">
 			
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" id="logo"/>
+					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" id="logo"/>
 				
 			</div>
 

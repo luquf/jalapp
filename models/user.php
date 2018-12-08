@@ -15,7 +15,7 @@ function getUsers() {
 // returns a user according to the $id given in parameter
 function getUserByID($id) {
     $db = connectDB();
-    $stmt = $db->prepare('SELECT * FROM `utilisateurs` WHERE id=?');
+    $stmt = $db->prepare('SELECT * FROM `utilisateurs` WHERE cle=?');
     $stmt->execute(array($id));
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
     return $data;
@@ -125,7 +125,7 @@ function setUser($user) {
 
 function setNom($nom, $id) {
     $db = connectDB();
-    $stmt = $db->prepare('UPDATE `utilisateurs` SET nom=:nom where $cle=:id');
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET nom=:nom WHERE cle=:id');
     $stmt->bindParam(':nom', $nom);
     $stmt->bindParam(':id', $id);    
     $data = $stmt->execute();
@@ -134,16 +134,17 @@ function setNom($nom, $id) {
 
 function setPrenom($prenom, $id) {
     $db = connectDB();
-    $stmt = $db->prepare('UPDATE `utilisateurs` SET prenom=:prenom where $cle=:id');
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET prenom=:prenom WHERE cle=:id');
     $stmt->bindParam(':prenom', $prenom);
     $stmt->bindParam(':id', $id);    
     $data = $stmt->execute();
+    var_dump($data);
     return $data;
 }
 
 function setAdresse($adresse, $id) {
     $db = connectDB();
-    $stmt = $db->prepare('UPDATE `utilisateurs` SET adresse=:adresse where $cle=:id');
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET adresse=:adresse WHERE cle=:id');
     $stmt->bindParam(':adresse', $adresse);
     $stmt->bindParam(':id', $id);    
     $data = $stmt->execute();
@@ -152,7 +153,7 @@ function setAdresse($adresse, $id) {
 
 function setEmail($email, $id) {
     $db = connectDB();
-    $stmt = $db->prepare('UPDATE `utilisateurs` SET email=:email where $cle=:id');
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET email=:email WHERE cle=:id');
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':id', $id);    
     $data = $stmt->execute();
@@ -161,7 +162,7 @@ function setEmail($email, $id) {
 
 function setVille($ville, $id) {
     $db = connectDB();
-    $stmt = $db->prepare('UPDATE `utilisateurs` SET ville=:ville where $cle=:id');
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET ville=:ville WHERE cle=:id');
     $stmt->bindParam(':ville', $ville);
     $stmt->bindParam(':id', $id);    
     $data = $stmt->execute();
@@ -170,7 +171,7 @@ function setVille($ville, $id) {
 
 function isNew($email) {
     $db = connectDB();
-    $stmt = $db->prepare('UPDATE `utilisateurs` SET ville=:ville where $cle=:id');
+    $stmt = $db->prepare('UPDATE `utilisateurs` SET ville=:ville WHERE cle=:id');
     $stmt->bindParam(':ville', $ville);
     $stmt->bindParam(':id', $id);    
     $data = $stmt->execute();

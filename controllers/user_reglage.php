@@ -2,40 +2,70 @@
 
 require __DIR__."/../models/user.php";
 
+session_start();
+
 $name = $surname = $email = $password = $address = $ville = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $prenom = test_input($_POST["name"]);
-  $nom = test_input($_POST["surname"]);
+  $prenom = test_input($_POST["surname"]);
+  $nom = test_input($_POST["name"]);
   $email = test_input($_POST["email"]);
-  $mdp = test_input($_POST["pass"]);
-  $addresse = test_input($_POST["address"]);
-  $genre = test_input($_POST["ville"]);
+  $ancien = test_input($_POST["old_pass"]);
+  $nouveau = test_input($_POST["new_pass"]);
+  $adresse = test_input($_POST["address"]);
+  $ville = test_input($_POST["ville"]);
 
-  if (isset($prenom)) {
-
+  $current_user = getUserByID($_SESSION['user_id']);
+  $err = false;
+  $user_id = $_SESSION['user_id'];
+  
+  if (isset($prenom) && trim($prenom) != "") {
+    $ok = setPrenom($prenom, $user_id);
+    if (!($ok == 1)) {
+      $err = true;
+    }
   }
 
-  if (isset($prenom)) {
-
+  if (isset($nom) && trim($nom) != "") {
+    $ok = setNom($nom, $user_id);
+    if (!($ok == 1)) {
+      $err = true;
+    }
   }
 
-  if (isset($prenom)) {
-
+  if (isset($ancien) && isset($nouveau) && trim($ancien) != ""  && trim($nouveau) != "") {
+    $ok = setPassword($current_user[0][3], $ancien, $nouveau);
+    if (!($ok == 1)) {
+      $err = true;
+    }
   }
 
-  if (isset($prenom)) {
-
+  if (isset($email) && trim($email) != "") {
+    $ok = setEmail($email, $user_id);
+    if (!($ok == 1)) {
+      $err = true;
+    }
   }
 
-  if (isset($prenom)) {
-
+  if (isset($adresse) && trim($adresse) != "") {
+    $ok = setAdresse($adresse, $user_id);
+    if (!($ok == 1)) {
+      $err = true;
+    }
   }
 
-  if (isset($prenom)) {
-
+  if (isset($ville) && trim($ville) != "") {
+    $ok = setVille($ville, $user_id);
+    if (!($ok == 1)) {
+      $err = true;
+    }
   }
 
+  if ($err == true) {
+    header("Location: ../views/user_settings.php?error=true");
+  } else {
+    header("Location: ../views/user_settings.php?error=false");
+  }
 }
 
 function test_input($data) {

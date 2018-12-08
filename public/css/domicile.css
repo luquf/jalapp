@@ -55,6 +55,7 @@ body
 
 }
 
+
 .aide a:visited {
     text-decoration: none;
     color: #515659;
@@ -83,7 +84,30 @@ body
     margin-top: auto;
     margin-bottom: auto;
     text-decoration: none;
-    margin-right: 5%;
+    margin-right: 10%;
+    padding-left: 2%;
+    
+}
+
+.settings a {
+    text-decoration: none;
+    color: #515659;
+}
+
+.settings a:visited {
+    text-decoration: none;
+    color: #515659;
+}
+
+.settings{
+
+    font-size: 1.1em;
+    color: #515659;
+    text-decoration: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    margin-right: 10%;
     padding-left: 2%;
     
 }

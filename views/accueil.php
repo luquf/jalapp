@@ -11,7 +11,7 @@
 	<div id="bandeau">
 			<div class="logo">
 
-					<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" /> 
+					<a href="domicile.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" /> 
 
 			</div>
 

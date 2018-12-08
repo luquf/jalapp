@@ -3,7 +3,7 @@
 session_start();
 
 // if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-//     header("Location: views/inscription.php");
+//     header("Location: views/accueil.php");
 // }
 
 // require_once __DIR__.'/../models/domicile.php';
@@ -12,6 +12,7 @@ session_start();
 // if (!isset($dom[0][0])) {
 //     header('Location: ../views/ajoutdomicile1.php');
 // }
+
 
 ?>
 
@@ -29,6 +30,7 @@ session_start();
   src="https://code.jquery.com/jquery-1.9.1.min.js"
   integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   		<title>Domisep: Domicile </title>
 
 	</head>
@@ -36,16 +38,19 @@ session_start();
 	<body>
 		<div id="bandeau">
 				<div class="logo">
-					<a href="accueil.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
+					<a href="domicile.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
 				</div>
 
 				<div id="bandeau_droite">
 						<div class="aide">
 							<a href= "aide_accueil.php"> Aide </a>
 						</div>
-					<div class="deconnexion">
-						<a href="inscription.php"> Déconnexion </a>
-					</div>
+						<div class="settings">
+							<a href= "user_settings.php"> Réglages </a>
+						</div>
+						<div class="deconnexion">
+							<a href="inscription.php"> Déconnexion </a>
+						</div>
 			</div>
 
 
