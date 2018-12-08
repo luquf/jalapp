@@ -96,7 +96,15 @@ session_start();
             <li class="button-add"><input class='button' type="button"  value='+' onclick="openModal()"/></li>
         </ul>
 
-
+<div class="modal1" id="myModal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+    			<h2>Ajouter une pièce</h2>
+				<form method="post" action="../controllers/piece.php">
+                        <input type="type" name="name" id="name" placeholder="Nom de la pièce : " size="30" maxlength="20"/>
+						<button id ="validation1" type="submit">Valider</button>
+			  </div>
+			</div>
         <div id = "modal">
   			 <h1> Ajout Domicile</h1>
 			   <div class="infos">
@@ -139,15 +147,7 @@ session_start();
 			<input id='add_piece' type="button"  value='+' />
 		</div>
 		
-		<div class="modal1" id="myModal">
-			<div class="modal-content">
-				<span class="close">&times;</span>
-    			<h2>Ajouter une pièce</h2>
-				<form method="post" action="../controllers/piece.php">
-                        <input type="type" name="name" id="name" placeholder="Nom de la pièce : " size="30" maxlength="20"/>
-						<button id ="validation1" >Valider</button>
-  			</div>
-		</div>
+		
 
 		<script>
 		var modal1 = document.getElementById('myModal');
