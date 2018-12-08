@@ -6,12 +6,13 @@ session_start();
 //     header("Location: views/accueil.php");
 // }
 
-// require_once __DIR__.'/../models/domicile.php';
+require_once __DIR__.'/../models/domicile.php';
 
-// $dom = getDomiciles($_SESSION['user_id']);
-// if (!isset($dom[0][0])) {
-//     header('Location: ../views/ajoutdomicile1.php');
-// }
+$dom = getDomiciles($_SESSION['user_id']);
+if (!isset($dom[0][0])) {
+    header('Location: ../views/ajoutdomicile1.php');
+}
+
 
 
 ?>
@@ -58,7 +59,7 @@ session_start();
 
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script>
+		<!-- <script>
 			$(document).ready(function(){
 				$('ul.tabs').each(function(){
 					var $active, $content, $links = $(this).find('a');
@@ -86,28 +87,29 @@ session_start();
 
 				});
 			});
-        </script>
+        </script> -->
 
 	<div>
 		<ul class='tabs'>
 		<?php
-			// require_once __DIR__ . '/../controllers/domicile.php';
-			// $domiciles = getDomicilesController($_SESSION['user_id']);
-			// foreach ($domiciles as $val) {
-			// 	echo "<li><a href='#" . str_replace(' ', '', $val[1]) . "'>" . $val[1] . "</a></li>";
-			// }
+			require_once __DIR__ . '/../controllers/domicile.php';
+			if (isset($_GET['dom'])) {
+				$_SESSION['domicile_id'] = $_GET['dom'];
+			}
+			$domiciles = getDomicilesController($_SESSION['user_id']);
+			foreach ($domiciles as $val) {
+				echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "' id=".str_replace(' ', '', $val[0]).">" . $val[1] . "</a></li>";
+			}
 		?>
 
             <li class="button-add"><input id='button' type="button"  value='+'/></li>
         </ul>
-
-
         <div class="modal2" id="myModal2">
 			<div class="modal-content2">
 				<span class="close2">&times;</span>
     			<h2>Ajouter un domicile</h2>
 				<form method="post" action="../controllers/domicile.php">
-                        <input type="type" name="name" id="name" placeholder="Nom du domicile : " size="30" maxlength="20"/>
+                        <input class="input" type="type" name="name" id="name" placeholder="Nom du domicile" size="30" maxlength="40"/>
 						<button id ="validation2" type="submit">Valider</button>
 				</form>
 			</div>
@@ -115,7 +117,7 @@ session_start();
 
 
 		<script>
-		var modal1 = document.getElementById('myModal2');
+		var modal2 = document.getElementById('myModal2');
 		var button = document.getElementById("button");
 		var span = document.getElementsByClassName("close2")[0];
 		button.onclick = function() {
@@ -124,10 +126,6 @@ session_start();
 		span.onclick = function() {
     		modal2.style.display = "none";
 		}
-		validation2.onclick()=function(){
-			modal2.style.display="none";
-		}
-		
 		window.onclick = function(event) {
     		if (event.target == modal2) {
         		modal2.style.display = "none";
@@ -138,37 +136,34 @@ session_start();
 	</div>
 		
 
-    	<script src="app.js" type="text/javascript"></script>
-        <script>
-			$(document).ready(function() {
-    			$("div#tabs").tabs();
-
-    			$("button#validation").click(function() {
-
-        			var num_tabs = $("div#tabs ul li").length + 1;
-
-        			$("div#tabs ul").append(
-            			"<li><a href='#tab" + num_tabs + " class="onglet"'>Domicile " + num_tabs + "</a></li>"
-        			);
-			$("div#tabs").append(
-            	"<div id='tab" + num_tabs + "'>Domicile " + num_tabs + "</div>"
-        	);
-        	$("div#tabs").tabs("refresh");
-    			});
-			});
-
-</script>
-
         <div id='tab1'>
-			<h3> Liste des pièces </h3>
+			<?php 
+				$pieces = getPieces($_SESSION['domicile_id']);
+			?>
+			<ul>
+				<?php
+					foreach ($pieces as $piece) {
+						echo "<li>".$piece[1]."</li>";
+					}
+				?>
+			</ul>
 			<input id='add_piece' type="button"  value='+' />
 		</div>
+		<script>
+		var path = window.location.href; 
+		var url = new URL(path);
+		var dom_id = url.searchParams.get("dom");
+		if (dom_id == null) {
+			var tab1 = document.getElementById("tab1");
+			tab1.style.display = "none";
+		}
+		</script>
 		<div class="modal1" id="myModal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
     			<h2>Ajouter une pièce</h2>
 				<form method="post" action="../controllers/piece.php">
-                        <input type="type" name="name" id="name" placeholder="Nom de la pièce : " size="30" maxlength="20"/>
+                        <input class="input" type="type" name="name" id="name" placeholder="Nom de la pièce" size="30" maxlength="40"/>
 						<button id ="validation1" type="submit">Valider</button>
 				</form>
 			  </div>
@@ -184,11 +179,7 @@ session_start();
 		}
 		span.onclick = function() {
     		modal1.style.display = "none";
-		}
-		validation1.onclick()=function(){
-			modal1.style.display="none";
-		}
-		
+		}		
 		window.onclick = function(event) {
     		if (event.target == modal1) {
         		modal1.style.display = "none";

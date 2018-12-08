@@ -10,9 +10,9 @@ function getPieces($domicileid) {
     return $data;
 }
 
-function setPieces($domicileid, $nom, $pieceid) {
+function setPiece($domicileid, $nom, $pieceid) {
     $db = connectDB();
-    $stmt = $db->prepare("INSERT INTO `pieces` VALUES(':id_piece, :nom, :id_domicile')");
+    $stmt = $db->prepare("INSERT INTO `pieces` VALUES(:id_piece, :nom, :id_domicile)");
     $stmt->bindParam(':id_piece', $pieceid);
     $stmt->bindParam(':nom', $nom);
     $stmt->bindParam(':id_domicile', $domicileid);

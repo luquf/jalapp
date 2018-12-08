@@ -118,6 +118,7 @@
 		padding-left: 0.4em;
 		padding-right: 0.4em;
 		margin-bottom: 10%;
+		outline: none;
 	}
 
 	
@@ -143,6 +144,24 @@
 		border: 1px solid #888;
 		width: 20%;
 	}
+	.modal-content .input {
+		padding: 2.5%;
+    	border-radius: 5px;
+    	border: 1px solid #888;
+	}
+
+	#validation1 {
+		font-size: 1em;
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-top: 3%;
+		padding-bottom: 3%;
+		border-radius: 5px;
+		background-color: #515659;
+		color: white;
+		border: none;
+	}
+
 	#name{
 		margin-bottom: 5%;
 	}
@@ -162,7 +181,7 @@
 		text-decoration: none;
 		cursor: pointer;
 	}
-
+}
 
 @media only screen and (max-width: 1000px) {
 	body
@@ -293,6 +312,24 @@
 		border: 1px solid #888;
 		width: 20%;
 	}
+
+	.modal-content .input {
+		padding: 2.5%;
+    	border-radius: 5px;
+    	border: 1px solid #888;
+	}
+
+	#validation1 {
+		font-size: 1em;
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-top: 3%;
+		padding-bottom: 3%;
+		border-radius: 5px;
+		background-color: #515659;
+		color: white;
+		border: none;
+	}
 	#name{
 		margin-bottom: 5%;
 	}
@@ -306,9 +343,9 @@
 		font-size: 1.2em;
 		font-weight: bold;
 	}
-	.close:hover,
-	.close:focus {
+	.close:hover, .close:focus {
 		color: #000;
 		text-decoration: none;
 		cursor: pointer;
 	}
+}

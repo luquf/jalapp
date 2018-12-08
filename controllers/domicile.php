@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_id = $_SESSION['user_id'];
     $dom_id = $v4uuid = UUID::v4();
     setDomicile($nom, $dom_id, $user_id);
-    header('Location: ../views/domicile.php');
+    header('Location: ../views/domicile.php?dom='.$dom_id);
 }
 
 function getDomicilesController($id) {

@@ -10,6 +10,14 @@ function getDomiciles($userid) {
     return $data;
 }
 
+function getDomicileByID($dom_id) {
+    $db = connectDB();
+    $stmt = $db->prepare("SELECT * from `domiciles` WHERE id_domicile=?");
+    $stmt->execute(array($dom_id));
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
 function setDomicile($nom, $id, $cle) {
     $db = connectDB();
     $stmt = $db->prepare("INSERT INTO `domiciles` VALUES (:id_domicile, :nom, :cle_utilisateur)");

@@ -119,7 +119,9 @@ body
     background:#ffffff;
     border-radius: 5px;
     padding: 1%;
+    opacity: 0.9;
     padding-bottom: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #tab1 h3 {
@@ -148,26 +150,30 @@ h3
     background:#fff;
     color:#515659;
     text-decoration:none;
-    border-radius: 5px;
+    border-radius: 20px;
     padding-top: 1%;
     padding-bottom: 1%;
     padding-right: 2%;
     padding-left: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 .tabs a.active {
-    background:#515659;
+    background:#007aff;
     color:#ffffff;
-    border-radius: 5px;
+    border-radius: 20px;
     padding-top: 1%;
     padding-bottom: 1%;
     padding-right: 2%;
     padding-left: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
 .tabs #button{
-    font-size: 1.5em;
+    font-size: 1.6em;
+    outline: none;
     background-color: white;
     color: #515659;
     border: none;
@@ -175,7 +181,8 @@ h3
     padding-bottom: 0.5%;
     padding-right: 1%;
     padding-left: 1%;
-    border-radius: 5px;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -188,6 +195,8 @@ h3
     margin-left: 48%;
     width :50px;
     height:50px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -211,6 +220,7 @@ h3
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 5px;
     width: 20%;
 }
 #name{
@@ -245,7 +255,8 @@ h2{
 	position: absolute;
 	left: 20%;
 	transition: 0.5s;
-	top: -400px;
+    top: -400px;
+    
 }
 
 .modal1 {
@@ -269,7 +280,45 @@ h2{
     padding: 20px;
     border: 1px solid #888;
     width: 20%;
+    border-radius: 5px;
 }
+
+.modal-content .input {
+    padding: 2.5%;
+    border-radius: 5px;
+    border: 1px solid #888;
+}
+
+.modal-content2 .input {
+    padding: 2.5%;
+    border-radius: 5px;
+    border: 1px solid #888;
+}
+
+#validation1 {
+    font-size: 1em;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 5px;
+    background-color: #515659;
+    color: white;
+    border: none;
+}
+
+#validation2 {
+    font-size: 1em;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 5px;
+    background-color: #515659;
+    color: white;
+    border: none;
+}
+
 #name{
     margin-bottom: 5%;
 }
