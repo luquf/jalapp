@@ -52,58 +52,67 @@ if (isset($_GET['piece'])) {
 
 		</div>
 		<div id='tab1'>
-			<div class="sensors-left">
-				<h1 class="titre"><i class="fa fa-hdd"></i> Capteurs</h1>
+			<?php echo "<a href='domicile.php?dom=".$_SESSION['domicile_id']."' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Retour</b></a>";?>
+			<div class="sensor-left">
+				<h1 class="titre"><i class="fa fa-microchip fa-sm"></i> Capteurs</h1>
 					<ul class="sensor-ul-top">
 						<?php
 						require_once __DIR__.'/../controllers/capteur.php';
 						$capteurs = getCapteursController($_SESSION['piece_id']);
-						foreach ($capteurs as $capteur) {
-							echo "<li>".$capteur[1]."-".$capteur[2]."-".$capteur[3]."
-							<form method='post' action='../controllers/action.php'>
-							<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
-							<input type='hidden' value='capt_info' name='action' id='action'/>
-							<button type='submit'>informations</button>
-							</form>
-							<form method='post' action='../controllers/action.php'>
-							<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/> 
-							<input type='hidden' value='capt_delete' name='action' id='action'/>
-							<button type='submit'>supprimer</button>
-							</form>
-							<form method='post' action='../controllers/action.php'>
-							<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/> 
-							<input type='hidden' value='capt_change' name='action' id='action'/> 
-							<button type='submit'>changer</button>
-							</form>
-							</li>";
+						if (count($capteurs) == 0) {
+							echo "<li>Vous n'avez pas encore de capteurs pour cette pièce.</li>";
+						} else {
+							foreach ($capteurs as $capteur) {
+								echo "<li>".$capteur[1]."-".$capteur[2]."-".$capteur[3]."
+								<form method='post' action='../controllers/action.php'>
+								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value='capt_info' name='action' id='action'/>
+								<button type='submit'>informations</button>
+								</form>
+								<form method='post' action='../controllers/action.php'>
+								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/> 
+								<input type='hidden' value='capt_delete' name='action' id='action'/>
+								<button type='submit'>supprimer</button>
+								</form>
+								<form method='post' action='../controllers/action.php'>
+								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/> 
+								<input type='hidden' value='capt_change' name='action' id='action'/> 
+								<button type='submit'>changer</button>
+								</form>
+								</li>";
+							}
 						}
 						?>
 					</ul>
 			</div>
-			<div class="sensors-right">
-				<h1 class="titre"><i class="fa fa-cog"></i> Controleurs</h1>
+			<div class="sensor-right">
+				<h1 class="titre"><i class="fa fa-cog fa-sm"></i> Controleurs</h1>
 					<ul class="sensor-ul-bottom">
 						<?php
 							$controleurs = getControleursController($_SESSION['piece_id']);
-							foreach ($controleurs as $controleur) {
-								echo "<li>".$controleur[1]."-".$controleur[2]."-".$controleur[3].
-								"<form method='post' action='../controllers/action.php'>
-								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
-								<input type='hidden' value='cont_info' name='action' id='action'/>
-								<button type='submit'>informations</button>
-								</form>
-								<form method='post' action='../controllers/action.php'>
-								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
-								<input type='hidden' value='cont_delete' name='action' id='action'/>
-								<button type='submit'>supprimer</button>
-								</form>
-								<form method='post' action='../controllers/action.php'>
-								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
-								<input type='hidden' value='cont_change' name='action' id='action'/>
-								<input type='range' id='cont-val' name='cont-val'min='0' max='100' step='10' value=".$controleur[3].">
-								<button type='submit'>changer</button>
-								</form>
-								</li>";
+							if (count($controleurs) == 0) {
+								echo "<li>Vous n'avez pas encore de controleurs pour cette pièce.</li>";
+							} else {
+								foreach ($controleurs as $controleur) {
+									echo "<li>".$controleur[1]."-".$controleur[2]."-".$controleur[3].
+									"<form method='post' action='../controllers/action.php'>
+									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
+									<input type='hidden' value='cont_info' name='action' id='action'/>
+									<button type='submit'>informations</button>
+									</form>
+									<form method='post' action='../controllers/action.php'>
+									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
+									<input type='hidden' value='cont_delete' name='action' id='action'/>
+									<button type='submit'>supprimer</button>
+									</form>
+									<form method='post' action='../controllers/action.php'>
+									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
+									<input type='hidden' value='cont_change' name='action' id='action'/>
+									<input type='range' id='cont-val' name='cont-val'min='0' max='100' step='10' value=".$controleur[3].">
+									<button type='submit'>changer</button>
+									</form>
+									</li>";
+								}
 							}
 						?>
 					</ul>
