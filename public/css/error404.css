@@ -1,0 +1,94 @@
+@media only screen and (min-width: 300px) {
+
+    body
+    {
+        background-color: grey;
+        color: #515659;
+        background: url("../assets/wallpaper.png") fixed no-repeat center;
+        background-size: cover;
+        font-family: Helvetica;
+        margin : 0 auto;
+    }
+
+    #bandeau
+    {
+        background-color: #ffffff;
+        opacity : 1;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        color: #515659;
+        margin-bottom: 2%; 
+    }
+    .logo
+    {
+        margin-left : 2%;
+        margin-top : 0.8%;
+        margin-bottom : 0.8%;
+
+    }
+    #logo {
+        width : 15%;
+        height : auto;
+    }
+    .aide 
+    {
+        text-decoration: none;
+        font-size : 1.1em;
+        color: #515659;
+        text-decoration: none;
+        margin-top : auto;
+        margin-bottom : auto;
+        margin-right : 8%;
+    }
+    .bandeau-droite
+    {
+        display : flex;
+        justify-content : space-around;
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap : nowrap;
+        padding : 2%;
+    }
+        
+    #slogan h1
+	{
+		font-size: 4em;
+		font-weight: bold;
+		text-align: center;
+		color : #ffffff;
+		margin-top : 5%;
+		margin-bottom : 5%;
+
+    }
+
+    #slogan h2
+	{
+		font-size: 2em;
+		text-align: center;
+		color : #ffffff;
+		margin-top : 5%;
+		margin-bottom : 5%;
+
+    }
+
+    #slogan h3
+	{
+        text-align: center;
+		margin-top : 5%;
+		margin-bottom : 5%;
+
+    }
+
+    #slogan h3 a
+	{
+        text-decoration: none;
+		font-size: 2.5em;
+        text-align: center;
+		color : #ffffff;
+		margin-top : 5%;
+		margin-bottom : 5%;
+
+    }
+}

@@ -6,9 +6,11 @@ session_start();
 //     header("Location: views/inscription.php");
 // }
 
-if (isset($_GET['piece'])) {
-	$_SESSION['piece_id'] = $_GET['piece'];
-}
+// if (isset($_GET['piece'])) {
+// 	$_SESSION['piece_id'] = $_GET['piece'];
+// } else {
+// 	header("Location: error404.php");
+// }
 
 ?>
 
@@ -52,7 +54,7 @@ if (isset($_GET['piece'])) {
 		<div id='tab1'>
 			<div class="sensors-left">
 				<h1 class="titre"><i class="fa fa-hdd"></i> Capteurs</h1>
-					<ul>
+					<ul class="sensor-ul-top">
 						<?php
 						require_once __DIR__.'/../controllers/capteur.php';
 						$capteurs = getCapteursController($_SESSION['piece_id']);
@@ -64,7 +66,7 @@ if (isset($_GET['piece'])) {
 			</div>
 			<div class="sensors-right">
 				<h1 class="titre"><i class="fa fa-cog"></i> Controleurs</h1>
-					<ul>
+					<ul class="sensor-ul-bottom">
 						<?php
 							$controleurs = getControleursController($_SESSION['piece_id']);
 							foreach ($controleurs as $controleur) {
