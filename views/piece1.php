@@ -6,6 +6,10 @@ session_start();
 //     header("Location: views/inscription.php");
 // }
 
+if (isset($_GET['piece'])) {
+	$_SESSION['piece_id'] = $_GET['piece'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -49,10 +53,27 @@ session_start();
 			<div class="sensors-left">
 				<h1 class="titre"><i class="fa fa-hdd"></i> Capteurs</h1>
 					<ul>
-						<li>test</li>
+						<?php
+						require_once __DIR__.'/../controllers/capteur.php';
+						$capteurs = getCapteursController($_SESSION['piece_id']);
+						foreach ($capteurs as $capteur) {
+							echo "<li>".$capteur[1]."-".$capteur[2]."-".$capteur[3]."</li>";
+						}
+						?>
 					</ul>
-						<input id='add_capteur' type="button"  value='+' />
 			</div>
+			<div class="sensors-right">
+				<h1 class="titre"><i class="fa fa-cog"></i> Controleurs</h1>
+					<ul>
+						<?php
+							$controleurs = getControleursController($_SESSION['piece_id']);
+							foreach ($controleurs as $controleur) {
+								echo "<li>".$controleur[1]."-".$controleur[2]."-".$controleur[3]."</li>";
+							}
+						?>
+					</ul>
+			</div>
+			<input id='add_capteur' type="button"  value='+' />
 		</div>
 		<div class="modal1" id="myModal">
 			<div class="modal-content">
