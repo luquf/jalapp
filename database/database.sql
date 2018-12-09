@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  jeu. 25 oct. 2018 à 08:55
--- Version du serveur :  10.1.36-MariaDB
--- Version de PHP :  7.2.11
+-- Généré le :  Dim 09 déc. 2018 à 11:23
+-- Version du serveur :  10.1.37-MariaDB
+-- Version de PHP :  7.2.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,10 +30,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `capteurs` (
   `id_capteur` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nom` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` enum('HUM','FUM','TEMP','') COLLATE utf8mb4_unicode_ci NOT NULL,
   `etat` enum('ON','OFF','','') COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_piece` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- --------------------------------------------------------
 
@@ -43,10 +45,13 @@ CREATE TABLE `capteurs` (
 
 CREATE TABLE `controleurs` (
   `id_controleur` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nom` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` enum('LUM','CH','VOL','') COLLATE utf8mb4_unicode_ci NOT NULL,
   `etat` int(11) NOT NULL,
   `id_piece` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
 
 -- --------------------------------------------------------
 
@@ -55,10 +60,12 @@ CREATE TABLE `controleurs` (
 --
 
 CREATE TABLE `domiciles` (
-  `id_domicile` varchar(100) NOT NULL,
+  `id_domicile` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nom` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cle_utilisateur` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
 
 -- --------------------------------------------------------
 
@@ -71,6 +78,7 @@ CREATE TABLE `pieces` (
   `nom` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_domicile` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- --------------------------------------------------------
 
@@ -113,9 +121,10 @@ CREATE TABLE `utilisateurs` (
   `adresse` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ville` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `pays` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `telephone` varchar(10)COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telephone` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 --
 -- Index pour les tables déchargées
@@ -133,13 +142,11 @@ ALTER TABLE `capteurs`
 ALTER TABLE `controleurs`
   ADD PRIMARY KEY (`id_controleur`);
 
-
 --
 -- Index pour la table `domiciles`
 --
 ALTER TABLE `domiciles`
   ADD PRIMARY KEY (`id_domicile`);
-
 
 --
 -- Index pour la table `pieces`
@@ -152,8 +159,7 @@ ALTER TABLE `pieces`
 --
 ALTER TABLE `utilisateurs`
   ADD PRIMARY KEY (`cle`);
-
-
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

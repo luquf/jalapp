@@ -2,4 +2,4 @@
 APP A2
 
 # Déploiement
-```$ docker-compose up -d```
+First, replace ```localhost``` by ```db``` in models and then hit a simple ```$ docker-compose up -d```
