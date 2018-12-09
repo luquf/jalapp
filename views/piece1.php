@@ -62,17 +62,17 @@ if (isset($_GET['piece'])) {
 							echo "<li>".$capteur[1]."-".$capteur[2]."-".$capteur[3]."
 							<form method='post' action='../controllers/action.php'>
 							<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
-							<input type='hidden' value='info' name='action' id='action'/>
+							<input type='hidden' value='capt_info' name='action' id='action'/>
 							<button type='submit'>informations</button>
 							</form>
 							<form method='post' action='../controllers/action.php'>
 							<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/> 
-							<input type='hidden' value='delete' name='action' id='action'/>
+							<input type='hidden' value='capt_delete' name='action' id='action'/>
 							<button type='submit'>supprimer</button>
 							</form>
 							<form method='post' action='../controllers/action.php'>
 							<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/> 
-							<input type='hidden' value='changer' name='action' id='action'/> 
+							<input type='hidden' value='capt_change' name='action' id='action'/> 
 							<button type='submit'>changer</button>
 							</form>
 							</li>";
@@ -86,7 +86,24 @@ if (isset($_GET['piece'])) {
 						<?php
 							$controleurs = getControleursController($_SESSION['piece_id']);
 							foreach ($controleurs as $controleur) {
-								echo "<li>".$controleur[1]."-".$controleur[2]."-".$controleur[3]."</li>";
+								echo "<li>".$controleur[1]."-".$controleur[2]."-".$controleur[3].
+								"<form method='post' action='../controllers/action.php'>
+								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value='cont_info' name='action' id='action'/>
+								<button type='submit'>informations</button>
+								</form>
+								<form method='post' action='../controllers/action.php'>
+								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
+								<input type='hidden' value='cont_delete' name='action' id='action'/>
+								<button type='submit'>supprimer</button>
+								</form>
+								<form method='post' action='../controllers/action.php'>
+								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
+								<input type='hidden' value='cont_change' name='action' id='action'/>
+								<input type='range' id='cont-val' name='cont-val'min='0' max='100' step='10' value=".$controleur[3].">
+								<button type='submit'>changer</button>
+								</form>
+								</li>";
 							}
 						?>
 					</ul>

@@ -70,6 +70,16 @@ function setControleur($controleurid, $nom, $type, $etat, $pieceid) {
     return $data;
 }
 
+function setControleurState($controleurid, $etat) {
+    $db = connectDB();
+    $stmt = $db->prepare("UPDATE `controleurs` SET etat=:etat WHERE id_controleur=:controleurid");
+    $stmt->bindParam(':etat', $etat);
+    $stmt->bindParam(':controleurid', $controleurid);
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
 function removeControleur($controleurid) {
     $db = connectDB();
     $stmt = $db->prepare("DELETE FROM `controleurs` WHERE id_controleur=?");
