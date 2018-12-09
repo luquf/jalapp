@@ -10,6 +10,24 @@ function getCapteurs($pieceid) {
     return $data;
 }
 
+function getCapteurState($capteurid) {
+    $db = connectDB();
+    $stmt = $db->prepare("SELECT etat from `capteurs` WHERE id_capteur=?");
+    $stmt->execute(array($capteurid));
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
+function setCapteurState($capteurid, $etat) {
+    $db = connectDB();
+    $stmt = $db->prepare("UPDATE `capteurs` SET etat=:etat WHERE id_capteur=:capteurid");
+    $stmt->bindParam(':etat', $etat);
+    $stmt->bindParam(':capteurid', $capteurid);
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
 function setCapteur($capteurid, $nom, $type, $etat, $pieceid) {
     $db = connectDB();
     $stmt = $db->prepare("INSERT INTO `capteurs` VALUES(:id_capteur, :nom, :typ, :etat, :id_piece)");
