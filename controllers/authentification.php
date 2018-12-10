@@ -21,10 +21,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $data = getUserByEmail($email);
         $_SESSION['user_id'] = $data[0][0];
         $domiciles = hasDomiciles();
-        if ($domiciles) {
-            header('Location: ../views/domicile.php');
+        if ($data[0][9] == 1) {
+            $_SESSION['is_admin'] = 1;
+            header('Location: ../views/admin_interface.php');
         } else {
-            header('Location: ../views/ajoutdomicile1.php');
+            $_SESSION['is_admin'] = 0;
+            if ($domiciles) {
+                header('Location: ../views/domicile.php');
+            } else {
+                header('Location: ../views/ajoutdomicile1.php');
+            }
         }
     } else { // credentials are false
         $_SESSION['connected'] = "false";
