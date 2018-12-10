@@ -36,21 +36,20 @@ session_start();
 
         <div id="tableau" >
             <input type="text" id="rechercher" onkeyup="tri()" placeholder="Rechercher..">
-                        <table>
+            <table>
                 <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Téléphone</th>
-                    <th>Email</th>
-                    <th>Dernière connexion</th>
-                    <th>Supprimer un utilisateur</th>
-                </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Téléphone</th>
+                        <th>Email</th>
+                    </tr>
                 </thead>
-            </table>
-            <table id="table">
-                <tbody>
+
+
+                <tbody id="table">
+                    
                     <script type="text/javascript">
                             function deleteRow(r)
                             {
@@ -60,81 +59,73 @@ session_start();
                     </script>
 
                     <tr>
-                        <td><a href= "capteurs_admin.php"> 0000000001 </a></td>
+                        <td><a href= "capteurs_admin.php" class="lien_ID"> 0000000001 </a></td>
                         <td>Nom 1</td>
                         <td>Prenom 1</td>
-                        <td>Téléphone 1</td>
+                        <td>0633058516</td>
                         <td>Email@email.com</td>
-                        <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
 
                     <tr>
-                        <td><a href= "capteurs_admin.php">0000000002 </a></td>
+                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000002 </a></td>
                         <td>Nom 2</td>
                         <td>Prenom 2</td>
                         <td>Téléphone 2</td>
                         <td>Email@email.com</td>
-                        <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
 
                     <tr>
-                        <td><a href= "capteurs_admin.php">0000000003 </a></td>
+                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000003 </a></td>
                         <td>Nom 3</td>
                         <td>Prenom 3</td>
                         <td>Téléphone 3</td>
                         <td>Email@email.com</td>
-                        <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
 
                     <tr>
-                        <td><a href= "capteurs_admin.php">0000000004 </a></td>
+                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000004 </a></td>
                         <td>Nom 4</td>
                         <td>Prenom 4</td>
                         <td>Téléphone 4</td>
                         <td>Email@email.com</td>
-                        <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
 
                     <tr>
-                        <td><a href= "capteurs_admin.php">0000000005 </a> </td>
+                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000005 </a> </td>
                         <td>Nom 5</td>
                         <td>Prenom 5</td>
                         <td>Téléphone 5</td>
                         <td>Email@email.com</td>
-                        <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
 
                     <tr>
-                        <td><a href= "capteurs_admin.php">0000000006 </a> </td>
+                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000006 </a> </td>
                         <td>Nom 6</td>
                         <td>Prenom 6</td>
                         <td>Téléphone 6</td>
-                        <td>Email@email.com</td>
-                        <td>01/01/2000</td>
+                        <td>Emoomail@email.com</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
                     <tr>
-                        <td><a href= "capteurs_admin.php">0000000007 </a></td>
+                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000007 </a></td>
                         <td>Nom 7</td>
                         <td>Prenom 7</td>
                         <td>Téléphone 7</td>
                         <td>Email@email.com</td>
-                        <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
 
                     <tr>
-                        <td><a href= "capteurs_admin.php">0000000008 </a></td>
+                        <td><a href= "capteurs_admin.php" class="lien_ID"e>0000000008 </a></td>
                         <td>Nom 8</td>
                         <td>Prenom 8</td>
                         <td>Téléphone 8</td>
                         <td>Email@email.com</td>
-                        <td>01/01/2000</td>
                         <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
                     </tr>
 
