@@ -36,19 +36,38 @@ session_start();
 
         <div id="tableau" >
             <input type="text" id="rechercher" onkeyup="tri()" placeholder="Rechercher..">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Téléphone</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
+            
+                
 
+<?php
 
-                <tbody id="table">
+include('connect-mysql.php');
+$sqlget = "SELECT * FROM utilisateurs";
+$sqldata = mysqli_query($dbcon, $sqlget) or die ('error getting');
+
+echo "<table>";
+echo "<thead><tr> <th>ID</th> <th>Nom</th> <th>Prénom</th> <th>Téléphone</th> <th>Email</th> </tr> </thead>";
+
+while ($row = mysqli_fetch_array($sqldatqa, MYSQLI_ASSOC)) {
+    echo "<tr><td>";
+    echo $row["cle"];
+    echo "</tr></td>";
+    echo "<tr><td>";
+    echo $row["nom"];
+    echo "</tr></td>";
+    echo "<tr><td>";
+    echo $row["prenom"];
+    echo "</tr></td>";
+    echo "<tr><td>";
+    echo $row["telephone"];
+    echo "</tr></td>";
+    echo "<tr><td>";
+    echo $row["email"];
+    echo "</tr></td>";
+}
+?>
+    <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
+
                     
                     <script type="text/javascript">
                             function deleteRow(r)
@@ -58,76 +77,7 @@ session_start();
                             }
                     </script>
 
-                    <tr>
-                        <td><a href= "capteurs_admin.php" class="lien_ID"> 0000000001 </a></td>
-                        <td>Nom 1</td>
-                        <td>Prenom 1</td>
-                        <td>0633058516</td>
-                        <td>Email@email.com</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
 
-                    <tr>
-                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000002 </a></td>
-                        <td>Nom 2</td>
-                        <td>Prenom 2</td>
-                        <td>Téléphone 2</td>
-                        <td>Email@email.com</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
-
-                    <tr>
-                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000003 </a></td>
-                        <td>Nom 3</td>
-                        <td>Prenom 3</td>
-                        <td>Téléphone 3</td>
-                        <td>Email@email.com</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
-
-                    <tr>
-                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000004 </a></td>
-                        <td>Nom 4</td>
-                        <td>Prenom 4</td>
-                        <td>Téléphone 4</td>
-                        <td>Email@email.com</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
-
-                    <tr>
-                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000005 </a> </td>
-                        <td>Nom 5</td>
-                        <td>Prenom 5</td>
-                        <td>Téléphone 5</td>
-                        <td>Email@email.com</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
-
-                    <tr>
-                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000006 </a> </td>
-                        <td>Nom 6</td>
-                        <td>Prenom 6</td>
-                        <td>Téléphone 6</td>
-                        <td>Emoomail@email.com</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
-                    <tr>
-                        <td><a href= "capteurs_admin.php" class="lien_ID">0000000007 </a></td>
-                        <td>Nom 7</td>
-                        <td>Prenom 7</td>
-                        <td>Téléphone 7</td>
-                        <td>Email@email.com</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
-
-                    <tr>
-                        <td><a href= "capteurs_admin.php" class="lien_ID"e>0000000008 </a></td>
-                        <td>Nom 8</td>
-                        <td>Prenom 8</td>
-                        <td>Téléphone 8</td>
-                        <td>Email@email.com</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
 
                     <script>
                             function tri() {
