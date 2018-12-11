@@ -1,182 +1,193 @@
 @media only screen and (min-width: 300px) {
 
-body
-{
-	background-color: grey;
-	color: #515659;
-	background: url("../assets/wallpaper.png") fixed no-repeat center;
-	background-size: cover;
-    font-family: Helvetica;
-    margin : 0 auto;
-}
+    body
+    {
+        background-color: grey;
+        color: #515659;
+        background: url("../assets/wallpaper.png") fixed no-repeat center;
+        background-size: cover;
+        font-family: Helvetica;
+        margin : 0 auto;
+    }
 
-#bandeau
-{
-	background-color: #ffffff;
-	opacity : 1;
-	display: flex;
-	width: 100%;
-	height: 100%;
-	justify-content: space-between;
-	color: #515659;
-	margin-bottom: 2%; 
-}
-.logo
-{
-	margin-left : 2%;
-	margin-top : 0.8%;
-	margin-bottom : 0.8%;
+    #bandeau
+    {
+        background-color: #ffffff;
+        opacity : 1;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        color: #515659;
+        margin-bottom: 2%; 
+    }
+    .logo
+    {
+        margin-left : 2%;
+        margin-top : 0.8%;
+        margin-bottom : 0.8%;
 
-}
-#logo {
-	width : 15%;
-	height : auto;
-}
+    }
+    #logo {
+        width : 15%;
+        height : auto;
+    }
 
-.deconnexion {
-	text-decoration: none;
-	color: #515659;
-	font-size : 1.1em;
-	margin-top : auto;
-	margin-bottom : auto;
-	margin-right : 18%;
-}
-.preferences 
-{
-	text-decoration: none;
-	font-size : 1.1em;
-	color: #515659;
-	text-decoration: none;
-	margin-top : auto;
-	margin-bottom : auto;
-	margin-right : 8%;
-}
-.bandeau-droite
-{
-	display : flex;
-	justify-content : space-around;
-	flex-direction: row;
-	align-items: flex-end;
-	flex-wrap : nowrap;
-	padding : 2%;
-	
+    .deconnexion {
+        text-decoration: none;
+        color: #515659;
+        font-size : 1.1em;
+        margin-top : auto;
+        margin-bottom : auto;
+        margin-right : 18%;
+    }
+    .preferences 
+    {
+        text-decoration: none;
+        font-size : 1.1em;
+        color: #515659;
+        text-decoration: none;
+        margin-top : auto;
+        margin-bottom : auto;
+        margin-right : 8%;
+    }
+    .bandeau-droite
+    {
+        display : flex;
+        justify-content : space-around;
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap : nowrap;
+        padding : 2%;
+        
 
-}
+    }
 
-.retour{
-    text-decoration: none;
-    color: #ffffff;
-    font-size : 1.1em;
-    margin-top : auto;
-    margin-bottom : auto;
-    margin-left : 2%;
-}
-#rechercher
-{
-    float : right;
-    border : none;
-    margin-right: 5%;
-    margin-top: 2%;
-    font-size : 17px
-}
+    #retour{
+        text-decoration: none;
+        color: #ffffff;
+        font-size : 1.1em;
+        margin-top : auto;
+        margin-bottom : auto;
+        padding-left : 3%;
+    }
 
-.identification{
-    font-style: italic;
-    margin-left : 2%;
-}
+    #rechercher
+    {
+        float : right;
+        border : none;
+        margin-right: 5%;
+        margin-top: 2%;
+        font-size : 17px
+    }
 
-table{
-    margin-top: 2%;
-    width : 100%;
-    border :none;
-    text-align: center;
-}
+    .identification{
+        font-style: italic;
+        margin-left : 2%;
+        margin-bottom: 2%;
+        text-decoration: none;
+    }
 
-
-th
-{
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width: 15%;
-    border: none;
+    table{
+        margin-top: 2%;
+        width : 100%;
+        border :none;
+        text-align: center;
+    }
 
 
-}
-td
-{
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width: 15%;
-    border: none;
-}
-.button
-{
-    background-color: #515659;
-    border-color: #515659;
-    box-shadow: #515659 ;
-    float: center;
-    color: white;
-    
+    th
+    {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 15%;
+        border: none;
 
-}
 
-#tableau{
-    background-color: white;
-    opacity: 0.9;
-    margin-left : 2%;
-    margin-right : 2%;
-    border-radius : 5px;
-}
+    }
 
-.principal{
-    background-color: white;
-    opacity: 0.9;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-left : 2%;
-    margin-right : 2%;
-    border-radius : 5px;
-}
+    td
+    {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 15%;
+        border: none;
+    }
+    .button
+    {
+        background-color: #515659;
+        border-color: #515659;
+        box-shadow: #515659 ;
+        float: center;
+        color: white;
+        
 
-.domiciles{
-    margin-left: 2.5%;
-    border-style: none;
-    color: white;
-    font-size: large;
-    background-color: #515659;
-    opacity: 0.9;
-    margin-left : 2%;
-    margin-right : 2%;
-    border-radius : 5px;
-}
+    }
 
-.domiciles:focus{
-    font-weight: bold;
-    border: none;
-}
+    #tableau{
+        background-color: white;
+        opacity: 0.9;
+        margin-left : 2%;
+        margin-right : 2%;
+        border-radius : 5px;
+        text-decoration: none;
+        color:  #515659;
+        outline: none;
+    }
 
-.pieces{
-    margin-left: 5%;
-    border-style: none;
-    color: #515659;
-    font-size: medium;
-    background-color: white;
-    opacity: 0.9;
-    margin-left : 2%;
-    margin-right : 2%;
-    border-radius : 5px;
-}
+    .principal{
+        background-color: white;
+        opacity: 0.9;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin-left : 2%;
+        margin-right : 2%;
+        border-radius : 5px;
+        border-bottom: 0px;
+    }
 
-.pieces:focus{
-    font-weight: bold;
-    border: 0px;
-}
+    .domiciles{
+        margin-left: 2.5%;
+        border-style: none;
+        color: white;
+        font-size: large;
+        background-color: #515659;
+        opacity: 0.9;
+        margin-left : 2%;
+        margin-right : 2%;
+        border-radius : 5px;
+    }
 
-#capteurs{
-    background-color: #ffffff;
-    opacity: 0.9;
-    margin-left : 2%;
-    margin-right : 2%;
-    border-radius : 5px;
-}
+    .domiciles:focus{
+        font-weight: bold;
+        outline: none;
+    }
+
+    .pieces{
+        margin-left: 5%;
+        border-style: none;
+        color: #515659;
+        font-size: medium;
+        background-color: white;
+        opacity: 0.9;
+        margin-left : 2%;
+        margin-right : 2%;
+        border-radius : 5px;
+        border-bottom: 0px;
+    }
+
+    .pieces:focus{
+        font-weight: bold;
+        outline: none;
+
+    }
+
+    #capteurs{
+        background-color: #ffffff;
+        opacity: 0.9;
+        margin-left : 2%;
+        margin-right : 2%;
+        border-radius : 5px;
+    }
+
 }

@@ -71,6 +71,17 @@ function checkCredentials($email, $pass) {
     return false;
 }
 
+function changePassword($email, $new) {
+    $db = connectDB();
+    $stmt = $db->prepare('UPDATE`utilisateurs` SET  mdp=:mdp WHERE email=:email');
+    $hashed = hashPassword($new);
+    $stmt->bindParam(':email', $email);    
+    $stmt->bindParam(':mdp', $hashed);
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
 function setPassword($email, $old, $new) {
     $hashed = hashPassword($new);
     $db = connectDB();

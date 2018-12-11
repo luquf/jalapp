@@ -34,7 +34,7 @@ session_start();
 			</div>
         </div>
 
-         <a href= "admin_interface.php" class = "retour" style ="text-decoration: none"> retour liste utilisateur </a>
+         <a href= "admin_interface.php" class = "retour" style ="text-decoration: none"><img src ="../public/assets/left_arrow.png" alt = "Logo Domisep" title = "Logo Domisep" id="retour"/></a>
 
 
 
@@ -48,14 +48,10 @@ session_start();
                     <th>Prénom</th>
                     <th>Téléphone</th>
                     <th>Email</th>
-                    <th>Dernière connexion</th>
                 </tr>
                 </thead>
             </table>
         </div>
-
-            <br>
-            <br>
 
 
     <div class="principal">
@@ -118,14 +114,19 @@ session_start();
         </div>
     </div>
 
-        <br>
-        <br>
-
 
         <div id="capteurs" style="display:none;">
 
             <table>
-                <tbody>
+                <tbody id="table">
+
+                    <script type="text/javascript">
+                        function deleteRow(r)
+                        {
+                            var i = r.parentNode.parentNode.rowIndex;
+                            document.getElementById("table").deleteRow(i);
+                        }
+                    </script>
 
                     <tr>
                         <td>Capteur 1</td>
