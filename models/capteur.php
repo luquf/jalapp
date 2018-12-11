@@ -1,6 +1,14 @@
 <?php
 
-require 'db.php';
+require_once 'db.php';
+
+function getAllCapteurs() {
+    $db = connectDB();
+    $stmt = $db->prepare("SELECT * from `capteurs`");
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
 
 function getCapteurs($pieceid) {
     $db = connectDB();
@@ -49,6 +57,14 @@ function removeCapteur($capteurid) {
     return $data;
 }
 
+function getAllControleurs() {
+    $db = connectDB();
+    $stmt = $db->prepare("SELECT * from `controleurs`");
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
 function getControleurs($pieceid) {
     $db = connectDB();
     $stmt = $db->prepare("SELECT * from `controleurs` WHERE id_piece=?");
@@ -76,6 +92,14 @@ function setControleurState($controleurid, $etat) {
     $stmt->bindParam(':etat', $etat);
     $stmt->bindParam(':controleurid', $controleurid);
     $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
+function getControleurState($capteurid) {
+    $db = connectDB();
+    $stmt = $db->prepare("SELECT etat from `controleurs` WHERE id_controleur=?");
+    $stmt->execute(array($capteurid));
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
     return $data;
 }

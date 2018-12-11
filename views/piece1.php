@@ -108,7 +108,7 @@ if (isset($_GET['piece'])) {
 									<form method='post' action='../controllers/action.php'>
 									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
 									<input type='hidden' value='cont_change' name='action' id='action'/>
-									<input type='range' id='cont-val' name='cont-val'min='0' max='100' step='10' value=".$controleur[3].">
+									<input type='range' id='cont-val' name='cont-val'min='0' max='100' step='5' value=".$controleur[3].">
 									<button type='submit'>changer</button>
 									</form>
 									</li>";
