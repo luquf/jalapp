@@ -17,3 +17,19 @@ function sendPassword($email, $nom, $prenom, $password) {
     $mail->Body    = 'Bonjour '.$prenom.', bienvenue chez Domisep. Voici votre mot de passe: '.$password;
     $mail->send();   
 }
+
+function sendForgottenPassword($email, $nom, $prenom, $password) {
+    $mail = new PHPMailer\PHPMailer\PHPMailer;                             
+    $mail->isSMTP();                                      
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;                               
+    $mail->Username = 'domisep.no.reply@gmail.com';       
+    $mail->Password = 'Jala123?';                          
+    $mail->SMTPSecure = 'tls';                            
+    $mail->Port = 587;                                    
+    $mail->setFrom('domisep.no.reply@gmail.com', 'Domisep');
+    $mail->addAddress($email, $prenom." ".$nom);     
+    $mail->Subject = 'Réinitialisation de votre mot de passe Domisep';
+    $mail->Body    = 'Bonjour '.$prenom.', vous avez demandé la réinitialisation de votre mot de passe Domisep. Voici votre nouveau mot de passe: '.$password;
+    $mail->send();   
+}

@@ -55,6 +55,7 @@ session_destroy();
             		<input class="input" type="password" name="pass" id="pass" placeholder="********" size="30" maxlength="100" required/>
         			<input class="input button" type="submit" value="Se connecter"/>
 				   </form>
+				   <a href="password.php" style="text-decoration: none; color: #515659;">Mot de passe oublié</a>
    			</div>
 			<div class="inscription">
 				<h1 class="titre">
