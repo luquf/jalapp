@@ -216,7 +216,7 @@
 	}
 
 	#logo {
-		width: 75%;
+		width: 50%;
 		height: auto; 
 	}
 
@@ -231,7 +231,7 @@
 	.aide
 	{
 		display: flex;
-		font-size: 2.5rem;
+		font-size: 1em;
 		color: #515659;
 		text-decoration: none;
 		flex-wrap: nowrap;
@@ -239,26 +239,27 @@
 		justify-content: space-around;
 		margin-top: auto;
 		margin-bottom: auto;
-		
-		
+		padding-right: 1%;
+
 	}
+
 
 	.deconnexion{
 
-		font-size: 2.5rem;
+		font-size: 1em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
 		text-decoration: none;
-		margin-right: 1%;
-		padding-left: 1%;
+		margin-right: 5%;
+		padding-left: 2%;
 		
 	}
 
 
 	.textboutton{
-		font-size: 500%;
+		font-size: 200%;
 		font-weight: bold;
 		color: #fff;
 
@@ -269,7 +270,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin-left : 10%;	
+
 	}
 
 	#button_modal{
@@ -277,7 +278,7 @@
 		opacity : 0.9;
 		background-attachment: fixed;
 		border: none;
-		font-size: 1800%;
+		font-size: 1250%;
 		color : white;
 		position: static;
 		cursor : pointer;

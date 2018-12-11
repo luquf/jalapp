@@ -138,7 +138,7 @@ body
 
 	}
 	#logo {
-	width : 70%;
+	width : 50%;
 	height : auto;
 	}
 
@@ -151,20 +151,19 @@ body
 .connexion {
 	text-decoration: none;
 	color: #515659;
-	font-size : 2.5rem;
+	font-size : 1.1em;
 	margin :auto;
-	margin-right : 5%;
-	padding-right : 1%;
+	margin-right : 4%;
 
 }
 .aide 
 {
 	text-decoration: none;
-	font-size : 2.5rem;
+	font-size : 1.1em;
 	color: #515659;
 	text-decoration: none;	
 margin :auto;
-margin-right: 2%;
+margin-right: 4%;
 
 }
 #slogan h1
