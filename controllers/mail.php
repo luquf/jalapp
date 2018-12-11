@@ -4,7 +4,8 @@ require __DIR__.'/../vendor/autoload.php';
 
 function sendPassword($email, $nom, $prenom, $password) {
     $mail = new PHPMailer\PHPMailer\PHPMailer;                             
-    $mail->isSMTP();                                      
+    $mail->isSMTP();   
+    $mail->CharSet = 'UTF-8';                                   
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;                               
     $mail->Username = 'domisep.no.reply@gmail.com';       
@@ -20,7 +21,8 @@ function sendPassword($email, $nom, $prenom, $password) {
 
 function sendForgottenPassword($email, $nom, $prenom, $password) {
     $mail = new PHPMailer\PHPMailer\PHPMailer;                             
-    $mail->isSMTP();                                      
+    $mail->isSMTP();
+    $mail->CharSet = 'UTF-8';                                      
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;                               
     $mail->Username = 'domisep.no.reply@gmail.com';       
