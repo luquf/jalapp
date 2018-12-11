@@ -20,7 +20,9 @@
 
 			<div class="aide">
 					<a href= "aide_accueil.php"style="text-decoration:none"> Aide </a>
-                    <a href= "inscription.php"style="text-decoration:none"> Connexion </a>
+			</div>
+			<div class="connexion">
+				<a href= "inscription.php"style="text-decoration:none"> Connexion </a>
 			</div>
 
 		</div>

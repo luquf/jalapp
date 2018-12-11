@@ -111,7 +111,13 @@ if (!isset($dom[0][0])) {
 			<ul>
 				<?php
 					foreach ($pieces as $piece) {
-						echo "<li class='list-pieces'><a href='piece1.php?piece=".$piece[0]."'>".$piece[1]."<a></li>";
+						echo "<li class='list-pieces'><a href='piece1.php?piece=".$piece[0]."'>".$piece[1]."<a>
+						<form action='../controllers/piece.php' method='post'>
+						<input type='hidden' value=".$piece[0]." name='piece' id='piece'/>
+						<input type='hidden' value='piece_del' name='action' id='action'/>
+						<button type='submit'>Supprimer</button>
+						</form>
+						</li>";
 					}
 				?>
 			</ul>
@@ -132,6 +138,7 @@ if (!isset($dom[0][0])) {
     			<h2>Ajouter une pièce</h2>
 				<form method="post" action="../controllers/piece.php">
                         <input class="input" type="type" name="name" id="name" placeholder="Nom de la pièce" size="30" maxlength="40" required/>
+						<input type='hidden' value='piece_add' name='action' id='action'/>
 						<button id ="validation1" type="submit">Valider</button>
 				</form>
 			  </div>
