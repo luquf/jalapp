@@ -4,7 +4,7 @@ body
 {
 	background-color: grey;
 	color: #515659;
-	background: url("../assets/wallpaper.png") fixed no-repeat center;
+	background: url("../assets/wallpaper.jpg") fixed no-repeat center;
 	background-size: cover;
 	font-family: Helvetica;
 	margin : 0 auto;

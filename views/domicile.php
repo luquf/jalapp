@@ -44,10 +44,10 @@ if (!isset($dom[0][0])) {
 
 				<div id="bandeau_droite">
 						<div class="aide">
-							<a href= "aide_accueil.php"> Aide </a>
+							<a href= "aide_accueil.php"> Aide</a>
 						</div>
 						<div class="settings">
-							<a href= "user_settings.php"> Réglages </a>
+							<a href= "user_settings.php"> Réglages</a>
 						</div>
 					<div class="deconnexion">
 						<a href="inscription.php"> Déconnexion </a>
@@ -64,13 +64,14 @@ if (!isset($dom[0][0])) {
 			if (isset($_GET['dom'])) {
 				$_SESSION['domicile_id'] = $_GET['dom'];
 			}
-			$domiciles = getDomicilesController($_SESSION['user_id']);
+			$domiciles = getDomicilesController($_SESSION['user_id']);	
 			foreach ($domiciles as $val) {
-				echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "' id=".str_replace(' ', '', $val[0]).">" . $val[1] . "</a></li>";
+				echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "' id=".str_replace(' ', '', $val[0])."><i class='fa fa-home' ></i> " . $val[1] . " 
+				</a></li>";
 			}
 		?>
 
-            <li class="button-add"><input id='button' type="button"  value='+'/></li>
+            <li class="button-add"><button id='button' type="button">+</button></li>
         </ul>
         <div class="modal2" id="myModal2">
 			<div class="modal-content2">
@@ -110,6 +111,9 @@ if (!isset($dom[0][0])) {
 			?>
 			<ul>
 				<?php
+				if (count($pieces) == 0) {
+					echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de pièces pour ce domicile.</li>"; 
+				} else {
 					foreach ($pieces as $piece) {
 						echo "<li class='list-pieces'><a href='piece1.php?piece=".$piece[0]."'>".$piece[1]."<a>
 						<form action='../controllers/piece.php' method='post'>
@@ -119,6 +123,7 @@ if (!isset($dom[0][0])) {
 						</form>
 						</li>";
 					}
+				}
 				?>
 			</ul>
 			<input id='add_piece' type="button"  value='+' />

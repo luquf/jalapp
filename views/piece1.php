@@ -60,7 +60,7 @@ if (isset($_GET['piece'])) {
 						require_once __DIR__.'/../controllers/capteur.php';
 						$capteurs = getCapteursController($_SESSION['piece_id']);
 						if (count($capteurs) == 0) {
-							echo "<li>Vous n'avez pas encore de capteurs pour cette pièce.</li>";
+							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteurs pour cette pièce.</li>";
 						} else {
 							foreach ($capteurs as $capteur) {
 								echo "<li>".$capteur[1]."-".$capteur[2]."-".$capteur[3]."
@@ -86,12 +86,12 @@ if (isset($_GET['piece'])) {
 					</ul>
 			</div>
 			<div class="sensor-right">
-				<h1 class="titre"><i class="fa fa-cog fa-sm"></i> Controleurs</h1>
+				<h1 class="titre"><i class="fa fa-cogs fa-sm"></i> Controleurs</h1>
 					<ul class="sensor-ul-bottom">
 						<?php
 							$controleurs = getControleursController($_SESSION['piece_id']);
 							if (count($controleurs) == 0) {
-								echo "<li>Vous n'avez pas encore de controleurs pour cette pièce.</li>";
+								echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de controleurs pour cette pièce.</li>";
 							} else {
 								foreach ($controleurs as $controleur) {
 									echo "<li>".$controleur[1]."-".$controleur[2]."-".$controleur[3].
