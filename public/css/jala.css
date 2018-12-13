@@ -1,0 +1,43 @@
+body
+{
+    background-color: grey;
+    color: #515659;
+    background: url("../assets/jala_wallpaper.jpg") fixed no-repeat center;
+    background-size: cover;
+    font-family: Helvetica;
+    opacity: 0.9;
+}
+
+
+.logo
+{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+    
+#slogan h1
+{
+	font-size: 5em;
+	font-weight: bold;
+	text-align: center;
+	color : #ffffff;
+}
+
+#slogan h2{
+    font-size: 4em;
+    font-style: italic;
+    text-align: center;
+    color: #ffffff;
+}
+
+.equipe{
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.photos_team{
+    display: flex;
+}
+
+

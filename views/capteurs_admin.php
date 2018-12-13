@@ -114,19 +114,19 @@ else {
 
 
                              <script type="text/javascript">
-                            /* Voici la fonction javascript qui change la propriété "display"
-                            pour afficher ou non le div selon que ce soit "none" ou "block". */
+                                /* Voici la fonction javascript qui change la propriété "display"
+                                pour afficher ou non le div selon que ce soit "none" ou "block". */
 
-                            function AfficherMasquerCapteurs()
-                            {
-                            divInfo = document.getElementById('capteurs');
+                                function AfficherMasquerCapteurs()
+                                {
+                                divInfo = document.getElementById('capteurs');
 
-                            if (divInfo.style.display == 'none')
-                            divInfo.style.display = 'block';
-                            else
-                            divInfo.style.display = 'none';
+                                if (divInfo.style.display == 'none')
+                                divInfo.style.display = 'block';
+                                else
+                                divInfo.style.display = 'none';
 
-                            }
+                                }
                             </script>
 
 
@@ -155,10 +155,10 @@ else {
 
                     <script type="text/javascript">
                         function deleteRow(r)
-                        {
-                            var i = r.parentNode.parentNode.rowIndex;
-                            document.getElementById("table").deleteRow(i);
-                        }
+                            {
+                                var i = r.parentNode.parentNode.rowIndex;
+                                document.getElementById("table").deleteRow(i);
+                            }
                     </script>
                     
                     <?php

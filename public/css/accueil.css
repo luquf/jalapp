@@ -1,69 +1,73 @@
 @media only screen and (min-width: 300px) {
-	* {
+	body
+	{
+		background-color: grey;
+		color: #515659;
+		background: url("../assets/wallpaper.jpg") fixed no-repeat center;
+		background-size: cover;
+		font-family: Helvetica;
 		margin: 0 auto;
-		}
-body
-{
-	background-color: grey;
-	color: #515659;
-	background: url("../assets/wallpaper.jpg") fixed no-repeat center;
-	background-size: cover;
-	font-family: Helvetica;
-}
+	}
+	#bandeau
+	{
+		background-color: #ffffff;
+		opacity : 1;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 100%;
+		justify-content: space-between;
+		margin-bottom: 5%;
+	}
 
-#bandeau
-{
-	background-color: #ffffff;
-	opacity : 1;
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	height: 100%;
-	justify-content: space-between;
-	color: #515659;
-	margin-bottom: 5%; 
-}
-.logo
-{
-	margin-left : 2%;
-	margin-top : 0.8%;
-	margin-bottom : 0.8%;
+	.logo
+	{
+		margin-bottom : 0.8%;
+		margin-left : 2%;
+		margin-top :0.8%;
 
-}
-#logo {
-	width : 15%;
-	height : auto;
-}
+	}
 
-.connexion {
-	text-decoration: none;
-	color: #515659;
-	font-size : 1.1em;
-	margin-top : auto;
-	margin-bottom : auto;
-	margin-right : 18%;
-}
-.aide 
-{
-	text-decoration: none;
-	font-size : 1.1em;
-	color: #515659;
-	text-decoration: none;
-	margin-top : auto;
-	margin-bottom : auto;
-	margin-right : 8%;
-}
-.bandeau-droite
-{
-	display : flex;
-	justify-content : space-around;
-	flex-direction: row;
-	align-items: flex-end;
-	flex-wrap : nowrap;
-	padding : 2%;
-	
+	#logo {
+		width: 15%;
+		height: auto; 
+	}
 
-}
+	#bandeau_droite{
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		flex-wrap: nowrap;
+		padding-right: 2%;
+	}
+
+	.connexion{
+
+		font-size: 1.1em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+
+		margin-right: 5%;
+		padding-left: 2%;
+		
+	}
+	.aide{
+
+		font-size: 1.1em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+
+		margin-right: 5%;
+		padding-left: 2%;
+		
+	}
+
+
+
 #slogan h1
 {
 	font-size: 4em;
