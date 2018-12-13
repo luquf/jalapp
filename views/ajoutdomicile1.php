@@ -54,7 +54,7 @@ session_start();
 				<span class="close">&times;</span>
     			<h2>Ajouter un domicile</h2>
 				<form method="post" action="../controllers/domicile.php">
-                        <input class="input" type="type" name="name" id="name" placeholder="Nom du domicile" size="30" maxlength="20" required/>
+                        <input class="input" type="type" name="name" id="name" placeholder="Nom du domicile" maxlength="20" required/>
 						<button id ="validation1" type="submit">Valider</button>
 				</form>
 			  </div>

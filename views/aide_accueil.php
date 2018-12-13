@@ -8,24 +8,21 @@
 	</head>
 
 	<body>
-		<div id="bandeau">
-			<div class="logo">
-				
-					<a href="domicile.php" style="text-decoration:none"> <img src="../public/assets/logo.png" id = "logo" alt = "Logo Domisep" title = "Logo Domisep" /> 
-				
-			</div>
+	<div id="bandeau">
 
-			<div class="bandeau-droite">
-			
+	<div class="logo">
+		<a href="domicile.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
+	</div>
 
-				<!-- <select name="Langue" id="Langue" >
-					<option value="Français">Français</option>
-					<option value="Anglais">English</option>
-				</select> -->
-				<a class="connexion" href="inscription.php"> Connexion</a>	
-				
-			</div>
+	<div id="bandeau_droite">
+		
+		<div class="connexion">
+			<a href="inscription.php" style = "text-decoration: none; color: #515659"; > Connexion </a>
 		</div>
+	</div>
+
+
+	</div>
 
 		<div id="slogan">
 			<h1>
