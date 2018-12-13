@@ -9,7 +9,7 @@ session_start();
 if (isset($_GET['piece'])) {
 	$_SESSION['piece_id'] = $_GET['piece'];
 } else {
-	header("Location: error404.php");
+	header("Location: domicile.php");
 }
 
 ?>

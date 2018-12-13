@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-session_destroy();
+unset($_SESSION['connected']);
 
 ?>
 
@@ -45,10 +45,12 @@ session_destroy();
 					<i class="fa fa-sign-in-alt fa-sm"></i> Connexion
 				</h1>
 				<?php
-				$error = $_GET['error'];
-				if (isset($error) && $error == "credentials") {
-					echo "<p style='color:red'>Email ou mot de passe erroné.</p>";
-				}
+				try {
+					$error = $_GET['error'];
+					if (isset($error) && $error == "credentials") {
+						echo "<p style='color:red'>Email ou mot de passe erroné.</p>";
+					}
+				} catch (Exception $e) {}
 				?>
     			<form class="conn-form" method="post" action="../controllers/authentification.php">
             		<input class="input" type="email" name="email1" id="email1" placeholder="email@example.com" size="30" maxlength="100" required/>
@@ -62,10 +64,12 @@ session_destroy();
 				<i class="fa fa-user-alt fa-xs"></i> Inscription
 				</h1>
 				<?php
-				$error = $_GET['error'];
-				if (isset($error) && $error == "alreadyexists") {
-					echo "<p style='color:red'>Cet email existe déjà.</p>";
-				}
+				try {
+					$error = $_GET['error'];
+					if (isset($error) && $error == "alreadyexists") {
+						echo "<p style='color:red'>Cet email existe déjà.</p>";
+					}
+				} catch (Exception $e) {}
 				?>
 				<form method="post" action="../controllers/inscription.php">
             		<input class="input" type="text" name="nom" id="nom" placeholder="Nom" size="30" maxlength="30" required />
