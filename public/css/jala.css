@@ -1,0 +1,71 @@
+    body
+    {
+        background-color: grey;
+        color: #515659;
+        background: url("../assets/jala_wallpaper1.jpg") fixed no-repeat center;
+        background-size: cover;
+        font-family: Helvetica;}
+
+
+	.logo
+	{
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+    
+
+
+	h2
+	{
+		font-size: 3em;
+		margin-bottom: 3%;
+	}
+
+.connexion {
+	text-decoration: none;
+	color: #515659;
+	font-size : 2.5rem;
+	margin :auto;
+	margin-right : 5%;
+	padding-right : 1%;
+
+}
+.aide 
+{
+	text-decoration: none;
+	font-size : 2.5rem;
+	color: #515659;
+	text-decoration: none;	
+margin :auto;
+margin-right: 2%;
+
+}
+#slogan h1
+{
+	font-size: 5em;
+	font-weight: bold;
+	text-align: center;
+	color : #ffffff;
+}
+#apropos
+{
+	background-color: #ffffff;
+	opacity: 0.9;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-bottom: 5%;
+	padding-top : 3%;
+	margin-left: 4%;
+	margin-right: 4%;
+	border-radius : 10px;
+}
+
+#apropos h3
+{
+	font-size : 3em;
+	padding-bottom: 25px;
+	text-align : center;
+
+}
+}
