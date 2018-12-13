@@ -14,18 +14,16 @@
 
 			</div>
 
-			<div class="bandeau-droite">
-	
-
-				<!-- <select name="Langue" id="Langue" >
-					<option value="Français">Français</option>
-					<option value="Anglais">English</option>
-				</select> -->
-				<a class="connexion" href="inscription.php"> Connexion</a>	
-				<a class= "aide" href= "aide_accueil.php">Aide </a>
+			<div id="bandeau_droite">
+					<div class="aide">
+						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+					</div>
+				<div class="connexion">
+					<a href="inscription.php" style = "text-decoration: none; color: #515659"> Connexion </a>
+				</div>
+			</div>
 
 		
-			</div>
 		</div>
 
 

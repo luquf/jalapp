@@ -41,38 +41,18 @@
 		padding-right: 2%;
 	}
 
-	.aide
-	{
-		display: flex;
-		font-size: 1em;
+
+	.aide{
+
+		font-size: 1.1em;
 		color: #515659;
-		justify-content: space-around;
+		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right: 10%;
-		padding-right: 1%;
-
-	}
-
-	.aide a:visited {
 		text-decoration: none;
-		color: #515659;
+		
 	}
 
-	.aide a {
-		text-decoration: none;
-		color: #515659;
-	}
-
-	.deconnexion a {
-		text-decoration: none;
-		color: #515659;
-	}
-
-	.deconnexion a:visited {
-		text-decoration: none;
-		color: #515659;
-	}
 
 	.deconnexion{
 
