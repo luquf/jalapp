@@ -1,10 +1,18 @@
 <?php
 
-session_start();
+//session_start();
 
 // if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 //     header("Location: views/inscription.php");
 // }
+
+if (isset($_GET['selected']) && $_GET['selected'] != '') {
+    $_SESSION['selected_user'] = $_GET['selected'];
+}
+else {
+    header('Location: admin_interface.php');
+} 
+
 
 ?>
 
@@ -42,13 +50,22 @@ session_start();
 
             <table class="identification">
                 <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Téléphone</th>
-                    <th>Email</th>
-                </tr>
+                <?php
+						require_once __DIR__.'/../controllers/admin_interface.php';
+                        $userid = $_SESSION['selected_user'];
+						if (count($utilisateur) == 0) {
+							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de client sur votre site.</li>";
+						} else {
+							foreach ($utilisateur as $utilisateur) {
+                                echo "<tr><td>".$utilisateur[0]."</td>
+                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[1]."</a></td>
+                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[2]."</a></td>
+                                <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[3]."</a></td>
+                                <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[8]."</a></td></tr>";
+                            }
+                         }
+                                ?>
+             
                 </thead>
             </table>
         </div>
@@ -76,8 +93,17 @@ session_start();
                     </script>
 
 
-
-                    <input class="domiciles" type="button" value="Domicile 1" onClick="AfficherMasquerPieces()"/>
+                    <?php
+                    require_once __DIR__.'/../controllers/admin_UsersDomiciles.php';
+                    $domicile = getUsersDomicileAdmin($userid);
+                    if (count($domicile) == 0) {
+                    echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de domicile.</li>";
+                    } else {
+                     foreach ($domicile as $domicile) {
+                      echo "<li>".$domicile[1]."</li>";
+                      }
+                    }
+                    ?>
 
         </div>
 
@@ -104,11 +130,18 @@ session_start();
                             </script>
 
 
-                <input class="pieces" type="button" value="Pièce 1" onClick="AfficherMasquerCapteurs()" />
-                <br>
-                <input class="pieces" type="button" value="Pièce 2" onClick="AfficherMasquerCapteurs()" />
-                <br>
-                <input class="pieces" type="button" value="Pièce 3" onClick="AfficherMasquerCapteurs()" />
+
+                                <?php
+                                require_once __DIR__.'/../controllers/admin_UsersPieces.php';
+                                $piece = getUsersPieceAdmin($domicileid);
+                                if (count($piece) == 0) {
+                                    echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de piece.</li>";
+                                } else {
+                                    foreach ($piece as $piece) {
+                                echo "<li>".$piece[1]."</li>";
+                                    }
+                                }
+                                ?>
 
 
         </div>
@@ -127,33 +160,26 @@ session_start();
                             document.getElementById("table").deleteRow(i);
                         }
                     </script>
-
-                    <tr>
-                        <td>Capteur 1</td>
-                        <td>emplacement</td>
-                        <td>état</td>
-                        <td>éteindre</td>
-                        <td>allumer</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
-
-                    <tr>
-                        <td>Capteur 2</td>
-                        <td>emplacement</td>
-                        <td>état</td>
-                        <td>éteindre</td>
-                        <td>allumer</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
-
-                    <tr>
-                        <td>Capteur 3</td>
-                        <td>emplacement</td>
-                        <td>état</td>
-                        <td>éteindre</td>
-                        <td>allumer</td>
-                        <td><input class ="button" type="button" value="X" onclick="deleteRow(this);"></td>
-                    </tr>
+                    
+                    <?php
+						require_once __DIR__.'/../controllers/admin_UsersCapteurs.php';
+						$capteur = getUsersCapteurAdmin($pieceid);
+						if (count($capteur) == 0) {
+							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteur.</li>";
+						} else {
+							foreach ($capteur as $capteur) {
+                                echo "<tr><td>".$capteur[1]."</td>
+                                <td>".$capteur[2]."</td>
+                                <td>".$capteur[4]."</td>
+                                <td>".$capteur[3]."</td>
+                                <td><input class ='button' type='button' value='Changer l'état'></td></tr>
+                                <td><input class ='button' type='button' value='X' onclick='deleteRow(this);'></td></tr>";
+                            }
+                         }
+                    ?>
+                    
                 </tbody>
             </table>
         </div>
+    </body>
+</html>

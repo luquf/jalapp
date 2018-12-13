@@ -60,8 +60,8 @@
 						} else {
 							foreach ($utilisateur as $utilisateur) {
                                 echo "<tr><td>".$utilisateur[0]."</td>
-                                <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[1]."</a></td>
-                                <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[2]."</a></td>
+                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[1]."</a></td>
+                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[2]."</a></td>
                                 <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[3]."</a></td>
                                 <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[8]."</a></td>
                                 <td><input class ='button' type='button' value='X' onclick='deleteRow(this);'></td></tr>";
