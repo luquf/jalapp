@@ -8,48 +8,59 @@
 		font-family: Helvetica;
 		margin: 0 auto;
 	}
-
-#bandeau
+	#bandeau
 	{
-	background-color: #ffffff;
-	opacity : 1;
-	display: flex;
-	width: 100%;
-	height: 100%;
-	justify-content: space-between;
-	color: #515659;
-	margin-bottom: 2%; 
+		background-color: #ffffff;
+		opacity : 1;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 100%;
+		justify-content: space-between;
+		margin-bottom: 5%;
 	}
 
 	.logo
 	{
 		margin-bottom : 0.8%;
-		margin-top :0.8%;
 		margin-left : 2%;
-	}
-	#logo{
-		width : 15%;
-		height : auto;
+		margin-top :0.8%;
+
 	}
 
-	.bandeau-droite
-	{
-		display : flex;
-		justify-content : space-around;
-		flex-direction: row;
-		align-items: flex-end;
-		flex-wrap : nowrap;
-		padding : 2%;
-		
-	
+	#logo {
+		width: 15%;
+		height: auto; 
 	}
-	.connexion {
-		text-decoration: none;
+
+	#bandeau_droite{
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		flex-wrap: nowrap;
+		padding-right: 2%;
+	}
+
+
+	.connexion{
+
+		font-size: 1.1em;
 		color: #515659;
-		font-size : 1.1em;
-		margin-top : auto;
-		margin-bottom : auto;
-		margin-right : 18%;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		text-decoration: none;
+		margin-right: 5%;
+		padding-left: 2%;
+		
+	}
+
+
+	.textboutton{
+		font-size: 200%;
+		font-weight: bold;
+		color: #fff;
+
 	}
 	#slogan h1{
 	font-size: 4em;
