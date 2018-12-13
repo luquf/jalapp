@@ -190,7 +190,7 @@
 	}
 	.logo
 	{
-		max-width: 30%;
+		max-width: 45%;
 		height: auto;
 		margin : 1%;
 		margin-left : 2%;
@@ -202,8 +202,8 @@
 	}
 	.aide
 	{		
-		margin-right: 2%;
-		font-size: 1.5em;
+		margin-right: 3%;
+		font-size: 2.5em;
 		color: #304045;
 		
 	}
