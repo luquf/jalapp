@@ -1,8 +1,10 @@
 @media only screen and (min-width: 300px) {
+
 	* {
 		margin: 0 auto;
-		}
-body
+}
+
+	body
 {
 	background-color: grey;
 	color: #515659;
