@@ -64,7 +64,9 @@
                                 <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[2]."</a></td>
                                 <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[3]."</a></td>
                                 <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[8]."</a></td>
-                                <td><input class ='button' type='button' value='X' onclick='deleteRow(this);'></td></tr>";
+                                <form action='../controllers/admin_interface.php' method='post'>
+                                <td><input  type='hidden' value='del_user' name='action' id='action'/>
+                                <button type='submit'>X</button></td></tr></form>";
                             }
                          }
                                 ?>
