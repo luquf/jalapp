@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $action = testinput($_POST['action']);
     if ($action == "del_user") { // suppression du user
         removeUserByID($id);
-        header('Location: ../views/admin_interface.php?cle='.$_SESSION['is_admin']);
+        header('Location: ../views/admin_interface.php');
     }
 }
 

@@ -53,8 +53,9 @@
 
                 <tbody id="table">
                 <?php
-						require_once __DIR__.'/../controllers/admin_interface.php';
-						$utilisateur = getUsers();
+                        require_once __DIR__.'/../controllers/admin_interface.php';
+                        $utilisateur = getUsers();
+                        
 						if (count($utilisateur) == 0) {
 							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de client sur votre site.</li>";
 						} else {
@@ -64,9 +65,12 @@
                                 <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[2]."</a></td>
                                 <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[3]."</a></td>
                                 <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[8]."</a></td>
-                                <form action='../controllers/admin_interface.php' method='post'>
-                                <td><input  type='hidden' value='del_user' name='action' id='action'/>
-                                <button type='submit'>X</button></td></tr></form>";
+                                
+                                <form method='post' action='../controllers/admin_interface.php'>
+								<td><input type='hidden' value=".$utilisateur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value='del_user' name='action' id='action'/>
+								<button type='submit'>X</button>
+								</form>";
                             }
                          }
                                 ?>

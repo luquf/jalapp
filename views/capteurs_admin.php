@@ -64,7 +64,7 @@ else {
                                 <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[8]."</a></td></tr>";
                             }
                          }
-                                ?>
+                ?>
              
                 </thead>
             </table>
