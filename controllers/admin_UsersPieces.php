@@ -1,9 +1,9 @@
 <?php
 
 
-require_once __DIR__.'/../models/piece.php';
+require_once __DIR__.'/../models/domicile.php';
 
-function getUsersPieceAdmin($domicileid){
-    return getPieces($domicileid);
+function getUsersPieceAdmin($id){
+    return getPieces($id);
 }
 ?>

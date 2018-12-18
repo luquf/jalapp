@@ -2,13 +2,13 @@
 
 require_once 'db.php';
 
-function getPieces($domicileid) {
-    $db = connectDB();
-    $stmt = $db->prepare("SELECT * from `pieces` WHERE id_domicile=?");
-    $stmt->execute(array($domicileid));
-    $data = $stmt->fetchAll(PDO::FETCH_NUM);
-    return $data;
-}
+// function getPieces($domicileid) {
+//     $db = connectDB();
+//     $stmt = $db->prepare("SELECT * from `pieces` WHERE id_domicile=?");
+//     $stmt->execute(array($domicileid));
+//     $data = $stmt->fetchAll(PDO::FETCH_NUM);
+//     return $data;
+// }
 
 function setPiece($domicileid, $nom, $pieceid) {
     $db = connectDB();

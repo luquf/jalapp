@@ -7,6 +7,7 @@
 
 require_once __DIR__.'/../models/user.php';
 
+
 session_start();
 if (isset($_GET['selected']) && $_GET['selected'] != '') {
     $_SESSION['selected_user'] = $_GET['selected'];
@@ -104,18 +105,14 @@ else {
                     echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de domicile.</li>";
                     } else {
                      foreach ($domicile as $domicile) {
-                      echo "<li>".$domicile[1]."</li>";
+                      echo "<li onclick='AfficherMasquerPieces()'>".$domicile[1]."</li>";
                       }
                     }
                     ?>
 
         </div>
 
-
-
         <div id="pieces" style="display:none;">
-
-
 
                              <script type="text/javascript">
                                 /* Voici la fonction javascript qui change la propriété "display"
@@ -137,15 +134,14 @@ else {
 
                                 <?php
                                 require_once __DIR__.'/../controllers/admin_UsersPieces.php';
-
                                 $userid = $_SESSION['selected_user'];
-                                
-                                $piece = getUsersPieceAdmin($domicileid);
+                                $domicile = getUsersDomicileAdmin($userid);
+                                $piece = getUsersPieceAdmin($domicile);
                                 if (count($piece) == 0) {
                                     echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de piece.</li>";
                                 } else {
                                     foreach ($piece as $piece) {
-                                echo "<li>".$piece[1]."</li>";
+                                echo "<li onclick='AfficherMasquerCapteurs()'>".$piece[1]."</li>";
                                     }
                                 }
                                 ?>
