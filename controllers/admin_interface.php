@@ -10,6 +10,7 @@ function getUsersAdmin(){
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     $action = testinput($_POST['action']);
+    $id = testinput($_POST['user']);
     if ($action == "del_user") { // suppression du user
         removeUserByID($id);
         header('Location: ../views/admin_interface.php');

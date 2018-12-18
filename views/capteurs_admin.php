@@ -1,11 +1,13 @@
 <?php
 
-//session_start();
 
 // if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 //     header("Location: views/inscription.php");
 // }
 
+require_once __DIR__.'/../models/user.php';
+
+session_start();
 if (isset($_GET['selected']) && $_GET['selected'] != '') {
     $_SESSION['selected_user'] = $_GET['selected'];
 }
@@ -51,9 +53,9 @@ else {
             <table class="identification">
                 <thead>
                 <?php
-						require_once __DIR__.'/../controllers/admin_interface.php';
                         $userid = $_SESSION['selected_user'];
-						if (count($utilisateur) == 0) {
+                        $utilisateur = getUserByID($userid);
+                        if (count($utilisateur) == 0) {
 							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de client sur votre site.</li>";
 						} else {
 							foreach ($utilisateur as $utilisateur) {
@@ -95,6 +97,8 @@ else {
 
                     <?php
                     require_once __DIR__.'/../controllers/admin_UsersDomiciles.php';
+
+                    $userid = $_SESSION['selected_user'];
                     $domicile = getUsersDomicileAdmin($userid);
                     if (count($domicile) == 0) {
                     echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de domicile.</li>";
@@ -133,6 +137,9 @@ else {
 
                                 <?php
                                 require_once __DIR__.'/../controllers/admin_UsersPieces.php';
+
+                                $userid = $_SESSION['selected_user'];
+                                
                                 $piece = getUsersPieceAdmin($domicileid);
                                 if (count($piece) == 0) {
                                     echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de piece.</li>";
@@ -162,7 +169,7 @@ else {
                     </script>
                     
                     <?php
-						require_once __DIR__.'/../controllers/admin_UsersCapteurs.php';
+                        require_once __DIR__.'/../controllers/admin_UsersCapteurs.php';
 						$capteur = getUsersCapteurAdmin($pieceid);
 						if (count($capteur) == 0) {
 							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteur.</li>";

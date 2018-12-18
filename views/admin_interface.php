@@ -60,14 +60,15 @@
 							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de client sur votre site.</li>";
 						} else {
 							foreach ($utilisateur as $utilisateur) {
-                                echo "<tr><td>".$utilisateur[0]."</td>
+                                echo "
+                                <tr><td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[0]."</a></td>
                                 <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[1]."</a></td>
                                 <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[2]."</a></td>
-                                <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[3]."</a></td>
-                                <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[8]."</a></td>
+                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[3]."</a></td>
+                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[8]."</a></td>
                                 
                                 <form method='post' action='../controllers/admin_interface.php'>
-								<td><input type='hidden' value=".$utilisateur[0]." name='capteur' id='capteur'/>
+								<td><input type='hidden' value=".$utilisateur[0]." name='user' id='user'/>
 								<input type='hidden' value='del_user' name='action' id='action'/>
 								<button type='submit'>X</button>
 								</form>";
