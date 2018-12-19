@@ -159,6 +159,17 @@ ALTER TABLE `pieces`
 --
 ALTER TABLE `utilisateurs`
   ADD PRIMARY KEY (`cle`);
+
+
+ALTER TABLE `pieces`
+  ADD CONSTRAINT `piece_ibfk_1` FOREIGN KEY (`id_domicile`) REFERENCES `domiciles` (`id_domicile`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `capteurs`
+  ADD CONSTRAINT `capteur_ibfk_1` FOREIGN KEY (`id_piece`) REFERENCES `pieces` (`id_piece`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `controleurs`
+  ADD CONSTRAINT `controleur_ibfk_1` FOREIGN KEY (`id_piece`) REFERENCES `pieces` (`id_piece`) ON DELETE CASCADE ON UPDATE CASCADE;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

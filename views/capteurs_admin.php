@@ -6,6 +6,9 @@
 // }
 
 require_once __DIR__.'/../models/user.php';
+require_once __DIR__.'/../models/domicile.php';
+require_once __DIR__.'/../models/piece.php';
+require_once __DIR__.'/../models/capteur.php';
 
 
 session_start();
@@ -97,10 +100,8 @@ else {
 
 
                     <?php
-                    require_once __DIR__.'/../controllers/admin_UsersDomiciles.php';
-
                     $userid = $_SESSION['selected_user'];
-                    $domicile = getUsersDomicileAdmin($userid);
+                    $domicile = getDomiciles($userid);
                     if (count($domicile) == 0) {
                     echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de domicile.</li>";
                     } else {
@@ -133,16 +134,13 @@ else {
 
 
                                 <?php
-                                require_once __DIR__.'/../controllers/admin_UsersPieces.php';
-                                $userid = $_SESSION['selected_user'];
-                                $domicile = getUsersDomicileAdmin($userid);
-                                $piece = getUsersPieceAdmin($domicile);
-                                if (count($piece) == 0) {
-                                    echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de piece.</li>";
-                                } else {
+                                $piece = getPieces($domicile[0][2]);
+                                if (count($piece) != 0) {
                                     foreach ($piece as $piece) {
-                                echo "<li onclick='AfficherMasquerCapteurs()'>".$piece[1]."</li>";
+                                        echo "<li onclick='AfficherMasquerCapteurs()'>".$piece[1]."</li>";
                                     }
+                                } else {
+                                    echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de piece.</li>";
                                 }
                                 ?>
 
@@ -165,8 +163,7 @@ else {
                     </script>
                     
                     <?php
-                        require_once __DIR__.'/../controllers/admin_UsersCapteurs.php';
-						$capteur = getUsersCapteurAdmin($pieceid);
+						$capteur = getCapteurs($pieceid);
 						if (count($capteur) == 0) {
 							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteur.</li>";
 						} else {
