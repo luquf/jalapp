@@ -79,7 +79,7 @@ if (isset($_GET['piece'])) {
 								<button type='submit'>supprimer</button>
 								</form>
 								<form method='post' action='../controllers/action.php'>
-								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/> 
+								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_change' name='action' id='action'/>
 								<button type='submit'>changer</button>
 								</form>
@@ -117,7 +117,7 @@ if (isset($_GET['piece'])) {
 								echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de controleurs pour cette pièce.</li>";
 							} else {
 								foreach ($controleurs as $controleur) {
-									echo "<li>".$controleur[1]."-".$controleur[2]."-".$controleur[3].
+									echo "<li class = liste>".$controleur[1]."-".$controleur[2]."-".$controleur[3].
 									"<form method='post' action='../controllers/action.php'>
 									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
@@ -170,7 +170,7 @@ if (isset($_GET['piece'])) {
 				<span class="close">&times;</span>
     			<h2>Ajouter un capteur</h2>
 				<form method="post" action="../controllers/capteur.php">
-						<input class="input" type="text" name="name" id="name" placeholder="Nom du capteur" size="30" maxlength="40"/>
+						<input class="input" type="text" name="name" id="name" placeholder="Nom du capteur" size="30" maxlength="10"/>
 						<select class="input" id="capteur" name="capteur">
 							<option value="hum">Capteur d'humidité</option>
 							<option value="temp">Capteur de température</option>

@@ -80,36 +80,56 @@
     }
 
     .sensor-left {
-		margin-left: auto;
+        margin-left: auto;
+        margin-right: auto;
         margin: 1%;
         
-    }
-    .sensor-ul-top {
-       display : flex;
-       flex-direction : row;
-       padding : 3%;
-
     }
     .sensor-right {
 		margin-left: auto;
         margin-right: auto;
-        border-radius: 10px;
         margin: 1%;
     }
-
+    .sensor-ul-top {
+       display : flex;
+       flex-direction : row;
+       padding-top : 3%;
+       padding-bottom : 3%;
+       flex : wrap;
+       
+    }
+    .sensor-ul-bottom {
+        display : flex;
+        flex-direction : row;
+        padding-top : 3%;
+        padding-bottom : 3%;
+        flex : wrap;
+    }
    .liste{
-        padding : 2%;
-   }
+        margin-right : 3%;
+        margin-left : 1%;
+        border:1px solid black;
+        border-radius : 10px ;
+        padding : 1%;
+        background-color : #A6AFB3;
+        color : black;
+        font-style : none;
+        font-family : Helvetica, sans-serif;
+        list-style-type : none;
+    }
 
     button {
         border-radius : 20px;
         font-family: Helvetica;
-        padding : 0.6%;
-        margin : 0.2%;
+        padding : 1%;
+        margin : 0.5%;  
+        background-color: #515659;
+        color : #ffffff;
     }
 
-    #slogan h1
-	{
+   
+
+    #slogan h1{
 		font-size: 4em;
 		font-weight: bold;
 		text-align: center;
