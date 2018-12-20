@@ -116,15 +116,17 @@
         font-style : none;
         font-family : Helvetica, sans-serif;
         list-style-type : none;
+        text-align: center;
     }
 
     button {
         border-radius : 20px;
         font-family: Helvetica;
-        padding : 1%;
-        margin : 0.5%;  
+        padding : 4%;
+        margin : 2%;  
         background-color: #515659;
         color : #ffffff;
+        border: 0;
     }
 
    
