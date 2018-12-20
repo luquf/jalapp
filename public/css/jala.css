@@ -5,15 +5,13 @@ body
     background: url("../assets/jala_wallpaper.jpg") fixed no-repeat center;
     background-size: cover;
     font-family: Helvetica;
-    opacity: 0.9;
+    opacity: 1;
 }
-
 
 .logo
 {
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
+    margin-left: 0.5%;
+    text-align: left;
 }
     
 #slogan h1

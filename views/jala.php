@@ -3,16 +3,16 @@
 	<head>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="../public/css/jala.css" />
-		<link rel="icon" type="image/png" href="../public/assets/logo_jala.png" />
+		<link rel="icon" type="image/png" href="../public/assets/logo_jala1.png" />
 		<title>JALA : Accueil</title>
 	</head>
 
 	<body>
-	<div id="bandeau">
-			<div class="logo">
-				<a href="domicile.php" style="text-decoration:none"> <img src="../public/assets/logo_jala.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" width="200" height="100"/> 
-            </div>
-    </div>
+
+		<div>
+			<img src="../public/assets/logo_jala1.png" class="logo"/> 
+		</div>
+
 
 
 		<div id="slogan">

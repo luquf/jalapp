@@ -7,6 +7,7 @@
 		background-size: cover;
 		font-family: Helvetica;
 		margin: 0 auto;
+		position: absolute;
 	}
 	#bandeau
 	{
@@ -89,7 +90,36 @@
 		margin-left: 8%;
 		margin-right: 8%;
 		border-radius: 10px;
-		margin-bottom : 7%;		
+		margin-bottom : 7%;	
+		position: relative;	
+	}
+
+	#footer{
+		background-color: #ffffff;
+		display: flex;
+		flex-direction: row;
+		text-align: center;
+		width: 100%; 
+		/* height: 6%; */
+		align-items: center;
+		flex-wrap: nowrap;
+		position: absolute;
+		bottom: 0;
+		justify-content: center;
+		opacity: 0.9;
+	}
+
+	.logo_JALA{
+		padding-left: 1.5%;
+		padding-right: 2%;
+		width: 5%;
+		height: 5%;  
+	}
+
+	.designed{
+		color: #515659;
+		font-style: italic;
+		font-size: 0.6em;
 	}
 }
 
@@ -103,6 +133,8 @@
 		background-size: cover;
 		font-family: Helvetica;
 		margin: 0 auto;
+		position : absolute;
+		padding-bottom: 47%;
 	}
 	#bandeau
 	{
@@ -158,7 +190,7 @@
 		margin-left: 4%;
 		margin-right: 4%;
 		margin-bottom : 7%;
-		padding-bottom: 5%;
+		padding-bottom: 10%;
 		padding-left: 5%;
 		padding-right: 5%;
 		opacity: 0.8;
@@ -179,4 +211,37 @@
 		color : #ffffff;
 		margin-top : 5%;
 		margin-bottom : 5%;
+	}
+
+	#footer{
+		background-color: #ffffff;
+		display: flex;
+		flex-direction: row;
+		text-align: center;
+		width: 100%; 
+		height: 10%;
+		align-items: center;
+		flex-wrap: nowrap;
+		position: absolute;
+		bottom: 0;
+		justify-content: center;
+		opacity: 0.9;
+	}
+
+	.logo_JALA {
+
+		width: 20%;
+		height:20%;
+	}
+
+	#logo_JALA{
+		width: 100%;
+		height:300%;
+		margin-top: -15%;
+	}
+
+	.designed{
+		color: #515659;
+		font-style: italic;
+		font-size: 2em;
 	}
