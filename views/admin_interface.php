@@ -47,6 +47,7 @@
                         <th>Prénom</th>
                         <th>Email</th>
                         <th>Téléphone</th>
+                        <th>Suppression</th>
                     </tr>
                 </thead>
 
@@ -57,7 +58,7 @@
                         $utilisateur = getUsers();
                         
 						if (count($utilisateur) == 0) {
-							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de client sur votre site.</li>";
+							echo " ";
 						} else {
 							foreach ($utilisateur as $utilisateur) {
                                 echo "
@@ -68,9 +69,9 @@
                                 <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[8]."</a></td>
                                 
                                 <form method='post' action='../controllers/admin_interface.php'>
-								<td><input type='hidden' value=".$utilisateur[0]." name='user' id='user'/>
+								<td class = delete><input type='hidden' value=".$utilisateur[0]." name='user' id='user'/>
 								<input type='hidden' value='del_user' name='action' id='action'/>
-								<button type='submit'>X</button>
+								<button id= buttondelete type='submit'>X</button>
 								</form>";
                             }
                          }
