@@ -2,6 +2,7 @@
 
 require_once 'db.php';
 
+
 function getPieces($domicileid) {
     $db = connectDB();
     $stmt = $db->prepare("SELECT * from `pieces` WHERE id_domicile=?");
