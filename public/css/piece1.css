@@ -82,13 +82,30 @@
     .sensor-left {
 		margin-left: auto;
         margin: 1%;
+        
     }
+    .sensor-ul-top {
+       display : flex;
+       flex-direction : row;
+       padding : 3%;
 
+    }
     .sensor-right {
 		margin-left: auto;
         margin-right: auto;
         border-radius: 10px;
         margin: 1%;
+    }
+
+   .liste{
+        padding : 2%;
+   }
+
+    button {
+        border-radius : 20px;
+        font-family: Helvetica;
+        padding : 0.6%;
+        margin : 0.2%;
     }
 
     #slogan h1

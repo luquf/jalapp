@@ -53,6 +53,10 @@ if (isset($_GET['piece'])) {
 		</div>
 		<div id='tab1'>
 			<?php echo "<a href='domicile.php?dom=".$_SESSION['domicile_id']."' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Retour</b></a>";?>
+		
+		
+		
+		
 			<div class="sensor-left">
 				<h1 class="titre"><i class="fa fa-microchip fa-sm"></i> Capteurs</h1>
 					<ul class="sensor-ul-top">
@@ -63,20 +67,20 @@ if (isset($_GET['piece'])) {
 							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteurs pour cette pièce.</li>";
 						} else {
 							foreach ($capteurs as $capteur) {
-								echo "<li>".$capteur[1]."-".$capteur[2]."-".$capteur[3]."
+								echo "<li class= liste>".$capteur[1]."-".$capteur[2]."-".$capteur[3]."
 								<form method='post' action='../controllers/action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_info' name='action' id='action'/>
 								<button type='submit'>informations</button>
 								</form>
 								<form method='post' action='../controllers/action.php'>
-								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/> 
+								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_delete' name='action' id='action'/>
 								<button type='submit'>supprimer</button>
 								</form>
 								<form method='post' action='../controllers/action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/> 
-								<input type='hidden' value='capt_change' name='action' id='action'/> 
+								<input type='hidden' value='capt_change' name='action' id='action'/>
 								<button type='submit'>changer</button>
 								</form>
 								</li>";
@@ -85,6 +89,25 @@ if (isset($_GET['piece'])) {
 						?>
 					</ul>
 			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<div class="sensor-right">
 				<h1 class="titre"><i class="fa fa-cogs fa-sm"></i> Controleurs</h1>
 					<ul class="sensor-ul-bottom">
@@ -119,6 +142,29 @@ if (isset($_GET['piece'])) {
 			</div>
 			<input id='add_capteur' type="button"  value='+' />
 		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<div class="modal1" id="myModal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
