@@ -110,7 +110,7 @@ if (!isset($dom[0][0])) {
 			<?php 
 				$pieces = getPieces($_SESSION['domicile_id']);
 			?>
-			<ul>
+			<ul class="pieces-ul-top">
 				<?php
 				if (count($pieces) == 0) {
 					echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de pièces pour ce domicile.</li>"; 
@@ -143,7 +143,7 @@ if (!isset($dom[0][0])) {
 				<span class="close">&times;</span>
     			<h2>Ajouter une pièce</h2>
 				<form method="post" action="../controllers/piece.php">
-                        <input class="input" type="type" name="name" id="name" placeholder="Nom de la pièce" size="30" maxlength="40" required/>
+                        <input class="input" type="type" name="name" id="name" placeholder="Nom de la pièce" size="30" maxlength="10" required/>
 						<input type='hidden' value='piece_add' name='action' id='action'/>
 						<button id ="validation1" type="submit">Valider</button>
 				</form>

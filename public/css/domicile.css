@@ -115,6 +115,41 @@ body
 }
 
 
+.pieces-ul-top {
+    display : flex;
+    flex-direction : row;
+    padding-top : 3%;
+    padding-bottom : 3%;
+    margin : 1%;
+    flex : wrap;
+   
+}
+
+.list-pieces{
+    margin-right : 3%;
+    margin-left : 1%;
+    border:1px solid black;
+    border-radius : 10px ;
+    padding : 2%;
+    background-color : #A6AFB3;
+    list-style-type : none;
+    text-align: center;
+    display : flex;
+    justify-content : space-between;
+    flex-direction: column;
+   
+ 
+}
+
+button {
+    border-radius : 20px;
+    font-family: Helvetica;
+    padding : 10%;  
+    background-color: #515659;
+    color : #ffffff;
+    border: 0;
+}
+
 #tab1 {
     margin-left: 8%;
     margin-right: 8%;
