@@ -6,7 +6,7 @@ session_start();
 //     header("Location: views/inscription.php");
 // }
 
-if (isset($_GET['piece']) && $_GET['piece'] != "") {
+if (isset($_GET['piece'])) {
 	$_SESSION['piece_id'] = $_GET['piece'];
 } else {
 	header("Location: domicile.php");
