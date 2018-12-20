@@ -64,11 +64,8 @@
 						} else {
               $page = $_GET["page"];
               if (!isset($page) || $page == "") {
-                $page = 1;
+                header("Location: admin_interface.php?page=1");
               }
-              // if (count($utilisateur)/10 < $page) {
-              //   $page = 1;
-              // }
 							foreach (array_slice($utilisateur, ($page*10)-10, 10) as $utilisateur) {
                                 echo "
                                 <tr><td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[0]."</td>
@@ -139,8 +136,14 @@
           $previous = $page -1;
           $next = $page + 1;
           if ($page == 1) {
-            $previous = 1;
+            echo "<p class='page-button' style='margin-right: 1%;color: #96999e;'><i class='fa fa-arrow-left'></i></p> ";
+          } else {
+            echo "<a class='page-button' href='admin_interface.php?page=".$previous."' style='margin-right: 1%;'><i class='fa fa-arrow-left'></i></a> ";
           }
-          echo "<a class='page-button' href='admin_interface.php?page=".$previous."' style='margin-right: 1%;'><i class='fa fa-arrow-left'></i></a> <a class='page-button' href='admin_interface.php?page=".$next."' style='margin-left: 1%;'><i class='fa fa-arrow-right'></i></a>";
+          if ((count($utilisateur)/10) < $page) {
+            echo "<p class='page-button' style='margin-left: 1%;color: #96999e;'><i class='fa fa-arrow-right'></i></p> ";
+          } else {
+            echo "<a class='page-button' href='admin_interface.php?page=".$next."' style='margin-left: 1%;'><i class='fa fa-arrow-right'></i></a>";
+          }
           ?>
         </div>
