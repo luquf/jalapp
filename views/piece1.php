@@ -145,26 +145,6 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		<div class="modal1" id="myModal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
@@ -201,6 +181,46 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
     		}
 		}
 		</script>
+
+
+
+
+<div class="modal2" id="myModal2">
+			<div class="modal-content2">
+				<span class="close">&times;</span>
+				<?php echo"
+    			<h2>Info " .$capteur[1]."</h2>
+				<form method='post' action='../controllers/capteur.php'>
+						<div class='infos'>
+							Numéro de série : ".$capteur[0]."
+							Type : ".$capteur[2]."
+							Emplacement : ".$capteur[4]."
+						</div>					
+				</form>
+			  </div>
+			</div>
+
+
+		<script>
+		var modal2 = document.getElementById('myModal2');
+		var button = document.getElementById("informations");
+		var span = document.getElementsByClassName("close")[0];
+		button.onclick = function() {
+   			modal1.style.display = "block";
+		}
+		span.onclick = function() {
+    		modal2.style.display = "none";
+		}		
+		window.onclick = function(event) {
+    		if (event.target == modal1) {
+        		modal2.style.display = "none";
+    		}
+		}
+		</script>
+
+
+
+
 
 	</body>
 </html>
