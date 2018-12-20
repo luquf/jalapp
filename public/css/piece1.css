@@ -239,5 +239,45 @@
         color: white;
         border: none;
     }
+ 
     
+    #modal2 {
+        height: 300px;
+        width: 60%;
+        background-color:white ;
+        opacity: 0.9;
+        text-align: center;
+        color: black;
+        position: absolute;
+        left: 20%;
+        transition: 0.5s;
+        top: -400px;
+        
+    }
+    
+    .modal2 {
+        display: none; 
+        position: fixed;
+        z-index: 1; 
+        padding-top: 100px; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+    }
+    
+    .modal-content2 {
+        background-color: #fefefe;
+        text-align:center;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 20%;
+        border-radius: 5px;
+    }
+    
+   
 }

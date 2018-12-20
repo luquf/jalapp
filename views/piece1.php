@@ -71,7 +71,7 @@ if (isset($_GET['piece'])) {
 								<form method='post' action='../controllers/action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_info' name='action' id='action'/>
-								<button type='submit'>informations</button>
+								<input id='informations' type='button' value = 'informations'/>
 								</form>
 								<form method='post' action='../controllers/action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
@@ -121,7 +121,7 @@ if (isset($_GET['piece'])) {
 									"<form method='post' action='../controllers/action.php'>
 									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
-									<button type='submit'>informations</button>
+									<input id='informations' type='button' value = 'informations'/>
 									</form>
 									<form method='post' action='../controllers/action.php'>
 									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
@@ -189,8 +189,8 @@ if (isset($_GET['piece'])) {
 			<div class="modal-content2">
 				<span class="close">&times;</span>
 				<?php echo"
-    			<h2>Info " .$capteur[1]."</h2>
 				<form method='post' action='../controllers/capteur.php'>
+    			<h2>Info " .$capteur[1]."</h2>
 						<div class='infos'>
 							Numéro de série : ".$capteur[0]."
 							Type : ".$capteur[2]."
@@ -205,16 +205,16 @@ if (isset($_GET['piece'])) {
 
 		<script>
 		var modal2 = document.getElementById('myModal2');
-		var button = document.getElementById("informations");
+		var button1 = document.getElementById('informations');
 		var span = document.getElementsByClassName("close")[0];
-		button.onclick = function() {
-   			modal1.style.display = "block";
+		button1.onclick = function() {
+   			modal2.style.display = "block";
 		}
 		span.onclick = function() {
     		modal2.style.display = "none";
 		}		
 		window.onclick = function(event) {
-    		if (event.target == modal1) {
+    		if (event.target == modal2) {
         		modal2.style.display = "none";
     		}
 		}
