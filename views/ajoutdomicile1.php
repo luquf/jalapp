@@ -82,14 +82,17 @@ session_start();
 		}
 		</script>
 
-		    <footer class="footer">
 
-				<div class="designed"> Powered by </div>
-				<div class="logo_JALA"> 
-					<a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA" width="70" height="34" /></a>
-				</div>
-				<div class="designed"> © </div>
+	</body>
 
-			</footer>
+	<footer id="footer">
 
-</body>
+		<div class="designed"> Powered by </div>
+		<div class="logo_JALA"> 
+			<a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
+		</div>
+		<div class="designed"> © </div>
+
+	</footer>
+
+</html>
