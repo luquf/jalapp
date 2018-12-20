@@ -53,6 +53,18 @@ else {
         <div id="tableau" >
 
             <table class="identification">
+            <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Téléphone</th>
+                    </tr>
+                </thead>
+
+
+                <tbody id="table">
                 <thead>
                 <?php
                         $userid = $_SESSION['selected_user'];
@@ -62,10 +74,10 @@ else {
 						} else {
 							foreach ($utilisateur as $utilisateur) {
                                 echo "<tr><td>".$utilisateur[0]."</td>
-                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[1]."</a></td>
-                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[2]."</a></td>
-                                <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[3]."</a></td>
-                                <td><a href= 'capteurs_admin.php' class='lien_ID'>".$utilisateur[8]."</a></td></tr>";
+                                <td>".$utilisateur[1]."</td>
+                                <td>".$utilisateur[2]."</td>
+                                <td>".$utilisateur[3]."</td>
+                                <td>".$utilisateur[8]."</td></tr>";
                             }
                          }
                 ?>
@@ -77,16 +89,15 @@ else {
 
     <div class="principal">
 
-        <div>
                     <?php
                     $userid = $_SESSION['selected_user'];
                     $data = getUserData($userid);
                     foreach ($data as $domcile) {
-                        echo "<li>".$domcile[1]."</li>";
+                        echo "<h1>".$domcile[1]."</h1>";
                         foreach ($domcile["pieces"] as $piece) {
-                            echo "<li>----".$piece[1]."</li>";
+                            echo "<h2>".$piece[1]."</h2>";
                             foreach ($piece["capteurs"] as $capteur) {
-                                echo "<li>--------".$capteur[1]."</li>";
+                                echo "<p>".$capteur[1]." ".$capteur[2]." ".$capteur[3]."</p>";
                             }
                             foreach ($piece["controleurs"] as $controleur) {
                                 echo "<li>--------".$controleur[1]."</li>";
@@ -94,7 +105,7 @@ else {
                         }
                     }
                     ?>
-        </div>
+
     </div>
     </body>
 </html>
