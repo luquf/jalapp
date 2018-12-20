@@ -196,9 +196,11 @@ if (isset($_GET['piece'])) {
 							Type : ".$capteur[2]."
 							Emplacement : ".$capteur[4]."
 						</div>					
-				</form>
+				</form>"
+				?>
 			  </div>
 			</div>
+
 
 
 		<script>
