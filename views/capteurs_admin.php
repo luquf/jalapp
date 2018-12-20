@@ -5,10 +5,8 @@
 //     header("Location: views/inscription.php");
 // }
 
-require_once __DIR__.'/../models/user.php';
-require_once __DIR__.'/../models/domicile.php';
-require_once __DIR__.'/../models/piece.php';
-require_once __DIR__.'/../models/capteur.php';
+require_once __DIR__.'/../controllers/admin_capteur.php';
+require_once __DIR__.'/../controllers/user.php';
 
 
 session_start();
@@ -80,106 +78,23 @@ else {
     <div class="principal">
 
         <div>
-
-
-                    <script type="text/javascript">
-                    /* Voici la fonction javascript qui change la propriété "display"
-                    pour afficher ou non le div selon que ce soit "none" ou "block". */
-
-                    function AfficherMasquerPieces()
-                    {
-                    divInfo = document.getElementById('pieces');
-
-                    if (divInfo.style.display == 'none')
-                    divInfo.style.display = 'block';
-                    else
-                    divInfo.style.display = 'none';
-
-                    }
-                    </script>
-
-
                     <?php
                     $userid = $_SESSION['selected_user'];
-                    $domicile = getDomiciles($userid);
-                    if (count($domicile) == 0) {
-                    echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de domicile.</li>";
-                    } else {
-                     foreach ($domicile as $domicile) {
-                      echo "<li onclick='AfficherMasquerPieces()'>".$domicile[1]."</li>";
-                      }
+                    $data = getUserData($userid);
+                    foreach ($data as $domcile) {
+                        echo "<li>".$domcile[1]."</li>";
+                        foreach ($domcile["pieces"] as $piece) {
+                            echo "<li>----".$piece[1]."</li>";
+                            foreach ($piece["capteurs"] as $capteur) {
+                                echo "<li>--------".$capteur[1]."</li>";
+                            }
+                            foreach ($piece["controleurs"] as $controleur) {
+                                echo "<li>--------".$controleur[1]."</li>";
+                            }
+                        }
                     }
                     ?>
-
-        </div>
-
-        <div id="pieces" style="display:none;">
-
-                             <script type="text/javascript">
-                                /* Voici la fonction javascript qui change la propriété "display"
-                                pour afficher ou non le div selon que ce soit "none" ou "block". */
-
-                                function AfficherMasquerCapteurs()
-                                {
-                                divInfo = document.getElementById('capteurs');
-
-                                if (divInfo.style.display == 'none')
-                                divInfo.style.display = 'block';
-                                else
-                                divInfo.style.display = 'none';
-
-                                }
-                            </script>
-
-
-
-                                <?php
-                                $piece = getPieces($domicile[0][2]);
-                                if (count($piece) != 0) {
-                                    foreach ($piece as $piece) {
-                                        echo "<li onclick='AfficherMasquerCapteurs()'>".$piece[1]."</li>";
-                                    }
-                                } else {
-                                    echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de piece.</li>";
-                                }
-                                ?>
-
-
         </div>
     </div>
-
-
-        <div id="capteurs" style="display:none;">
-
-            <table>
-                <tbody id="table">
-
-                    <script type="text/javascript">
-                        function deleteRow(r)
-                            {
-                                var i = r.parentNode.parentNode.rowIndex;
-                                document.getElementById("table").deleteRow(i);
-                            }
-                    </script>
-                    
-                    <?php
-						$capteur = getCapteurs($pieceid);
-						if (count($capteur) == 0) {
-							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteur.</li>";
-						} else {
-							foreach ($capteur as $capteur) {
-                                echo "<tr><td>".$capteur[1]."</td>
-                                <td>".$capteur[2]."</td>
-                                <td>".$capteur[4]."</td>
-                                <td>".$capteur[3]."</td>
-                                <td><input class ='button' type='button' value='Changer l'état'></td></tr>
-                                <td><input class ='button' type='button' value='X' onclick='deleteRow(this);'></td></tr>";
-                            }
-                         }
-                    ?>
-                    
-                </tbody>
-            </table>
-        </div>
     </body>
 </html>
