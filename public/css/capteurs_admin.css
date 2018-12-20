@@ -13,7 +13,7 @@
     #bandeau
     {
         background-color: #ffffff;
-        opacity : 1;
+        opacity : 0.9;
         display: flex;
         width: 100%;
         height: 100%;
@@ -81,11 +81,15 @@
         font-size : 17px
     }
 
-    .identification{
-        font-style: italic;
+    .identification {
         margin-left : 2%;
         margin-bottom: 2%;
         text-decoration: none;
+    }
+    .identification a {
+        text-decoration: none;
+        color: #515659;
+
     }
 
     table{
@@ -93,6 +97,7 @@
         width : 100%;
         border :none;
         text-align: center;
+        margin-bottom: 2%;
     }
 
 
@@ -140,54 +145,27 @@
         opacity: 0.9;
         padding-top: 1%;
         padding-bottom: 1%;
+        padding-left: 2%;
         margin-left : 2%;
         margin-right : 2%;
         border-radius : 5px;
         border-bottom: 0px;
+        margin-bottom: 2%;
     }
 
-    .domiciles{
-        margin-left: 2.5%;
-        border-style: none;
-        color: white;
-        font-size: large;
-        background-color: #515659;
-        opacity: 0.9;
-        margin-left : 2%;
-        margin-right : 2%;
-        border-radius : 5px;
+    h1{
+        margin-bottom: 0.5%;
+        padding-left: 1%;
     }
-
-    .domiciles:focus{
-        font-weight: bold;
-        outline: none;
+    h2{
+        margin-top: 0.5%;
+        padding-left:2.5%;
+        margin-bottom: 0.5%;
     }
-
-    .pieces{
-        margin-left: 5%;
-        border-style: none;
-        color: #515659;
-        font-size: medium;
-        background-color: white;
-        opacity: 0.9;
-        margin-left : 2%;
-        margin-right : 2%;
-        border-radius : 5px;
-        border-bottom: 0px;
-    }
-
-    .pieces:focus{
-        font-weight: bold;
-        outline: none;
-
-    }
-
-    #capteurs{
-        background-color: #ffffff;
-        opacity: 0.9;
-        margin-left : 2%;
-        margin-right : 2%;
-        border-radius : 5px;
+    p{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        padding-left: 4%;
     }
 
 }
