@@ -6,36 +6,43 @@ body
     background-size: cover;
     font-family: Helvetica;
     opacity: 1;
+
 }
 
-.logo
-{
-    margin-left: 0.5%;
-    text-align: left;
+
+
+.logo{
+    width: 20%;
+    height: 20%;
+    margin-top: 2%;
+    margin-left: 2%;
 }
+
     
 #slogan h1
 {
 	font-size: 5em;
 	font-weight: bold;
 	text-align: center;
-	color : #ffffff;
+    color : #ffffff;
+    margin-top: 1%;
 }
 
-#slogan h2{
-    font-size: 4em;
-    font-style: italic;
-    text-align: center;
-    color: #ffffff;
-}
 
 .equipe{
     font-size: 2em;
     color: #ffffff;
+    margin-left: 5%;
 }
 
 .photos_team{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+#photo_profil{
+    height: 20%;
+    width: 20%;
+}
 
