@@ -7,6 +7,7 @@ session_start();
 // }
 
 require_once __DIR__.'/../models/domicile.php';
+require_once __DIR__.'/../models/piece.php';
 
 $dom = getDomiciles($_SESSION['user_id']);
 if (!isset($dom[0][0])) {
