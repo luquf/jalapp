@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  Dim 09 déc. 2018 à 11:23
+-- Généré le :  jeu. 20 déc. 2018 à 13:21
 -- Version du serveur :  10.1.37-MariaDB
--- Version de PHP :  7.2.13
+-- Version de PHP :  7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -36,7 +36,6 @@ CREATE TABLE `capteurs` (
   `id_piece` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-
 -- --------------------------------------------------------
 
 --
@@ -51,8 +50,6 @@ CREATE TABLE `controleurs` (
   `id_piece` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-
-
 -- --------------------------------------------------------
 
 --
@@ -64,8 +61,6 @@ CREATE TABLE `domiciles` (
   `nom` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cle_utilisateur` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
 
 -- --------------------------------------------------------
 
@@ -79,7 +74,6 @@ CREATE TABLE `pieces` (
   `id_domicile` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-
 -- --------------------------------------------------------
 
 --
@@ -87,7 +81,7 @@ CREATE TABLE `pieces` (
 --
 
 CREATE TABLE `releve_capteurs` (
-  `id_relevecapteurs` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_releve` varchar(250) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `id_capteur` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `heure` datetime NOT NULL,
   `type` enum('HUM','TEMP','','') COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -101,7 +95,7 @@ CREATE TABLE `releve_capteurs` (
 --
 
 CREATE TABLE `releve_controleurs` (
-  `id_relevecontroleurs` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_releve` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `id_controleur` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `heure` datetime NOT NULL,
   `type` enum('LUM') COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -127,7 +121,6 @@ CREATE TABLE `utilisateurs` (
   `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-
 --
 -- Index pour les tables déchargées
 --
@@ -136,13 +129,15 @@ CREATE TABLE `utilisateurs` (
 -- Index pour la table `capteurs`
 --
 ALTER TABLE `capteurs`
-  ADD PRIMARY KEY (`id_capteur`);
+  ADD PRIMARY KEY (`id_capteur`),
+  ADD KEY `capteur_ibfk_1` (`id_piece`);
 
 --
 -- Index pour la table `controleurs`
 --
 ALTER TABLE `controleurs`
-  ADD PRIMARY KEY (`id_controleur`);
+  ADD PRIMARY KEY (`id_controleur`),
+  ADD KEY `controleur_ibfk_1` (`id_piece`);
 
 --
 -- Index pour la table `domiciles`
@@ -154,7 +149,22 @@ ALTER TABLE `domiciles`
 -- Index pour la table `pieces`
 --
 ALTER TABLE `pieces`
-  ADD PRIMARY KEY (`id_piece`);
+  ADD PRIMARY KEY (`id_piece`),
+  ADD KEY `piece_ibfk_1` (`id_domicile`);
+
+--
+-- Index pour la table `releve_capteurs`
+--
+ALTER TABLE `releve_capteurs`
+  ADD PRIMARY KEY (`id_releve`),
+  ADD KEY `id_capteur` (`id_capteur`);
+
+--
+-- Index pour la table `releve_controleurs`
+--
+ALTER TABLE `releve_controleurs`
+  ADD PRIMARY KEY (`id_releve`),
+  ADD KEY `id_controleur` (`id_controleur`);
 
 --
 -- Index pour la table `utilisateurs`
@@ -163,36 +173,38 @@ ALTER TABLE `utilisateurs`
   ADD PRIMARY KEY (`cle`);
 
 --
--- Index pour la table `relevé capteurs`
+-- Contraintes pour les tables déchargées
 --
-ALTER TABLE `releve_capteurs`
-  ADD PRIMARY KEY (`id_relevecapteurs`);
 
 --
--- Index pour la table `relevé controleurs`
+-- Contraintes pour la table `capteurs`
 --
-ALTER TABLE `releve_controleurs`
-  ADD PRIMARY KEY (`id_relevecontroleurs`);
-
-
-
-ALTER TABLE `pieces`
-  ADD CONSTRAINT `piece_ibfk_1` FOREIGN KEY (`id_domicile`) REFERENCES `domiciles` (`id_domicile`) ON DELETE CASCADE ON UPDATE CASCADE;
-
 ALTER TABLE `capteurs`
   ADD CONSTRAINT `capteur_ibfk_1` FOREIGN KEY (`id_piece`) REFERENCES `pieces` (`id_piece`) ON DELETE CASCADE ON UPDATE CASCADE;
 
+--
+-- Contraintes pour la table `controleurs`
+--
 ALTER TABLE `controleurs`
   ADD CONSTRAINT `controleur_ibfk_1` FOREIGN KEY (`id_piece`) REFERENCES `pieces` (`id_piece`) ON DELETE CASCADE ON UPDATE CASCADE;
 
+--
+-- Contraintes pour la table `pieces`
+--
+ALTER TABLE `pieces`
+  ADD CONSTRAINT `piece_ibfk_1` FOREIGN KEY (`id_domicile`) REFERENCES `domiciles` (`id_domicile`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `releve_capteurs`
+--
 ALTER TABLE `releve_capteurs`
-  ADD CONSTRAINT `releve_capteur_ibfk_1` FOREIGN KEY (`id_capteur`) REFERENCES `capteurs` (`id_capteur`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `id_capteur` FOREIGN KEY (`id_capteur`) REFERENCES `capteurs` (`id_capteur`) ON DELETE CASCADE ON UPDATE CASCADE;
 
+--
+-- Contraintes pour la table `releve_controleurs`
+--
 ALTER TABLE `releve_controleurs`
-  ADD CONSTRAINT `releve_controleur_ibfk_1` FOREIGN KEY (`id_controleur`) REFERENCES `controleurs` (`id_controleur`) ON DELETE CASCADE ON UPDATE CASCADE;
-
-
-
+  ADD CONSTRAINT `id_controleur` FOREIGN KEY (`id_controleur`) REFERENCES `controleurs` (`id_controleur`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

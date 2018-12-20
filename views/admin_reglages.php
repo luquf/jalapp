@@ -22,7 +22,7 @@ session_start();
 		<div id="bandeau">
 			<div class="logo">
 				
-					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
+					<a href="admin_interface.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
 			</div>
 
 			<div class="bandeau-droite">
