@@ -14,6 +14,7 @@
 		<meta charset="utf-8"/>
         <link rel="stylesheet" href="../public/css/admin_interface.css" />
         <link rel="icon" type="image/png" href="../public/assets/favicon.png" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 		<title>Domisep : Accueil</title>
 	</head>
 
@@ -57,10 +58,18 @@
                         require_once __DIR__.'/../controllers/admin_interface.php';
                         $utilisateur = getUsers();
                         
+                        
 						if (count($utilisateur) == 0) {
 							echo " ";
 						} else {
-							foreach ($utilisateur as $utilisateur) {
+              $page = $_GET["page"];
+              if (!isset($page) || $page == "") {
+                $page = 1;
+              }
+              // if (count($utilisateur)/10 < $page) {
+              //   $page = 1;
+              // }
+							foreach (array_slice($utilisateur, ($page*10)-10, 10) as $utilisateur) {
                                 echo "
                                 <tr><td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[0]."</td>
                                 <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[1]."</a></td>
@@ -76,17 +85,7 @@
                             }
                          }
                                 ?>
-                    
-                    <script type="text/javascript">
-                            function deleteRow(r)
-                            {
-                                var i = r.parentNode.parentNode.rowIndex;
-                                document.getElementById("table").deleteRow(i);
-                            }
-                    </script>
-
-
-
+                  
                     <script>
                             function tri() {
                               var input, filter, table, tr, td, i;
@@ -136,5 +135,12 @@
 
                 </tbody>
             </table>
-
+          <?php 
+          $previous = $page -1;
+          $next = $page + 1;
+          if ($page == 1) {
+            $previous = 1;
+          }
+          echo "<a class='page-button' href='admin_interface.php?page=".$previous."' style='margin-right: 1%;'><i class='fa fa-arrow-left'></i></a> <a class='page-button' href='admin_interface.php?page=".$next."' style='margin-left: 1%;'><i class='fa fa-arrow-right'></i></a>";
+          ?>
         </div>
