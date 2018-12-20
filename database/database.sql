@@ -87,6 +87,7 @@ CREATE TABLE `pieces` (
 --
 
 CREATE TABLE `releve_capteurs` (
+  `id_relevecapteurs` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_capteur` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `heure` datetime NOT NULL,
   `type` enum('HUM','TEMP','','') COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -100,6 +101,7 @@ CREATE TABLE `releve_capteurs` (
 --
 
 CREATE TABLE `releve_controleurs` (
+  `id_relevecontroleurs` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_controleur` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `heure` datetime NOT NULL,
   `type` enum('LUM') COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -160,6 +162,19 @@ ALTER TABLE `pieces`
 ALTER TABLE `utilisateurs`
   ADD PRIMARY KEY (`cle`);
 
+--
+-- Index pour la table `relevé capteurs`
+--
+ALTER TABLE `releve_capteurs`
+  ADD PRIMARY KEY (`id_relevecapteurs`);
+
+--
+-- Index pour la table `relevé controleurs`
+--
+ALTER TABLE `releve_controleurs`
+  ADD PRIMARY KEY (`id_relevecontroleurs`);
+
+
 
 ALTER TABLE `pieces`
   ADD CONSTRAINT `piece_ibfk_1` FOREIGN KEY (`id_domicile`) REFERENCES `domiciles` (`id_domicile`) ON DELETE CASCADE ON UPDATE CASCADE;
@@ -169,6 +184,14 @@ ALTER TABLE `capteurs`
 
 ALTER TABLE `controleurs`
   ADD CONSTRAINT `controleur_ibfk_1` FOREIGN KEY (`id_piece`) REFERENCES `pieces` (`id_piece`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `releve_capteurs`
+  ADD CONSTRAINT `releve_capteur_ibfk_1` FOREIGN KEY (`id_capteur`) REFERENCES `capteurs` (`id_capteur`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `releve_controleurs`
+  ADD CONSTRAINT `releve_controleur_ibfk_1` FOREIGN KEY (`id_controleur`) REFERENCES `controleurs` (`id_controleur`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
 
 COMMIT;
 
