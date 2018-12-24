@@ -91,23 +91,6 @@ if (isset($_GET['piece'])) {
 			</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			<div class="sensor-right">
 				<h1 class="titre"><i class="fa fa-cogs fa-sm"></i> Controleurs</h1>
 					<ul class="sensor-ul-bottom">
@@ -188,30 +171,31 @@ if (isset($_GET['piece'])) {
 <div class="modal2" id="myModal2">
 			<div class="modal-content2">
 				<span class="close">&times;</span>
-				<?php 
-					echo"
-					<form method='post' action='../controllers/capteur.php'>
-    				<h2>Info " .$capteur[1]."</h2>
-						<div class='infos'>
-							<span>Numéro de série : </span>".$capteur[0]."
-							<br/><span>Type : </span>".$capteur[2]."
-							<br/><span>Emplacement : </span>".$capteur[4]."
-						</div>"
+				<?php echo"
+    			
+					<div class='infos'>
+					<h2>Info de " .$capteur[1]."</h2>
+						<span>Numéro de série : </span>".$capteur[0]."
+						<br/><span>Type : </span>".$capteur[2]."
+						<br/><span>Emplacement : </span>".$capteur[4]."
+					</div>
+					
+				<div class ='historique'>
+				<h2> Historique de ".$capteur[1]." </h2>"
 				?>
-			    <div class ="historique">
-				<!-- <?php
-				$releve_capteur = getDataCapteur();
-				 	echo"
-					<h2> Historique ".$capteur[1]."</h2>
-					</form>
+				<?php
+					require __DIR__ . '/../controllers/releve.php';
+
+					$releve_capteur = getDataCapteur();
+					echo "
 					<div class='datas'>
-						<form method='post' action='../controllers/releve.php'>
-						<span>".$releve_capteur[1]." : </span>".$releve_capteur[3]."
+					<form method='post' action='../controllers/releve.php'>
+					<span>".$releve_capteur[1]." : </span>".$releve_capteur[3]."
 					</form>
-						</div>
+					</div>
 					"
-					?> -->
-				</div>
+					?>
+				</div> 
 			</div>
 </div>
 
