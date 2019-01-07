@@ -119,7 +119,25 @@ else {
 									</div>";
                             }
                             foreach ($piece["controleurs"] as $controleur) {
-                                echo "<li>--------".$controleur[1]."</li>";
+                                echo "<p>".$controleur[1]." ".$controleur[2]." ".$controleur[3]."</p>
+                                <div class = 'capteuradmin'> 
+                                <form method='post' action='../controllers/admin_action.php'>
+								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value='cont_info' name='action' id='action'/>
+								<input id='informations' type='button' value = 'informations'/>
+								</form>
+								<form method='post' action='../controllers/admin_action.php'>
+								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value='cont_delete' name='action' id='action'/>
+								<button type='submit'>supprimer</button>
+								</form>
+								<form method='post' action='../controllers/admin_action.php'>
+								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value='cont_change' name='action' id='action'/>
+									<input type='range' id='cont-val' name='cont-val'min='0' max='100' step='5' value=".$controleur[3].">
+								<button type='submit'>changer</button>
+								</form>
+									</div>";
                             }
                         }
                     }

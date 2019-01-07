@@ -11,7 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($capteur) & isset($action)) {
         if ($action == "capt_info") {
             header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['user_id']);
-            var_dump("info");
         } else if ($action == "capt_delete") {
             removeCapteur($capteur);
             header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['user_id']);
