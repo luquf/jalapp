@@ -41,7 +41,7 @@ else {
 			
             
                     <a href="admin_reglages.php" class = "preferences" >Préférences</a>
-					<a href= "accueil.php" class= "deconnexion">Déconnexion </a>
+					<a href= "inscription.php" class= "deconnexion">Déconnexion </a>
 		
 			</div>
         </div>

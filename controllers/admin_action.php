@@ -10,10 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $capteur = testinput($_POST['capteur']);
     if (isset($capteur) & isset($action)) {
         if ($action == "capt_info") {
-            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['user_id']);
+            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']);
         } else if ($action == "capt_delete") {
             removeCapteur($capteur);
-            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['user_id']);
+            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']);
         } else if ($action == "capt_change"){
             $state = getCapteurState($capteur);
             if ($state[0][0] == "ON") {
@@ -21,16 +21,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             } else {
                 setCapteurState($capteur, "ON");
             }
-            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['user_id']);
+            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']);
         } if ($action == "cont_info") {
-            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['user_id']);
+            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']);
         } if ($action == "cont_delete") {
             removeControleur($capteur);
-            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['user_id']);
+            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']);
         } if ($action == "cont_change") {
             $level = $_POST['cont-val'];
             setControleurState($capteur, $level);
-            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['user_id']);
+            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']);
         }
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-unset($_SESSION['connected']);
+session_unset();
 
 ?>
 
