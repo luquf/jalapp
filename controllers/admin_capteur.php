@@ -41,7 +41,7 @@ $controleurs = array("lum", "vol", "ch");
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-    $nom = testinput($_POST["name"]);
+    $nom = testinput($_POST["action"]);
     $type = testinput($_POST["capteur"]);
     if (isset($nom) && isset($type)) {
         if (in_array($type, $capteurs)) {
@@ -84,12 +84,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// function testinput($data) {
-//     $data = trim($data);
-//     $data = stripslashes($data);
-//     $data = htmlspecialchars($data);
-//     return $data;
-// }
+function testinput($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
 function getCapteursController($id) {
     return getCapteurs($id);

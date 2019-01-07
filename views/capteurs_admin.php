@@ -101,17 +101,17 @@ else {
                             foreach ($piece["capteurs"] as $capteur) {
                                 echo "<p>".$capteur[1]." ".$capteur[2]." ".$capteur[3]."</p>
                                 <div class = 'capteuradmin'> 
-                                <form method='post' action='../controllers/action.php'>
+                                <form method='post' action='../controllers/admin_action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_info' name='action' id='action'/>
 								<input id='informations' type='button' value = 'informations'/>
 								</form>
-								<form method='post' action='../controllers/action.php'>
+								<form method='post' action='../controllers/admin_action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_delete' name='action' id='action'/>
 								<button type='submit'>supprimer</button>
 								</form>
-								<form method='post' action='../controllers/action.php'>
+								<form method='post' action='../controllers/admin_action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_change' name='action' id='action'/>
 								<button type='submit'>changer</button>
