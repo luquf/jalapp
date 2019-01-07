@@ -11,7 +11,7 @@ require_once __DIR__.'/../controllers/user.php';
 
 session_start();
 if (isset($_GET['selected']) && $_GET['selected'] != '') {
-    $_SESSION['selected_user'] = $_GET['selected'];
+    $_SESSION['selected_user'] = testinput($_GET['selected']);
 }
 else {
     header('Location: admin_interface.php');
@@ -70,7 +70,7 @@ else {
                         $userid = $_SESSION['selected_user'];
                         $utilisateur = getUserByID($userid);
                         if (count($utilisateur) == 0) {
-							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de client sur votre site.</li>";
+							header('Location: admin_interface.php'); // if selected user id is invalid
 						} else {
 							foreach ($utilisateur as $utilisateur) {
                                 echo "<tr><td>".$utilisateur[0]."</td>

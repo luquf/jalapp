@@ -5,7 +5,13 @@ session_start();
 require_once __DIR__.'/../models/user.php';
 
 function getUsersAdmin(){
-    return getUsers();
+    $users = getUsers();
+    foreach ($users as $user) {
+        if ($user[9] == 1) {
+            unset($users[array_search($user, $users)]); // remove admin users from admin panel
+        }
+    }
+    return $users;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 

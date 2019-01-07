@@ -56,7 +56,7 @@
                 <tbody id="table">
                 <?php
                         require_once __DIR__.'/../controllers/admin_interface.php';
-                        $utilisateur = getUsers();
+                        $utilisateur = getUsersAdmin();
                         
                         
 						if (count($utilisateur) == 0) {
