@@ -168,4 +168,10 @@
         padding-left: 4%;
     }
 
+    .capteuradmin{
+        display: flex;
+        flex-direction: row;
+    }
+
+
 }

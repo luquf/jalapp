@@ -90,6 +90,8 @@ else {
     <div class="principal">
 
                     <?php
+                    require_once __DIR__.'/../controllers/admin_capteur.php';
+
                     $userid = $_SESSION['selected_user'];
                     $data = getUserData($userid);
                     foreach ($data as $domcile) {
@@ -97,7 +99,24 @@ else {
                         foreach ($domcile["pieces"] as $piece) {
                             echo "<h2>".$piece[1]."</h2>";
                             foreach ($piece["capteurs"] as $capteur) {
-                                echo "<p>".$capteur[1]." ".$capteur[2]." ".$capteur[3]."</p>";
+                                echo "<p>".$capteur[1]." ".$capteur[2]." ".$capteur[3]."</p>
+                                <div class = 'capteuradmin'> 
+                                <form method='post' action='../controllers/action.php'>
+								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value='capt_info' name='action' id='action'/>
+								<input id='informations' type='button' value = 'informations'/>
+								</form>
+								<form method='post' action='../controllers/action.php'>
+								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value='capt_delete' name='action' id='action'/>
+								<button type='submit'>supprimer</button>
+								</form>
+								<form method='post' action='../controllers/action.php'>
+								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value='capt_change' name='action' id='action'/>
+								<button type='submit'>changer</button>
+								</form>
+									</div>";
                             }
                             foreach ($piece["controleurs"] as $controleur) {
                                 echo "<li>--------".$controleur[1]."</li>";
