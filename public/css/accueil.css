@@ -44,6 +44,7 @@
 		align-items: flex-end;
 		flex-wrap: nowrap;
 		padding-right: 2%;
+		margin: 2%;
 	}
 
 	.connexion{
@@ -259,7 +260,7 @@
 		flex-direction: row;
 		text-align: center;
 		width: 100%; 
-		height: 10%;
+		height: 8%;
 		align-items: center;
 		flex-wrap: nowrap;
 		position: absolute;
@@ -278,7 +279,7 @@
 
 	#logo_JALA{
 		width: 100%;
-		height:300%;
+		height:270%;
 		margin-top: -15%;
 
 	}
