@@ -50,7 +50,7 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		text-decoration: none;
-		
+		margin-right : 5%;
 	}
 
 
@@ -250,12 +250,13 @@
 		display: flex;
 		font-size: 2.5rem;
 		color: #515659;
-		text-decoration: none;
 		flex-wrap: nowrap;
 		flex-direction: row;
 		justify-content: space-around;
 		margin-top: auto;
 		margin-bottom: auto;
+		margin-right : 5%;
+		
 		
 		
 	}

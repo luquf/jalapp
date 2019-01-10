@@ -28,12 +28,12 @@ session_start();
 				<a href="domicile.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
 			</div>
 
-			<div id="bandeau_droite">
+			<div id="bandeau_droite" >
 					<div class="aide">
-						<a href= "aide_accueil.php"> Aide </a>
+						<a href= "aide_accueil.php" style="text-decoration: none; color: #515659"> Aide </a>
 					</div>
 				<div class="deconnexion">
-					<a href="inscription.php"> Déconnexion </a>
+					<a href="inscription.php" style="text-decoration: none; color: #515659"> Déconnexion </a>
 				</div>
 			</div>
 
