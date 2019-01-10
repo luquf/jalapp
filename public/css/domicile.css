@@ -127,6 +127,11 @@
 	
     }
 
+    .pieces-ul-top {
+	flex-wrap: wrap;
+    }
+
+
     .list-pieces{
 	margin-right : 3%;
 	margin-left : 1%;
@@ -151,6 +156,7 @@
     .list-pieces a {
 	text-decoration: none;
 	color: #FFFFFF;
+	font-size: 2em;
     }
 
     button {
@@ -271,7 +277,7 @@
 	margin: auto;
 	padding: 20px;
 	border: 1px solid #888;
-	border-radius: 5px;
+	border-radius: 15px;
 	width: 20%;
     }
     #name{
@@ -491,6 +497,11 @@
     #del-piece-button {
 	margin-top: 15%;
     }
+
+    .pieces-ul-top {
+	flex-wrap: wrap;
+    }
+
 
     .list-pieces a {
 	text-decoration: none;
