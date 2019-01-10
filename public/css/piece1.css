@@ -105,13 +105,14 @@
         padding-bottom : 3%;
         flex : wrap;
     }
+
    .liste{
         margin-right : 3%;
         margin-left : 1%;
-        border:1px solid black;
+        border: 1px solid black;
         border-radius : 10px ;
-        padding : 1%;
-        background-color : #A6AFB3;
+        padding : 1.5%;
+        background-color : white;
         color : black;
         font-style : none;
         font-family : Helvetica, sans-serif;
@@ -120,19 +121,19 @@
     }
 
     button {
-        border-radius : 20px;
+        border-radius : 25px;
         font-family: Helvetica;
-        padding : 4%;
-        margin : 2%;  
+        padding : 6%;
+        margin : 4%;  
         background-color: #515659;
         color : #ffffff;
         border: 0;
     }
 
     #informations {
-        border-radius : 20px;
+        border-radius : 25px;
         font-family: Helvetica;
-        padding : 4%;
+        padding : 6%;
         margin : 2%;  
         background-color: #515659;
         color : #ffffff;
@@ -206,6 +207,7 @@
         border: 1px solid #888;
         width: 20%;
         border-radius: 5px;
+        margin-bottom: 50%;
     }
     
     .modal-content .input {
@@ -218,6 +220,7 @@
 
     #name{
         margin-bottom: 5%;
+        text-decoration: none;
     }
     .close {
         color: #aaaaaa;
@@ -247,6 +250,326 @@
         color: white;
         border: none;
     }
+ 
+    
+    #modal2 {
+        height: 300px;
+        width: 80%;
+        background-color:white ;
+        opacity: 0.9;
+        text-align: center;
+        color: black;
+        position: absolute;
+        left: 20%;
+        transition: 0.5s;
+        top: -400px;
+        
+    }
+    
+    .modal2 {
+        display: none; 
+        position: fixed;
+        z-index: 1; 
+        padding-top: 100px; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+    }
+    
+    .modal-content2 {
+        background-color: #fefefe;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: 10%;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 75%;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .modal-content2 span {
+        font-weight: bold;
+    }
+    
+    .historique {
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    body
+    {
+        background-color: grey;
+        color: #515659;
+        background: url("../assets/wallpaper.jpg") fixed no-repeat center;
+        background-size: cover;
+        font-family: Helvetica;
+        margin : 0 auto;
+        position: absolute;
+    }
+
+    #bandeau
+    {
+        background-color: #ffffff;
+        opacity : 1;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        color: #515659;
+        margin-bottom: 8%; 
+    }
+    .logo
+    {
+        margin-left : 2%;
+        margin-top : 0.8%;
+        margin-bottom : 0.8%;
+
+    }
+    #logo {
+        width : 75%;
+        height : auto;
+    }
+
+    .deconnexion {
+        text-decoration: none;
+        color: #515659;
+        font-size : 3em;
+        margin-top : auto;
+        margin-bottom : auto;
+        margin-right : 18%;
+    }
+    .aide 
+    {
+        text-decoration: none;
+        font-size : 3em;
+        color: #515659;
+        text-decoration: none;
+        margin-top : auto;
+        margin-bottom : auto;
+        margin-right : 8%;
+    }
+    .bandeau-droite
+    {
+        display : flex;
+        justify-content : space-around;
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap : nowrap;
+        padding : 2%;
+    }
+        
+
+    #slogan h1{
+        margin-top: 2%;
+    }
+
+
+    #tab1 {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 1%;
+        margin-bottom : 2%;
+        border-radius : 20px;
+        background:#fff;
+        opacity: 0.9;
+        justify-content: center;
+        padding: 1%;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .sensor-left {
+        margin-left: auto;
+        margin-right: auto;
+        margin: 1%;
+        
+    }
+    .sensor-right {
+		margin-left: auto;
+        margin-right: auto;
+        margin: 1%;
+    }
+    .sensor-ul-top {
+       display : flex;
+       flex-direction : row;
+       padding-top : 3%;
+       padding-bottom : 3%;
+       flex : wrap;
+       
+    }
+    .sensor-ul-bottom {
+        display : flex;
+        flex-direction : row;
+        padding-top : 3%;
+        padding-bottom : 3%;
+        flex : wrap;
+    }
+
+   .liste{
+        margin-right : 3%;
+        margin-left : 1%;
+        border: 1px solid black;
+        border-radius : 10px ;
+        padding : 1.5%;
+        background-color : white;
+        color : black;
+        font-style : none;
+        font-family : Helvetica, sans-serif;
+        list-style-type : none;
+        text-align: center;
+    }
+
+    button {
+        border-radius : 25px;
+        font-family: Helvetica;
+        padding : 6%;
+        margin : 4%;  
+        background-color: #515659;
+        color : #ffffff;
+        border: 0;
+    }
+
+    #informations {
+        border-radius : 25px;
+        font-family: Helvetica;
+        padding : 6%;
+        margin : 2%;  
+        background-color: #515659;
+        color : #ffffff;
+        border: 0;
+    }
+
+    #slogan h1{
+		font-size: 4em;
+		font-weight: bold;
+		text-align: center;
+		color : #ffffff;
+		margin-top : 5%;
+		margin-bottom : 5%;
+
+    }
+    
+    .titre {
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 0%;
+        margin: 1%;
+    }
+
+
+    #add_capteur{
+        background-color: #515659;
+        color: #ffffff;
+        border: none;
+        font-size: 2em;
+        border-radius: 50%;
+        margin-left: 48%;
+        width :50px;
+        height:50px;
+        outline: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #modal1 {
+        height: 300px;
+        width: 60%;
+        background-color:white ;
+        opacity: 0.9;
+        text-align: center;
+        color: black;
+        position: absolute;
+        left: 20%;
+        transition: 0.5s;
+        top: -400px;
+        
+    }
+    
+    .modal1 {
+        display: none; 
+        position: fixed;
+        z-index: 1; 
+        padding-top: 100px; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        text-align:center;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        height: 35%;
+        border-radius: 5px;
+        margin-bottom: 50%;
+    }
+
+    .modal-content h2{
+        font-size: 3em;
+        padding-bottom: 3%;
+    }
+    
+    .modal-content .input {
+        padding: 2.5%;
+        border-radius: 5px;
+        border: 1px solid #888;
+        box-sizing: content-box;
+        outline: none;
+        font-size: 2.7em;
+    }
+
+    #name{
+        margin-bottom: 5%;
+        text-decoration: none;
+    }
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 80px;
+        font-weight: bold;
+    }
+    h2{
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #validation1 {
+        margin-top: 17%;
+        font-size: 3em;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        border-radius: 5px;
+        background-color: #515659;
+        color: white;
+        border: none;
+    }
+
+    
  
     
     #modal2 {

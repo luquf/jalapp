@@ -42,8 +42,8 @@ session_start();
                     <i class="fa fa-info-circle fa-sm"></i> Informations
                 </h2>
                 <?php
-                require __DIR__.'/../models/user.php';
-                $user = getUserByID($_SESSION['user_id']);
+                    require __DIR__.'/../models/user.php';
+                    $user = getUserByID($_SESSION['user_id']);
                 ?>
                         <p>
                             <b>Nom: </b><?php echo $user[0][1]?>
@@ -71,6 +71,7 @@ session_start();
                 <i class="fa fa-edit fa-sm"></i> Modifier
 
                 </h2>
+
                 <?php
                 $error = $_GET['error'];
                 if (isset($error)) {
@@ -81,6 +82,7 @@ session_start();
                     }
                 }
                 ?>
+
                 <form method="post" action="../controllers/user_reglage.php">
                             <input class="input" type="text" name="name" id="name" placeholder="Nom" size="30" maxlength="40"/>
                             <input class="input" type="text" name="surname" id="surname" placeholder="Prénom" size="30" maxlength="40"/>
