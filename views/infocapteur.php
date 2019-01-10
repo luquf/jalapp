@@ -72,14 +72,14 @@ if ($type == 1) {
                         echo"
                         
                         <div class='infos'>
-                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du Capteur <em>'".$capteur[1]."'</em></h1>
+                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du capteur <em>'".$capteur[1]."'</em></h1>
                             <span>Numéro de série : </span>".$capteur[0]."
                             <br/><span>Type : </span>".$capteur[2]."
                             <br/><span>Emplacement : </span>".$capteur[4]."
                         </div>
 					
                         <div class ='historique'>
-                            <h2> Historique de ".$capteur[1]." </h2>";
+                                                    <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du capteur <em>'".$capteur[1]."'</em></h1>";
                         }
 
                             require __DIR__ . '/../controllers/releve.php';
@@ -108,7 +108,8 @@ if ($type == 1) {
                         </div>
 					
                         <div class ='historique'>
-                            <h2> Historique de ".$controleurs[1]." </h2>";}
+                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du controleur <em>'".$controleurs[1]."'</em></h1>";
+                        }
                             ?>
                             <?php
 
