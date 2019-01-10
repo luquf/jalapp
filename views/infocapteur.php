@@ -8,15 +8,13 @@ session_start();
 
 if (isset($_GET['capteur'])) {
 	$_SESSION['capteur_id'] = $_GET['capteur'];
- } else {
+    $type = 1;
+} else if (isset($_GET['controleur'])) {
+    $_SESSION['controleur_id'] = $_GET['controleur'];
+    $type = 2;     
+} else {
     header("Location: domicile.php");
  }
-if (isset($_GET['controleur'])) {
-    $_SESSION['controleur_id'] = $_GET['controleur'];
- } else {
-	header("Location: domicile.php");
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +49,7 @@ if (isset($_GET['controleur'])) {
 
 		<div id="slogan">
 			<h1>
-				Je m'informe sur mes capteurs !
+			Informations
 			</h1>
 		</div>
 
@@ -65,22 +63,25 @@ if (isset($_GET['controleur'])) {
                         require_once __DIR__.'/../controllers/capteur.php';
                         $capteurs = getCapteursController($_SESSION['capteur_id']);
                         $controleurs = getControleursController($_SESSION['controleur_id']);
-
+if ($type == 1) {
+    if (count($capteurs) == 0) {
+        header("Location: piece1.php?piece=".$_SESSION['piece_id']);
+    }
                         foreach ($capteurs as $capteur) {
 
                         echo"
                         
                         <div class='infos'>
-                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos de Capteur ".$capteur[1]." </h1>
+                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du capteur <em>'".$capteur[1]."'</em></h1>
                             <span>Numéro de série : </span>".$capteur[0]."
                             <br/><span>Type : </span>".$capteur[2]."
                             <br/><span>Emplacement : </span>".$capteur[4]."
                         </div>
 					
                         <div class ='historique'>
-                            <h2> Historique de ".$capteur[1]." </h2>";}
-                            ?>
-                            <?php
+                                                    <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du capteur <em>'".$capteur[1]."'</em></h1>";
+                        }
+
                             require __DIR__ . '/../controllers/releve.php';
 
                             $releve_capteur = getDataCapteur();
@@ -90,22 +91,25 @@ if (isset($_GET['controleur'])) {
                                 <span>".$releve_capteur[1]." : </span>".$releve_capteur[3]."
                                 </form>
 					        </div>";
-				            ?>
-
-                        <?php 
+    
+} else {
+    if (count($controleurs) == 0) {
+        header("Location: piece1.php?piece=".$_SESSION['piece_id']);
+    }
                         foreach ($controleurs as $controleurs) {
 
                         echo"
                         
                         <div class='infos'>
-                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos de Capteur ".$controleurs[1]." </h1>
+                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du controleur <em>'".$controleurs[1]."'</em></h1>
                             <span>Numéro de série : </span>".$controleurs[0]."
                             <br/><span>Type : </span>".$controleurs[2]."
                             <br/><span>Emplacement : </span>".$controleurs[4]."
                         </div>
 					
                         <div class ='historique'>
-                            <h2> Historique de ".$controleurs[1]." </h2>";}
+                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du controleur <em>'".$controleurs[1]."'</em></h1>";
+                        }
                             ?>
                             <?php
 
@@ -116,8 +120,10 @@ if (isset($_GET['controleur'])) {
                                 <span>".$releve_ccontroleur[1]." : </span>".$releve_controleur[3]."
                                 </form>
 					        </div>";
-				            ?>
-				        </div> 
+				             
+}
+?>
+</div> 
 			
                     </div>
                 </div>  
