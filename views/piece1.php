@@ -62,7 +62,7 @@ if (isset($_GET['piece'])) {
 					<ul class="sensor-ul-top">
 						<?php
 						require_once __DIR__.'/../controllers/capteur.php';
-						$capteurs = getCapteursController($_SESSION['piece_id']);
+						$capteurs = getCapteursControllerPIECE($_SESSION['piece_id']);
 						if (count($capteurs) == 0) {
 							echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteurs pour cette pièce.</li>";
 						} else {
@@ -71,7 +71,7 @@ if (isset($_GET['piece'])) {
 								<form method='post' action='../controllers/action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_info' name='action' id='action'/>
-								<input id='informations' type='button' value = 'informations'/>
+								<button>informations </button>
 								</form>
 								<form method='post' action='../controllers/action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
@@ -95,7 +95,7 @@ if (isset($_GET['piece'])) {
 				<h1 class="titre"><i class="fa fa-cogs fa-sm"></i> Controleurs</h1>
 					<ul class="sensor-ul-bottom">
 						<?php
-							$controleurs = getControleursController($_SESSION['piece_id']);
+							$controleurs = getControleursControllerPIECE($_SESSION['piece_id']);
 							if (count($controleurs) == 0) {
 								echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de controleurs pour cette pièce.</li>";
 							} else {
@@ -104,7 +104,7 @@ if (isset($_GET['piece'])) {
 									"<form method='post' action='../controllers/action.php'>
 									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
-									<input id='informations' type='button' value = 'informations'/>
+									<button <a href='infocapteur.php?cont=".$controleur[0]."'>informations<a> </button>
 									</form>
 									<form method='post' action='../controllers/action.php'>
 									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
@@ -202,14 +202,14 @@ if (isset($_GET['piece'])) {
 
 
 
-		<script>
+		<!-- <script>
 		var modal2 = document.getElementById('myModal2');
 		var button1 = document.getElementById('informations');
-		var span = document.getElementsByClassName("close")[0];
+		var span2 = document.getElementsByClassName("close")[0];
 		button1.onclick = function() {
    			modal2.style.display = "block";
 		}
-		span.onclick = function() {
+		span2.onclick = function() {
     		modal2.style.display = "none";
 		}		
 		window.onclick = function(event) {
@@ -217,7 +217,7 @@ if (isset($_GET['piece'])) {
         		modal2.style.display = "none";
     		}
 		}
-		</script>
+		</script> -->
 
 
 

@@ -60,10 +60,18 @@ function testinput($data) {
     return $data;
 }
 
-function getCapteursController($id) {
+function getCapteursControllerPIECE($id) {
     return getCapteurs($id);
 }
 
-function getControleursController($id) {
+function getControleursControllerPIECE($id) {
     return getControleurs($id);
+}
+
+function getCapteursController($capteurid) {
+    return getCapteursByID($capteurid);
+}
+
+function getControleursController($controleurid) {
+    return getControllersByID($controleurid);
 }

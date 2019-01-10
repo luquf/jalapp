@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $capteur = testinput($_POST['capteur']);
     if (isset($capteur) & isset($action)) {
         if ($action == "capt_info") {
-            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']."&capteur=".$capteur);
+            header("Location: ../views/infocapteur.php?piece=".$_SESSION['piece_id']."&capteur=".$capteur);
         } else if ($action == "capt_delete") {
             removeCapteur($capteur);
             header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']);

@@ -56,7 +56,7 @@
                 <tbody id="table">
                 <?php
                         require_once __DIR__.'/../controllers/admin_interface.php';
-                        $utilisateur = getUsersAdmin();
+                        $utilisateur = getUsers();
                         
                         
 						if (count($utilisateur) == 0) {
@@ -68,7 +68,8 @@
               }
 							foreach (array_slice($utilisateur, ($page*10)-10, 10) as $utilisateur) {
                                 echo "
-                                <tr><td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[0]."</td>
+                                <tr>
+                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[0]."</td>
                                 <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[1]."</a></td>
                                 <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[2]."</a></td>
                                 <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[3]."</a></td>

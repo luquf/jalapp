@@ -112,4 +112,21 @@ function removeControleur($controleurid) {
     return $data;
 }
 
+function getCapteursByID($capteurid) {
+    $db = connectDB();
+    $stmt = $db->prepare("SELECT * from `capteurs` WHERE id_capteur=?");
+    $stmt->execute(array($capteurid));
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
+function getControllersByID($controleurid) {
+    $db = connectDB();
+    $stmt = $db->prepare("SELECT * from `controleurs` WHERE id_controleur=?");
+    $stmt->execute(array($controleurid));
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
+
 ?>
