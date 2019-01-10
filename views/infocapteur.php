@@ -61,6 +61,8 @@ if (isset($_GET['capteur'])) {
                 
                         <?php 
                         require_once __DIR__.'/../controllers/capteur.php';
+                        require_once __DIR__.'/../models/piece.php';
+                        $pieces = getPiecesByID($_SESSION['piece_id']);
                         $capteurs = getCapteursController($_SESSION['capteur_id']);
                         $controleurs = getControleursController($_SESSION['controleur_id']);
 if ($type == 1) {
@@ -73,13 +75,15 @@ if ($type == 1) {
                         
                         <div class='infos'>
                         <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du capteur <em>'".$capteur[1]."'</em></h1>
+                        <br/>
                             <span>Numéro de série : </span>".$capteur[0]."
                             <br/><span>Type : </span>".$capteur[2]."
-                            <br/><span>Emplacement : </span>".$capteur[4]."
+                            <br/><span>Emplacement : </span>".$pieces[0][1]."
                         </div>
 					
                         <div class ='historique'>
-                                                    <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du capteur <em>'".$capteur[1]."'</em></h1>";
+                        <br/>
+                                                    <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du capteur <em>'".$capteur[1]."'</em></h1><br/>";
                         }
 
                             require __DIR__ . '/../controllers/releve.php';

@@ -30,4 +30,12 @@ function removePiece($pieceid) {
     return $data;
 }
 
+function getPiecesByID($pieceid) {
+    $db = connectDB();
+    $stmt = $db->prepare("SELECT * from `pieces` WHERE id_piece=?");
+    $stmt->execute(array($pieceid));
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
 ?>
