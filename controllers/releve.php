@@ -10,11 +10,11 @@ function getDataControleur() {
     return getAllReleveControleurs();
 }
 
-function testinput($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+// function testinput($data) {
+//     $data = trim($data);
+//     $data = stripslashes($data);
+//     $data = htmlspecialchars($data);
+//     return $data;
+// }
 
 ?>

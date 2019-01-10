@@ -45,13 +45,13 @@ if (!isset($dom[0][0])) {
 
 				<div id="bandeau_droite">
 						<div class="aide">
-							<a href= "aide_accueil.php"> Aide</a>
+							<a href= "aide_accueil.php">Aide</a>
 						</div>
 						<div class="settings">
-							<a href= "user_settings.php"> Réglages</a>
+							<a href= "user_settings.php">Réglages</a>
 						</div>
 					<div class="deconnexion">
-						<a href="inscription.php"> Déconnexion </a>
+						<a href="inscription.php">Déconnexion</a>
 					</div>
 			</div>
 
@@ -109,7 +109,10 @@ if (!isset($dom[0][0])) {
         <div id='tab1'>
 			<?php 
 				$pieces = getPieces($_SESSION['domicile_id']);
-			?>
+                $domicile = getDomicileByID($_SESSION['domicile_id']);
+                echo "<h1 style='text-align:center;'>".$domicile[0][1]."</h1>";
+              ?>
+            
 			<ul class="pieces-ul-top">
 				<?php
 				if (count($pieces) == 0) {
@@ -120,7 +123,7 @@ if (!isset($dom[0][0])) {
 						<form action='../controllers/piece.php' method='post'>
 						<input type='hidden' value=".$piece[0]." name='piece' id='piece'/>
 						<input type='hidden' value='piece_del' name='action' id='action'/>
-						<button type='submit'>Supprimer</button>
+						<button type='submit' id='del-piece-button'>Supprimer</button>
 						</form>
 						</li>";
 					}

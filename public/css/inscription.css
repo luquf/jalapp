@@ -28,12 +28,10 @@
 		margin-top :0.8%;
 
 	}
-
 	#logo {
 		width: 15%;
 		height: auto; 
 	}
-
 	#bandeau_droite{
 		display: flex;
 		justify-content: space-around;
