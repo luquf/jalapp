@@ -11,7 +11,7 @@
 	<div id="bandeau">
 
 	<div class="logo">
-		<a href="domicile.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
+		<a href="accueil.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
 	</div>
 
 	<div id="bandeau_droite">
@@ -41,13 +41,14 @@ Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus ap
 		</div>
 	</body>
 
-	<footer id="footer">
+	<footer>
 
-		<div class="designed"> Powered by </div>
-		<div class="logo_JALA"> 
-			<a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
-		</div>
-		<div class="designed"> © </div>
+		    <div class = 'info_footer'> 
+          <div class='inf'> Powered by </div>
+          <div class='inf'> <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a></div>
+          <div class='inf'>©</div>
+        </div>
+
 
 	</footer>
 

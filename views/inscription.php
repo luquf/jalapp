@@ -90,6 +90,22 @@ session_unset();
             		<input class="input" type="text" name="cle" id="cle" placeholder="xxxxxx-xxxxxx-xxxxxx-xxxxxx" size="30" maxlength="20" required />
         			<input class="input button" type="submit" value="S'inscrire"/>
 				   </form>
-   			</div>
+			   </div>
+				</div>
+
+			   <footer>
+
+<div class = 'info_footer'> 
+<div class='inf'> Powered by </div>
+<div class='inf'> <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a></div>
+<div class='inf'>©</div>
+</div>
+
+
+</footer>
 
 	</body>
+
+	
+
+</html>

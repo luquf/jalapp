@@ -85,14 +85,16 @@ session_start();
 
 	</body>
 
-	<footer id="footer">
+	<footer>
 
-		<div class="designed"> Powered by </div>
-		<div class="logo_JALA"> 
-			<a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
-		</div>
-		<div class="designed"> © </div>
+		    <div class = 'info_footer'> 
+          <div class='inf'> Powered by </div>
+          <div class='inf'> <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a></div>
+          <div class='inf'>©</div>
+        </div>
+
 
 	</footer>
+
 
 </html>

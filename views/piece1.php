@@ -201,6 +201,18 @@ if (isset($_GET['piece'])) {
 </div>
 
 
+<footer>
+
+		    <div class = 'info_footer'> 
+          <div class='inf'> Powered by </div>
+          <div class='inf'> <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a></div>
+          <div class='inf'>©</div>
+        </div>
+
+
+	</footer>
+
+	</body>
 
 
 		<!-- <script>
@@ -224,5 +236,5 @@ if (isset($_GET['piece'])) {
 
 
 
-	</body>
+
 </html>
