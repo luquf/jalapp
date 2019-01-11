@@ -94,39 +94,30 @@
 		position: relative;	
 	}
 
-	#footer{
-		background-color: #ffffff;
-		display: flex;
+	.info_footer{
+        background-color: #ffffff;
+        display: flex;
 		flex-direction: row;
 		text-align: center;
 		width: 100%; 
-		height: 5%; 
-		align-items: center;
+        height: 8%;
+        align-items: center;
 		flex-wrap: nowrap;
-		position: absolute;
-		bottom: 0;
 		justify-content: center;
 		opacity: 0.9;
-		padding-top: 0.25%;
-		padding-bottom: 0.25%;  
-	}
+    }
 
+    #logo_JALA{
+        width: 15%;
+        height:15%;
+        padding-left: 2%;
+    }
 
-	#logo_JALA{
-		width: 45%;
-		height: 100%;
-	}
+    .inf{
+        margin-left: -9.8%;
+        margin-right: -9.8%;
 
-	.logo_JALA{
-		width: 15%;
-		height: 100%;
-	}
-
-	.designed{
-		color: #515659;
-		font-style: italic;
-		font-size: 0.6em;
-	}
+    }
 
 
 
@@ -231,8 +222,6 @@
         height: 8%;
         align-items: center;
 		flex-wrap: nowrap;
-		position: absolute;
-		bottom: 0;
 		justify-content: center;
 		opacity: 0.9;
     }

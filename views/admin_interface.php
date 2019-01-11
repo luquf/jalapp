@@ -22,7 +22,7 @@
 
     <div id="bandeau">
 				<div class="logo">
-					<a href="domicile.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
+					<a href="admin_interface.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
 				</div>
 
                 <div class="bandeau_droite">

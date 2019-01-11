@@ -103,8 +103,8 @@ else {
                                 <div class = 'capteuradmin'> 
                                 <form method='post' action='../controllers/admin_action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
-								<input type='hidden' value='capt_info' name='action' id='action'/>
-								<input id='informations' type='button' value = 'informations'/>
+                                <input type='hidden' value='capt_info' name='action' id='action'/>
+                                <button <a href='admin_infocapteur.php?cont=".$capteur[0]."'>informations<a> </button>
 								</form>
 								<form method='post' action='../controllers/admin_action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
@@ -124,7 +124,7 @@ else {
                                 <form method='post' action='../controllers/admin_action.php'>
 								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='cont_info' name='action' id='action'/>
-								<input id='informations' type='button' value = 'informations'/>
+                                <button <a href='admin_infocapteur.php?cont=".$controleur[0]."'>informations<a> </button>
 								</form>
 								<form method='post' action='../controllers/admin_action.php'>
 								<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>

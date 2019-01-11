@@ -35,3 +35,4 @@ function sendForgottenPassword($email, $nom, $prenom, $password) {
     $mail->Body    = 'Bonjour '.$prenom.', vous avez demandé la réinitialisation de votre mot de passe Domisep. Voici votre nouveau mot de passe: '.$password;
     $mail->send();   
 }
+
