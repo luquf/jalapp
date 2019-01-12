@@ -182,7 +182,7 @@
         height: 8%;
         align-items: center;
 		flex-wrap: nowrap;
-		justify-content: center;
+		justify-content: space-around;
 		opacity: 0.9;
     }
 
