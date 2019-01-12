@@ -19,6 +19,7 @@
 		opacity : 1;
 		display: flex;
 		flex-direction: row;
+		flex-wrap: nowrap;
 		width: 100%;
 		height: 100%;
 		justify-content: space-between;
@@ -40,10 +41,9 @@
 
 	#bandeau_droite{
 		display: flex;
-		justify-content: space-around;
-		align-items: flex-end;
+		flex-direction: row;
+		justify-content: center;
 		flex-wrap: nowrap;
-		padding-right: 2%;
 		margin: 2%;
 	}
 
@@ -54,8 +54,9 @@
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-
-		margin-right: 5%;
+		display: flex;
+		flex-wrap: nowrap;
+		margin-right: 2%;
 		padding-left: 2%;
 		
 	}
@@ -126,7 +127,7 @@
         height: 8%;
         align-items: center;
 		flex-wrap: nowrap;
-		justify-content: center;
+		justify-content: space-around;
 		opacity: 0.9;
     }
 
@@ -138,10 +139,16 @@
 
     .inf{
         margin-left: -9.8%;
-        margin-right: -9.8%;
-
+		margin-right: -9.8%;
+		color: #515659;
+		text-decoration:none;
+		
     }
 
+	.inf a{
+		margin-right: 1%;
+		padding-right: 5%;
+	}
 	
 
 
@@ -254,7 +261,7 @@
         height: 8%;
         align-items: center;
 		flex-wrap: nowrap;
-		justify-content: center;
+		justify-content: space-around;
 		opacity: 0.9;
     }
 
@@ -266,7 +273,9 @@
 
     .inf{
         margin-left: -9.8%;
-        margin-right: -9.8%;
+		margin-right: -9.8%;
+		color: #515659;
+
 
     }
 }

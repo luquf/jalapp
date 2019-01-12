@@ -173,9 +173,13 @@ if (!isset($dom[0][0])) {
 		<footer>
 
 <div class = 'info_footer'> 
-<div class='inf'> Powered by </div>
-<div class='inf'> <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a></div>
-<div class='inf'>©</div>
+	<div>Powered by 
+<a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
+  ©</div>
+  <a href= 'mentionslegales.php'> Mentions Légales </a> 
+  <a href= 'cgu.php'> ConditionsGénérales </a> 
+
+
 </div>
 
 

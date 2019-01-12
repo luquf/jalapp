@@ -10,7 +10,7 @@
 	<body>
 		<div id="bandeau">
 				<div class="logo">
-						<a href="domicile.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" /> 
+						<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" /> 
 
 				</div>
 
@@ -19,7 +19,7 @@
 							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
 						</div>
 					<div class="connexion">
-						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Espace Client </a>
+						<a href="inscription.php" style = "text-decoration: none; color: #515659"> EspaceClient </a>
 					</div>
 				</div>
 
@@ -49,13 +49,17 @@
 
 	<footer>
 
-		    <div class = 'info_footer'> 
-          <div class='inf'> Powered by </div>
-          <div class='inf'> <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a></div>
-          <div class='inf'>©</div>
+		<div class = 'info_footer'> 
+        	<div>Powered by 
+        <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
+          ©</div>
+		  <a href= 'mentionslegales.php'> Mentions Légales </a> 
+		  <a href= 'cgu.php'> ConditionsGénérales </a> 
+
+
         </div>
 
-
+		
 	</footer>
 
 
