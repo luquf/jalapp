@@ -113,7 +113,7 @@ if (!isset($dom[0][0])) {
                 echo "<h1 style='text-align:center;'>".$domicile[0][1]."</h1>";
               ?>
             
-			<ul class="pieces-ul-top">
+			<ul class="pieces-ul-top" style="list-style-type:none;">
 				<?php
 				if (count($pieces) == 0) {
 					echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de pièces pour ce domicile.</li>"; 
@@ -171,23 +171,7 @@ if (!isset($dom[0][0])) {
 		}
 		</script>
 		<footer>
-
-<div class = 'info_footer'> 
-	<div>Powered by 
-<a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
-  ©</div>
-  <a href= 'mentionslegales.php'> Mentions Légales </a> 
-  <a href= 'cgu.php'> ConditionsGénérales </a> 
-
-
-</div>
-
-
-</footer>
-
 	</body>
 
-	
-	
 
 </html>

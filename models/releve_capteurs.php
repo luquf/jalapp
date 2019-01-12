@@ -4,7 +4,16 @@ require_once "db.php";
 
 function getAllReleveCapteurs() {
     $db = connectDB();
-    $stmt = $db->prepare("SELECT * from `releve_capteurs`");
+    $stmt = $db->prepare("SELECT * from releve_capteurs");
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $data;
+}
+
+function getReleveCapteurByID($id) {
+    $db = connectDB();
+    $stmt = $db->prepare("SELECT * from `releve_capteurs` WHERE id_capteur=?");
+    $stmt->execute(array($id));
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
     return $data;
 }

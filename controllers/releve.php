@@ -10,6 +10,14 @@ function getDataControleur() {
     return getAllReleveControleurs();
 }
 
+function getCapteurDataByID($id) {
+    return getReleveCapteurByID($id);
+}
+
+function getControleurDataByID($id) {
+    
+}
+
 // function testinput($data) {
 //     $data = trim($data);
 //     $data = stripslashes($data);

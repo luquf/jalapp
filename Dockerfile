@@ -18,7 +18,7 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c06277
 RUN php composer-setup.php --install-dir=/usr/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 RUN composer install
-RUN (cd crawler && sh ./crawler.sh)
+RUN (cd crawler && sh ./crawler.sh &)
 
 # Lancement du serveur
 CMD /usr/sbin/apache2ctl -D FOREGROUND
