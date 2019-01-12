@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             header("Location: ../views/infocapteur.php?capteur=".$capteur);
         } else if ($action == "capt_delete") {
             removeCapteur($capteur);
-            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']);
+            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']."#capt");
         } else if ($action == "capt_change"){
             $state = getCapteurState($capteur);
             if ($state[0][0] == "ON") {
@@ -21,16 +21,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             } else {
                 setCapteurState($capteur, "ON");
             }
-            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']);
+            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']."#capt");
         } if ($action == "cont_info") {
             header("Location: ../views/infocapteur.php?controleur=".$capteur);
         } if ($action == "cont_delete") {
             removeControleur($capteur);
-            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']);
+            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']."#cont");
         } if ($action == "cont_change") {
             $level = $_POST['cont-val'];
             setControleurState($capteur, $level);
-            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']);
+            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']."#cont");
         }
     } 
 }

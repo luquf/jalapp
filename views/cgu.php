@@ -29,7 +29,7 @@
 
 		<div id="slogan">
 			<h1>
-            Conditions générales d'utilisation du site www.domisep.ovh
+            Conditions générales d'utilisation
 			</h1>
 		</div>
 
@@ -41,7 +41,7 @@
 
 <br/>
 ARTICLE 1 : Objet
-<br/>
+<br/><br/>
 
 Les présentes « conditions générales d'utilisation » ont pour objet l'encadrement juridique de l’utilisation du site www.domisep.ovh  et de ses services.
 <br/>
@@ -55,7 +55,7 @@ Les conditions générales d'utilisation doivent être acceptées par tout Utili
 <br/>
 <br/>
 ARTICLE 2 : Mentions légales
-<br/>
+<br/><br/>
 Pour les personnes morales :
 <br/>
 Le site www.domisep.ovh est édité par la société Jala, SARL au capital de 1 000 000 €, dont le siège social est situé au 10 rue de Vanves 92130 Issy-les-Moulineaux.
@@ -70,7 +70,7 @@ Le site www.domisep.ovh est édité par Léo B, Augustin dB, Arthur D & James G.
 <br/>
 
 ARTICLE 3 : accès aux services
-<br/>
+<br/><br/>
 L’Utilisateur du site www.domisep.ovh a accès aux services suivants :<br/>
 •	Gestion de domiciles<br/>
 •	Gestion de pièces<br/>
@@ -92,7 +92,7 @@ Le site et ses différents services peuvent être interrompus ou suspendus par l
 <br/>
 <br/>
 ARTICLE 4 : Responsabilité de l’Utilisateur
-<br/>
+<br/><br/>
 L'Utilisateur est responsable des risques liés à l’utilisation de son identifiant de connexion et de son mot de passe. 
 <br/>
 Le mot de passe de l’Utilisateur doit rester secret. En cas de divulgation de mot de passe, l’Éditeur décline toute responsabilité.
@@ -116,7 +116,7 @@ L’Éditeur s'engage toutefois à citer le membre en cas d’utilisation de  sa
 
 <br/>
 ARTICLE 5 : Responsabilité de l’Éditeur
-<br/>
+<br/><br/>
 Tout dysfonctionnement du serveur ou du réseau ne peut engager la responsabilité de l’Éditeur.
 <br/>
 De même, la responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et insurmontable d'un tiers.
@@ -126,7 +126,7 @@ Le site www.domisep.ovh s'engage à mettre en œuvre tous les moyens nécessaire
 L’Éditeur se réserve la faculté d’une non-garantie de la fiabilité des sources, bien que les informations diffusées sur le site soient réputées fiables.
 <br/><br/>
 ARTICLE 6 : Propriété intellectuelle
-<br/>
+<br/><br/>
 Les contenus du site www.domisep.ovh (logos, textes, éléments graphiques, vidéos, etc.) sont protégés par le droit d’auteur, en vertu du Code de la propriété intellectuelle.
 <br/>
 L’Utilisateur devra obtenir l’autorisation de l’éditeur du site avant toute reproduction, copie ou publication de ces différents contenus.
@@ -139,7 +139,7 @@ L’Éditeur du site se réserve le droit de modérer ou de supprimer librement 
 <br/>
 <br/>
 ARTICLE 7 : Données personnelles
-<br/>
+<br/><br/>
 L’Utilisateur doit obligatoirement fournir des informations personnelles pour procéder à son inscription sur le site. 
 <br/>
 L’adresse électronique (e-mail) de l’utilisateur pourra notamment être utilisée par le site www.domisep.ovh pour la communication d’informations diverses et la gestion du compte.
@@ -157,24 +157,24 @@ En vertu des articles 39 et 40 de la loi en date du 6 janvier 1978, l'Utilisateu
 
 <br/>
 ARTICLE 8 : Liens hypertextes
-<br/>
+<br/><br/>
 Les domaines vers lesquels mènent les liens hypertextes présents sur le site n’engagent pas la responsabilité de l’Éditeur de www.domisep.ovh, qui n’a pas de contrôle sur ces liens.
 <br/>
 Il est possible pour un tiers de créer un lien vers une page du site www.domisep.ovh sans autorisation expresse de l’éditeur.
 <br/>
 <br/>
 ARTICLE 9 : Évolution des conditions générales d’utilisation
-<br/>
+<br/><br/>
 Le site www.domisep.ovh se réserve le droit de modifier les clauses de ces conditions générales d’utilisation à tout moment et sans justification.
 <br/>
 <br/>
 ARTICLE 10 : Durée du contrat
-<br/>
+<br/><br/>
 La durée du présent contrat est indéterminée. Le contrat produit ses effets à l'égard de l'Utilisateur à compter du début de l’utilisation du service.
 <br/>
 <br/>
 ARTICLE 11 : Droit applicable et juridiction compétente
-<br/>
+<br/><br/>
 Le présent contrat dépend de la législation française. 
 <br/>En cas de litige non résolu à l’amiable entre l’Utilisateur et l’Éditeur, les tribunaux de Paris sont compétents pour régler le contentieux.
 <br/>
