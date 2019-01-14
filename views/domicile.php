@@ -72,7 +72,7 @@ if (!isset($dom[0][0])) {
 				<form action='../controllers/domicile.php' method='post'>
 						<input type='hidden' value=".$val[0]." name='domicile' id='domicile'/>
 						<input type='hidden' value='domicile_del' name='action' id='action'/>
-						<button type='submit' id='del-domicile-button'>x</button>
+                        <button id='del-domicile-button' type='submit' value='del_home'><i class='fa fa-trash'></i></button>
 						</form> 
 				</a></li>";
 			}
@@ -86,7 +86,8 @@ if (!isset($dom[0][0])) {
     			<h2>Ajouter un domicile</h2>
 				<form method="post" action="../controllers/domicile.php">
                         <input class="input" type="type" name="name" id="name" placeholder="Nom du domicile" size="30" maxlength="40" required/>
-						<button id ="validation2" type="submit">Valider</button>
+                        <input type='hidden' value='domicile_add' name='action' id='action'/>
+						<button id ="validation2" type="submit" value="ajouter">Valider</button>
 				</form>
 			</div>
 		</div>
