@@ -151,25 +151,38 @@
 	
     }
 
-    #del-piece-button {
+    /* #del-piece-button {
 	margin-top: 15%;
-    }
+    } */
 
     .list-pieces a {
 	text-decoration: none;
 	color: #515659;
 	font-size: 2em;
-    }
+	}
+	
 
-    button {
-	border-radius : 20px;
-	font-family: Helvetica;
-	padding : 10px;
-	margin-top:2%;
-	background-color: #ffffff;
-	color : #515659;
-	border:2px solid #515659;
-    }
+    #del-piece-button {
+		margin-top: 15%;
+		border-radius : 20px;
+		font-family: Helvetica;
+		padding : 10px;
+		margin-top:2%;
+		background-color: #ffffff;
+		color : #515659;
+		border:2px solid #515659;
+	}
+	#del-domicile-button {
+		margin-top: 15%;
+		border-radius : 20px;
+		font-family: Helvetica;
+		padding : 10px;
+		margin-top:2%;
+		background-color: #ffffff;
+		color : #515659;
+		border:2px solid #fff;
+	}
+	
 
 
     #tab1 {

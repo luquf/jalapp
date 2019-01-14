@@ -67,7 +67,13 @@ if (!isset($dom[0][0])) {
 			}
 			$domiciles = getDomicilesController($_SESSION['user_id']);	
 			foreach ($domiciles as $val) {
-				echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "' id=".str_replace(' ', '', $val[0])."><i class='fa fa-home' ></i> " . $val[1] . " 
+				echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "
+				' id=".str_replace(' ', '', $val[0])."><i class='fa fa-home' ></i> " . $val[1] . "
+				<form action='../controllers/domicile.php' method='post'>
+						<input type='hidden' value=".$val[0]." name='domicile' id='domicile'/>
+						<input type='hidden' value='domicile_del' name='action' id='action'/>
+						<button type='submit' id='del-domicile-button'>x</button>
+						</form> 
 				</a></li>";
 			}
 		?>
