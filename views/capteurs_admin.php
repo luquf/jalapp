@@ -26,6 +26,8 @@ else {
 		<meta charset="utf-8"/>
         <link rel="stylesheet" href="../public/css/capteurs_admin.css" />
         <link rel="icon" type="image/png" href="../public/assets/favicon.png" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 		<title>Domisep : Liste des capteurs</title>
 	</head>
 
@@ -95,12 +97,21 @@ else {
                     $userid = $_SESSION['selected_user'];
                     $data = getUserData($userid);
                     foreach ($data as $domcile) {
-                        echo "<h1>".$domcile[1]."</h1>";
+                        echo "<h1>".$domcile[1]."<form action='../controllers/admin_action.php' method='post'>
+                        <input type='hidden' value=".$domcile[0]." name='domicile' id='domicile'/>
+                        <input type='hidden' value='domicile_del' name='action' id='action'/>
+                        <button id='del-domicile-button' type='submit' value='del_home'><i class='fa fa-trash'></i></button>
+                    </form> </h1>
+                        ";
                         foreach ($domcile["pieces"] as $piece) {
-                            echo "<h2>".$piece[1]."</h2>";
+                            echo "<h2>".$piece[1]."<form action='../controllers/admin_action.php' method='post'>
+                            <input type='hidden' value=".$piece[0]." name='piece' id='piece'/>
+                            <input type='hidden' value='piece_del' name='action' id='action'/>
+                            <button id='del-piece-button' type='submit' value='del_piece'><i class='fa fa-trash'></i></button>
+                        </form></h2>
+                            ";
                             foreach ($piece["capteurs"] as $capteur) {
-                                echo "<p>".$capteur[1]." ".$capteur[2]." ".$capteur[3]."</p>
-                                <div class = 'capteuradmin'> 
+                                echo "<p>".$capteur[1]." ".$capteur[2]." ".$capteur[3]."<div class = 'capteuradmin'> 
                                 <form method='post' action='../controllers/admin_action.php'>
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
                                 <input type='hidden' value='capt_info' name='action' id='action'/>
@@ -116,7 +127,8 @@ else {
 								<input type='hidden' value='capt_change' name='action' id='action'/>
 								<button type='submit'>changer</button>
 								</form>
-									</div>";
+									</div></p>
+                                ";
                             }
                             foreach ($piece["controleurs"] as $controleur) {
                                 echo "<p>".$controleur[1]." ".$controleur[2]." ".$controleur[3]."</p>
@@ -141,6 +153,7 @@ else {
                             }
                         }
                     }
+                    
                     ?>
 
     </div>

@@ -152,15 +152,17 @@
         border-bottom: 0px;
         margin-bottom: 2%;
     }
-
+    
     h1{
         margin-bottom: 0.5%;
         padding-left: 1%;
+        display: flex;
     }
     h2{
         margin-top: 0.5%;
         padding-left:2.5%;
         margin-bottom: 0.5%;
+        display: flex;
     }
     p{
         margin-top: 0.5%;
@@ -168,7 +170,7 @@
         padding-left: 4%;
     }
 
-    .capteuradmin{
+    .principal .capteuradmin{
         display: flex;
         flex-direction: row;
     }
@@ -209,8 +211,8 @@
     button {
         border-radius : 25px;
         font-family: Helvetica;
-        padding : 6%;
-        margin : 4%;  
+        /* padding : 6%;
+        margin : 4%;   */
         background-color: #515659;
         color : #ffffff;
         border: 0;
@@ -246,4 +248,22 @@
     background: #3C4459; 
   }
   
+  #del-domicile-button {
+    border-radius : 20px;
+    font-family: Helvetica;
+    padding : 10px;
+    margin-top:2%;
+    background-color: #ffffff;
+    color : #515659;
+    border:2px solid #fff;
+}
+#del-piece-button {
+    border-radius : 20px;
+    font-family: Helvetica;
+    padding : 10px;
+    margin-top:2%;
+    background-color: #ffffff;
+    color : #515659;
+    border:2px solid #fff;
+}
 }
