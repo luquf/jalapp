@@ -3,7 +3,7 @@
 session_start();
 
 require_once __DIR__.'/../models/capteur.php';
-require __DIR__.'/../lib/uuid.php';
+require_once __DIR__.'/../lib/uuid.php';
 
 $capteurs = array("hum", "temp", "fum");
 $controleurs = array("lum", "vol", "ch");

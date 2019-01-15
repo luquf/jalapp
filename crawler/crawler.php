@@ -3,7 +3,7 @@
 require __DIR__.'/../models/user.php';
 require __DIR__.'/../models/releve_capteurs.php';
 require __DIR__.'/../models/capteur.php';
-require __DIR__.'/../lib/uuid.php';
+require_once __DIR__.'/../lib/uuid.php';
 
 // get data from sensor server and insert it in db
 

@@ -29,7 +29,7 @@
                     <a href="admin_reglages.php" class="parametres"> Paramètres </a>
                     <a href="inscription.php" class="deconnexion"> Déconnexion </a>
                 </div>
-			    
+
 
 
 		</div>
@@ -37,8 +37,8 @@
 
         <div id="tableau" >
             <input type="text" id="rechercher" onkeyup="tri()" placeholder="Rechercher..">
-            
-                
+
+
 
 <table>
                 <thead>
@@ -55,35 +55,34 @@
 
                 <tbody id="table">
                 <?php
-                        require_once __DIR__.'/../controllers/admin_interface.php';
-                        $utilisateur = getUsers();
-                        
-                        
-						if (count($utilisateur) == 0) {
-							echo " ";
-						} else {
-              $page = $_GET["page"];
-              if (!isset($page) || $page == "") {
-                header("Location: admin_interface.php?page=1");
-              }
-							foreach (array_slice($utilisateur, ($page*10)-10, 10) as $utilisateur) {
-                                echo "
+require_once __DIR__ . '/../controllers/admin_interface.php';
+$utilisateur = getUsersAdmin();
+
+if (count($utilisateur) == 0) {
+    echo " ";
+} else {
+    $page = testinput($_GET["page"]);
+    if (!isset($page) || $page == "") {
+        header("Location: admin_interface.php?page=1");
+    }
+    foreach (array_slice($utilisateur, ($page * 10) - 10, 10) as $utilisateur) {
+        echo "
                                 <tr>
-                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[0]."</td>
-                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[1]."</a></td>
-                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[2]."</a></td>
-                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[3]."</a></td>
-                                <td><a href= 'capteurs_admin.php?selected=".$utilisateur[0]."' class='lien_ID'>".$utilisateur[8]."</a></td>
-                                
+                                <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[0] . "</td>
+                                <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[1] . "</a></td>
+                                <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[2] . "</a></td>
+                                <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[3] . "</a></td>
+                                <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[8] . "</a></td>
+
                                 <form method='post' action='../controllers/admin_interface.php'>
-								<td class = delete><input type='hidden' value=".$utilisateur[0]." name='user' id='user'/>
+								<td class = delete><input type='hidden' value=" . $utilisateur[0] . " name='user' id='user'/>
 								<input type='hidden' value='del_user' name='action' id='action'/>
 								<button id= buttondelete type='submit'>X</button>
 								</form>";
-                            }
-                         }
-                                ?>
-                  
+    }
+}
+?>
+
                     <script>
                             function tri() {
                               var input, filter, table, tr, td, i;
@@ -124,7 +123,7 @@
                                     tr[i].style.display = "none";
                                   }
                                 }
-                                
+
 
                               }
                             }
@@ -133,32 +132,20 @@
 
                 </tbody>
             </table>
-          <?php 
-          $previous = $page -1;
-          $next = $page + 1;
-          if ($page == 1) {
-            echo "<p class='page-button' style='margin-right: 1%;color: #96999e;'><i class='fa fa-arrow-left'></i></p> ";
-          } else {
-            echo "<a class='page-button' href='admin_interface.php?page=".$previous."' style='margin-right: 1%;'><i class='fa fa-arrow-left'></i></a> ";
-          }
-          if ((count($utilisateur)/10) < $page) {
-            echo "<p class='page-button' style='margin-left: 1%;color: #96999e;'><i class='fa fa-arrow-right'></i></p> ";
-          } else {
-            echo "<a class='page-button' href='admin_interface.php?page=".$next."' style='margin-left: 1%;'><i class='fa fa-arrow-right'></i></a>";
-          }
-          ?>
+          <?php
+$previous = $page - 1;
+$next = $page + 1;
+if ($page == 1) {
+    echo "<p class='page-button' style='margin-right: 1%;color: #96999e;'><i class='fa fa-arrow-left'></i></p> ";
+} else {
+    echo "<a class='page-button' href='admin_interface.php?page=" . $previous . "' style='margin-right: 1%;'><i class='fa fa-arrow-left'></i></a> ";
+}
+if ((count($utilisateur) / 10) < $page) {
+    echo "<p class='page-button' style='margin-left: 1%;color: #96999e;'><i class='fa fa-arrow-right'></i></p> ";
+} else {
+    echo "<a class='page-button' href='admin_interface.php?page=" . $next . "' style='margin-left: 1%;'><i class='fa fa-arrow-right'></i></a>";
+}
+?>
         </div>
-        <footer>
-
-		<div class = 'info_footer'> 
-        	<div>Powered by 
-        <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
-          ©</div>
-		  <a href= 'mentionslegales.php'> Mentions Légales </a> 
-		  <a href= 'cgu.php'> ConditionsGénérales </a> 
-
-
-        </div>
-
-		
-	</footer>
+  </body>
+</html>

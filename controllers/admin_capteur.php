@@ -31,59 +31,6 @@ function getUserData($user_id) {
     return $data;
 }
 
-// getUserData("klsjhgeuhkufjgegrk");
-
-/* require_once __DIR__.'/../models/capteur.php'; */
-/* require __DIR__.'/../lib/uuid.php'; */
-
-/* $capteurs = array("hum", "temp", "fum"); */
-/* $controleurs = array("lum", "vol", "ch"); */
-
-
-/* if ($_SERVER["REQUEST_METHOD"] == "POST") {  */
-/*     $nom = testinput($_POST["action"]); */
-/*     $type = testinput($_POST["capteur"]); */
-/*     if (isset($nom) && isset($type)) { */
-/*         if (in_array($type, $capteurs)) { */
-/*             switch ($type) { */
-/*                 case "hum": */
-/*                     $capteur_id = UUID::v4(); */
-/*                     setCapteur($capteur_id, $nom, $type, "ON",$_SESSION['piece_id']); */
-/*                     header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['userid']); */
-/*                     break; */
-/*                 case "temp": */
-/*                     $capteur_id = UUID::v4(); */
-/*                     setCapteur($capteur_id, $nom, $type, "ON",$_SESSION['piece_id']); */
-/*                     header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['userid']); */
-/*                     break; */
-/*                 case "fum": */
-/*                     $capteur_id = UUID::v4(); */
-/*                     setCapteur($capteur_id, $nom, $type, "ON",$_SESSION['piece_id']); */
-/*                     header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['userid']); */
-/*                     break; */
-/*             } */
-/*         } else { */
-/*             switch ($type) { */
-/*                 case "lum": */
-/*                     $controleur_id = UUID::v4(); */
-/*                     setControleur($controleur_id, $nom, $type, "ON",$_SESSION['piece_id']); */
-/*                     header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['userid']); */
-/*                     break; */
-/*                 case "vol": */
-/*                     $controleur_id = UUID::v4(); */
-/*                     setControleur($controleur_id, $nom, $type, "ON",$_SESSION['piece_id']); */
-/*                     header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['userid']); */
-/*                     break; */
-/*                 case "ch": */
-/*                     $controleur_id = UUID::v4(); */
-/*                     setControleur($controleur_id, $nom, $type, "ON",$_SESSION['piece_id']); */
-/*                     header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['userid']); */
-/*                     break; */
-/*             } */
-/*         } */
-/*     } */
-/* } */
-
 function testinput($data) {
     $data = trim($data);
     $data = stripslashes($data);

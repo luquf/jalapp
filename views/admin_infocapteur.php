@@ -7,14 +7,14 @@ session_start();
 // }
 
 if (isset($_GET['capteur'])) {
-	$_SESSION['capteur_id'] = $_GET['capteur'];
+    $_SESSION['capteur_id'] = $_GET['capteur'];
     $type = 1;
 } else if (isset($_GET['controleur'])) {
     $_SESSION['controleur_id'] = $_GET['controleur'];
-    $type = 2;     
+    $type = 2;
 } else {
     header("Location: domicile.php");
- }
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,99 +55,83 @@ if (isset($_GET['capteur'])) {
 
 		</div>
 		<div id='tab1'>
-			<?php echo "<a href='capteurs_admin.php?selected=".$_SESSION['user_id']."' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Retour</b></a>";?>
-		
+			<?php echo "<a href='capteurs_admin.php?selected=" . $_SESSION['user_id'] . "' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Retour</b></a>"; ?>
+
 		    <div class="sensor-left">
-                
-                        <?php 
-                        require_once __DIR__.'/../controllers/capteur.php';
-                        require_once __DIR__.'/../models/piece.php';
-                        $pieces = getPiecesByID($_SESSION['piece_id']);
-                        $capteurs = getCapteursController($_SESSION['capteur_id']);
-                        $controleurs = getControleursController($_SESSION['controleur_id']);
+
+                        <?php
+require_once __DIR__ . '/../controllers/capteur.php';
+require_once __DIR__ . '/../models/piece.php';
+$pieces = getPiecesByID($_SESSION['piece_id']);
+$capteurs = getCapteursController($_SESSION['capteur_id']);
+$controleurs = getControleursController($_SESSION['controleur_id']);
 if ($type == 1) {
     if (count($capteurs) == 0) {
-        header("Location: piece1.php?piece=".$_SESSION['piece_id']);
+        header("Location: piece1.php?piece=" . $_SESSION['piece_id']);
     }
-                        foreach ($capteurs as $capteur) {
+    foreach ($capteurs as $capteur) {
 
-                        echo"
-                        
+        echo "
+
                         <div class='infos'>
-                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du capteur <em>'".$capteur[1]."'</em></h1>
+                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du capteur <em>'" . $capteur[1] . "'</em></h1>
                         <br/>
-                            <span>Numéro de série : </span>".$capteur[0]."
-                            <br/><span>Type : </span>".$capteur[2]."
-                            <br/><span>Emplacement : </span>".$pieces[0][1]."
+                            <span>Numéro de série : </span>" . $capteur[0] . "
+                            <br/><span>Type : </span>" . $capteur[2] . "
+                            <br/><span>Emplacement : </span>" . $pieces[0][1] . "
                         </div>
-					
+
                         <div class ='historique'>
                         <br/>
-                                                    <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du capteur <em>'".$capteur[1]."'</em></h1><br/>";
-                        }
+                                                    <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du capteur <em>'" . $capteur[1] . "'</em></h1><br/>";
+    }
 
-                            require __DIR__ . '/../controllers/releve.php';
+    require __DIR__ . '/../controllers/releve.php';
 
-                            $releve_capteur = getDataCapteur();
-                            echo "
+    $releve_capteur = getDataCapteur();
+    echo "
                             <div class='datas'>
                                 <form method='post' action='../controllers/releve.php'>
-                                <span>".$releve_capteur[1]." : </span>".$releve_capteur[3]."
+                                <span>" . $releve_capteur[1] . " : </span>" . $releve_capteur[3] . "
                                 </form>
 					        </div>";
-    
+
 } else {
     if (count($controleurs) == 0) {
-        header("Location: piece1.php?piece=".$_SESSION['piece_id']);
+        header("Location: piece1.php?piece=" . $_SESSION['piece_id']);
     }
-                        foreach ($controleurs as $controleurs) {
+    foreach ($controleurs as $controleurs) {
 
-                        echo"
-                        
+        echo "
+
                         <div class='infos'>
-                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du controleur <em>'".$controleurs[1]."'</em></h1>
-                            <span>Numéro de série : </span>".$controleurs[0]."
-                            <br/><span>Type : </span>".$controleurs[2]."
-                            <br/><span>Emplacement : </span>".$controleurs[4]."
+                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du controleur <em>'" . $controleurs[1] . "'</em></h1>
+                            <span>Numéro de série : </span>" . $controleurs[0] . "
+                            <br/><span>Type : </span>" . $controleurs[2] . "
+                            <br/><span>Emplacement : </span>" . $controleurs[4] . "
                         </div>
-					
+
                         <div class ='historique'>
-                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du controleur <em>'".$controleurs[1]."'</em></h1>";
-                        }
-                            ?>
+                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du controleur <em>'" . $controleurs[1] . "'</em></h1>";
+    }
+    ?>
                             <?php
 
-                            $releve_controleur = getDataControleur();
-                            echo "
+    $releve_controleur = getDataControleur();
+    echo "
                             <div class='datas'>
                                 <form method='post' action='../controllers/releve.php'>
-                                <span>".$releve_ccontroleur[1]." : </span>".$releve_controleur[3]."
+                                <span>" . $releve_ccontroleur[1] . " : </span>" . $releve_controleur[3] . "
                                 </form>
 					        </div>";
-				             
+
 }
 ?>
-</div> 
-			
-                    </div>
-                </div>  
-                </body>
-                <footer>
-
-<div class = 'info_footer'> 
-    <div>Powered by 
-<a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
-  ©</div>
-  <a href= 'mentionslegales.php'> Mentions Légales </a> 
-  <a href= 'cgu.php'> ConditionsGénérales </a> 
-
-
 </div>
 
-
-</footer>
-
-            
+                    </div>
+                </div>
+                </body>
 </html>
 
 
