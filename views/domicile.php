@@ -6,15 +6,13 @@ session_start();
 //     header("Location: views/accueil.php");
 // }
 
-require_once __DIR__.'/../models/domicile.php';
-require_once __DIR__.'/../models/piece.php';
+require_once __DIR__ . '/../models/domicile.php';
+require_once __DIR__ . '/../models/piece.php';
 
 $dom = getDomiciles($_SESSION['user_id']);
 if (!isset($dom[0][0])) {
     header('Location: ../views/ajoutdomicile1.php');
 }
-
-
 
 ?>
 
@@ -61,22 +59,26 @@ if (!isset($dom[0][0])) {
 	<div>
 		<ul class='tabs'>
 		<?php
-			require_once __DIR__ . '/../controllers/domicile.php';
-			if (isset($_GET['dom'])) {
-				$_SESSION['domicile_id'] = $_GET['dom'];
-			}
-			$domiciles = getDomicilesController($_SESSION['user_id']);	
-			foreach ($domiciles as $val) {
-				echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "
-				' id=".str_replace(' ', '', $val[0])."><i class='fa fa-home' ></i> " . $val[1] . "
+require_once __DIR__ . '/../controllers/domicile.php';
+if (isset($_GET['dom']) && $_GET['dom'] != "") {
+	$domicile = getDomicileByID($_GET['dom']);
+	if (count($domicile) == 0) {
+		header("Location: domicile.php");
+	}
+    $_SESSION['domicile_id'] = testinput($_GET['dom']);
+}
+$domiciles = getDomicilesController($_SESSION['user_id']);
+foreach ($domiciles as $val) {
+    echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "
+				' id=" . str_replace(' ', '', $val[0]) . "><i class='fa fa-home' ></i> " . $val[1] . "
 				<form action='../controllers/domicile.php' method='post'>
-						<input type='hidden' value=".$val[0]." name='domicile' id='domicile'/>
+						<input type='hidden' value=" . $val[0] . " name='domicile' id='domicile'/>
 						<input type='hidden' value='domicile_del' name='action' id='action'/>
                         <button id='del-domicile-button' type='submit' value='del_home'><i class='fa fa-trash'></i></button>
-						</form> 
+						</form>
 				</a></li>";
-			}
-		?>
+}
+?>
 
             <li class="button-add"><button id='button' type="button">+</button></li>
         </ul>
@@ -111,36 +113,36 @@ if (!isset($dom[0][0])) {
 		</script>
 		</div>
 	</div>
-		
+
 
         <div id='tab1'>
-			<?php 
-				$pieces = getPieces($_SESSION['domicile_id']);
-                $domicile = getDomicileByID($_SESSION['domicile_id']);
-                echo "<h1 style='text-align:center;'>".$domicile[0][1]."</h1>";
-              ?>
-            
+			<?php
+$pieces = getPieces($_SESSION['domicile_id']);
+$domicile = getDomicileByID($_SESSION['domicile_id']);
+echo "<h1 style='text-align:center;'>" . $domicile[0][1] . "</h1>";
+?>
+
 			<ul class="pieces-ul-top" style="list-style-type:none;">
 				<?php
-				if (count($pieces) == 0) {
-					echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de pièces pour ce domicile.</li>"; 
-				} else {
-					foreach ($pieces as $piece) {
-						echo "<li class='list-pieces'><a href='piece1.php?piece=".$piece[0]."'>".$piece[1]."<a>
+if (count($pieces) == 0) {
+    echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de pièces pour ce domicile.</li>";
+} else {
+    foreach ($pieces as $piece) {
+        echo "<li class='list-pieces'><a href='piece1.php?piece=" . $piece[0] . "'>" . $piece[1] . "<a>
 						<form action='../controllers/piece.php' method='post'>
-						<input type='hidden' value=".$piece[0]." name='piece' id='piece'/>
+						<input type='hidden' value=" . $piece[0] . " name='piece' id='piece'/>
 						<input type='hidden' value='piece_del' name='action' id='action'/>
 						<button type='submit' id='del-piece-button'>Supprimer</button>
 						</form>
 						</li>";
-					}
-				}
-				?>
+    }
+}
+?>
 			</ul>
 			<input id='add_piece' type="button"  value='+' />
 		</div>
 		<script>
-		var path = window.location.href; 
+		var path = window.location.href;
 		var url = new URL(path);
 		var dom_id = url.searchParams.get("dom");
 		if (dom_id == null) {
@@ -170,7 +172,7 @@ if (!isset($dom[0][0])) {
 		}
 		span.onclick = function() {
     		modal1.style.display = "none";
-		}		
+		}
 		window.onclick = function(event) {
     		if (event.target == modal1) {
         		modal1.style.display = "none";
