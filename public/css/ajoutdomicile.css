@@ -7,7 +7,10 @@
 		background-size: cover;
 		font-family: Helvetica;
 		margin: 0 auto;
+		position: fixed;
+		margin-bottom: 45%;
 	}
+	
 	#bandeau
 	{
 		background-color: #ffffff;
@@ -167,12 +170,14 @@
         display: flex;
 		flex-direction: row;
 		text-align: center;
-		width: 100%; 
-        height: 8%;
+		/*width: 100%; 
+        height: 8%; */
         align-items: center;
 		flex-wrap: nowrap;
 		justify-content: space-around;
 		opacity: 0.9;
+		position: 0;
+		position: relative;
     }
 
     #logo_JALA{
@@ -220,8 +225,8 @@
 		background-size: cover;
 		font-family: Helvetica;
 		margin: 0 auto;
-		position: absolute;
-		padding-bottom: 150%;
+		position: sticky;
+
 	}
 	#bandeau
 	{
@@ -373,7 +378,7 @@
 	.close {
 		color: #aaaaaa;
 		float: right;
-		font-size: 28px;
+		font-size: 2em;
 		font-weight: bold;
 	}
 	h2{
@@ -397,6 +402,7 @@
 		flex-wrap: nowrap;
 		justify-content: space-around;
 		opacity: 0.9;
+		position: 0;
     }
 
     #logo_JALA{

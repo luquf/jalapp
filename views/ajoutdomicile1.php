@@ -10,6 +10,7 @@ session_start();
 
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="../public/css/ajoutdomicile.css" />
@@ -17,7 +18,7 @@ session_start();
 		<title>Domisep : Ajout domicile</title>
 	</head>
 
-	<body>
+<body>
 
 	</div>
 
@@ -37,8 +38,8 @@ session_start();
 				</div>
 			</div>
 
-
 		</div>
+
 		<div class="boutton">
 
 			<div class="button_container">
@@ -49,7 +50,7 @@ session_start();
 
 		</div>
 
-			<div class="modal1" id="myModal">
+		<div class="modal1" id="myModal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
     			<h2>Ajouter un domicile</h2>
@@ -59,7 +60,7 @@ session_start();
 						<button id ="validation1" type="submit">Valider</button>
 				</form>
 			  </div>
-			</div>
+		</div>
 
 
 		<script>
@@ -84,22 +85,27 @@ session_start();
 		</script>
 
 
-	</body>
+</body>
 
-	<footer>
+</html>
 
-		<div class = 'info_footer'> 
-        	<div>Powered by 
-        <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
-          ©</div>
-		  <a href= 'mentionslegales.php'> Mentions Légales </a> 
-		  <a href= 'cgu.php'> ConditionsGénérales </a> 
+<html>
 
 
-        </div>
+<footer>
 
-		
-	</footer>
+	<div class="info_footer"> 
+
+			<div>Powered by 
+		<a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
+		©</div>
+			<a href= 'mentionslegales.php' style="color: grey; text-decoration: none;"> Mentions Légales </a> 
+			<a href= 'cgu.php' style="color: grey; text-decoration: none;"> Conditions Générales </a> 
+
+
+	</div>
+
+</footer>
 
 
 </html>
