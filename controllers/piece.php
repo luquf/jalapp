@@ -3,7 +3,6 @@
 session_start();
 
 require __DIR__.'/../models/piece.php';
-require __DIR__.'/../lib/uuid.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     $nom = testinput($_POST["name"]);
@@ -18,11 +17,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         removePiece($piece_id);
         header('Location: ../views/domicile.php?dom='.$_SESSION['domicile_id']);
     }
-}
-
-function testinput($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
 }

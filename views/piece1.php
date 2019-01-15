@@ -6,10 +6,16 @@ session_start();
 //     header("Location: views/inscription.php");
 // }
 
-if (isset($_GET['piece'])) {
+require_once __DIR__."/../controllers/piece.php";
+
+if (isset($_GET['piece']) && $_GET['piece'] != "") {
+	$piece = getPiecesByID($_GET['piece']);
+	if (count($piece) == 0) {
+		header("Location: domicile.php");		
+	}
 	$_SESSION['piece_id'] = $_GET['piece'];
 } else {
-	header("Location: domicile.php");
+header("Location: domicile.php");
 }
 
 ?>
