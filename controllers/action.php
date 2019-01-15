@@ -21,16 +21,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             } else {
                 setCapteurState($capteur, "ON");
             }
-            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']."#capt");
-        } if ($action == "cont_info") {
+            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']);
+        } else if ($action == "cont_info") {
             header("Location: ../views/infocapteur.php?controleur=".$capteur);
-        } if ($action == "cont_delete") {
+        } else if ($action == "cont_delete") {
             removeControleur($capteur);
-            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']."#cont");
-        } if ($action == "cont_change") {
-            $level = $_POST['cont-val'];
+        } else if ($action == "cont_change") {
+            $level = testinput($_POST['cont-val']);
             setControleurState($capteur, $level);
-            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']."#cont");
+            header("Location: ../views/piece1.php?piece=".$_SESSION['piece_id']);
         }
     } 
 }
