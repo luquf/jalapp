@@ -17,7 +17,7 @@
 	<div id="bandeau_droite">
 		
 		<div class="connexion">
-			<a href="inscription.php" style = "text-decoration: none; color: #515659"; > EspaceClient </a>
+			<a href="inscription.php" style = "text-decoration: none; color: #515659"; > Espace Client </a>
 		</div>
 	</div>
 
@@ -54,7 +54,7 @@ Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus ap
 			<label for="first_name">Prénom *</label>
 			</td>
 			<td valign="top">
-			<input  type="text" name="first_name" maxlength="50" size="30">
+			<input  type="text" name="first_name" maxlength="50" size="80" class="input">
 			</td>
 			</tr>
 			<tr>
@@ -62,7 +62,7 @@ Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus ap
 			<label for="last_name">Nom *</label>
 			</td>
 			<td valign="top">
-			<input  type="text" name="last_name" maxlength="50" size="30">
+			<input  type="text" name="last_name" maxlength="50" size="30" class="input">
 			</td>
 			</tr>
 			<tr>
@@ -70,7 +70,7 @@ Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus ap
 			<label for="email">Email *</label>
 			</td>
 			<td valign="top">
-			<input  type="text" name="email" maxlength="80" size="30">
+			<input  type="text" name="email" maxlength="80" size="30" class="input">
 			</td>
 			</tr>
 			<tr>
@@ -78,12 +78,12 @@ Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus ap
 			<label for="comments">Dit nous tout ! *</label>
 			</td>
 			<td valign="top">
-			<textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+			<textarea  name="comments" maxlength="1000" cols="25" rows="6" class="input"></textarea>
 			</td>
 			</tr>
 			<tr>
 			<td colspan="2" style="text-align:center">
-			<input type="submit" value="Submit">  
+			<input type="submit" value="Submit" class="submit">  
 			</td>
 			</tr>
 			</table>
@@ -103,12 +103,12 @@ Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus ap
 
 	<footer>
 
-		<div class = 'info_footer'> 
+	<div class = 'info_footer'> 
         	<div>Powered by 
         <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
-          ©</div>
-		  <a href= 'mentionslegales.php'> Mentions Légales </a> 
-		  <a href= 'cgu.php'> ConditionsGénérales </a> 
+©</div>
+		  <a href= 'mentionslegales.php' style="color: grey; text-decoration: none;"> Mentions Légales </a> 
+		  <a href= 'cgu.php' style="color: grey; text-decoration: none;"> Conditions Générales </a> 
 
 
         </div>

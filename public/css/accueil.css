@@ -282,10 +282,12 @@
         height: 8%;
         align-items: center;
 		flex-wrap: nowrap;
-		justify-content: space-around;
+		justify-content: space-between;
 		opacity: 0.9;
-    }
+		}
 
+
+	
     #logo_JALA{
         width: 15%;
         height:15%;
