@@ -61,7 +61,7 @@ $utilisateur = getUsersAdmin();
 if (count($utilisateur) == 0) {
     echo " ";
 } else {
-    $page = testinput($_GET["page"]);
+    $page = testinput((int)$_GET["page"]);
     if (!isset($page) || $page == "") {
         header("Location: admin_interface.php?page=1");
     }
