@@ -18,7 +18,7 @@ foreach($all_sensors as $sensor) {
             case "HUM":
                 $val = rand(10, 20);
                 $uid = uuid::v4();
-                setReleveCapteur($uid, sensor[0], $heure, $sensor[2], $val);
+                setReleveCapteur($uid, $sensor[0], $heure, $sensor[2], $val);
                 break;
             case "TEMP":
                 $val = rand(20, 35);

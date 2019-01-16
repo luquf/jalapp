@@ -192,7 +192,7 @@ header("Location: domicile.php");
 				<span class="close">&times;</span>
     			<h2>Ajouter un capteur</h2>
 				<form method="post" action="../controllers/capteur.php">
-						<input class="input" type="text" name="name" id="name" placeholder="Nom du capteur" size="30" maxlength="10"/ required>
+						<input class="input" type="text" name="name" id="name" placeholder="Nom du capteur" size="30" maxlength="20"/ required>
                         <input class="input" type="text" name="ref" id="ref" placeholder="Clé du capteur" size="30" maxlength="20" required/>
 						<select class="input" id="capteur" name="capteur">
 							<option value="hum">Capteur d'humidité</option>

@@ -72,8 +72,8 @@ if ($type == 1) {
                         foreach ($capteurs as $capteur) {
                             $t = "";
                             switch ($capteur[2]) {
-                                case "LUM":
-                                    $t = "Capteur de luminosité";
+                                case "HUM":
+                                    $t = "Capteur d'humidité";
                                     break;
                                 case "TEMP":
                                     $t = "Capteur de température";
@@ -142,8 +142,6 @@ if ($type == 1) {
                         <div class ='historique'>
                             <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du controleur <em>'".$controleurs[1]."'</em></h1>";
                         }
-                            ?>
-                            <?php
                                 require __DIR__ . '/../controllers/releve.php';
                                 $releve_cont = getControleurDataByID($_SESSION['controleur_id']);
                                 foreach ($releve_cont as $k=>$releve) {
