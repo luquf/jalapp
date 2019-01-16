@@ -115,19 +115,12 @@ foreach ($data as $domcile) {
 								<input type='hidden' value='capt_info' name='action' id='action'/>
 								<button>Informations </button>
                                 </form>
-                                ";?>
-                                <form method='post' action='../controllers/admin_action.php' onsubmit="return confirm
-                                ('Etes-vous sûr de vouloir supprimer ce capteur ?')">
-                                <?php echo"
 								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_delete' name='action' id='action'/>
                                 <button type='submit' id='del-".$capteur[0]."'>Supprimer</button>
-                                </form>
-                                <form method='post' action='../controllers/admin_action.php'>
 								<br><input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_change' name='action' id='action'/>
                                 <button type='submit' id='change-".$capteur[0]."'>Changer</button>
-                                </form>
 								</li>
                                 <script>
                                     $('#change-".$capteur[0]."').click(function() {
@@ -148,16 +141,18 @@ foreach ($data as $domcile) {
                                   });
 
                                   $('#del-".$capteur[0]."').click(function() {
-                                    $.post('../controllers/admin_action.php',
-                                    {
-                                      action: 'capt_delete',
-                                      capteur: '".$capteur[0]."'
-                                    },
-                                    function(data, status){
-                                      if (status == 'success') {
-                                        $('#element-".$capteur[0]."').remove();
-                                      }
-                                    });
+                                      if (confirm('Etes-vous sûr de vouloir supprimer ce capteur ?')) {
+                                        $.post('../controllers/admin_action.php',
+                                        {
+                                        action: 'capt_delete',
+                                        capteur: '".$capteur[0]."'
+                                        },
+                                        function(data, status){
+                                        if (status == 'success') {
+                                            $('#element-".$capteur[0]."').remove();
+                                        }
+                                        });
+                                    }
                               });
                                 </script>   
                                 ";
@@ -170,19 +165,13 @@ foreach ($data as $domcile) {
             <input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
             <input type='hidden' value='cont_info' name='action' id='action'/>
             <button type='submit'>Informations</button>
-            </form><br> ";?>
-            <form method='post' action='../controllers/admin_action.php' onsubmit="return confirm
-            ('Etes-vous sûr de vouloir supprimer ce capteur ?')">
-            <?php echo"
+            </form><br>
             <input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
             <input type='hidden' value='cont_delete' name='action' id='action'/>
             <button type='button' id='del-".$controleur[0]."'>Supprimer</button><br>
-            </form>
-            <form method='post' action='../controllers/admin_action.php'>
             <input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
             <input type='hidden' value='cont_change' name='action' id='action'/>
             <input type='range' class='cont-val' id='change-".$controleur[0]."' name='cont-val' min='0' max='100' step='5' value=".$controleur[3].">
-            </form>
             </li>
                                 <script>
                                     $('#change-".$controleur[0]."').change(function() {
@@ -200,16 +189,18 @@ foreach ($data as $domcile) {
                                   });
 
                                   $('#del-".$controleur[0]."').click(function() {
-                                      $.post('../controllers/admin_action.php',
-                                      {
-                                        action: 'cont_delete',
-                                        capteur: '".$controleur[0]."',
-                                      },
-                                      function(data, status){
-                                        if (status == 'success') {
-                                          $('#element-".$controleur[0]."').remove();
-                                        }
-                                      });
+                                      if (confirm('Etes-vous sûr de vouloir supprimer ce capteur ?')) {
+                                        $.post('../controllers/admin_action.php',
+                                        {
+                                            action: 'cont_delete',
+                                            capteur: '".$controleur[0]."',
+                                        },
+                                        function(data, status){
+                                            if (status == 'success') {
+                                            $('#element-".$controleur[0]."').remove();
+                                            }
+                                        });
+                                    }
                                 });
 
                               </script>";

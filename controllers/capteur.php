@@ -16,8 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $reference = testinput($_POST["reference"]);
     $ref = testinput($_POST["ref"]);
     if (isset($reference) && !empty($reference)) {
-        $capt = getCapteursByID($ref);
-        $cont = getControllersByID($ref);
+        $capt = getCapteursByID($reference);
+        $cont = getControllersByID($reference);
         if (count($capt) != 0 || count($cont) != 0) {
             header('Sensor-exists: true');
         } else {
