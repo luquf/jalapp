@@ -7,7 +7,10 @@ require_once __DIR__.'/../lib/uuid.php';
 
 // get data from sensor server and insert it in db
 
-$all_sensors = getAllCapteurs();
+
+while (true) {
+
+    $all_sensors = getAllCapteurs();
 foreach($all_sensors as $sensor) {
     $heure = date("Y-m-d H:i:s");
     if ($sensor[3] == "ON") {
@@ -52,3 +55,7 @@ foreach($all_controleurs as $controleur) {
                 break;       
         }
     }
+
+
+    sleep(3600);
+}

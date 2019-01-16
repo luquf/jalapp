@@ -135,7 +135,7 @@ header("Location: domicile.php");
 									</br></br><form method='post' action='../controllers/action.php'>
 									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
-									<button <a href='infocapteur.php?cont=".$controleur[0]."'>Informations<a> </button>
+									<button type='submit'>Informations</button>
 									</form>
 									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
 									<input type='hidden' value='cont_delete' name='action' id='action'/>

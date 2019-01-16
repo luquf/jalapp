@@ -12,14 +12,10 @@ require_once __DIR__.'/../lib/uuid.php';
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $action = testinput($_POST['action']);
     $capteur = testinput($_POST["capteur"]);
-    if (isset($_POST['piece'])){
-        $piece = testinput($_POST['piece']);
-    }
-    if (isset($_POST['domicile'])){
-        $domicile = testinput($_POST['domicile']);    
-    } 
+    $piece = testinput($_POST['piece']);
+    $domicile = testinput($_POST['domicile']);    
 
-    if (isset($capteur) & isset($action)) {
+    if (isset($capteur) && isset($action)) {
         if ($action == "capt_info") {
             header("Location: ../views/admin_infocapteur.php?capteur=".$capteur);
         } else if ($action == "capt_delete") {
@@ -31,22 +27,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             } else {
                 setCapteurState($capteur, "ON");
             }
-        } if ($action == "cont_info") {
+        } else if ($action == "cont_info") {
             header("Location: ../views/admin_infocapteur.php?controleur=".$capteur);
-        } if ($action == "cont_delete") {
+        } else if ($action == "cont_delete") {
             removeControleur($capteur);
-        } if ($action == "cont_change") {
+        } else if ($action == "cont_change") {
             $level = $_POST['cont-val'];
             setControleurState($capteur, $level);
         }
     }
-    else if (isset($piece) & isset($action)) {
+    if (isset($piece) && isset($action)) {
         if ($action == "piece_del") {
             removePiece($piece);
             header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']);
         }
     }
-    else if (isset($domicile) & isset($action)) {
+    if (isset($domicile) && isset($action)) {
         if ($action == "domicile_del") {
             removeDomicileByID($domicile);
             header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']);

@@ -15,7 +15,7 @@ function getCapteurDataByID($id) {
 }
 
 function getControleurDataByID($id) {
-    
+    return getReleveControleurByID($id);
 }
 
 // function testinput($data) {
