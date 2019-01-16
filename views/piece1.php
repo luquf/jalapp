@@ -217,20 +217,7 @@ header("Location: domicile.php");
 								return	
 							}
 
-							$.post('../controllers/capteur.php',
-										{
-										  reference: ref
-										},
-										function(data, status, req){
-											$exists = req.getResponseHeader('Sensor-exists');
-											if ($exists == "false") {
-												$("#validation1").prop('disabled', false);		
-												$("#validation1").text("Valider");
-											} else {
-												$("#validation1").prop('disabled', true);		
-												$("#validation1").text("Code expiré");
-											}
-										});
+							
 						})
 						</script>
 			  </div>

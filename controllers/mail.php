@@ -36,3 +36,20 @@ function sendForgottenPassword($email, $nom, $prenom, $password) {
     $mail->send();   
 }
 
+function sendContactFormMail($email, $nom, $prenom, $msg) {
+    $mail = new PHPMailer\PHPMailer\PHPMailer;                             
+    $mail->isSMTP();
+    $mail->CharSet = 'UTF-8';                                      
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;                               
+    $mail->Username = 'domisep.no.reply@gmail.com';       
+    $mail->Password = 'Jala123?';                          
+    $mail->SMTPSecure = 'tls';                            
+    $mail->Port = 587;                                    
+    $mail->setFrom('domisep.no.reply@gmail.com', 'Domisep');
+    $mail->addAddress('domisep.no.reply@gmail.com', 'Domisep');     
+    $mail->Subject = 'Nouveau message site Domisep';
+    $mail->Body    = 'Email: '.$email.'Nom: '.$nom.'Prénom: '.$prenom.'Message: '.$msg.'';
+    $mail->send();   
+}
+
