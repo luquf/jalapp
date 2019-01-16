@@ -70,45 +70,73 @@ if ($type == 1) {
         header("Location: piece1.php?piece=".$_SESSION['piece_id']);
     }
                         foreach ($capteurs as $capteur) {
-
+                            $t = "";
+                            switch ($capteur[2]) {
+                                case "LUM":
+                                    $t = "Capteur de luminosité";
+                                    break;
+                                case "TEMP":
+                                    $t = "Capteur de température";
+                                    break;
+                                case "FUM":
+                                    $t = "Capteur de fumée";
+                                    break;
+                                default:
+                                    break;
+                            }
                         echo"
-                        
                         <div class='infos'>
                         <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du capteur <em>'".$capteur[1]."'</em></h1>
                         <br/>
-                            <span>Numéro de série : </span>".$capteur[0]."
-                            <br/><span>Type : </span>".$capteur[2]."
-                            <br/><span>Emplacement : </span>".$pieces[0][1]."
+                            <span>Numéro de série : </span><b>".$capteur[0]."</b>
+                            <br/><span>Type : </span><b>".$t."</b>
+                            <br/><span>Emplacement : </span><b>".$pieces[0][1]."</b>
                         </div>
 					
                         <div class ='historique'>
-                        <br/>
-                                                    <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du capteur <em>'".$capteur[1]."'</em></h1><br/>";
+                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du capteur <em>'".$capteur[1]."'</em></h1><br/>";
                         }
 
                             require __DIR__ . '/../controllers/releve.php';
 
-                            $releve_capteur = getDataCapteur();
-                            echo "
-                            <div class='datas'>
-                                <form method='post' action='../controllers/releve.php'>
-                                <span>".$releve_capteur[1]." : </span>".$releve_capteur[3]."
-                                </form>
-					        </div>";
+                            $releve_capteur = getCapteurDataByID($_SESSION['capteur_id']);
+                            foreach ($releve_capteur as $k=>$releve) {
+                                echo "
+                                    <div class='datas'>
+                                        <span>[ ".$releve[2]." ] Valeur : ".$releve[4]."</span>
+                                    </div>";
+                                    if ($k >= 24) {
+                                        break;
+                                    }    
+                            }
+                            
     
 } else {
     if (count($controleurs) == 0) {
         header("Location: piece1.php?piece=".$_SESSION['piece_id']);
     }
                         foreach ($controleurs as $controleurs) {
-
+                            $t = "";
+                            switch ($controleurs[2]) {
+                                case "LUM":
+                                    $t = "Controleur de luminosité";
+                                    break;
+                                case "VOL":
+                                    $t = "Controleur de volet";
+                                    break;
+                                case "CH":
+                                    $t = "Controleur de chauffage";
+                                    break;
+                                default:
+                                    break;
+                            }
                         echo"
                         
                         <div class='infos'>
                         <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du controleur <em>'".$controleurs[1]."'</em></h1>
-                            <span>Numéro de série : </span>".$controleurs[0]."
-                            <br/><span>Type : </span>".$controleurs[2]."
-                            <br/><span>Emplacement : </span>".$controleurs[4]."
+                        <span>Numéro de série : </span><b>".$controleurs[0]."</b>
+                        <br/><span>Type : </span><b>".$t."</b>
+                        <br/><span>Emplacement : </span><b>".$pieces[0][1]."</b>
                         </div>
 					
                         <div class ='historique'>
@@ -116,14 +144,17 @@ if ($type == 1) {
                         }
                             ?>
                             <?php
-
-                            $releve_controleur = getDataControleur();
-                            echo "
-                            <div class='datas'>
-                                <form method='post' action='../controllers/releve.php'>
-                                <span>".$releve_ccontroleur[1]." : </span>".$releve_controleur[3]."
-                                </form>
-					        </div>";
+                                require __DIR__ . '/../controllers/releve.php';
+                                $releve_cont = getControleurDataByID($_SESSION['controleur_id']);
+                                foreach ($releve_cont as $k=>$releve) {
+                                    echo "
+                                        <div class='datas'>
+                                            <span>[ ".$releve[2]." ] Valeur : ".$releve[4]." </span>
+                                        </div>";
+                                        if ($k >= 24) {
+                                            break;
+                                        }    
+                                }
 				             
 }
 ?>
