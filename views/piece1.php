@@ -142,7 +142,6 @@ header("Location: domicile.php");
 									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
 									<input type='hidden' value='cont_delete' name='action' id='action'/>
 									<button type='button' id='del-".$controleur[0]."'>Supprimer</button><br>
-									<form method='post' action='../controllers/action.php'>
 									<input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
 									<input type='hidden' value='cont_change' name='action' id='action'/>
 									<input type='range' class='cont-val' id='change-".$controleur[0]."' name='cont-val' min='0' max='100' step='5' value=".$controleur[3].">
@@ -204,7 +203,7 @@ header("Location: domicile.php");
 							<option value="ch">Controleur de chauffage</option>
 						</select>
 						<button id ="validation1" type="submit">valider</button>
-						</form>
+				</form>
 						<script>
 						$("#ref").on('input', function() {
 							var ref = $('#ref').val();
