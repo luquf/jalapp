@@ -202,6 +202,15 @@ header("Location: domicile.php");
 						<script>
 						$("#ref").on('input', function() {
 							var ref = $('#ref').val();
+							var regExp = /^[a-z0-9]+$/i;
+							if (regExp.test($('#ref').val()) && ref.length >= 8) {	
+								$("#validation1").prop('disabled', false).text("Valider");
+								return		
+							}
+							else {
+								$("#validation1").prop('disabled', true).text("Code invalide");
+								return	
+							}
 
 							$.post('../controllers/capteur.php',
 										{
@@ -217,8 +226,6 @@ header("Location: domicile.php");
 												$("#validation1").text("Code expiré");
 											}
 										});
-
-
 						})
 						</script>
 				</form>
