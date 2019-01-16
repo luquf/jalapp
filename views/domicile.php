@@ -70,8 +70,10 @@ if (isset($_GET['dom']) && $_GET['dom'] != "") {
 $domiciles = getDomicilesController($_SESSION['user_id']);
 foreach ($domiciles as $val) {
     echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "
-				' id=" . str_replace(' ', '', $val[0]) . "><i class='fa fa-home' ></i> " . $val[1] . "
-				<form action='../controllers/domicile.php' method='post'>
+				' id=" . str_replace(' ', '', $val[0]) . "><i class='fa fa-home' ></i> " . $val[1] . "";?>
+				<form method='post' action='../controllers/domicile.php' onsubmit="return confirm
+				('Etes-vous sûr de vouloir supprimer ce domicile ?')">
+				<?php echo"
 						<input type='hidden' value=" . $val[0] . " name='domicile' id='domicile'/>
 						<input type='hidden' value='domicile_del' name='action' id='action'/>
                         <button id='del-domicile-button' type='submit' value='del_home'><i class='fa fa-trash'></i></button>
@@ -128,13 +130,15 @@ if (count($pieces) == 0) {
     echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de pièces pour ce domicile.</li>";
 } else {
     foreach ($pieces as $piece) {
-        echo "<li class='list-pieces'><a href='piece1.php?piece=" . $piece[0] . "'>" . $piece[1] . "<a>
-						<form action='../controllers/piece.php' method='post'>
-						<input type='hidden' value=" . $piece[0] . " name='piece' id='piece'/>
-						<input type='hidden' value='piece_del' name='action' id='action'/>
-						<button type='submit' id='del-piece-button'>Supprimer</button>
-						</form>
-						</li>";
+        echo "<li class='list-pieces'><a href='piece1.php?piece=" . $piece[0] . "'>" . $piece[1] . "<a>";?>
+		<form method='post' action='../controllers/piece.php' onsubmit="return confirm
+		('Etes-vous sûr de vouloir supprimer cet pièce ?')">
+		<?php echo"
+			<input type='hidden' value=" . $piece[0] . " name='piece' id='piece'/>
+			<input type='hidden' value='piece_del' name='action' id='action'/>
+			<button type='submit' id='del-piece-button'>Supprimer</button>
+			</form>
+			</li>";
     }
 }
 ?>
