@@ -12,8 +12,9 @@ $controleurs = array("lum", "vol", "ch");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = testinput($_POST["name"]);
     $type = testinput($_POST["capteur"]);
+    $reference = testinput($_POST["reference"]);
     $ref = testinput($_POST["ref"]);
-    if (isset($ref) && !empty($ref)) {
+    if (isset($reference) && !empty($reference)) {
         $capt = getCapteursByID($ref);
         $cont = getControllersByID($ref);
         if (count($capt) != 0 || count($cont) != 0) {

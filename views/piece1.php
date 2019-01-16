@@ -199,6 +199,7 @@ header("Location: domicile.php");
 							<option value="ch">Controleur de chauffage</option>
 						</select>
 						<button id ="validation1" type="submit">valider</button>
+						</form>
 						<script>
 						$("#ref").on('input', function() {
 							var ref = $('#ref').val();
@@ -214,7 +215,7 @@ header("Location: domicile.php");
 
 							$.post('../controllers/capteur.php',
 										{
-										  ref: ref
+										  reference: ref
 										},
 										function(data, status, req){
 											$exists = req.getResponseHeader('Sensor-exists');
@@ -228,7 +229,6 @@ header("Location: domicile.php");
 										});
 						})
 						</script>
-				</form>
 			  </div>
 			</div>
 
@@ -253,36 +253,6 @@ header("Location: domicile.php");
 
 
 
-<div class="modal2" id="myModal2">
-			<div class="modal-content2">
-				<span class="close">&times;</span>
-				<?php echo"
-    			
-					<div class='infos'>
-					<h2>Info de " .$capteur[1]."</h2>
-						<span>Numéro de série : </span>".$capteur[0]."
-						<br/><span>Type : </span>".$capteur[2]."
-						<br/><span>Emplacement : </span>".$capteur[4]."
-					</div>
-					
-				<div class ='historique'>
-				<h2> Historique de ".$capteur[1]." </h2>"
-				?>
-				<?php
-					require __DIR__ . '/../controllers/releve.php';
-
-					$releve_capteur = getDataCapteur();
-					echo "
-					<div class='datas'>
-					<form method='post' action='../controllers/releve.php'>
-					<span>".$releve_capteur[1]." : </span>".$releve_capteur[3]."
-					</form>
-					</div>
-					"
-					?>
-				</div> 
-			</div>
-</div>
 
 
 </body>
