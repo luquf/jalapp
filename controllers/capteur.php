@@ -9,11 +9,19 @@ $capteurs = array("hum", "temp", "fum");
 $controleurs = array("lum", "vol", "ch");
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = testinput($_POST["name"]);
     $type = testinput($_POST["capteur"]);
     $ref = testinput($_POST["ref"]);
-    if (isset($nom) && isset($type)) {
+    if (isset($ref) && !empty($ref)) {
+        $capt = getCapteursByID($ref);
+        $cont = getControllersByID($ref);
+        if (count($capt) != 0 || count($cont) != 0) {
+            header('Sensor-exists: true');
+        } else {
+            header('Sensor-exists: false');
+        }
+    } else if (isset($nom) && isset($type)) {
         if (in_array($type, $capteurs)) {
             switch ($type) {
                 case "hum":
