@@ -143,7 +143,8 @@ if (count($pieces) == 0) {
 }
 ?>
 			</ul>
-			<input id='add_piece' type="button"  value='+' />
+			<button id='add_piece'><i class='fa fa-plus'></i></button>
+			<!-- <input id='add_piece' type="button"  value='+' /> -->
 		</div>
 		<script>
 		var path = window.location.href;
