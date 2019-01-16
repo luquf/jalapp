@@ -7,6 +7,11 @@ session_start();
 $name = $surname = $email = $password = $address = $ville = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (isset($_POST['action']) && $_POST['action'] == "del_account") {
+    removeUserByID($_SESSION['user_id']);
+    session_destroy();
+    header();
+  }
   $prenom = test_input($_POST["surname"]);
   $nom = test_input($_POST["name"]);
   $email = test_input($_POST["email"]);
