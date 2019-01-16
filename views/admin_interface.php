@@ -73,15 +73,16 @@ if (count($utilisateur) == 0) {
                                 <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[2] . "</a></td>
                                 <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[3] . "</a></td>
                                 <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[8] . "</a></td>
-
-                                <form method='post' action='../controllers/admin_interface.php'>
-								<td class = delete><input type='hidden' value=" . $utilisateur[0] . " name='user' id='user'/>
-								<input type='hidden' value='del_user' name='action' id='action'/>
-								<button id= buttondelete type='submit'>X</button>
-								</form>";
+                                ";}
     }
-}
-?>
+                                ?>
+                                <form method='post' action='../controllers/admin_interface.php' onsubmit="return confirm
+                                ('Etes-vous sûr de vouloir supprimer cet utilisateur ?')">
+								<td class = delete><input type='hidden' value=" <?php $utilisateur[0] ?> " name='user' id='user'/>
+								<input type='hidden' value='del_user' name='action' id='action'/>
+								<input id= buttondelete  type='submit' value='X'>
+								</form>
+    
 
                     <script>
                             function tri() {
