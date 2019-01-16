@@ -155,6 +155,8 @@ foreach ($data as $domcile) {
                                 </script>   
                                 ";
         }
+        echo "</ul>";
+        echo "<ul class='sensors'>";
         foreach ($piece["controleurs"] as $controleur) {
             echo "<li class='liste' id='element-".$controleur[0]."'><span id='display-".$controleur[0]."'>Nom: ".$controleur[1]."<br>Type: ".$controleur[2]."<br>Valeur: ".$controleur[3]."</span>
             </br></br><form method='post' action='../controllers/admin_action.php'>

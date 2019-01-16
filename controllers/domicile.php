@@ -3,6 +3,7 @@
 session_start();
 
 require_once __DIR__.'/../models/domicile.php';
+require_once __DIR__.'/../lib/uuid.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 

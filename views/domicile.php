@@ -155,7 +155,7 @@ if (count($pieces) == 0) {
 				<span class="close">&times;</span>
     			<h2>Ajouter une pièce</h2>
 				<form method="post" action="../controllers/piece.php">
-                        <input class="input" type="type" name="name" id="name" placeholder="Nom de la pièce" size="30" maxlength="10" required/>
+                        <input class="input" type="type" name="name" id="name" placeholder="Nom de la pièce" size="30" maxlength="20" required/>
 						<input type='hidden' value='piece_add' name='action' id='action'/>
 						<button id ="validation1" type="submit">Valider</button>
 				</form>

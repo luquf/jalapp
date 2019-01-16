@@ -57,5 +57,5 @@ foreach($all_controleurs as $controleur) {
     }
 
 
-    sleep(10);
+    sleep(3600);
 }
