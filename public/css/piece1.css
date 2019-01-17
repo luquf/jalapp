@@ -178,6 +178,11 @@
         margin: 1%;
     }
 
+    .no-sensors {
+        font-size: 1em;
+        list-style-type: none;
+        text-align: center;
+    }
 
     #add_capteur{
         background-color: #515659;
@@ -191,19 +196,9 @@
         outline: none;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+    .modal1 input {
+        width: 80%;
 
-    #modal1 {
-        height: 300px;
-        width: 60%;
-        background-color:white ;
-        opacity: 0.9;
-        text-align: center;
-        color: black;
-        position: absolute;
-        left: 20%;
-        transition: 0.5s;
-        top: -400px;
-        
     }
     
     .modal1 {
@@ -230,7 +225,11 @@
         border-radius: 5px;
         margin-bottom: 50%;
     }
-    
+
+    .modal-content .input-dropdown {
+        margin-top: 5%;
+    }
+
     .modal-content .input {
         padding: 2.5%;
         border-radius: 5px;
@@ -569,19 +568,7 @@
         font-size: 2.5em;
     }
 
-    #modal1 {
-        height: 300px;
-        width: 60%;
-        background-color:white ;
-        opacity: 0.9;
-        text-align: center;
-        color: black;
-        position: absolute;
-        left: 20%;
-        transition: 0.5s;
-        top: -400px;
-        
-    }
+    
     
     .modal1 {
         display: none; 
@@ -596,6 +583,10 @@
         background-color: rgb(0,0,0); 
         background-color: rgba(0,0,0,0.4); 
     }
+
+    .modal1 input {
+        width: 80%;
+    }
     
     .modal-content {
         background-color: #fefefe;
@@ -604,7 +595,7 @@
         padding: 20px;
         border: 1px solid #888;
         width: 80%;
-        height: 35%;
+        height: 55%;
         border-radius: 5px;
         margin-bottom: 50%;
     }
