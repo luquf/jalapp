@@ -140,30 +140,7 @@
 		text-decoration: none;
 		color: #515659;
 	}
-	.info_footer{
-        background-color: #ffffff;
-        display: flex;
-		flex-direction: row;
-		text-align: center;
-		width: 100%; 
-        height: 8%;
-        align-items: center;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		opacity: 0.9;
-    }
-
-    #logo_JALA{
-        width: 15%;
-        height:15%;
-        padding-left: 2%;
-    }
-
-    .inf{
-        margin-left: -9.8%;
-        margin-right: -9.8%;
-
-    }
+	
 }
 
 @media only screen and (max-width: 1100px) {
@@ -275,30 +252,7 @@
 		margin-top: 5%;
 		margin-bottom: 10%;
 	}
-	.info_footer{
-        background-color: #ffffff;
-        display: flex;
-		flex-direction: row;
-		text-align: center;
-		width: 100%; 
-        height: 8%;
-        align-items: center;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		opacity: 0.9;
-    }
-
-    #logo_JALA{
-        width: 15%;
-        height:15%;
-        padding-left: 2%;
-    }
-
-    .inf{
-        margin-left: -9.8%;
-        margin-right: -9.8%;
-
-	}
+	
 	/* width */
 ::-webkit-scrollbar {
 	width: 10px;

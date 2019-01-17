@@ -59,36 +59,17 @@
 		padding-left: 2%;
 		
 	}
-	.aide{
-
-		font-size: 1.1em;
-		color: #515659;
-		text-decoration: none;
-		margin-top: auto;
-		margin-bottom: auto;
-
-		margin-right: 5%;
-		padding-left: 2%;
-		
-	}
 
 
 
-	#slogan h1
-	{
-		font-size: 4em;
-		font-weight: bold;
-		text-align: center;
-		color : #ffffff;
-		margin-top : 7.5%;
-		margin-bottom : 7.5%;
 
-	}
-	#apropos
+	#FAQ
 	{
 		background-color: white;
 		opacity: 0.9;
-
+		display: flex;
+		flex-wrap:wrap;
+		text-align:justify;
 		padding-left: 4%;
 		padding-right: 4%;
 		padding-bottom: 5%;
@@ -103,9 +84,9 @@
 		
 	}
 
-	.titre_apropos
+	.titre_FAQ
 	{
-		font-size: 2.5em;
+		font-size: 4em;
 		padding-bottom: 2%;
 		text-align: center;
 		margin: auto;
@@ -113,6 +94,19 @@
 		margin-bottom: 2%;
 		
 
+	}
+	.question{
+		margin: auto;
+		position: relative;
+		text-align: center;	
+	}
+	.answer {
+		font-weight: normal;
+		text-align: justify;	
+		font-size : 0.7em;
+		
+	
+	
 	}
 
 	    /* width */
@@ -201,24 +195,8 @@
 		padding-right : 1%;
 
 	}
-	.aide 
-	{
-		text-decoration: none;
-		font-size : 2.5rem;
-		color: #515659;
-		text-decoration: none;	
-		margin :auto;
-		margin-right: 2%;
 
-	}
-	#slogan h1
-	{
-		font-size: 5em;
-		font-weight: bold;
-		text-align: center;
-		color : #ffffff;
-	}
-	#apropos
+	#FAQ
 	{
 		background-color: #ffffff;
 		opacity: 0.9;
@@ -231,14 +209,23 @@
 		border-radius : 10px;
 	}
 
-	#apropos h3
+	#FAQ h1
 	{
-		font-size : 3em;
+		font-size : 5em;
 		padding-bottom: 25px;
 		text-align : center;
 
 	}
+	
+	.question {
+		margin-bottom : 5%;
 
+	}
+	.answer {
+		margin-top : 2%;
+		font-weight: normal;
+		font-size : 0.5em;
+	}
 
     .inf{
         margin-left: -9.8%;
