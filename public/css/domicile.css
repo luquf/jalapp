@@ -186,8 +186,8 @@
 
 
     #tab1 {
-	margin-left: 8%;
-	margin-right: 8%;
+	margin-left: 4%;
+	margin-right: 4%;
 	background:#ffffff;
 	border-radius: 5px;
 	padding: 1%;
@@ -208,25 +208,34 @@
     }
 
     .tabs {
-	margin-left: 6%;
+	margin-left: 1.5%;
 	margin-bottom: 2%;
-    }
+	}
+	
 
     .tabs li {
 	list-style:none;
 	display:inline;
 	margin-right: 0.5%;
-    }
+	}
+
+	#del-dom-form {
+		display: inline-block;
+	}
+
+	.trash-button {
+		margin-left: 5%;
+	}
 
     .tabs a {
 	display:inline-block;
 	background:#fff;
 	color:#515659;
 	text-decoration:none;
-	border-radius: 20px;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	padding-right: 2%;
+	border-radius: 30px;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	padding-right: 1%;
 	padding-left: 2%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
@@ -460,7 +469,7 @@
   
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1000px) {
 	body
 	{
 		background-color: grey;
@@ -491,7 +500,7 @@
 
 	}
 	#logo {
-		width: 90%;
+		width: 80%;
 		height: auto; 
 	}
 	#bandeau_droite{
@@ -517,7 +526,7 @@
 
 	.settings
 	{		
-		margin-right: 1%;
+		margin-right: 3%;
 		font-size: 2em;
 		color: #304045;
 		
@@ -530,7 +539,7 @@
 
 	.deconnexion
 	{		
-		margin-right: 1%;
+		margin-right: 3%;
 		font-size: 2em;
 		color: #304045;
 		
@@ -593,8 +602,8 @@
     }
 
     #tab1 {
-	margin-left: 8%;
-	margin-right: 8%;
+	margin-left: 4%;
+	margin-right: 4%;
 	background:#ffffff;
 	border-radius: 5px;
 	font-size: 3em;
@@ -623,10 +632,18 @@
     h3 
     {
 	color: #FFF;
-    }
+	}
+	
+	#del-dom-form {
+		display: inline-block;
+	}
+
+	.trash-button {
+		margin-left: 5%;
+	}
 
     .tabs {
-	margin-left: 6%;
+	margin-left:0%;
 	margin-bottom: 5%;
     }
 
@@ -636,6 +653,9 @@
 	margin-right: 0.5%;
     }
 
+	.trash-icon {
+		font-size: 3em;
+	}
   
 
     .tabs a {
@@ -643,7 +663,7 @@
 	background:#fff;
 	color:#515659;
 	text-decoration:none;
-	font-size: 2.5em;
+	font-size: 2em;
 	border-radius: 30px;
 	padding-top: 1%;
 	padding-bottom: 1%;

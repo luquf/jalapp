@@ -22,15 +22,8 @@ if (!isset($dom[0][0])) {
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="../public/css/domicile.css" />
 		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-        <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script
-  src="https://code.jquery.com/jquery-1.9.1.min.js"
-  integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   		<title>Domisep: Domicile </title>
 
 	</head>
@@ -61,22 +54,22 @@ if (!isset($dom[0][0])) {
 		<?php
 require_once __DIR__ . '/../controllers/domicile.php';
 if (isset($_GET['dom']) && $_GET['dom'] != "") {
-	$domicile = getDomicileByID($_GET['dom']);
-	if (count($domicile) == 0) {
-		header("Location: domicile.php");
-	}
+    $domicile = getDomicileByID($_GET['dom']);
+    if (count($domicile) == 0) {
+        header("Location: domicile.php");
+    }
     $_SESSION['domicile_id'] = testinput($_GET['dom']);
 }
 $domiciles = getDomicilesController($_SESSION['user_id']);
 foreach ($domiciles as $val) {
     echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "
 				' id=" . str_replace(' ', '', $val[0]) . "><i class='fa fa-home' ></i> " . $val[1] . "";?>
-				<form method='post' action='../controllers/domicile.php' onsubmit="return confirm
+				<form id='del-dom-form' method='post' action='../controllers/domicile.php' onsubmit="return confirm
 				('Etes-vous sûr de vouloir supprimer ce domicile ?')">
-				<?php echo"
+				<?php echo "
 						<input type='hidden' value=" . $val[0] . " name='domicile' id='domicile'/>
 						<input type='hidden' value='domicile_del' name='action' id='action'/>
-                        <button id='del-domicile-button' type='submit' value='del_home'><i class='fa fa-trash'></i></button>
+						<button id='del-domicile-button' class='trash-button' type='submit' value='del_home'><i class='fa fa-trash trash-icon'></i></button>
 						</form>
 				</a></li>";
 }
@@ -133,7 +126,7 @@ if (count($pieces) == 0) {
         echo "<li class='list-pieces'><a href='piece1.php?piece=" . $piece[0] . "'>" . $piece[1] . "<a>";?>
 		<form method='post' action='../controllers/piece.php' onsubmit="return confirm
 		('Etes-vous sûr de vouloir supprimer cet pièce ?')">
-		<?php echo"
+		<?php echo "
 			<input type='hidden' value=" . $piece[0] . " name='piece' id='piece'/>
 			<input type='hidden' value='piece_del' name='action' id='action'/>
 			<button type='submit' id='del-piece-button'>Supprimer</button>
@@ -184,7 +177,6 @@ if (count($pieces) == 0) {
     		}
 		}
 		</script>
-		<footer>
 	</body>
 
 
