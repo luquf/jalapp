@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../public/css/accueil.css" />
+		<link rel="stylesheet" href="../public/css/aide_accueil.css" />
 		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-		<title>Domisep : Accueil</title>
+		<title>Domisep : Foire aux Questions</title>
 	</head>
 
 	<body>
