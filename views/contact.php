@@ -33,7 +33,7 @@ session_start();
 					<div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Connexion </a>
 					</div>
-					<div class="contact">
+					<div class="settings">
 						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
 					</div>
 					<div class="language">
