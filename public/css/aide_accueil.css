@@ -164,9 +164,6 @@
 
 @media only screen and (max-width: 1000px) {
 
-	* {
-		margin: 0 auto;
-}
 	body
 	{
 		background-color: grey;
@@ -175,78 +172,81 @@
 		background-size: cover;
 		font-family: Helvetica;
 		margin: 0 auto;
-		padding-bottom: 20%;
 		position: absolute;
+
+
 	}
 
 
-		#bandeau
-		{
-			background-color: #ffffff;
-			opacity : 0.9;
-			display: flex;
-			width: 100%;
-			height : 100%;
-			justify-content: space-between;
-			color: #515659;
-			font-size: 1.5rem;
-		}
+	#bandeau
+	{
+		background-color: #ffffff;
+		opacity : 1;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		width: 100%;
+		height: 100%;
+		justify-content: space-between;
+		margin-bottom: 5%;
+	}
 
-		.logo
-		{
-			margin-left : 2%;
-			margin-top : 0.8%;
-			margin-bottom : 0.8%;
-
-		}
-		#logo {
-		width : 70%;
-		height : auto;
-		}
-
-		h2
-		{
-			font-size: 3em;
-			margin-bottom: 3%;
-		}
-
-	.connexion {
-		text-decoration: none;
-		color: #515659;
-		font-size : 2.5rem;
-		margin :auto;
-		margin-right : 3%;
-		padding-right : 1%;
+	.logo
+	{
+		margin-bottom : 0.8%;
+		margin-left : 2%;
+		margin-top :0.8%;
 
 	}
 
-	.aide {
-		text-decoration: none;
-		color: #515659;
-		font-size : 2.5rem;
-		margin :auto;
-		margin-right : 3%;
-		padding-right : 1%;
-
+	#logo {
+		width: 80%;
+		height: auto; 
 	}
 
-	.contact {
-		text-decoration: none;
-		color: #515659;
-		font-size : 2.5rem;
-		margin :auto;
-		margin-right : 3%;
-		padding-right : 1%;
-
+	#bandeau_droite{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: nowrap;
+		margin-right : 4%;
 	}
 
-	.language {
-		text-decoration: none;
+	.connexion{
+		font-size : 2.3em;
 		color: #515659;
-		font-size : 2.5rem;
-		margin :auto;
-		margin-right : 5%;
-		padding-right : 1%;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right : 4%;
+				
+	}
+	.aide{
+		font-size : 2.3em;
+		margin-right : 4%;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+	
+	}
+	.contact{
+		font-size : 2.3em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right : 4%;
+
+
+	}
+	.language{
+		font-size: 2.1em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		border : 1px solid #515659;
 
 	}
 
@@ -288,27 +288,5 @@
 
 
 	}
-	
-	/* width */
-::-webkit-scrollbar {
-	width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey; 
-	border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-	background: grey; 
-	border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-	background: #3C4459; 
-  }
-  
+
 }
