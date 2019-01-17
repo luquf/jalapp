@@ -19,7 +19,6 @@
 		opacity : 1;
 		display: flex;
 		flex-direction: row;
-		flex-wrap: nowrap;
 		width: 100%;
 		height: 100%;
 		justify-content: space-between;
@@ -60,38 +59,13 @@
 		padding-left: 2%;
 		
 	}
-	.aide{
-
-		font-size: 1.1em;
-		color: #515659;
-		text-decoration: none;
-		margin-top: auto;
-		margin-bottom: auto;
-
-		margin-right: 5%;
-		padding-left: 2%;
-		
-	}
 
 
-
-	#slogan h1
-	{
-		font-size: 4em;
-		font-weight: bold;
-		text-align: center;
-		color : #ffffff;
-		margin-top : 7.5%;
-		margin-bottom : 7.5%;
-
-	}
-	#apropos
+	#FAQ
 	{
 		background-color: white;
 		opacity: 0.9;
-		display: flex;
-		flex-wrap:wrap;
-		text-align:justify;
+
 		padding-left: 4%;
 		padding-right: 4%;
 		padding-bottom: 5%;
@@ -106,7 +80,7 @@
 		
 	}
 
-	.titre_apropos
+	.titre_FAQ
 	{
 		font-size: 2.5em;
 		padding-bottom: 2%;
@@ -114,41 +88,10 @@
 		margin: auto;
 		position: relative;
 		margin-bottom: 2%;
-		
 
 	}
 
-	.info_footer{
-        background-color: #ffffff;
-        display: flex;
-		flex-direction: row;
-		text-align: center;
-		width: 100%; 
-        height: 8%;
-        align-items: center;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		opacity: 0.9;
-    }
 
-    #logo_JALA{
-        width: 15%;
-        height:15%;
-        padding-left: 2%;
-    }
-
-    .inf{
-        margin-left: -9.8%;
-		margin-right: -9.8%;
-		color: #515659;
-		text-decoration:none;
-		
-    }
-
-	.inf a{
-		margin-right: 1%;
-		padding-right: 5%;
-	}
 	    /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -235,24 +178,8 @@
 		padding-right : 1%;
 
 	}
-	.aide 
-	{
-		text-decoration: none;
-		font-size : 2.5rem;
-		color: #515659;
-		text-decoration: none;	
-		margin :auto;
-		margin-right: 2%;
 
-	}
-	#slogan h1
-	{
-		font-size: 5em;
-		font-weight: bold;
-		text-align: center;
-		color : #ffffff;
-	}
-	#apropos
+	#FAQ
 	{
 		background-color: #ffffff;
 		opacity: 0.9;
@@ -265,7 +192,7 @@
 		border-radius : 10px;
 	}
 
-	#apropos h3
+	.titre_FAQ
 	{
 		font-size : 3em;
 		padding-bottom: 25px;
@@ -273,34 +200,7 @@
 
 	}
 
-	.info_footer{
-        background-color: #ffffff;
-        display: flex;
-		flex-direction: row;
-		text-align: center;
-		width: 100%; 
-        height: 8%;
-        align-items: center;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		opacity: 0.9;
-		}
 
-
-	
-    #logo_JALA{
-        width: 15%;
-        height:15%;
-        padding-left: 2%;
-    }
-
-    .inf{
-        margin-left: -9.8%;
-		margin-right: -9.8%;
-		color: #515659;
-
-
-	}
 	
 	/* width */
 ::-webkit-scrollbar {

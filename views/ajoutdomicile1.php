@@ -20,6 +20,8 @@ session_start();
 
 <body>
 
+</label>
+
 	</div>
 
 
@@ -36,9 +38,16 @@ session_start();
 				<div class="deconnexion">
 					<a href="inscription.php" style="text-decoration: none; color: #515659"> Déconnexion </a>
 				</div>
-			</div>
+				<div class="language">
+					<a href="aide_accueil_ENG.php" style="text-decoration: none; color: #515659"> ENG </a>
+				</div>
 
+				</div>
+		
+			</div>
+		
 		</div>
+		
 
 		<div class="boutton">
 
@@ -82,6 +91,7 @@ session_start();
         		modal1.style.display = "none";
     		}
 		}
+
 		</script>
 
 

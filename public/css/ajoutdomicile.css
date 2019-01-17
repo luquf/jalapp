@@ -65,11 +65,22 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		text-decoration: none;
-		margin-right: 5%;
+		margin-right: 10%;
 		padding-left: 2%;
 		
 	}
+	.language{
 
+		font-size: 0.9em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		text-decoration: none;
+		margin-right: 5%;
+		border : 1px solid  #515659;
+		
+	}
 
 	.textboutton{
 		font-size: 200%;
@@ -273,7 +284,7 @@
 		justify-content: space-around;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 5%;
+
 		
 		
 		
@@ -287,12 +298,23 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		text-decoration: none;
-		margin-right: 1%;
 		padding-left: 1%;
 		
 	}
+	.language{
 
+		font-size: 2em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		text-decoration: none;
+		
+		border : 1px solid  #515659;
+		
+	}
 
+	
 	.textboutton{
 		font-size: 500%;
 		font-weight: bold;

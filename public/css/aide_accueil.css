@@ -8,7 +8,11 @@
 		font-family: Helvetica;
 		margin: 0 auto;
 		position: absolute;
+
+
 	}
+
+
 	#bandeau
 	{
 		background-color: #ffffff;
@@ -36,13 +40,11 @@
 
 	#bandeau_droite{
 		display: flex;
-		justify-content: space-around;
-		align-items: flex-end;
+		flex-direction: row;
+		justify-content: center;
 		flex-wrap: nowrap;
-		padding-right: 2%;
-		margin-right: 2%;
+		margin: 2%;
 	}
-
 
 	.connexion{
 
@@ -51,75 +53,202 @@
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
+		display: flex;
+		flex-wrap: nowrap;
+		margin-right: 2%;
+		padding-left: 2%;
+		
+	}
+	.aide{
+
+		font-size: 1.1em;
+		color: #515659;
 		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+
 		margin-right: 5%;
 		padding-left: 2%;
 		
 	}
 
 
-	.textboutton{
-		font-size: 200%;
+
+	#slogan h1
+	{
+		font-size: 4em;
 		font-weight: bold;
-		color: #fff;
+		text-align: center;
+		color : #ffffff;
+		margin-top : 7.5%;
+		margin-bottom : 7.5%;
 
 	}
-	#slogan h1{
-	font-size: 4em;
-	font-weight: bold;
-	text-align: center;
-	color : #ffffff;
-	margin-top : 5%;
-	margin-bottom : 5%;
+	#apropos
+	{
+		background-color: white;
+		opacity: 0.9;
+
+		padding-left: 4%;
+		padding-right: 4%;
+		padding-bottom: 5%;
+		padding-top : 2%;
+		margin-left: 8%;
+		margin-right: 8%;
+		border-radius : 10px;
+		font-size : 1.4em;
+		margin-bottom : 5%;
+		position: relative;
+		min-height: 100%;
+		
+	}
+
+	.titre_apropos
+	{
+		font-size: 2.5em;
+		padding-bottom: 2%;
+		text-align: center;
+		margin: auto;
+		position: relative;
+		margin-bottom: 2%;
+		
+
+	}
+
+	    /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3C4459; 
+  }
+	
+
+
 }
 
-	#FAQ
+
+
+
+@media only screen and (max-width: 1000px) {
+
+	* {
+		margin: 0 auto;
+}
+	body
+	{
+		background-color: grey;
+		color: #515659;
+		background: url("../assets/wallpaper.jpg") fixed no-repeat center;
+		background-size: cover;
+		font-family: Helvetica;
+		margin: 0 auto;
+		padding-bottom: 20%;
+		position: absolute;
+	}
+
+
+		#bandeau
+		{
+			background-color: #ffffff;
+			opacity : 0.9;
+			display: flex;
+			width: 100%;
+			height : 100%;
+			justify-content: space-between;
+			color: #515659;
+			font-size: 1.5rem;
+		}
+
+		.logo
+		{
+			margin-left : 2%;
+			margin-top : 0.8%;
+			margin-bottom : 0.8%;
+
+		}
+		#logo {
+		width : 70%;
+		height : auto;
+		}
+
+		h2
+		{
+			font-size: 3em;
+			margin-bottom: 3%;
+		}
+
+	.connexion {
+		text-decoration: none;
+		color: #515659;
+		font-size : 2.5rem;
+		margin :auto;
+		margin-right : 5%;
+		padding-right : 1%;
+
+	}
+	.aide 
+	{
+		text-decoration: none;
+		font-size : 2.5rem;
+		color: #515659;
+		text-decoration: none;	
+		margin :auto;
+		margin-right: 2%;
+
+	}
+	#slogan h1
+	{
+		font-size: 5em;
+		font-weight: bold;
+		text-align: center;
+		color : #ffffff;
+	}
+	#apropos
 	{
 		background-color: #ffffff;
 		opacity: 0.9;
-		display: flex;
-		flex-wrap:wrap;
-		justify-content: justify;
-		text-align:justify;
-		color: #515659;
-		font-size : 1.4em;
-		padding-right: 4%;
-		padding-left: 4%;
-		padding-top: 3%;
-		padding-bottom: 3%;
-		padding-bottom: 2%;
-		margin-left: 8%;
-		margin-right: 8%;
-		border-radius: 10px;
-		margin-bottom : 7%;	
-		position: relative;	
+		padding-left: 3%;
+		padding-right: 3%;
+		padding-bottom: 5%;
+		padding-top : 3%;
+		margin-left: 4%;
+		margin-right: 4%;
+		border-radius : 10px;
 	}
 
-	.info_footer{
-        background-color: #ffffff;
-        display: flex;
-		flex-direction: row;
-		text-align: center;
-		width: 100%; 
-        height: 8%;
-        align-items: center;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		opacity: 0.9;
-    }
+	#apropos h3
+	{
+		font-size : 3em;
+		padding-bottom: 25px;
+		text-align : center;
 
-    #logo_JALA{
-        width: 15%;
-        height:15%;
-        padding-left: 2%;
-    }
+	}
+
 
     .inf{
         margin-left: -9.8%;
-        margin-right: -9.8%;
+		margin-right: -9.8%;
+		color: #515659;
 
-    }
-/* width */
+
+	}
+	
+	/* width */
 ::-webkit-scrollbar {
 	width: 10px;
   }
@@ -141,140 +270,4 @@
 	background: #3C4459; 
   }
   
-
-
-}
-
-
-@media only screen and (max-width: 1000px) {
-	body
-	{
-		background-color: grey;
-		color: #515659;
-		background: url("../assets/wallpaper.jpg") fixed no-repeat center;
-		background-size: cover;
-		font-family: Helvetica;
-		margin: 0 auto;
-		position : absolute;
-		margin-right: 0%;
-		
-	}
-	#bandeau
-	{
-		background-color: #ffffff;
-		opacity : 0.9;
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		height: 100%;
-		color: #515659;
-		justify-content: space-between;
-		margin-bottom: 10%;
-	}
-	.logo
-	{
-		margin-bottom : 0.8%;
-		margin-left : 2%;
-		margin-top :0.8%;
-	}
-
-	#logo {
-		width: 62%;
-		height: auto; 
-	}
-
-	#bandeau_droite{
-		display: flex;
-		justify-content: space-around;
-		align-items: flex-end;
-		flex-wrap: nowrap;
-		padding-right: 5%;
-	}
-
-
-	.connexion{
-
-		font-size: 2.5rem;
-		color: #515659;
-		text-decoration: none;
-		margin-top: auto;
-		margin-bottom: auto;
-		text-decoration: none;
-		margin-right: 1%;
-		padding-left: 1%;
-		
-	}
-
-
-
-	#FAQ
-	{
-		margin-top : 8%;
-		margin-left: 2%;
-		margin-right: 2%;
-		margin-bottom : 4%;
-		padding-bottom: 2%;
-		padding-left: 2%;
-		padding-right: 2%;
-		opacity: 0.8;
-		background-color: #ffffff;
-		display: flex;
-		flex-wrap:wrap;
-		flex-direction: column;
-		justify-content: justify;
-		text-align:justify;
-		border-radius: 20px;
-		color: #515659;
-		font-size : 2.8em;
-		width: 92.7%;
-	}
-
-
-	.input{
-		width: 80%;
-		border-color: grey;
-		margin-left: 40%;
-		font-size: 0.7em;
-	}
-
-
-	#slogan h1{
-		font-size: 6em;
-		font-weight: bold;
-		text-align: center;
-		color : #ffffff;
-		margin-top : 5%;
-		margin-bottom : 5%;
-	}
-
-
-	.info_footer{
-        background-color: #ffffff;
-        display: flex;
-		flex-direction: row;
-		text-align: center;
-		width: 100%; 
-        height: 80%;
-        align-items: center;
-		flex-wrap: nowrap;
-		justify-content: center;
-		opacity: 0.9;
-	}
-	.submit{
-		font-size: 0.9em;
-		margin-top: 10%;
-		margin-left: 20%;
-	}
-
-    #logo_JALA{
-        width: 15%;
-        height:15%;
-        padding-left: 2%;
-    }
-
-    .inf{
-        margin-left: -9.8%;
-        margin-right: -9.8%;
-
-    }
 }
