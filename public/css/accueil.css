@@ -107,7 +107,6 @@
 	{
 		background-color: white;
 		opacity: 0.9;
-		display: flex;
 		flex-wrap:wrap; 	
 		text-align:justify;
 		padding-left: 4%;
@@ -138,8 +137,16 @@
 
 	.textdomisep{
 		font-style: normal;
+		margin-left : 12%;
 	}
 
+	h4{
+		margin-left: 12%;
+	}
+	.cgu{
+		margin-left: 12%;
+
+	}
     .inf{
         margin-left: -9.8%;
 		margin-right: -9.8%;
