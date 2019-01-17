@@ -16,7 +16,7 @@ session_start();
         <link rel="icon" type="image/png" href="../public/assets/favicon.png" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-		<title>Domisep : Réglages</title>
+		<title>Domisep : Contact</title>
 	</head>
 
 	<body>
@@ -26,9 +26,22 @@ session_start();
 					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
 			</div>
 
-			<div class="bandeau-droite">
-				<a href= "accueil.php" class= "deconnexion"> Accueil </a>
-			</div>
+            <div id="bandeau_droite">
+						<div class="aide">
+							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+						</div>
+					<div class="connexion">
+						<a href="inscription.php" style = "text-decoration: none; color: #515659"> EspaceClient </a>
+					</div>
+					<div class="contact">
+						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
+					</div>
+					<div class="language">
+							<a href= "contact_ENG.php" style = "text-decoration: none; color: #515659"	> ENG </a>
+						</div>
+					
+				</div>
+
         </div>
 
         <div id="slogan">
@@ -119,19 +132,5 @@ session_start();
 
             </body>
 
-            <footer>
-
-		<div class = 'info_footer'> 
-        	<div>Powered by 
-        <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
-          ©</div>
-		  <a href= 'mentionslegales.php'> Mentions Légales </a> 
-		  <a href= 'cgu.php'> ConditionsGénérales </a> 
-
-
-        </div>
-
-		
-	</footer>
 
             </html>
