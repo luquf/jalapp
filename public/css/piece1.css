@@ -1,6 +1,5 @@
 @media only screen and (min-width: 300px) {
-
-    body
+	body
 	{
 		background-color: grey;
 		color: #515659;
@@ -55,7 +54,7 @@
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
+
 		
 	
 		
@@ -86,6 +85,7 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		border : 1px solid #515659;
+		margin-right : 6%;
 		
 
 	}
@@ -100,7 +100,6 @@
 
 	
     }
-        
 
 
     #tab1 {
@@ -492,7 +491,9 @@
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		border : 1px solid #515659;
+        border : 1px solid #515659;
+        margin-right : 4%;
+
 
 	}
 

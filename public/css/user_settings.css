@@ -54,7 +54,7 @@
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
+
 		
 	
 		
@@ -66,17 +66,15 @@
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-
-
-		
+	
 	}
-	.settings{
+	.contact{
 		font-size : 1em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
+		margin-right : 6%;
 
 
 	}
@@ -87,8 +85,21 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		border : 1px solid #515659;
+		margin-right : 6%;
+		
 
 	}
+
+    .settings{
+		font-size : 1em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right : 3%;
+
+	
+    }
 
 
 	.input {
@@ -289,6 +300,8 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		border : 1px solid #515659;
+		margin-right : 4%;
+
 
 	}
 	.input {
