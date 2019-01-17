@@ -180,9 +180,7 @@
 
 @media only screen and (max-width: 1000px) {
 
-	* {
-		margin: 0 auto;
-}
+
 	body
 	{
 		background-color: grey;
@@ -216,7 +214,7 @@
 
 		}
 		#logo {
-		width : 70%;
+		width : 80%;
 		height : auto;
 		}
 
@@ -229,7 +227,7 @@
 	.connexion {
 		text-decoration: none;
 		color: #515659;
-		font-size : 2.5rem;
+		font-size : 2.3rem;
 		margin :auto;
 		margin-right : 2%;
 		padding-right : 1%;
@@ -238,7 +236,7 @@
 	.aide 
 	{
 		text-decoration: none;
-		font-size : 2.5rem;
+		font-size : 2.3rem;
 		color: #515659;
 		text-decoration: none;	
 		margin :auto;
@@ -248,7 +246,7 @@
 	.language 
 	{
 		text-decoration: none;
-		font-size : 2.5rem;
+		font-size : 2.3rem;
 		color: #515659;
 		text-decoration: none;	
 		margin :auto;
@@ -258,7 +256,7 @@
 	.contact 
 	{
 		text-decoration: none;
-		font-size : 2.5rem;
+		font-size : 2.3rem;
 		color: #515659;
 		text-decoration: none;	
 		margin :auto;
@@ -293,27 +291,6 @@
 
 	}
 
-	
-	/* width */
-::-webkit-scrollbar {
-	width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey; 
-	border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-	background: grey; 
-	border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-	background: #3C4459; 
-  }
+
   
 }
