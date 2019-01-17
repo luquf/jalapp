@@ -42,11 +42,11 @@
 </div>
 <DIV CLASS = "question">			 
 <h2>
-				1. Comment utiliser Domisep ? </h2> </div>
+				1. Domisep m'intéresse, comment commencer ? </h2> </div>
 				
 				<p class = "answer">
-					Unde Rufinus ea tempestate praefectus praetorio ad discrimen trusus est ultimum. ire enim ipse compellebatur ad militem, quem exagitabat inopia simul et feritas, et alioqui coalito more in ordinarias dignitates asperum semper et saevum, ut satisfaceret atque monstraret, quam ob causam annonae convectio sit impedita.
-	Haec igitur Epicuri non probo, 
+					Domisep gère uniquement ses propre capteurs et ses propres controlleurs. Il vous faut vous procurer un ou plusieurs des 6 capteurs et/ou contrôleurs disponibles dans la majorité des grandes surfaces High-Tech (Fnac, Darty, Boulanger, etc.). 
+					Ces capteurs et ces contrôleurs Domisep sur utilisables exclusivement depuis notre site web (existe également en version mobile) et sont reconus directement grâce à leurs numéro de série uniques.
 				</p>
 			<h2 class = "question" >
 			2. Comment utiliser Domisep ? </h2>
