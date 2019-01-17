@@ -20,7 +20,6 @@ session_start();
 
 <body>
 
-</label>
 
 	</div>
 
