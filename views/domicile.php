@@ -82,7 +82,7 @@ foreach ($domiciles as $val) {
 				<span class="close2">&times;</span>
     			<h2>Ajouter un domicile</h2>
 				<form method="post" action="../controllers/domicile.php">
-                        <input class="input" type="type" name="name" id="name" placeholder="Nom du domicile" size="30" maxlength="40" required/>
+                        <input class="input" type="type" name="name" id="name" placeholder="Nom du domicile" size="20" maxlength="40" required/>
                         <input type='hidden' value='domicile_add' name='action' id='action'/>
 						<button id ="validation2" type="submit" value="ajouter">Valider</button>
 				</form>
@@ -153,7 +153,7 @@ if (count($pieces) == 0) {
 				<span class="close">&times;</span>
     			<h2>Ajouter une pièce</h2>
 				<form method="post" action="../controllers/piece.php">
-                        <input class="input" type="type" name="name" id="name" placeholder="Nom de la pièce" size="30" maxlength="20" required/>
+                        <input class="input" type="type" name="name" id="name" placeholder="Nom de la pièce" size="20" maxlength="20" required/>
 						<input type='hidden' value='piece_add' name='action' id='action'/>
 						<button id ="validation1" type="submit">Valider</button>
 				</form>
