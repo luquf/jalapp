@@ -478,6 +478,7 @@
        flex-direction : row;
        padding-top : 3%;
        padding-bottom : 3%;
+       flex-wrap: wrap;
        
     }
     .sensor-ul-bottom {
@@ -485,24 +486,34 @@
         flex-direction : row;
         padding-top : 3%;
         padding-bottom : 3%;
-        flex : wrap;
+        flex-wrap: wrap;
     }
 
    .liste{
         margin-right : 3%;
         margin-left : 1%;
-        border: 1px solid black;
+        border: 2px solid #515659;
         border-radius : 10px ;
+        font-size: 2.5em;
         padding : 1.5%;
         background-color : white;
-        color : black;
+        color : #515659;
         font-style : none;
         font-family : Helvetica, sans-serif;
         list-style-type : none;
         text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-top: 1%;
+    }
+
+    .no-sensors {
+        font-size: 3em;
+        list-style-type: none;
+        text-align: center;
     }
 
     button {
+        font-size: 0.97em;
         border-radius : 25px;
         font-family: Helvetica;
         padding : 6%;
@@ -510,6 +521,7 @@
         background-color: #515659;
         color : #ffffff;
         border: 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     }
 
     #informations {

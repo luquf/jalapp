@@ -66,7 +66,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 require_once __DIR__ . '/../controllers/capteur.php';
 $capteurs = getCapteursControllerPIECE($_SESSION['piece_id']);
 if (count($capteurs) == 0) {
-    echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteurs pour cette pièce.</li>";
+    echo "<li class='no-sensors'><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteurs pour cette pièce.</li>";
 } else {
     foreach ($capteurs as $capteur) {
         echo "<li class=liste id='element-" . $capteur[0] . "'><span id='display-" . $capteur[0] . "'>Nom: " . $capteur[1] . "<br>Type: " . $capteur[2] . "<br>Etat: " . $capteur[3] . "</span>
@@ -130,7 +130,7 @@ if (count($capteurs) == 0) {
 						<?php
 $controleurs = getControleursControllerPIECE($_SESSION['piece_id']);
 if (count($controleurs) == 0) {
-    echo '<li><i class=\'fa fa-exclamation-triangle\'></i> Vous n\'avez pas encore de controleurs pour cette pièce.</li>';
+    echo '<li class=\'no-sensors\'><i class=\'fa fa-exclamation-triangle\'></i> Vous n\'avez pas encore de controleurs pour cette pièce.</li>';
 } else {
     foreach ($controleurs as $controleur) {
         echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: " . $controleur[3] . "</span>
