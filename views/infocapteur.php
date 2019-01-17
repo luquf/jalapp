@@ -39,12 +39,29 @@ if (isset($_GET['capteur'])) {
 
 			</div>
 
-			<div class="bandeau-droite">
 
-					<a href= "aide_accueil.php" class = "aide"> Aide </a>
-                    <a href= "inscription.php"  class = "deconnexion" > Déconnexion</a>
+            
 
-            </div>
+				<div id="bandeau_droite">
+					<div class="aide">
+						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+					</div>
+					<div class="connexion">
+						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
+					</div>
+					<div class="contact">
+						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
+					</div>
+					<div class="settings">
+						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Réglages</a>
+					</div>
+					<div class="language">
+							<a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #515659"	> ENG </a>
+						</div>
+			
+
+				</div>
+
 		</div>
 
 		<div id="slogan">
@@ -161,20 +178,7 @@ if ($type == 1) {
                     </div>
                 </div>  
                 </body>
-                <footer>
 
-		<div class = 'info_footer'> 
-        	<div>Powered by 
-        <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
-          ©</div>
-		  <a href= 'mentionslegales.php'> Mentions Légales </a> 
-		  <a href= 'cgu.php'> ConditionsGénérales </a> 
-
-
-        </div>
-
-		
-	</footer>
 
             
 </html>
