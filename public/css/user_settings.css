@@ -213,93 +213,84 @@
 		background: url("../assets/wallpaper.jpg") fixed no-repeat center;
 		background-size: cover;
 		font-family: Helvetica;
-		margin : 0 auto;
+		margin: 0 auto;
 		position: absolute;
+
+
 	}
+
 
 	#bandeau
 	{
 		background-color: #ffffff;
 		opacity : 1;
 		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
 		width: 100%;
 		height: 100%;
 		justify-content: space-between;
-		color: #515659;
-		margin-bottom: 7%; 
+		margin-bottom: 5%;
 	}
+
 	.logo
 	{
-		margin-left : 2%;
-		margin-top : 0.8%;
 		margin-bottom : 0.8%;
+		margin-left : 2%;
+		margin-top :0.8%;
 
 	}
+
 	#logo {
-		width : 70%;
-		height : auto;
+		width: 80%;
+		height: auto; 
 	}
 
-	.deconnexion {
-		text-decoration: none;
-		color: #515659;
-		font-size : 2.3rem;
-		margin :auto;
-		margin-right : 2%;
-		padding-right : 1%;
-
-	}
-
-	.connexion {
-		text-decoration: none;
-		color: #515659;
-		font-size : 2.3rem;
-		margin :auto;
-		margin-right : 2%;
-		padding-right : 1%;
-
-	}
-
-	.language {
-		text-decoration: none;
-		color: #515659;
-		font-size : 2.3rem;
-		margin :auto;
-		margin-right : 10%;
-		padding-right : 1%;
-
-	}
-
-	.contact {
-		text-decoration: none;
-		color: #515659;
-		font-size : 2.3rem;
-		margin :auto;
-		margin-right : 2%;
-		padding-right : 1%;
-
-	}
-
-	.aide {
-		text-decoration: none;
-		color: #515659;
-		font-size : 2.5rem;
-		margin :auto;
-		margin-right : 2%;
-		padding-right : 1%;
-
-	}
-	.bandeau-droite
-	{
-		display : flex;
-		justify-content : space-around;
+	#bandeau_droite{
+		display: flex;
 		flex-direction: row;
-		align-items: flex-end;
-		flex-wrap : nowrap;
-		padding : 2%;
-		font-size: 2.5rem;
+		justify-content: center;
+		flex-wrap: nowrap;
+		margin-right : 4%;
 	}
 
+	.connexion{
+		font-size : 2.3em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right : 4%;
+				
+	}
+	.aide{
+		font-size : 2.3em;
+		margin-right : 4%;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+	
+	}
+	.contact{
+		font-size : 2.3em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right : 4%;
+
+
+	}
+	.language{
+		font-size: 2.1em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		border : 1px solid #515659;
+
+	}
 	.input {
 		padding: 10px;
 		border-radius: 5px;
@@ -366,51 +357,7 @@
 		text-align: center;
 	}
 
-	.info_footer{
-        background-color: #ffffff;
-        display: flex;
-		flex-direction: row;
-		text-align: center;
-		width: 100%; 
-        height: 8%;
-        align-items: center;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		opacity: 0.9;
-    }
 
-    #logo_JALA{
-        width: 15%;
-        height:15%;
-        padding-left: 2%;
-    }
 
-    .inf{
-        margin-left: -9.8%;
-        margin-right: -9.8%;
-
-    }
-/* width */
-::-webkit-scrollbar {
-	width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey; 
-	border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-	background: grey; 
-	border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-	background: #3C4459; 
-  }
-  
 
 }
