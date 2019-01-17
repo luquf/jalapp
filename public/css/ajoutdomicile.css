@@ -254,21 +254,23 @@
 		background-size: cover;
 		font-family: Helvetica;
 		margin: 0 auto;
-		position: sticky;
+		position: absolute;
+
 
 	}
+
+
 	#bandeau
 	{
 		background-color: #ffffff;
-		opacity : 0.9;
+		opacity : 1;
 		display: flex;
 		flex-direction: row;
+		flex-wrap: nowrap;
 		width: 100%;
 		height: 100%;
-		color: #515659;
 		justify-content: space-between;
-		margin-bottom: 30%;
-	
+		margin-bottom: 5%;
 	}
 
 	.logo
@@ -280,56 +282,54 @@
 	}
 
 	#logo {
-		width: 75%;
+		width: 80%;
 		height: auto; 
 	}
 
 	#bandeau_droite{
 		display: flex;
-		justify-content: space-around;
-		align-items: flex-end;
-		flex-wrap: nowrap;
-		padding-right: 5%;
-	}
-
-	.aide
-	{
-		display: flex;
-		font-size: 2.5rem;
-		color: #515659;
-		flex-wrap: nowrap;
 		flex-direction: row;
-		justify-content: space-around;
-		margin-top: auto;
-		margin-bottom: auto;
-
-		
-		
-		
+		justify-content: center;
+		flex-wrap: nowrap;
+		margin-right : 4%;
 	}
 
-	.deconnexion{
-
-		font-size: 2.5rem;
+	.connexion{
+		font-size : 2.3em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
+		margin-right : 4%;
+				
+	}
+	.aide{
+		font-size : 2.3em;
+		margin-right : 4%;
+		color: #515659;
 		text-decoration: none;
-		padding-left: 1%;
-		
+		margin-top: auto;
+		margin-bottom: auto;
+	
+	}
+	.settings{
+		font-size : 2.3em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right : 4%;
+
+
 	}
 	.language{
-
-		font-size: 2em;
+		font-size: 2.1em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		text-decoration: none;
-		
-		border : 1px solid  #515659;
-		
+		border : 1px solid #515659;
+
 	}
 
 	
@@ -430,32 +430,5 @@
 		text-decoration: none;
 		cursor: pointer;
 	}
-
-    .inf{
-        margin-left: -9.8%;
-        margin-right: -9.8%;
-
-	}
-	/* width */
-::-webkit-scrollbar {
-	width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey; 
-	border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-	background: white; 
-	border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-	background: #3C4459; 
-  }
   
 }

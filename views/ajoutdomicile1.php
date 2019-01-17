@@ -40,9 +40,7 @@ session_start();
 					<div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
 					</div>
-					<div class="contact">
-						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
-					</div>
+					
 					<div class="settings">
 						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Réglages</a>
 					</div>
