@@ -133,7 +133,9 @@
 
 	}
 
-
+	.textdomisep{
+		font-style: normal;
+	}
 
     .inf{
         margin-left: -9.8%;
