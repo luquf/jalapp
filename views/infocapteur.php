@@ -70,7 +70,7 @@ if (isset($_GET['capteur'])) {
 
 		</div>
 		<div id='tab1'>
-			<?php echo "<a href='piece1.php?piece=".$_SESSION['piece_id']."' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Retour</b></a>";?>
+			<?php echo "<a id='back-button' href='piece1.php?piece=".$_SESSION['piece_id']."' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b> Retour</b></a>";?>
 		
 		    <div class="sensor-left">
                 
