@@ -180,7 +180,6 @@
 
 @media only screen and (max-width: 1000px) {
 
-
 	body
 	{
 		background-color: grey;
@@ -189,80 +188,84 @@
 		background-size: cover;
 		font-family: Helvetica;
 		margin: 0 auto;
-		padding-bottom: 20%;
 		position: absolute;
+
+
 	}
 
 
-		#bandeau
-		{
-			background-color: #ffffff;
-			opacity : 0.9;
-			display: flex;
-			width: 100%;
-			height : 100%;
-			justify-content: space-between;
-			color: #515659;
-			font-size: 1.5rem;
-		}
-
-		.logo
-		{
-			margin-left : 2%;
-			margin-top : 0.8%;
-			margin-bottom : 0.8%;
-
-		}
-		#logo {
-		width : 80%;
-		height : auto;
-		}
-
-		h2
-		{
-			font-size: 3em;
-			margin-bottom: 3%;
-		}
-
-	.connexion {
-		text-decoration: none;
-		color: #515659;
-		font-size : 2.3rem;
-		margin :auto;
-		margin-right : 2%;
-		padding-right : 1%;
-
-	}
-	.aide 
+	#bandeau
 	{
-		text-decoration: none;
-		font-size : 2.3rem;
-		color: #515659;
-		text-decoration: none;	
-		margin :auto;
-		margin-right: 2%;
-
+		background-color: #ffffff;
+		opacity : 1;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		width: 100%;
+		height: 100%;
+		justify-content: space-between;
+		margin-bottom: 5%;
 	}
-	.language 
+
+	.logo
 	{
-		text-decoration: none;
-		font-size : 2.3rem;
-		color: #515659;
-		text-decoration: none;	
-		margin :auto;
-		margin-right: 5%;
+		margin-bottom : 0.8%;
+		margin-left : 2%;
+		margin-top :0.8%;
 
 	}
-	.contact 
-	{
-		text-decoration: none;
-		font-size : 2.3rem;
+
+	#logo {
+		width: 80%;
+		height: auto; 
+	}
+
+	#bandeau_droite{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: nowrap;
+		margin-right : 4%;
+	}
+
+	.connexion{
+		font-size : 2.3em;
 		color: #515659;
-		text-decoration: none;	
-		margin :auto;
-		margin-right: 2%;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right : 4%;
+				
+	}
+	.aide{
+		font-size : 2.3em;
+		margin-right : 4%;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+	
+	}
+	.contact{
+		font-size : 2.3em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right : 4%;
+
 
 	}
+	.language{
+		font-size: 2.1em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		border : 1px solid #515659;
+
+	}
+
 	#slogan h1
 	{
 		font-size: 5em;
@@ -290,7 +293,11 @@
 		text-align : center;
 
 	}
-
+	h2
+	{
+		font-size: 3em;
+		margin-bottom: 3%;
+	}
 
   
 }
