@@ -27,7 +27,7 @@ session_unset();
 					<div class="aide">
 								<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
 							</div>
-						<div class="connexion1">
+						<div class="connexion">
 							<a href="inscription.php" style = "text-decoration: none; color: #515659"> EspaceClient </a>
 						</div>
 						<div class="contact">

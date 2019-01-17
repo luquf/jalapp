@@ -44,7 +44,7 @@
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: nowrap;
-		margin-right : 1%;
+		margin-right : 3%;
 	}
 
 	.connexion{
@@ -231,11 +231,31 @@
 		color: #515659;
 		font-size : 2.5rem;
 		margin :auto;
-		margin-right : 5%;
+		margin-right : 2%;
 		padding-right : 1%;
 
 	}
 	.aide 
+	{
+		text-decoration: none;
+		font-size : 2.5rem;
+		color: #515659;
+		text-decoration: none;	
+		margin :auto;
+		margin-right: 2%;
+
+	}
+	.language 
+	{
+		text-decoration: none;
+		font-size : 2.5rem;
+		color: #515659;
+		text-decoration: none;	
+		margin :auto;
+		margin-right: 5%;
+
+	}
+	.contact 
 	{
 		text-decoration: none;
 		font-size : 2.5rem;

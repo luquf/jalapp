@@ -19,7 +19,7 @@
 							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
 						</div>
 					<div class="connexion">
-						<a href="inscription.php" style = "text-decoration: none; color: #515659"> EspaceClient </a>
+						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Connexion </a>
 					</div>
 				</div>
 

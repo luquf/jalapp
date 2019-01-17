@@ -44,7 +44,7 @@
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: nowrap;
-		margin-right : 1%;
+		margin-right : 3%;
 	}
 
 	.connexion{
@@ -236,17 +236,58 @@
 
 	}
 	#logo {
-		width : 75%;
+		width : 70%;
 		height : auto;
 	}
 
 	.deconnexion {
 		text-decoration: none;
 		color: #515659;
-		font-size : 1.1em;
-		margin-top : auto;
-		margin-bottom : auto;
-		margin-right : 18%;
+		font-size : 2.3rem;
+		margin :auto;
+		margin-right : 2%;
+		padding-right : 1%;
+
+	}
+
+	.connexion {
+		text-decoration: none;
+		color: #515659;
+		font-size : 2.3rem;
+		margin :auto;
+		margin-right : 2%;
+		padding-right : 1%;
+
+	}
+
+	.language {
+		text-decoration: none;
+		color: #515659;
+		font-size : 2.3rem;
+		margin :auto;
+		margin-right : 10%;
+		padding-right : 1%;
+
+	}
+
+	.contact {
+		text-decoration: none;
+		color: #515659;
+		font-size : 2.3rem;
+		margin :auto;
+		margin-right : 2%;
+		padding-right : 1%;
+
+	}
+
+	.aide {
+		text-decoration: none;
+		color: #515659;
+		font-size : 2.5rem;
+		margin :auto;
+		margin-right : 2%;
+		padding-right : 1%;
+
 	}
 	.bandeau-droite
 	{
@@ -257,14 +298,12 @@
 		flex-wrap : nowrap;
 		padding : 2%;
 		font-size: 2.5rem;
-		
-
 	}
 
 	.input {
 		padding: 10px;
 		border-radius: 5px;
-		width: 100%;
+		width: 90%;
 		border: none;
 		color: #304045;
 		border: 1px solid grey;
@@ -301,7 +340,7 @@
 		justify-content: space-around;
 		padding-top: 2%;
 		padding-bottom: 3%;
-		border-radius : 5px;
+		border-radius : 15px;
 		margin-bottom: 5%;
 		padding-right: 3%;
 		padding-left: 3%;
