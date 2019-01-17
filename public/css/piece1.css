@@ -380,61 +380,65 @@
         background-size: cover;
         font-family: Helvetica;
         margin : 0 auto;
-        position: absolute;
-        height: 100%;
-
+        min-height: 100%;
     }
 
     #bandeau
-    {
-        background-color: #ffffff;
-        opacity : 1;
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-content: space-between;
-        color: #515659;
-        margin-bottom: 8%; 
-    }
-    .logo
-    {
-        margin-left : 2%;
-        margin-top : 0.8%;
-        margin-bottom : 0.8%;
+	{
+		background-color: #ffffff;
+		opacity : 1;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 100%;
+		justify-content: space-between;
+		margin-bottom: 5%;
+	}
 
-    }
-    #logo {
-        width : 75%;
-        height : auto;
-    }
+	.logo
+	{
+		margin-bottom : 0.8%;
+		margin-left : 2%;
+		margin-top :0.8%;
 
-    .deconnexion {
-        text-decoration: none;
-        color: #515659;
-        font-size : 3em;
-        margin-top : auto;
-        margin-bottom : auto;
-        margin-right : 18%;
-    }
-    .aide 
-    {
-        text-decoration: none;
-        font-size : 3em;
-        color: #515659;
-        text-decoration: none;
-        margin-top : auto;
-        margin-bottom : auto;
-        margin-right : 8%;
-    }
-    .bandeau-droite
-    {
-        display : flex;
-        justify-content : space-around;
-        flex-direction: row;
-        align-items: flex-end;
-        flex-wrap : nowrap;
-        padding : 2%;
-    }
+	}
+	#logo {
+		width: 70%;
+		height: auto; 
+	}
+	#bandeau_droite{
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		flex-wrap: nowrap;
+		padding-right: 2%;
+	}
+
+	.aide
+	{		
+		margin-right: 3%;
+		font-size: 2.5em;
+		color: #304045;
+		
+	}
+	
+	.aide a {
+		text-decoration: none;
+		color: #515659;
+	}
+
+	.deconnexion
+	{		
+		margin-right: 3%;
+		font-size: 2.5em;
+		color: #304045;
+		
+	}
+	
+	.deconnexion a {
+		text-decoration: none;
+		color: #515659;
+	}
         
 
     #slogan h1{
@@ -454,7 +458,7 @@
         padding: 1%;
         padding-left: 3%;
         padding-right: 3%;
-        padding-top: 2%;
+        padding-top: 5%;
         padding-bottom: 2%;
     }
 
@@ -474,7 +478,6 @@
        flex-direction : row;
        padding-top : 3%;
        padding-bottom : 3%;
-       flex : wrap;
        
     }
     .sensor-ul-bottom {
@@ -534,20 +537,24 @@
         padding-top: 0%;
         padding-bottom: 0%;
         margin: 1%;
+        font-size: 4.5em;
     }
-
 
     #add_capteur{
         background-color: #515659;
         color: #ffffff;
         border: none;
-        font-size: 2em;
+        font-size: 5em;
         border-radius: 50%;
-        margin-left: 48%;
-        width :50px;
-        height:50px;
+        margin-left: 44%;
+        width :100px;
+        height:100px;
         outline: none;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #back-button {
+        font-size: 2.5em;
     }
 
     #modal1 {
@@ -687,34 +694,7 @@
         font-weight: bold;
     }
     
-    .historique {
-        margin-left: 5%;
-    }
 
-    .info_footer{
-        background-color: #ffffff;
-        display: flex;
-		flex-direction: row;
-		text-align: center;
-		width: 100%; 
-        height: 8%;
-        align-items: center;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		opacity: 0.9;
-    }
-
-    #logo_JALA{
-        width: 15%;
-        height:15%;
-        padding-left: 2%;
-    }
-
-    .inf{
-        margin-left: -9.8%;
-        margin-right: -9.8%;
-
-    }
     /* width */
 ::-webkit-scrollbar {
     width: 10px;

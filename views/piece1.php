@@ -56,7 +56,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 
 		</div>
 		<div id='tab1'>
-			<?php echo "<a href='domicile.php?dom=" . $_SESSION['domicile_id'] . "' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Retour</b></a>"; ?>
+			<?php echo "<a id='back-button' href='domicile.php?dom=" . $_SESSION['domicile_id'] . "' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Retour</b></a>"; ?>
 
 
 			<div class="sensor-left">
@@ -206,18 +206,27 @@ if (count($controleurs) == 0) {
 				</form>
 						<script>
 						$("#ref").on('input', function() {
-							var ref = $('#ref').val();
+							ref = $("#ref").val();
 							var regExp = /^[a-z0-9]+$/i;
-							if (regExp.test($('#ref').val()) && ref.length >= 8) {
-								$("#validation1").prop('disabled', false).text("Valider");
-								return
-							}
-							else {
-								$("#validation1").prop('disabled', true).text("Code invalide");
-								return
-							}
+							$.post('../controllers/capteur.php',
+										{
+										  'reference': ref
+										},
+										function(data, status, req){
+											exists = req.getResponseHeader('Sensor-exists');
+											if (exists == "false") {
+												if (regExp.test($('#ref').val()) && ref.length >= 8) {
+													$("#validation1").prop('disabled', false).text("Valider");
+												} else {
+													$("#validation1").prop('disabled', true).text("Code invalide");
+												}
+											} else {
+												$("#validation1").prop('disabled', true).text("Code expiré");
+											}
 
-
+										}
+										
+							);
 						})
 						</script>
 			  </div>
