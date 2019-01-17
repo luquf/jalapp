@@ -14,6 +14,7 @@
 
 				</div>
 
+
 				<div id="bandeau_droite">
 						<div class="aide">
 							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
@@ -21,8 +22,14 @@
 					<div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Connexion </a>
 					</div>
+					<div class="contact">
+						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
+					</div>
+					<div class="language">
+							<a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #515659"	> ENG </a>
+						</div>
+					
 				</div>
-
 			
 		</div>
 
@@ -104,18 +111,5 @@ Cependant, ce principe comporte certaines exceptions. En effet, pour certains se
 Enfin, nous pouvons collecter de manière automatique certaines informations vous concernant lors d’une simple navigation sur notre site Internet, notamment : des informations concernant l’utilisation de notre site, comme les zones que vous visitez et les services auxquels vous accédez, votre adresse IP, le type de votre navigateur, vos temps d'accès. De telles informations sont utilisées exclusivement à des fins de statistiques internes, de manière à améliorer la qualité des services qui vous sont proposés. Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.
 
 </div>
-<footer>
 
-		<div class = 'info_footer'> 
-        	<div>Powered by 
-        <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
-          ©</div>
-		  <a href= 'mentionslegales.php'> Mentions Légales </a> 
-		  <a href= 'cgu.php'> ConditionsGénérales </a> 
-
-
-        </div>
-
-		
-    </footer>
     </html>
