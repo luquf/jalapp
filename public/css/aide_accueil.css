@@ -96,7 +96,12 @@
 		background-color: white;
 		opacity: 0.9;
 		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-content: left;
+		align-items: left;
 		flex-wrap:wrap;
+
 		text-align:justify;
 		padding-left: 4%;
 		padding-right: 4%;
@@ -123,7 +128,6 @@
 
 	}
 	.question{
-		margin: auto;
 		position: relative;
 		text-align: center;
 	
@@ -266,18 +270,28 @@
 		margin-left: 4%;
 		margin-right: 4%;
 		border-radius : 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-content: left;
+		align-items: left;
+		text-align: left;
 	}
 
 	#FAQ h1
 	{
 		font-size : 5em;
 		padding-bottom: 25px;
-		text-align : center;
+		text-align : left;
 
 	}
 	
 	.question {
 		margin-bottom : 5%;
+		justify-content: left;
+		align-content: left;
+		align-items: left;
+		text-align: left;
 
 	}
 	.answer {
