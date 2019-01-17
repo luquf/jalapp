@@ -109,21 +109,21 @@
 		
 	}
 
-	.titre_FAQ
+	#titre_FAQ
 	{
-		font-size: 4em;
+		font-size: 2em;
 		padding-bottom: 2%;
 		text-align: center;
 		margin: auto;
 		position: relative;
-		margin-bottom: 2%;
 		
 
 	}
 	.question{
 		margin: auto;
 		position: relative;
-		text-align: center;	
+		text-align: center;
+	
 	}
 	.answer {
 		font-weight: normal;

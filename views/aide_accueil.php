@@ -35,27 +35,36 @@
 
 			
 		<div id="FAQ">
-			<h1 class = "titre_FAQ">
+			<div id ="titre_FAQ">
+			<h1>
 				FAQ
 			</h1>
-			<h2 class = "question" >
-				1. Comment utiliser Domisep ? 
+</div>
+<DIV CLASS = "question">			 
+<h2>
+				1. Comment utiliser Domisep ? </h2> </div>
+				
 				<p class = "answer">
 					Unde Rufinus ea tempestate praefectus praetorio ad discrimen trusus est ultimum. ire enim ipse compellebatur ad militem, quem exagitabat inopia simul et feritas, et alioqui coalito more in ordinarias dignitates asperum semper et saevum, ut satisfaceret atque monstraret, quam ob causam annonae convectio sit impedita.
 	Haec igitur Epicuri non probo, 
 				</p>
 			<h2 class = "question" >
-			2. Comment utiliser Domisep ? 
+			2. Comment utiliser Domisep ? </h2>
 			<p class = "answer">
 				Unde Rufinus ea tempestate praefectus praetorio ad discrimen trusus est ultimum. ire enim ipse compellebatur ad militem, quem exagitabat inopia simul et feritas, et alioqui coalito more in ordinarias dignitates asperum semper et saevum, ut satisfaceret atque monstraret, quam ob causam annonae convectio sit impedita.
 Haec igitur Epicuri non probo, inquam. intractato et novo. Nec vero in hoc quod est animal, sed in iis etiam quae sunt inanima, consuetudo valet, cum locis ipsis delectemur, montuosis etiam et silvestribus, in quibus diutius commorati sumus.
 			</p>
 			<h2 class = "question" >
-			3. Comment utiliser Domisep ? 
+			3. Comment utiliser Domisep ? </h2>
 			<p class = "answer">
 			dem aut ipse doctrinis fuisset instructior est enim, quod tibi ita videri necesse est, non satis politus iis artibus, quas qui tenent, eruditi appellantur aut ne deterruisset alios a studiis. quamquam te quidem video minime esse deterritum.
 Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus appareat, non sunt illae quidem repudiandae, vetustas tamen suo loco conservanda; maxima est enim vis vetustatis et consuetudinis. Quin in ipso equo, cuius modo feci mentionem, si nulla res impediat, nemo est, quin eo, quo consuevit, libentius utatur quam intractato et novo. Nec vero in hoc quod est animal, sed in iis etiam quae sunt inanima, consuetudo valet, cum locis ipsis delectemur, montuosis etiam et silvestribus, in quibus diutius commorati sumus.
 			</p>
+
+			<div class = "cgu">
+				<a href= "cgu.php"	> Conditions générales d'utilisation </a>
+				<p>&</p><a href= "mentionslegales.php"	> Mentions Légales </a>
+</div>
 		</div>
 		
 	</body>

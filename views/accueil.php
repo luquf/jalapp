@@ -47,7 +47,7 @@
 			<h3 class = "titre_apropos">
 				A propos
 			</h3>
-			<h4>Bienvenue chez Domisep, un service de domotique personnel ! 
+			<h4>Bienvenue chez Domisep, un service de domotique personnel ! </h4>
 				<p class = "textdomisep">
 
 					- Contrôler vos lampes, chauffages, volets à distance depuis votre ordinateur ou votre smartphone</br>
@@ -57,6 +57,10 @@
 </br>
 
 				</p>
+			<div class = "cgu">
+				<a href= "cgu.php"	> Conditions générales d'utilisation </a>
+				<p>&</p><a href= "mentionslegales.php"	> Mentions Légales </a>
+</div>
 		</div>
 		
 	</body>
