@@ -54,9 +54,6 @@
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
-		
-	
 		
 	}
 	.aide{
@@ -87,6 +84,7 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		border : 1px solid #515659;
+		margin-right : 6%;
 
 	}
 
@@ -263,6 +261,7 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		border : 1px solid #515659;
+		margin-right : 4%;
 
 	}
 
