@@ -36,18 +36,15 @@ if (!isset($dom[0][0])) {
 
 
 
-				<div id="bandeau_droite">
+				<div id="bandeau_droite">	
 					<div class="aide">
 						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
 					</div>
-					<div class="connexion">
-						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
-					</div>
-					<div class="contact">
-						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
-					</div>
 					<div class="settings">
 						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Réglages</a>
+					</div>
+					<div class="connexion">
+						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
 					</div>
 					<div class="language">
 							<a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #515659"	> ENG </a>
