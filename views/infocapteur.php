@@ -115,17 +115,42 @@ if ($type == 1) {
                             require __DIR__ . '/../controllers/releve.php';
 
                             $releve_capteur = getCapteurDataByID($_SESSION['capteur_id']);
-                            foreach ($releve_capteur as $k=>$releve) {
-                                echo "
-                                    <div class='datas'>
-                                        <span>[ ".$releve[2]." ] Valeur : ".$releve[4]."</span>
-                                    </div>";
-                                    if ($k >= 24) {
-                                        break;
-                                    }    
-                            }
-                            
-    
+?>
+  <canvas id="linechart1"></canvas>
+<script>
+    var ctx = $("#linechart1");
+    var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [
+                <?php 
+                        foreach ($releve_capteur as $k=>$releve) {
+                            echo "'".$releve[2]."',";
+                            if ($k >= 12) {
+                                break;
+                            } 
+                        }
+                        ?>
+            ],
+            datasets: [
+                {
+                    label: 'Relevé horaire',
+                    data: [
+                        <?php 
+                        foreach ($releve_capteur as $k=>$releve) {
+                            echo $releve[4].",";
+                            if ($k >= 24) {
+                                break;
+                            } 
+                        }
+                        ?>
+                    ]
+                }
+            ]
+        }
+    })
+</script>                          
+<?php    
 } else {
     if (count($controleurs) == 0) {
         header("Location: piece1.php?piece=".$_SESSION['piece_id']);
@@ -159,16 +184,42 @@ if ($type == 1) {
                         }
                                 require __DIR__ . '/../controllers/releve.php';
                                 $releve_cont = getControleurDataByID($_SESSION['controleur_id']);
-                                foreach ($releve_cont as $k=>$releve) {
-                                    echo "
-                                        <div class='datas'>
-                                            <span>[ ".$releve[2]." ] Valeur : ".$releve[4]." </span>
-                                        </div>";
-                                        if ($k >= 24) {
-                                            break;
-                                        }    
-                                }
-				             
+?>
+<canvas id="linechart"></canvas>
+<script>
+    var ctx = $("#linechart");
+    var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [
+                <?php 
+                        foreach ($releve_cont as $k=>$releve) {
+                            echo "'".$releve[2]."',";
+                            if ($k >= 12) {
+                                break;
+                            } 
+                        }
+                        ?>
+            ],
+            datasets: [
+                {
+                    label: 'Relevé horaire',
+                    data: [
+                        <?php 
+                        foreach ($releve_cont as $k=>$releve) {
+                            echo $releve[4].",";
+                            if ($k >= 24) {
+                                break;
+                            } 
+                        }
+                        ?>
+                    ]
+                }
+            ]
+        }
+    })
+</script>
+<?php 
 }
 ?>
 </div> 

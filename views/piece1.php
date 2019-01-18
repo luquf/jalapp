@@ -149,7 +149,7 @@ if (count($controleurs) == 0) {
     echo '<li class=\'no-sensors\'><i class=\'fa fa-exclamation-triangle\'></i> Vous n\'avez pas encore de controleurs pour cette pièce.</li>';
 } else {
     foreach ($controleurs as $controleur) {
-        echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: " . $controleur[3] . "</span>
+        echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: " . $controleur[3] . " %</span>
 									</br></br><form method='post' action='../controllers/action.php'>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
@@ -172,7 +172,7 @@ if (count($controleurs) == 0) {
 										  },
 										  function(data, status){
 											if (status == 'success') {
-												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val());
+												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val()+' %');
 											}
 										  });
 									});
