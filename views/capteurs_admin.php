@@ -1,8 +1,8 @@
 <?php
 
-// if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-//     header("Location: views/inscription.php");
-// }
+if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+    header("Location: views/inscription.php");
+}
 
 require_once __DIR__ . '/../controllers/admin_capteur.php';
 require_once __DIR__ . '/../controllers/user.php';

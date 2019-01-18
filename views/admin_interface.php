@@ -1,10 +1,10 @@
 <?php
 
-//session_start();
+session_start();
 
-// if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-//     header("Location: views/inscription.php");
-// }
+if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+    header("Location: views/inscription.php");
+}
 
 ?>
 

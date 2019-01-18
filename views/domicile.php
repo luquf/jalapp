@@ -2,9 +2,9 @@
 
 session_start();
 
-// if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-//     header("Location: views/accueil.php");
-// }
+if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+    header("Location: views/accueil.php");
+}
 
 require_once __DIR__ . '/../models/domicile.php';
 require_once __DIR__ . '/../models/piece.php';

@@ -2,9 +2,9 @@
 
 session_start();
 
-// if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-//     header("Location: views/inscription.php");
-// }
+if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+    header("Location: views/inscription.php");
+}
 
 if (isset($_GET['capteur'])) {
 	$_SESSION['capteur_id'] = $_GET['capteur'];
