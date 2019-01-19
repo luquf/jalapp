@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: views/accueil.php");
 }
 
@@ -39,7 +39,7 @@ if (!isset($dom[0][0])) {
 				<div id="bandeau_droite">
 				<div class="language">
 				<a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
-						</div>	
+						</div>
 					<div class="aide">
 						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
 					</div>
@@ -49,8 +49,8 @@ if (!isset($dom[0][0])) {
 					<div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
 					</div>
-				
-			
+
+
 
 				</div>
 

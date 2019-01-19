@@ -10,7 +10,7 @@
 	<body>
 		<div id="bandeau">
 				<div class="logo">
-						<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" /> 
+						<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" />
 
 				</div>
 
@@ -27,24 +27,24 @@
 					<div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Connexion </a>
 					</div>
-					
+
 				</div>
 
-			
+
 		</div>
 
-			
+
 		<div id="FAQ">
 			<div id ="titre_FAQ">
 			<h1>
 				FAQ
 			</h1>
 </div>
-			<DIV CLASS = "question">			 
+			<DIV CLASS = "question">
 			<h2>
 			1. Domisep m'intéresse, comment commencer ? </h2> </div>
 			<p class = "answer">
-				Domisep gère uniquement ses propre capteurs et ses propres controlleurs. Il vous faut vous procurer un ou plusieurs des 6 capteurs et/ou contrôleurs disponibles dans la majorité des grandes surfaces High-Tech (Fnac, Darty, Boulanger, etc.). 
+				Domisep gère uniquement ses propre capteurs et ses propres controlleurs. Il vous faut vous procurer un ou plusieurs des 6 capteurs et/ou contrôleurs disponibles dans la majorité des grandes surfaces High-Tech (Fnac, Darty, Boulanger, etc.).
 				Ces capteurs et ces contrôleurs Domisep sur utilisables exclusivement depuis notre site web (existe également en version mobile) et sont reconus directement grâce à leurs numéro de série uniques.
 			</p>
 			<h2 class = "question" >
@@ -64,10 +64,10 @@ Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus ap
 				<p>&</p><a href= "mentionslegales.php"	> Mentions Légales </a>
 </div>
 		</div>
-		
+
 	</body>
 
 
 
-	
+
 </html>

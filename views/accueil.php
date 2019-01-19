@@ -10,7 +10,7 @@
 	<body>
 		<div id="bandeau">
 				<div class="logo">
-						<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" /> 
+						<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" />
 
 				</div>
 
@@ -27,12 +27,12 @@
 					<div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Connexion </a>
 					</div>
-					
-					
-					
+
+
+
 				</div>
 
-			
+
 		</div>
 
 
@@ -42,7 +42,7 @@
 			</h1>
 		</div>
 
-			
+
 		<div id="apropos">
 			<h3 class = "titre_apropos">
 				A propos
@@ -62,10 +62,10 @@
 				<p>&</p><a href= "mentionslegales.php"	> Mentions Légales </a>
 </div>
 		</div>
-		
+
 	</body>
 
 
 
-	
+
 </html>

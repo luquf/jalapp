@@ -10,7 +10,7 @@
 	<body>
 		<div id="bandeau">
 				<div class="logo">
-						<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" /> 
+						<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" />
 
 				</div>
 
@@ -19,11 +19,11 @@
                 <div class="language">
                 <a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
 						</div>
-					
+
 						<div class="aide">
 							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
 						</div>
-					
+
 					<div class="contact">
 						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
 					</div>
@@ -31,7 +31,7 @@
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Connexion </a>
 					</div>
 				</div>
-			
+
 		</div>
 
 
@@ -41,7 +41,7 @@
 			</h1>
 		</div>
 
-			
+
 		<div id="apropos">
 		<h2>Définitions</h2>
                 <p><b>Client&nbsp;:</b>&nbsp;tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales.<br>
@@ -59,7 +59,7 @@
                 <h2>1. Présentation du site internet.</h2>
                 <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site internet&nbsp;<a href="https://www.domisep.ovh">https://www.domisep.ovh</a>&nbsp;l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi:
                 </p><p><strong>Propriétaire</strong> :  SAS Domisep   – 10 rue de Vanves 97132 Issy les moulineaux<br>
-                              
+
                 <strong>Responsable publication</strong> : Jala Inc – jala-inc@gmail.com<br>
                 Le responsable publication est une personne physique ou une personne morale.<br>
                 <strong>Webmaster</strong> : Domisep – domisep.no.reply@gmail.com<br>
@@ -73,7 +73,7 @@
 
                 <h2>2. Conditions générales d’utilisation du site et des services proposés.</h2>
 
-                <p>Le Site constitue une œuvre de l’esprit protégée par les dispositions du Code de la Propriété Intellectuelle et des Réglementations Internationales applicables. 
+                <p>Le Site constitue une œuvre de l’esprit protégée par les dispositions du Code de la Propriété Intellectuelle et des Réglementations Internationales applicables.
                 Le Client ne peut en aucune manière réutiliser, céder ou exploiter pour son propre compte tout ou partie des éléments ou travaux du Site.</p>
 
                 <p>L’utilisation du site&nbsp;<a href="https://www.domisep.ovh">https://www.domisep.ovh</a>&nbsp;implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site&nbsp;<a href="https://www.domisep.ovh">https://www.domisep.ovh</a>&nbsp;sont donc invités à les consulter de manière régulière.</p>
@@ -131,7 +131,7 @@
                 <p><a href="https://www.domisep.ovh">https://www.domisep.ovh</a> est susceptible de traiter tout ou partie des données : </p>
 
                 <ul>
-                  
+
                 <li>pour permettre la navigation sur le Site et la gestion et la traçabilité des prestations et services commandés par l’utilisateur : données de connexion et d’utilisation du Site, facturation, historique des commandes, etc. </li>
                 &nbsp;
                 <li>pour prévenir et lutter contre la fraude informatique (spamming, hacking…) : matériel informatique utilisé pour la navigation, l’adresse IP, le mot de passe (hashé) </li>
@@ -189,13 +189,13 @@
                 Les Données Personnelles de l’Utilisateur peuvent être traitées par des filiales de <a href="https://www.domisep.ovh">https://www.domisep.ovh</a> et des sous-traitants (prestataires de services), exclusivement afin de réaliser les finalités de la présente politique.</p>
                 <p>
                 Dans la limite de leurs attributions respectives et pour les finalités rappelées ci-dessus, les principales personnes susceptibles d’avoir accès aux données des Utilisateurs de <a href="https://www.domisep.ovh">https://www.domisep.ovh</a> sont principalement les agents de notre service client.</p>
-                
+
                 <div ng-bind-html="rgpdHTML"></div>
 
 
                 <h2>8. Notification d’incident</h2>
                 <p>
-                Quels que soient les efforts fournis, aucune méthode de transmission sur Internet et aucune méthode de stockage électronique n'est complètement sûre. Nous ne pouvons en conséquence pas garantir une sécurité absolue. 
+                Quels que soient les efforts fournis, aucune méthode de transmission sur Internet et aucune méthode de stockage électronique n'est complètement sûre. Nous ne pouvons en conséquence pas garantir une sécurité absolue.
                 Si nous prenions connaissance d'une brèche de la sécurité, nous avertirions les utilisateurs concernés afin qu'ils puissent prendre les mesures appropriées. Nos procédures de notification d’incident tiennent compte de nos obligations légales, qu'elles se situent au niveau national ou européen. Nous nous engageons à informer pleinement nos clients de toutes les questions relevant de la sécurité de leur compte et à leur fournir toutes les informations nécessaires pour les aider à respecter leurs propres obligations réglementaires en matière de reporting.</p>
                 <p>
                 Aucune information personnelle de l'utilisateur du site&nbsp;<a href="https://www.domisep.ovh">https://www.domisep.ovh</a>&nbsp;n'est publiée à l'insu de l'utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l'hypothèse du rachat de <a href="https://www.domisep.ovh">https://www.domisep.ovh</a> et de ses droits permettrait la transmission des dites informations à l'éventuel acquéreur qui serait à son tour tenu de la même obligation de conservation et de modification des données vis à vis de l'utilisateur du site&nbsp;<a href="https://www.domisep.ovh">https://www.domisep.ovh</a>.</p>
@@ -240,16 +240,16 @@
                 <a href="https://www.domisep.ovh">https://www.domisep.ovh</a> peut employer occasionnellement des balises Internet (également appelées « tags », ou balises d’action, GIF à un pixel, GIF transparents, GIF invisibles et GIF un à un) et les déployer par l’intermédiaire d’un partenaire spécialiste d’analyses Web susceptible de se trouver (et donc de stocker les informations correspondantes, y compris l’adresse IP de l’Utilisateur) dans un pays étranger.</p>
                 &nbsp;
                 <p>
-                Ces balises sont placées à la fois dans les publicités en ligne permettant aux internautes d’accéder au Site, et sur les différentes pages de celui-ci. 
+                Ces balises sont placées à la fois dans les publicités en ligne permettant aux internautes d’accéder au Site, et sur les différentes pages de celui-ci.
                 &nbsp;</p>
                 <p>
                 Cette technologie permet à <a href="https://www.domisep.ovh">https://www.domisep.ovh</a> d’évaluer les réponses des visiteurs face au Site et l’efficacité de ses actions (par exemple, le nombre de fois où une page est ouverte et les informations consultées), ainsi que l’utilisation de ce Site par l’Utilisateur. </p>
                 &nbsp;<p>
                 Le prestataire externe pourra éventuellement recueillir des informations sur les visiteurs du Site et d’autres sites Internet grâce à ces balises, constituer des rapports sur l’activité du Site à l’attention de <a href="https://www.domisep.ovh">https://www.domisep.ovh</a>, et fournir d’autres services relatifs à l’utilisation de celui-ci et d’Internet.</p>
                 &nbsp;<p>
-                </p><h2>10. Droit applicable et attribution de juridiction.</h2>  
+                </p><h2>10. Droit applicable et attribution de juridiction.</h2>
                  <p>
-                Tout litige en relation avec l’utilisation du site&nbsp;<a href="https://www.domisep.ovh">https://www.domisep.ovh</a>&nbsp;est soumis au droit français. 
+                Tout litige en relation avec l’utilisation du site&nbsp;<a href="https://www.domisep.ovh">https://www.domisep.ovh</a>&nbsp;est soumis au droit français.
                 En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris</p>
 
 
@@ -258,10 +258,3 @@
 		</div>
 
 	</html>
-	
-
-
-
-
-              
-            

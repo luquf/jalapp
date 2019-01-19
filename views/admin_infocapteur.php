@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
 }
 
@@ -71,19 +71,19 @@ if ($type == 1) {
     }
     foreach ($capteurs as $capteur) {
         $t = "";
-                            switch ($capteur[2]) {
-                                case "HUM":
-                                    $t = "Capteur d'humidité";
-                                    break;
-                                case "TEMP":
-                                    $t = "Capteur de température";
-                                    break;
-                                case "FUM":
-                                    $t = "Capteur de fumée";
-                                    break;
-                                default:
-                                    break;
-                            }
+        switch ($capteur[2]) {
+            case "HUM":
+                $t = "Capteur d'humidité";
+                break;
+            case "TEMP":
+                $t = "Capteur de température";
+                break;
+            case "FUM":
+                $t = "Capteur de fumée";
+                break;
+            default:
+                break;
+        }
         echo "
 
                         <div class='infos'>
@@ -101,14 +101,14 @@ if ($type == 1) {
     require __DIR__ . '/../controllers/releve.php';
 
     $releve_capteur = getCapteurDataByID($_SESSION['capteur_id']);
-    foreach ($releve_capteur as $k=>$releve) {
+    foreach ($releve_capteur as $k => $releve) {
         echo "
             <div class='datas'>
-                <span>[ ".$releve[2]." ] Valeur : ".$releve[4]."</span>
+                <span>[ " . $releve[2] . " ] Valeur : " . $releve[4] . "</span>
             </div>";
-            if ($k >= 24) {
-                break;
-            }    
+        if ($k >= 24) {
+            break;
+        }
     }
 
 } else {
@@ -117,19 +117,19 @@ if ($type == 1) {
     }
     foreach ($controleurs as $controleurs) {
         $t = "";
-                            switch ($controleurs[2]) {
-                                case "LUM":
-                                    $t = "Controleur de luminosité";
-                                    break;
-                                case "VOL":
-                                    $t = "Controleur de volet";
-                                    break;
-                                case "CH":
-                                    $t = "Controleur de chauffage";
-                                    break;
-                                default:
-                                    break;
-                            }
+        switch ($controleurs[2]) {
+            case "LUM":
+                $t = "Controleur de luminosité";
+                break;
+            case "VOL":
+                $t = "Controleur de volet";
+                break;
+            case "CH":
+                $t = "Controleur de chauffage";
+                break;
+            default:
+                break;
+        }
         echo "
 
                         <div class='infos'>
@@ -143,14 +143,14 @@ if ($type == 1) {
     }
     require __DIR__ . '/../controllers/releve.php';
     $releve_cont = getControleurDataByID($_SESSION['controleur_id']);
-    foreach ($releve_cont as $k=>$releve) {
+    foreach ($releve_cont as $k => $releve) {
         echo "
             <div class='datas'>
-                <span>[ ".$releve[2]." ] Valeur : ".$releve[4]." </span>
+                <span>[ " . $releve[2] . " ] Valeur : " . $releve[4] . " </span>
             </div>";
-            if ($k >= 24) {
-                break;
-            }    
+        if ($k >= 24) {
+            break;
+        }
     }
 }
 ?>

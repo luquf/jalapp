@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
 }
 
@@ -40,25 +40,25 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 
 			</div>
 
-		
+
 
 			<div id="bandeau_droite">
 					<div class="language">
 					<a href= "eng/aide_accueil.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
 						</div>
-			
+
 					<div class="aide">
 						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
 					</div>
-					
-					
+
+
 					<div class="settings">
 						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Réglages</a>
 					</div>
 					<div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
 					</div>
-					
+
 
 				</div>
 
@@ -241,7 +241,7 @@ if (count($controleurs) == 0) {
 											}
 
 										}
-										
+
 							);
 						})
 						</script>

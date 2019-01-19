@@ -22,7 +22,7 @@ session_start();
 	<body>
 		<div id="bandeau">
 			<div class="logo">
-				
+
 					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
 			</div>
 
@@ -33,14 +33,14 @@ session_start();
             <div class="aide">
 							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
 						</div>
-				
+
 					<div class="settings">
 						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
 					</div>
                     <div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Connexion </a>
 					</div>
-					
+
 				</div>
 
         </div>
@@ -129,9 +129,9 @@ session_start();
             </div>
 
 
-</div>
+        </div>
 
-            </body>
+    </body>
 
 
-            </html>
+</html>

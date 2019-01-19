@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
 }
 
@@ -30,7 +30,7 @@ if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 				<a href="domicile.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
 			</div>
 
-		
+
 
 
 			<div id="bandeau_droite">
@@ -38,22 +38,22 @@ if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 					<div class="language">
 					<a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
 						</div>
-			
+
 					<div class="aide">
 						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
-					</div>					
+					</div>
 					<div class="settings">
 						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Réglages</a>
 					</div>
 					<div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
 					</div>
-					
+
 
 				</div>
-		
+
 		</div>
-		
+
 
 		<div class="boutton">
 
@@ -91,7 +91,7 @@ if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 		validation1.onclick()=function(){
 			modal1.style.display="none";
 		}
-		
+
 		window.onclick = function(event) {
     		if (event.target == modal1) {
         		modal1.style.display = "none";
@@ -104,4 +104,3 @@ if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 </body>
 
 </html>
-

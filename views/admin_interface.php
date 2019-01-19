@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
 }
 
@@ -61,7 +61,7 @@ $utilisateur = getUsersAdmin();
 if (count($utilisateur) == 0) {
     echo " ";
 } else {
-    $page = testinput((int)$_GET["page"]);
+    $page = testinput((int) $_GET["page"]);
     if (!isset($page) || $page == "") {
         header("Location: admin_interface.php?page=1");
     }
@@ -74,15 +74,15 @@ if (count($utilisateur) == 0) {
                                 <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[3] . "</a></td>
                                 <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[8] . "</a></td>
                                 ";}
-    }
-                                ?>
+}
+?>
                                 <form method='post' action='../controllers/admin_interface.php' onsubmit="return confirm
                                 ('Etes-vous sûr de vouloir supprimer cet utilisateur ?')">
-								<td class = delete><input type='hidden' value=" <?php $utilisateur[0] ?> " name='user' id='user'/>
+								<td class = delete><input type='hidden' value=" <?php $utilisateur[0]?> " name='user' id='user'/>
 								<input type='hidden' value='del_user' name='action' id='action'/>
 								<input id= buttondelete  type='submit' value='X'>
 								</form>
-    
+
 
                     <script>
                             function tri() {

@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
 }
 
@@ -21,7 +21,7 @@ if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 	<body>
 		<div id="bandeau">
 			<div class="logo">
-				
+
 					<a href="admin_interface.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
 			</div>
 
@@ -42,27 +42,27 @@ if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
                     <i class="fa fa-info-circle fa-sm"></i> Informations
                 </h2>
                 <?php
-                require __DIR__.'/../models/user.php';
-                $user = getUserByID($_SESSION['user_id']);
-                ?>
+require __DIR__ . '/../models/user.php';
+$user = getUserByID($_SESSION['user_id']);
+?>
                         <p>
-                            <b>Nom: </b><?php echo $user[0][1]?>
+                            <b>Nom: </b><?php echo $user[0][1] ?>
                         </p>
                         <p>
-                        <b>Prénom: </b> <?php echo $user[0][2]?>
+                        <b>Prénom: </b> <?php echo $user[0][2] ?>
                         </p>
 
                         <p>
-                        <b>Email: </b> <?php echo $user[0][3]?>
+                        <b>Email: </b> <?php echo $user[0][3] ?>
                         </p>
                         <p>
                         <b>Mot de passe: </b> ********
                         </p>
                         <p>
-                        <b>Adresse: </b> <?php echo $user[0][5]?>
+                        <b>Adresse: </b> <?php echo $user[0][5] ?>
                         </p>
                         <p>
-                        <b>Ville: </b><?php echo $user[0][6]?>
+                        <b>Ville: </b><?php echo $user[0][6] ?>
                         </p>
 
                 </div>
@@ -72,15 +72,15 @@ if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 
                 </h2>
                 <?php
-                $error = $_GET['error'];
-                if (isset($error)) {
-                    if ($error == "true") {
-                        echo "<p style='color:red;'>Une erreur s'est produite.</p>";
-                    } else {
-                        echo "<p style='color:green;'>Vos modifications ont été enregistrées.</p>";
-                    }
-                }
-                ?>
+$error = $_GET['error'];
+if (isset($error)) {
+    if ($error == "true") {
+        echo "<p style='color:red;'>Une erreur s'est produite.</p>";
+    } else {
+        echo "<p style='color:green;'>Vos modifications ont été enregistrées.</p>";
+    }
+}
+?>
                 <form method="post" action="../controllers/admin_reglage.php">
                             <input class="input" type="text" name="name" id="name" placeholder="Nom" size="30" maxlength="40"/>
                             <input class="input" type="text" name="surname" id="surname" placeholder="Prénom" size="30" maxlength="40"/>
@@ -98,17 +98,17 @@ if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 
             <footer>
 
-		<div class = 'info_footer'> 
-        	<div>Powered by 
+		<div class = 'info_footer'>
+        	<div>Powered by
         <a href = "jala.php"> <img id="logo_JALA" src="../public/assets/logo_JALA.png" alt = "Logo JALA" title = "Logo JALA"/></a>
           ©</div>
-		  <a href= 'mentionslegales.php'> Mentions Légales </a> 
-		  <a href= 'cgu.php'> ConditionsGénérales </a> 
+		  <a href= 'mentionslegales.php'> Mentions Légales </a>
+		  <a href= 'cgu.php'> ConditionsGénérales </a>
 
 
         </div>
 
-		
+
 	</footer>
 
             </html>

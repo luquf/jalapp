@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
 }
 
@@ -109,102 +109,102 @@ foreach ($data as $domcile) {
                             ";
         echo "<ul class='sensors'>";
         foreach ($piece["capteurs"] as $capteur) {
-            echo "<li class='liste' id='element-".$capteur[0]."'><span id='display-".$capteur[0]."'>Nom: ".$capteur[1]."<br>Type: ".$capteur[2]."<br>Etat: ".$capteur[3]."</span>
+            echo "<li class='liste' id='element-" . $capteur[0] . "'><span id='display-" . $capteur[0] . "'>Nom: " . $capteur[1] . "<br>Type: " . $capteur[2] . "<br>Etat: " . $capteur[3] . "</span>
 								<form method='post' action='../controllers/admin_action.php'>
-								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_info' name='action' id='action'/>
 								<button>Informations </button>
                                 </form>
-								<input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
+								<input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_delete' name='action' id='action'/>
-                                <button type='submit' id='del-".$capteur[0]."'>Supprimer</button>
-								<br><input type='hidden' value=".$capteur[0]." name='capteur' id='capteur'/>
+                                <button type='submit' id='del-" . $capteur[0] . "'>Supprimer</button>
+								<br><input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_change' name='action' id='action'/>
-                                <button type='submit' id='change-".$capteur[0]."'>Changer</button>
+                                <button type='submit' id='change-" . $capteur[0] . "'>Changer</button>
 								</li>
                                 <script>
-                                    $('#change-".$capteur[0]."').click(function() {
+                                    $('#change-" . $capteur[0] . "').click(function() {
                                         $.post('../controllers/admin_action.php',
                                         {
                                           action: 'capt_change',
-                                          capteur: '".$capteur[0]."'
+                                          capteur: '" . $capteur[0] . "'
                                         },
                                         function(data, status){
                                           if (status == 'success') {
-                                              if ($('#display-".$capteur[0]."').text().includes('OFF')) {
-                                                  $('#display-".$capteur[0]."').html('Nom: ".$capteur[1]."<br>Type: ".$capteur[2]."<br>Etat: ON');
+                                              if ($('#display-" . $capteur[0] . "').text().includes('OFF')) {
+                                                  $('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $capteur[2] . "<br>Etat: ON');
                                               } else {
-                                                  $('#display-".$capteur[0]."').html('Nom: ".$capteur[1]."<br>Type: ".$capteur[2]."<br>Etat: OFF');
+                                                  $('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $capteur[2] . "<br>Etat: OFF');
                                               }
                                           }
                                         });
                                   });
 
-                                  $('#del-".$capteur[0]."').click(function() {
+                                  $('#del-" . $capteur[0] . "').click(function() {
                                       if (confirm('Etes-vous sûr de vouloir supprimer ce capteur ?')) {
                                         $.post('../controllers/admin_action.php',
                                         {
                                         action: 'capt_delete',
-                                        capteur: '".$capteur[0]."'
+                                        capteur: '" . $capteur[0] . "'
                                         },
                                         function(data, status){
                                         if (status == 'success') {
-                                            $('#element-".$capteur[0]."').remove();
+                                            $('#element-" . $capteur[0] . "').remove();
                                         }
                                         });
                                     }
                               });
-                                </script>   
+                                </script>
                                 ";
         }
         echo "</ul>";
         echo "<ul class='sensors'>";
         foreach ($piece["controleurs"] as $controleur) {
-            echo "<li class='liste' id='element-".$controleur[0]."'><span id='display-".$controleur[0]."'>Nom: ".$controleur[1]."<br>Type: ".$controleur[2]."<br>Valeur: ".$controleur[3]."</span>
+            echo "<li class='liste' id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: " . $controleur[3] . "</span>
             </br></br><form method='post' action='../controllers/admin_action.php'>
-            <input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/>
+            <input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
             <input type='hidden' value='cont_info' name='action' id='action'/>
             <button type='submit'>Informations</button>
             </form><br>
-            <input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
+            <input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
             <input type='hidden' value='cont_delete' name='action' id='action'/>
-            <button type='button' id='del-".$controleur[0]."'>Supprimer</button><br>
-            <input type='hidden' value=".$controleur[0]." name='capteur' id='capteur'/> 
+            <button type='button' id='del-" . $controleur[0] . "'>Supprimer</button><br>
+            <input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
             <input type='hidden' value='cont_change' name='action' id='action'/>
-            <input type='range' class='cont-val' id='change-".$controleur[0]."' name='cont-val' min='0' max='100' step='5' value=".$controleur[3].">
+            <input type='range' class='cont-val' id='change-" . $controleur[0] . "' name='cont-val' min='0' max='100' step='5' value=" . $controleur[3] . ">
             </li>
                                 <script>
-                                    $('#change-".$controleur[0]."').change(function() {
+                                    $('#change-" . $controleur[0] . "').change(function() {
                                         $.post('../controllers/admin_action.php',
                                         {
                                           action: 'cont_change',
-                                          capteur: '".$controleur[0]."',
+                                          capteur: '" . $controleur[0] . "',
                                           'cont-val': $(this).val()
                                         },
                                         function(data, status){
                                           if (status == 'success') {
-                                              $('#display-".$controleur[0]."').html('Nom: ".$controleur[1]."<br>Type: ".$controleur[2]."<br>Valeur: '+$('#change-".$controleur[0]."').val());
+                                              $('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val());
                                           }
                                         });
                                   });
 
-                                  $('#del-".$controleur[0]."').click(function() {
+                                  $('#del-" . $controleur[0] . "').click(function() {
                                       if (confirm('Etes-vous sûr de vouloir supprimer ce capteur ?')) {
                                         $.post('../controllers/admin_action.php',
                                         {
                                             action: 'cont_delete',
-                                            capteur: '".$controleur[0]."',
+                                            capteur: '" . $controleur[0] . "',
                                         },
                                         function(data, status){
                                             if (status == 'success') {
-                                            $('#element-".$controleur[0]."').remove();
+                                            $('#element-" . $controleur[0] . "').remove();
                                             }
                                         });
                                     }
                                 });
 
                               </script>";
-                    
+
         }
         echo "</ul>";
     }

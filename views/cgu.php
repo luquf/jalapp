@@ -10,7 +10,7 @@
 	<body>
 		<div id="bandeau">
 				<div class="logo">
-						<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" /> 
+						<a href="accueil.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" />
 
 				</div>
 
@@ -29,12 +29,12 @@
 					<div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Connexion </a>
 					</div>
-					
-					
-					
+
+
+
 				</div>
 
-			
+
 		</div>
 
 
@@ -44,9 +44,9 @@
 			</h1>
 		</div>
 
-			
+
 		<div id="apropos">
-			
+
 
 <p>
 
@@ -74,7 +74,7 @@ Le site www.domisep.ovh est édité par la société Jala, SARL au capital de 1 
 La société est représentée par Jala Inc.
 <br/>
 
-Pour les personnes physiques : 
+Pour les personnes physiques :
 <br/>
 Le site www.domisep.ovh est édité par Léo B, Augustin dB, Arthur D & James G.
 <br/>
@@ -104,7 +104,7 @@ Le site et ses différents services peuvent être interrompus ou suspendus par l
 <br/>
 ARTICLE 4 : Responsabilité de l’Utilisateur
 <br/><br/>
-L'Utilisateur est responsable des risques liés à l’utilisation de son identifiant de connexion et de son mot de passe. 
+L'Utilisateur est responsable des risques liés à l’utilisation de son identifiant de connexion et de son mot de passe.
 <br/>
 Le mot de passe de l’Utilisateur doit rester secret. En cas de divulgation de mot de passe, l’Éditeur décline toute responsabilité.
 <br/>
@@ -118,7 +118,7 @@ Le site permet aux membres de publier sur le site :<br/>
 •	Capteurs ;<br/>
 •	Controleurs<br/>
 
-Le membre s’engage à tenir des propos respectueux des autres et de la loi et accepte que ces publications soient modérées ou refusées par l’Éditeur, sans obligation de justification. 
+Le membre s’engage à tenir des propos respectueux des autres et de la loi et accepte que ces publications soient modérées ou refusées par l’Éditeur, sans obligation de justification.
 <br/>
 En publiant sur le site, l’Utilisateur cède à la société éditrice le droit non exclusif et gratuit de représenter, reproduire, adapter, modifier, diffuser et distribuer sa publication, directement ou par un tiers autorisé.
 <br/>
@@ -151,7 +151,7 @@ L’Éditeur du site se réserve le droit de modérer ou de supprimer librement 
 <br/>
 ARTICLE 7 : Données personnelles
 <br/><br/>
-L’Utilisateur doit obligatoirement fournir des informations personnelles pour procéder à son inscription sur le site. 
+L’Utilisateur doit obligatoirement fournir des informations personnelles pour procéder à son inscription sur le site.
 <br/>
 L’adresse électronique (e-mail) de l’utilisateur pourra notamment être utilisée par le site www.domisep.ovh pour la communication d’informations diverses et la gestion du compte.
 <br/>
@@ -186,10 +186,8 @@ La durée du présent contrat est indéterminée. Le contrat produit ses effets 
 <br/>
 ARTICLE 11 : Droit applicable et juridiction compétente
 <br/><br/>
-Le présent contrat dépend de la législation française. 
+Le présent contrat dépend de la législation française.
 <br/>En cas de litige non résolu à l’amiable entre l’Utilisateur et l’Éditeur, les tribunaux de Paris sont compétents pour régler le contentieux.
 <br/>
 
 </div>
-
-
