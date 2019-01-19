@@ -1,6 +1,5 @@
 @media only screen and (min-width: 300px) {
-	body
-	{
+	body {
 		background-color: grey;
 		color: #515659;
 		background: url("../assets/wallpaper.jpg") fixed no-repeat center;
@@ -8,15 +7,10 @@
 		font-family: Helvetica;
 		margin: 0 auto;
 		position: absolute;
-
-
 	}
-
-
-	#bandeau
-	{
+	#bandeau {
 		background-color: #ffffff;
-		opacity : 1;
+		opacity: 1;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -25,108 +19,86 @@
 		justify-content: space-between;
 		margin-bottom: 5%;
 	}
-
-	.logo
-	{
-		margin-bottom : 0.8%;
-		margin-left : 2%;
-		margin-top :0.8%;
-
+	.logo {
+		margin-bottom: 0.8%;
+		margin-left: 2%;
+		margin-top: 0.8%;
 	}
-
 	#logo {
 		width: 15%;
-		height: auto; 
+		height: auto;
 	}
-
-	#bandeau_droite{
+	#bandeau_droite {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: nowrap;
-		margin-right : 3%;
+		margin-right: 3%;
 	}
-
-	.connexion{
-		font-size : 1em;
+	.connexion {
+		font-size: 1em;
 		font-size: 1em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-
-		
-	
-		
 	}
-	.aide{
-		font-size : 1em;
-		margin-right : 4%;
+	.aide {
+		font-size: 1em;
+		margin-right: 4%;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-	
 	}
-	.contact{
-		font-size : 1em;
+	.contact {
+		font-size: 1em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 6%;
-
-
+		margin-right: 6%;
 	}
-	.language{
+	.language {
 		/* background-image: url("../assets/usa.svg"); */
 		font-size: 0.8em;
 		color: white;
 		text-decoration: none;
 		margin-top: 10%;
 		margin-bottom: auto;
-		border : none;
-		margin-right : 6%;
+		border: none;
+		margin-right: 6%;
 		display: flex;
 		flex-direction: row;
-
 	}
-
-    .settings{
-		font-size : 1em;
+	.settings {
+		font-size: 1em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 3%;
-
-	
-    }
-
-	.textboutton{
+		margin-right: 3%;
+	}
+	.textboutton {
 		font-size: 200%;
 		font-weight: bold;
 		color: #fff;
-
 	}
-
-	.boutton{
+	.boutton {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-
 	}
-
-	#button_modal{
+	#button_modal {
 		background-color: #515659;
-		opacity : 0.9;
+		opacity: 0.9;
 		background-attachment: fixed;
 		border: none;
 		font-size: 1250%;
-		color : white;
+		color: white;
 		position: static;
-		cursor : pointer;
+		cursor: pointer;
 		padding-top: 0.1em;
 		border-radius: 100%;
 		padding-bottom: 0.1em;
@@ -135,25 +107,22 @@
 		margin-bottom: 10%;
 		outline: none;
 	}
-
-	
 	.modal1 {
-		display: none; 
+		display: none;
 		position: fixed;
-		z-index: 1; 
-		padding-top: 100px; 
+		z-index: 1;
+		padding-top: 100px;
 		left: 0;
 		top: 0;
-		width: 100%; 
-		height: 100%; 
-		overflow: auto; 
-		background-color: rgb(0,0,0); 
-		background-color: rgba(0,0,0,0.4); 
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.4);
 	}
-	
 	.modal-content {
 		background-color: #fefefe;
-		text-align:center;
+		text-align: center;
 		margin: auto;
 		padding: 20px;
 		border: 1px solid #888;
@@ -161,10 +130,9 @@
 	}
 	.modal-content .input {
 		padding: 2.5%;
-    	border-radius: 5px;
-    	border: 1px solid #888;
+		border-radius: 5px;
+		border: 1px solid #888;
 	}
-
 	#validation1 {
 		font-size: 1em;
 		padding-left: 5%;
@@ -176,8 +144,7 @@
 		color: white;
 		border: none;
 	}
-
-	#name{
+	#name {
 		margin-bottom: 5%;
 	}
 	.close {
@@ -186,71 +153,60 @@
 		font-size: 28px;
 		font-weight: bold;
 	}
-	h2{
+	h2 {
 		font-size: 1.2em;
 		font-weight: bold;
 	}
-	.close:hover,
-	.close:focus {
+	.close:hover, .close:focus {
 		color: #000;
 		text-decoration: none;
 		cursor: pointer;
 	}
-
-	.info_footer{
-        background-color: #ffffff;
-        display: flex;
+	.info_footer {
+		background-color: #ffffff;
+		display: flex;
 		flex-direction: row;
 		text-align: center;
 		/*width: 100%; 
         height: 8%; */
-        align-items: center;
+		align-items: center;
 		flex-wrap: nowrap;
 		justify-content: space-around;
 		opacity: 0.9;
 		position: 0;
 		position: relative;
-    }
-
-    #logo_JALA{
-        width: 15%;
-        height:15%;
-        padding-left: 2%;
-    }
-
-    .inf{
-        margin-left: -9.8%;
-        margin-right: -9.8%;
-
+	}
+	#logo_JALA {
+		width: 15%;
+		height: 15%;
+		padding-left: 2%;
+	}
+	.inf {
+		margin-left: -9.8%;
+		margin-right: -9.8%;
 	}
 	/* width */
-::-webkit-scrollbar {
-	width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey; 
-	border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-	background: grey; 
-	border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-	background: #3C4459; 
-  }
-  
-
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	/* Track */
+	::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px grey;
+		border-radius: 10px;
+	}
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: grey;
+		border-radius: 10px;
+	}
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #3C4459;
+	}
 }
 
 @media only screen and (max-width: 1000px) {
-	body
-	{
+	body {
 		background-color: grey;
 		color: #515659;
 		background: url("../assets/wallpaper.jpg") fixed no-repeat center;
@@ -258,15 +214,10 @@
 		font-family: Helvetica;
 		margin: 0 auto;
 		position: absolute;
-
-
 	}
-
-
-	#bandeau
-	{
+	#bandeau {
 		background-color: #ffffff;
-		opacity : 1;
+		opacity: 1;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -275,91 +226,75 @@
 		justify-content: space-between;
 		margin-bottom: 10%;
 	}
-
-	.logo
-	{
-		margin-bottom : 0.8%;
-		margin-left : 2%;
-		margin-top :0.8%;
-
+	.logo {
+		margin-bottom: 0.8%;
+		margin-left: 2%;
+		margin-top: 0.8%;
 	}
-
 	#logo {
 		width: 80%;
-		height: auto; 
+		height: auto;
 	}
-
-	#bandeau_droite{
+	#bandeau_droite {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: nowrap;
-		margin-right : 4%;
+		margin-right: 4%;
 	}
-
-	.connexion{
-		font-size : 2.3em;
+	.connexion {
+		font-size: 2.3em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
-				
+		margin-right: 4%;
 	}
-	.aide{
-		font-size : 2.3em;
-		margin-right : 4%;
+	.aide {
+		font-size: 2.3em;
+		margin-right: 4%;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-	
 	}
-	.settings{
-		font-size : 2.3em;
+	.settings {
+		font-size: 2.3em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
-
-
+		margin-right: 4%;
 	}
-	.language{
+	.language {
 		font-size: 2.1em;
 		color: #fff;
 		text-decoration: none;
 		margin-top: 10%;
 		margin-bottom: auto;
-		border :  none;
-		margin-right : 4%;
-
+		border: none;
+		margin-right: 4%;
 	}
-
-	
-	.textboutton{
+	.textboutton {
 		font-size: 500%;
 		font-weight: bold;
 		color: #fff;
-
 	}
-
-	.boutton{
+	.boutton {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
-
-	#button_modal{
+	#button_modal {
 		background-color: #515659;
-		opacity : 0.9;
+		opacity: 0.9;
 		background-attachment: fixed;
 		border: none;
 		font-size: 1800%;
-		color : white;
+		color: white;
 		position: static;
-		cursor : pointer;
+		cursor: pointer;
 		padding-top: 0.1em;
 		border-radius: 100%;
 		padding-bottom: 0.1em;
@@ -367,42 +302,38 @@
 		padding-right: 0.4em;
 		margin-bottom: 10%;
 	}
-
 	.modal1 {
-		display: none; 
-		z-index: 1; 
-		padding-top: 30%; 
+		display: none;
+		z-index: 1;
+		padding-top: 30%;
 		left: 0;
 		top: 0;
-		width: 100%; 
-		height: 100%; 
-		overflow: auto; 
-		background-color: rgb(0,0,0); 
-		background-color: rgba(0,0,0,0.4); 
-		margin-top : 12.8%;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.4);
+		margin-top: 12.8%;
 	}
-	
 	.modal-content {
 		background-color: #fefefe;
-		text-align:center;
+		text-align: center;
 		margin: auto;
 		padding: 3%;
 		border: 1px solid #888;
 		width: 80%;
-		height : 30%;
-		font-size : 3em;
-		border-radius : 20px;	
+		height: 30%;
+		font-size: 3em;
+		border-radius: 20px;
 	}
-
 	.modal-content .input {
 		padding: 2.5%;
-		margin-top : 5%;
-    	border-radius: 5px;
+		margin-top: 5%;
+		border-radius: 5px;
 		border: 1px solid #888;
-		font-size : 1em;
-		text-align : center;	
+		font-size: 1em;
+		text-align: center;
 	}
-
 	#validation1 {
 		font-size: 1.3em;
 		padding-left: 5%;
@@ -415,7 +346,7 @@
 		color: white;
 		border: none;
 	}
-	#name{
+	#name {
 		margin-bottom: 5%;
 	}
 	.close {
@@ -424,7 +355,7 @@
 		font-size: 2em;
 		font-weight: bold;
 	}
-	h2{
+	h2 {
 		font-size: 1.2em;
 		font-weight: bold;
 	}
@@ -433,5 +364,4 @@
 		text-decoration: none;
 		cursor: pointer;
 	}
-  
 }

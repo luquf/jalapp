@@ -1,57 +1,50 @@
-body
-{
+body {
     background-color: grey;
     color: #515659;
     background: url("../assets/jala_wallpaper.jpg") fixed no-repeat center;
     background-size: cover;
     font-family: Helvetica;
     opacity: 1;
-
 }
 
-
-
-.logo{
+.logo {
     width: 20%;
     height: 20%;
     margin-top: 2%;
     margin-left: 2%;
 }
 
-    
-#slogan h1
-{
-	font-size: 5em;
-	font-weight: bold;
-	text-align: center;
-    color : #ffffff;
+#slogan h1 {
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
     margin-top: 1%;
 }
 
-
-.equipe{
+.equipe {
     font-size: 2em;
     color: #ffffff;
     margin-left: 5%;
 }
 
-.photos_team{
+.photos_team {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#photo_profil{
+#photo_profil {
     height: 20%;
     width: 20%;
 }
 
-.info_footer{
+.info_footer {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     text-align: center;
-    width: 100%; 
+    width: 100%;
     height: 8%;
     align-items: center;
     flex-wrap: nowrap;
@@ -59,37 +52,39 @@ body
     opacity: 0.9;
 }
 
-#logo_JALA{
+#logo_JALA {
     width: 15%;
-    height:15%;
+    height: 15%;
     padding-left: 2%;
 }
 
-.inf{
+.inf {
     margin-left: -9.8%;
     margin-right: -9.8%;
-
 }
 
 /* width */
+
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: white; 
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: white;
     border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #3C4459; 
-  }
-  
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3C4459;
+}

@@ -3,7 +3,7 @@
 session_start();
 
 if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-    header("Location: views/inscription.php");
+    header("Location: inscription.php");
 }
 
 require_once __DIR__ . "/../controllers/piece.php";
@@ -27,7 +27,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 		<link rel="stylesheet" href="../public/css/piece1.css" />
 		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src='../public/js/jquery-3.3.1.min.js'></script>
 		<title>Domisep: Pièce </title>
 
 	</head>
@@ -44,7 +44,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 
 			<div id="bandeau_droite">
 					<div class="language">
-					<a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+					<a href= "eng/aide_accueil.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
 						</div>
 			
 					<div class="aide">

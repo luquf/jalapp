@@ -12,7 +12,7 @@ function getAllReleveCapteurs() {
 
 function getReleveCapteurByID($id) {
     $db = connectDB();
-    $stmt = $db->prepare("SELECT * from `releve_capteurs` WHERE id_capteur=? ORDER BY heure DESC");
+    $stmt = $db->prepare("SELECT * from `releve_capteurs` WHERE id_capteur=? ORDER BY heure ASC");
     $stmt->execute(array($id));
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
     return $data;
@@ -40,7 +40,7 @@ function getAllReleveControleurs() {
 
 function getReleveControleurByID($id) {
     $db = connectDB();
-    $stmt = $db->prepare("SELECT * from `releve_controleurs` WHERE id_controleur=? ORDER BY heure DESC");
+    $stmt = $db->prepare("SELECT * from `releve_controleurs` WHERE id_controleur=? ORDER BY heure ASC");
     $stmt->execute(array($id));
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
     return $data;

@@ -1,7 +1,5 @@
 @media only screen and (min-width: 300px) {
-    
-    body
-    {
+    body {
         background-color: grey;
         color: #515659;
         background: url("../assets/wallpaper.jpg") fixed no-repeat center;
@@ -9,11 +7,9 @@
         margin: 0 auto;
         font-family: Helvetica;
     }
-
-    #bandeau
-    {
+    #bandeau {
         background-color: #ffffff;
-        opacity : 0.9;
+        opacity: 0.9;
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -22,22 +18,16 @@
         justify-content: space-between;
         margin-bottom: 5%;
     }
-
-
-    .logo
-    {
-        margin-bottom : 0.8%;
-        margin-left : 2%;
-        margin-top :0.8%;
-
+    .logo {
+        margin-bottom: 0.8%;
+        margin-left: 2%;
+        margin-top: 0.8%;
     }
-
     #logo {
         width: 15%;
-        height: auto; 
+        height: auto;
     }
-
-    .bandeau_droite{
+    .bandeau_droite {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -46,10 +36,8 @@
         color: #515659;
         margin-top: auto;
         margin-bottom: auto;
-
     }
-
-    .parametres{
+    .parametres {
         display: flex;
         font-size: 1em;
         color: #515659;
@@ -58,10 +46,9 @@
         margin-bottom: auto;
         margin-right: 5%;
         padding-right: 1%;
-        text-decoration: none;    
+        text-decoration: none;
     }
-
-    .deconnexion{
+    .deconnexion {
         font-size: 1em;
         color: #515659;
         text-decoration: none;
@@ -70,26 +57,23 @@
         margin-right: 5%;
         padding-left: 2%;
     }
-
-    #rechercher
-    {
-        float : right;
-        border : none;
+    #rechercher {
+        float: right;
+        border: none;
         margin-right: 5%;
         margin-top: 2%;
-        font-size : 17px;
+        font-size: 17px;
         font-style: italic;
         border-bottom: 1px solid #515659;
     }
-    #tableau
-    {
+    #tableau {
         background-color: #ffffff;
         margin-top: 2%;
         margin-left: 5%;
         margin-right: 5%;
         opacity: 0.9;
         display: flex;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         justify-content: left;
         padding-left: 4%;
         padding-right: 4%;
@@ -97,44 +81,35 @@
         color: #515659;
         border-radius: 10px;
     }
-    table
-    {
+    table {
         margin-top: 2%;
-        width : 100%;
+        width: 100%;
         border-collapse: collapse;
         text-align: center;
         text-decoration: none;
         color: #515659;
     }
-
-
-    th
-    {
+    th {
         padding-top: 1%;
         padding-bottom: 1%;
         background-color: #ffffff;
         width: 15%;
-        border-left : 1px solid #ffffff;
-        border-right : 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
     }
-
-    td
-    {
+    td {
         padding-top: 1%;
         padding-bottom: 1%;
         background-color: #ffffff;
         width: 15%;
         border: 1px solid black;
     }
-
-
     /* .delete{
         border-right: none;
         border-top: none;
         border-bottom: none;
     } */
-
-    #buttondelete{
+    #buttondelete {
         background-color: #ffffff;
         border-color: #515659;
         box-shadow: #ffffff;
@@ -142,12 +117,9 @@
         color: #515659;
         text-align: center;
         text-decoration: none;
-        border : 1px;
+        border: 1px;
     }
-
-
-    .button
-    {
+    .button {
         background-color: #ffffff;
         border-color: #515659;
         box-shadow: #ffffff;
@@ -156,63 +128,53 @@
         text-align: center;
         text-decoration: none;
     }
-
-    .lien_ID{
+    .lien_ID {
         text-decoration: none;
         color: #515659;
     }
-
     .page-button {
         text-decoration: none;
         text-align: center;
         margin-top: 3%;
         color: #515659;
     }
-
-    .info_footer{
+    .info_footer {
         background-color: #ffffff;
         display: flex;
-		flex-direction: row;
-		text-align: center;
-		width: 100%; 
+        flex-direction: row;
+        text-align: center;
+        width: 100%;
         height: 8%;
         align-items: center;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		opacity: 0.9;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        opacity: 0.9;
     }
-
-    #logo_JALA{
+    #logo_JALA {
         width: 15%;
-        height:15%;
+        height: 15%;
         padding-left: 2%;
     }
-
-    .inf{
+    .inf {
         margin-left: -9.8%;
         margin-right: -9.8%;
-
     }
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: grey; 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #3C4459; 
-  }
-  
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: grey;
+        border-radius: 10px;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3C4459;
+    }
 }

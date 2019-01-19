@@ -1,6 +1,5 @@
 @media only screen and (min-width: 300px) {
-	body
-	{
+	body {
 		background-color: grey;
 		color: #515659;
 		background: url("../assets/wallpaper.jpg") fixed no-repeat center;
@@ -8,17 +7,13 @@
 		font-family: Helvetica;
 		margin: 0 auto;
 		position: absolute;
-
-
 	}
-	.cgu{
-		font-style : normal;
+	.cgu {
+		font-style: normal;
 	}
-
-	#bandeau
-	{
+	#bandeau {
 		background-color: #ffffff;
-		opacity : 1;
+		opacity: 1;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -27,171 +22,133 @@
 		justify-content: space-between;
 		margin-bottom: 5%;
 	}
-
-	.logo
-	{
-		margin-bottom : 0.8%;
-		margin-left : 2%;
-		margin-top :0.8%;
-
+	.logo {
+		margin-bottom: 0.8%;
+		margin-left: 2%;
+		margin-top: 0.8%;
 	}
-
 	#logo {
 		width: 15%;
-		height: auto; 
+		height: auto;
 	}
-
-	#bandeau_droite{
+	#bandeau_droite {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: nowrap;
-		margin-right : 3%;
+		margin-right: 3%;
 	}
-
-	.connexion{
-		font-size : 1em;
+	.connexion {
+		font-size: 1em;
 		font-size: 1em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		
 	}
-	.aide{
-		font-size : 1em;
-		margin-right : 4%;
+	.aide {
+		font-size: 1em;
+		margin-right: 4%;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-
-
-		
 	}
-	.contact{
-		font-size : 1em;
+	.contact {
+		font-size: 1em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
-
-
+		margin-right: 4%;
 	}
-	.language{
+	.language {
 		/* background-image: url("../assets/usa.svg"); */
 		font-size: 0.8em;
 		color: white;
 		text-decoration: none;
 		margin-top: 11%;
 		margin-bottom: auto;
-		border : none;
-		margin-right : 6%;
+		border: none;
+		margin-right: 6%;
 		display: flex;
 		flex-direction: row;
-
 	}
-
-	#slogan h1
-	{
+	#slogan h1 {
 		font-size: 4em;
 		font-weight: bold;
 		text-align: center;
-		color : #ffffff;
-		margin-top : 7.5%;
-		margin-bottom : 7.5%;
-
+		color: #ffffff;
+		margin-top: 7.5%;
+		margin-bottom: 7.5%;
 	}
-	#apropos
-	{
+	#apropos {
 		background-color: white;
 		opacity: 0.9;
-		flex-wrap:wrap; 	
-		text-align:justify;
+		flex-wrap: wrap;
+		text-align: justify;
 		padding-left: 4%;
 		padding-right: 4%;
 		padding-bottom: 5%;
-		padding-top : 2%;
+		padding-top: 2%;
 		margin-left: 8%;
 		margin-right: 8%;
-		border-radius : 10px;
-		font-size : 1.4em;
-		margin-bottom : 5%;
+		border-radius: 10px;
+		font-size: 1.4em;
+		margin-bottom: 5%;
 		position: relative;
 		min-height: 100%;
-		
 	}
-
-	.titre_apropos
-	{
+	.titre_apropos {
 		font-size: 2.5em;
 		padding-bottom: 2%;
 		text-align: center;
 		margin: auto;
 		position: relative;
 		margin-bottom: 2%;
-		
-
 	}
-
-	.textdomisep{
+	.textdomisep {
 		font-style: normal;
-		margin-left : 12%;
-	}
-
-	h4{
 		margin-left: 12%;
 	}
-	.cgu{
+	h4 {
 		margin-left: 12%;
-
 	}
-    .inf{
-        margin-left: -9.8%;
+	.cgu {
+		margin-left: 12%;
+	}
+	.inf {
+		margin-left: -9.8%;
 		margin-right: -9.8%;
 		color: #515659;
-		text-decoration:none;
-		
-    }
-
-	.inf a{
+		text-decoration: none;
+	}
+	.inf a {
 		margin-right: 1%;
 		padding-right: 5%;
 	}
-	    /* width */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: grey; 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #3C4459; 
-  }
-	
-
-
+	/* width */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	/* Track */
+	::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px grey;
+		border-radius: 10px;
+	}
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: grey;
+		border-radius: 10px;
+	}
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #3C4459;
+	}
 }
 
-
-
-
 @media only screen and (max-width: 1000px) {
-
-	body
-	{
+	body {
 		background-color: grey;
 		color: #515659;
 		background: url("../assets/wallpaper.jpg") fixed no-repeat center;
@@ -199,15 +156,10 @@
 		font-family: Helvetica;
 		margin: 0 auto;
 		position: absolute;
-
-
 	}
-
-
-	#bandeau
-	{
+	#bandeau {
 		background-color: #ffffff;
-		opacity : 1;
+		opacity: 1;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -216,99 +168,79 @@
 		justify-content: space-between;
 		margin-bottom: 5%;
 	}
-
-	.logo
-	{
-		margin-bottom : 0.8%;
-		margin-left : 2%;
-		margin-top :0.8%;
-
+	.logo {
+		margin-bottom: 0.8%;
+		margin-left: 2%;
+		margin-top: 0.8%;
 	}
-
 	#logo {
 		width: 80%;
-		height: auto; 
+		height: auto;
 	}
-
-	#bandeau_droite{
+	#bandeau_droite {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: nowrap;
-		margin-right : 4%;
+		margin-right: 4%;
 	}
-
-	.connexion{
-		font-size : 2.3em;
+	.connexion {
+		font-size: 2.3em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
-				
+		margin-right: 4%;
 	}
-	.aide{
-		font-size : 2.3em;
-		margin-right : 4%;
+	.aide {
+		font-size: 2.3em;
+		margin-right: 4%;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-	
 	}
-	.contact{
-		font-size : 2.3em;
+	.contact {
+		font-size: 2.3em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
-
-
+		margin-right: 4%;
 	}
-	.language{
+	.language {
 		font-size: 2.1em;
 		color: #fff;
 		text-decoration: none;
 		margin-top: 10%;
 		margin-bottom: auto;
-		border :  none;
-		margin-right : 4%;
-
+		border: none;
+		margin-right: 4%;
 	}
-
-	#slogan h1
-	{
+	#slogan h1 {
 		font-size: 5em;
 		font-weight: bold;
 		text-align: center;
-		color : #ffffff;
+		color: #ffffff;
 	}
-	#apropos
-	{
+	#apropos {
 		background-color: #ffffff;
 		opacity: 0.9;
 		padding-left: 3%;
 		padding-right: 3%;
 		padding-bottom: 5%;
-		padding-top : 3%;
+		padding-top: 3%;
 		margin-left: 4%;
 		margin-right: 4%;
-		border-radius : 10px;
+		border-radius: 10px;
 	}
-
-	#apropos h3
-	{
-		font-size : 3em;
+	#apropos h3 {
+		font-size: 3em;
 		padding-bottom: 25px;
-		text-align : center;
-
+		text-align: center;
 	}
-	h2
-	{
+	h2 {
 		font-size: 3em;
 		margin-bottom: 3%;
 	}
-
-  
 }

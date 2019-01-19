@@ -1,7 +1,5 @@
 @media only screen and (min-width: 300px) {
-
-	body
-	{
+	body {
 		background-color: grey;
 		color: #515659;
 		background: url("../assets/wallpaper.jpg") fixed no-repeat center;
@@ -9,13 +7,10 @@
 		font-family: Helvetica;
 		margin: 0 auto;
 		position: absolute;
-
-
 	}
-	#bandeau
-	{
+	#bandeau {
 		background-color: #ffffff;
-		opacity : 1;
+		opacity: 1;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -24,78 +19,59 @@
 		justify-content: space-between;
 		margin-bottom: 5%;
 	}
-
-	.logo
-	{
-		margin-bottom : 0.8%;
-		margin-left : 2%;
-		margin-top :0.8%;
-
+	.logo {
+		margin-bottom: 0.8%;
+		margin-left: 2%;
+		margin-top: 0.8%;
 	}
-
 	#logo {
 		width: 15%;
-		height: auto; 
+		height: auto;
 	}
-
-	#bandeau_droite{
+	#bandeau_droite {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: nowrap;
-		margin-right : 3%;
+		margin-right: 3%;
 	}
-
-	.connexion1{
-		font-size : 1em;
+	.connexion1 {
+		font-size: 1em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-	
-		
-	
-		
 	}
-	.aide{
-		font-size : 1em;
-		margin-right : 4%;
+	.aide {
+		font-size: 1em;
+		margin-right: 4%;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-
-
-		
 	}
-	.contact{
-		font-size : 1em;
+	.contact {
+		font-size: 1em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
-
-
+		margin-right: 4%;
 	}
-	.language{
+	.language {
 		/* background-image: url("../assets/usa.svg"); */
 		font-size: 0.8em;
 		color: white;
 		text-decoration: none;
 		margin-top: 11%;
 		margin-bottom: auto;
-		border : none;
-		margin-right : 6%;
+		border: none;
+		margin-right: 6%;
 		display: flex;
 		flex-direction: row;
-
 	}
-
 	/* Partie conteneur  */
-
-	#conteneur
-	{
+	#conteneur {
 		background-color: #ffffff;
 		color: #304045;
 		margin-left: 15%;
@@ -105,15 +81,13 @@
 		padding-left: 3%;
 		opacity: 0.9;
 		display: flex;
-		flex-wrap:wrap;
+		flex-wrap: wrap;
 		justify-content: center;
 		border-radius: 10px;
-		margin-bottom : 3%;
-		margin-top : 2%;
+		margin-bottom: 3%;
+		margin-top: 2%;
 		padding-bottom: 5%;
 	}
-
-
 	.input {
 		padding: 10px;
 		border-radius: 5px;
@@ -133,11 +107,10 @@
 		margin-top: 7%;
 		margin-bottom: 3%
 	}
-	.inscription
-	{
-		margin-left:2%;
+	.inscription {
+		margin-left: 2%;
 		margin-right: 4%;
-		opacity: 0.9;	
+		opacity: 0.9;
 		font-size: 1.2em;
 		text-align: center;
 		margin-left: auto;
@@ -146,67 +119,53 @@
 	.titre {
 		padding-bottom: 5%;
 	}
-
-	#slogan h1
-	{
+	#slogan h1 {
 		font-size: 4em;
 		font-weight: bold;
 		text-align: center;
-		color : #ffffff;
-		margin-top : 5%;
-		margin-bottom : 5%;
-
+		color: #ffffff;
+		margin-top: 5%;
+		margin-bottom: 5%;
 	}
-	
-	.connexion
-	{
-		margin-left:2%;
+	.connexion {
+		margin-left: 2%;
 		margin-right: 3%;
-		opacity: 0.9;	
+		opacity: 0.9;
 		font-size: 1.2em;
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
 	}
-
 	.aide a:visited {
 		text-decoration: none;
 		color: #515659;
 	}
-	
 	.aide a {
 		text-decoration: none;
 		color: #515659;
 	}
-	
-		    /* width */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: grey; 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #3C4459; 
-  }
-	
-
+	/* width */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	/* Track */
+	::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px grey;
+		border-radius: 10px;
+	}
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: grey;
+		border-radius: 10px;
+	}
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #3C4459;
+	}
 }
 
 @media only screen and (max-width: 1000px) {
-	body
-	{
+	body {
 		background-color: grey;
 		color: #515659;
 		background: url("../assets/wallpaper.jpg") fixed no-repeat center;
@@ -214,15 +173,10 @@
 		font-family: Helvetica;
 		margin: 0 auto;
 		position: absolute;
-
-
 	}
-
-
-	#bandeau
-	{
+	#bandeau {
 		background-color: #ffffff;
-		opacity : 1;
+		opacity: 1;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -231,72 +185,57 @@
 		justify-content: space-between;
 		margin-bottom: 5%;
 	}
-
-	.logo
-	{
-		margin-bottom : 0.8%;
-		margin-left : 2%;
-		margin-top :0.8%;
-
+	.logo {
+		margin-bottom: 0.8%;
+		margin-left: 2%;
+		margin-top: 0.8%;
 	}
-
 	#logo {
 		width: 80%;
-		height: auto; 
+		height: auto;
 	}
-
-	#bandeau_droite{
+	#bandeau_droite {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: nowrap;
-		margin-right : 4%;
+		margin-right: 4%;
 	}
-
-	.connexion1{
-		font-size : 2.3em;
+	.connexion1 {
+		font-size: 2.3em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
-				
+		margin-right: 4%;
 	}
-	.aide{
-		font-size : 2.3em;
-		margin-right : 4%;
+	.aide {
+		font-size: 2.3em;
+		margin-right: 4%;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-	
 	}
-	.contact{
-		font-size : 2.3em;
+	.contact {
+		font-size: 2.3em;
 		color: #515659;
 		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right : 4%;
-
-
+		margin-right: 4%;
 	}
-	.language{
+	.language {
 		font-size: 2.1em;
 		color: #fff;
 		text-decoration: none;
 		margin-top: 10%;
 		margin-bottom: auto;
-		border :  none;
-		margin-right : 4%;
-
+		border: none;
+		margin-right: 4%;
 	}
-	
-		
-	
-	#conteneur
-	{
-		background-color: #ffffff; 
+	#conteneur {
+		background-color: #ffffff;
 		margin-left: 2%;
 		margin-right: 2%;
 		opacity: 0.9;
@@ -306,26 +245,21 @@
 		height: 80%;
 		padding-top: 5%;
 	}
-
-	.connexion
-	{
+	.connexion {
 		margin-left: auto;
-		margin-right: auto;
-		opacity: 1;
-		font-size: 2em;	
-	}
-	.inscription
-	{
-		margin-left:auto;
 		margin-right: auto;
 		opacity: 1;
 		font-size: 2em;
 	}
-
+	.inscription {
+		margin-left: auto;
+		margin-right: auto;
+		opacity: 1;
+		font-size: 2em;
+	}
 	.titre {
 		font-size: 2.5em;
 	}
-
 	.input {
 		padding: 20px;
 		border-radius: 5px;
@@ -335,23 +269,16 @@
 		width: 97%;
 		font-size: 1.4em;
 	}
-
-	#slogan h1
-	{
+	#slogan h1 {
 		font-size: 5em;
 		font-weight: bold;
 		text-align: center;
-		color : #ffffff;
-		margin-top : 10%;
-		margin-bottom : 10%;
-
+		color: #ffffff;
+		margin-top: 10%;
+		margin-bottom: 10%;
 	}
-
 	.input.button {
 		margin-top: 5%;
 		margin-bottom: 10%;
 	}
-
 }
-
-

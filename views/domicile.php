@@ -11,7 +11,7 @@ require_once __DIR__ . '/../models/piece.php';
 
 $dom = getDomiciles($_SESSION['user_id']);
 if (!isset($dom[0][0])) {
-    header('Location: ../views/ajoutdomicile1.php');
+    header('Location: ajoutdomicile1.php');
 }
 
 ?>
