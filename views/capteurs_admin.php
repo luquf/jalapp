@@ -92,15 +92,18 @@ require_once __DIR__ . '/../controllers/admin_capteur.php';
 
 $userid = $_SESSION['selected_user'];
 $data = getUserData($userid);
+if (count($data) == 0) {
+    echo "<p><i class='fa fa-exclamation-triangle'></i> Pas de données</p>";
+}
 foreach ($data as $domcile) {
-    echo "<h1>" . $domcile[1] . "<form action='../controllers/admin_action.php' method='post'>
+    echo "<h1>" . $domcile[1] . "<form action='../controllers/admin_action.php' method='post' onsubmit=\"return confirm('Voulez vous vraiment supprimer ce domicile ?');\">
                         <input type='hidden' value=" . $domcile[0] . " name='domicile' id='domicile'/>
                         <input type='hidden' value='domicile_del' name='action' id='action'/>
                         <button id='del-domicile-button' type='submit' value='del_home'><i class='fa fa-trash'></i></button>
                     </form> </h1>
                         ";
     foreach ($domcile["pieces"] as $piece) {
-        echo "<h2>" . $piece[1] . "<form action='../controllers/admin_action.php' method='post'>
+        echo "<h2>" . $piece[1] . "<form action='../controllers/admin_action.php' method='post' onsubmit=\"return confirm('Voulez vous vraiment supprimer ce domicile ?');\">
                             <input type='hidden' value=" . $piece[0] . " name='piece' id='piece'/>
                             <input type='hidden' value='piece_del' name='action' id='action'/>
                             <button id='del-piece-button' type='submit' value='del_piece'><i class='fa fa-trash'></i></button>
@@ -108,7 +111,21 @@ foreach ($data as $domcile) {
                             ";
         echo "<ul class='sensors'>";
         foreach ($piece["capteurs"] as $capteur) {
-            echo "<li class='liste' id='element-" . $capteur[0] . "'><span id='display-" . $capteur[0] . "'>Nom: " . $capteur[1] . "<br>Type: " . $capteur[2] . "<br>Etat: " . $capteur[3] . "</span>
+        $t = "";
+        switch ($capteur[2]) {
+            case "HUM":
+                $t = "Humidité";
+                break;
+            case "FUM":
+                $t = "Fumée";
+                break;
+            case "TEMP":
+                $t = "Température";
+                break;
+            default:
+                break;
+        }
+            echo "<li class='liste' id='element-" . $capteur[0] . "'><span id='display-" . $capteur[0] . "'>Nom: " . $capteur[1] . "<br>Type: " . $t . "<br>Etat: " . $capteur[3] . "</span>
 								<form method='post' action='../controllers/admin_action.php'>
 								<input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_info' name='action' id='action'/>
@@ -131,9 +148,9 @@ foreach ($data as $domcile) {
                                         function(data, status){
                                           if (status == 'success') {
                                               if ($('#display-" . $capteur[0] . "').text().includes('OFF')) {
-                                                  $('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $capteur[2] . "<br>Etat: ON');
+                                                  $('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $t . "<br>Etat: ON');
                                               } else {
-                                                  $('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $capteur[2] . "<br>Etat: OFF');
+                                                  $('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $t . "<br>Etat: OFF');
                                               }
                                           }
                                         });
@@ -205,7 +222,7 @@ foreach ($data as $domcile) {
 
 									$('#del-" . $controleur[0] . "').click(function() {
 										if (confirm('Etes-vous sûr de vouloir supprimer ce controleur ?')) {
-											$.post('../controllers/adminaction.php',
+											$.post('../controllers/admin_action.php',
 											{
 											action: 'cont_delete',
 											capteur: '" . $controleur[0] . "',

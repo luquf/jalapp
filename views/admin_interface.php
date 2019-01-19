@@ -66,7 +66,7 @@ $utilisateur = getUsersAdmin();
 $up = getUsersAdmin();
 
 if (count($utilisateur) == 0) {
-    echo " ";
+    echo "<p style='text-align: center;'><i class='fa fa-exclamation-triangle'></i> Pas d'utilisateurs</p>";
 } else {
     foreach (array_slice($utilisateur, ($page * 10) - 10, 10) as $utilisateur) {
         echo "
@@ -79,7 +79,7 @@ if (count($utilisateur) == 0) {
                                 <form method='post' action='../controllers/admin_interface.php'>
 								<td class = delete><input type='hidden' value='".$utilisateur[0]."' name='user' id='user'/>
 								<input type='hidden' value='del_user' name='action' id='action'/>
-								<button id= buttondelete  type='submit'><i class='fa fa-trash'></i></button></td>
+								<button id= buttondelete  type='submit'><i class='fa fa-trash' style='color:red;'></i></button></td>
                                 </form>";
     }
 }
