@@ -22,7 +22,7 @@ if (!isset($dom[0][0])) {
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="../public/css/domicile.css" />
 		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src='../public/js/jquery-3.3.1.min.js'></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   		<title>Domisep: Domicile </title>
 

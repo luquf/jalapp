@@ -25,8 +25,8 @@ if (isset($_GET['capteur'])) {
 		<link rel="stylesheet" href="../public/css/piece1.css" />
 		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js'></script>
+        <script src='../public/js/jquery-3.3.1.min.js'></script>
+        <script src='../public/js/Chart.min.js'></script>
 		<title>Domisep: Infos Capteur </title>
 
 	</head>
