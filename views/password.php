@@ -12,9 +12,19 @@
 		<div id="bandeau">
 			<div class="logo">
 
-					<a href="accueil.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"/>
+					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"/>
 
 			</div>
+
+			<?php
+					session_start();
+					$text = "";
+					if ($_SESSION["connected"] == "true") {
+						$text = "Déconnexion";
+					} else {
+						$text = "Connexion";
+					}
+				?>
 
 			<div id="bandeau_droite">
 			<div class="language">
@@ -28,7 +38,7 @@
 						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
 					</div>
 					<div class="connexion">
-						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Connexion </a>
+						<a href="inscription.php" style = "text-decoration: none; color: #515659"> <?php echo $text; ?> </a>
 					</div>
 
 				</div>
