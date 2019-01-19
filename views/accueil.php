@@ -53,24 +53,24 @@
 		</div>
 
 
-		<div id="apropos">
+		<div id="apropos" style="text-align:center;">
 			<h3 class = "titre_apropos">
 				A propos
 			</h3>
-			<h4>Bienvenue chez Domisep, un service de domotique personnel ! </h4>
-				<p class = "textdomisep">
-
-					- Contrôler vos lampes, chauffages, volets à distance depuis votre ordinateur ou votre smartphone</br>
-					- 6 différents controlleurs/capteurs pour toutes vos pièces</br>
-					- Gérez une ou plusieurs maison </br>
-					- Accès facile à vos informations de consommation</br>
-</br>
-
-				</p>
-			<div class = "cgu">
-				<a href= "cgu.php"	> Conditions générales d'utilisation </a>
-				<p>&</p><a href= "mentionslegales.php"	> Mentions Légales </a>
-</div>
+			<h4>Bienvenue chez Domisep, un service de domotique intelligent ! </h4>
+			<h4>Cette plateforme est une plateforme réalisée pour un projet étudiant et n'est donc pas un vrai produit !</h4>
+			<div class="bulletpoints">
+					- Contrôlez vos lampes, chauffages, volets à distance depuis un ordinateur ou un smartphone</br>
+					- Choisissez parmi 6 différents controlleurs/capteurs pour toutes vos pièces</br>
+					- Gérez une ou plusieurs maison. </br>
+					- Accèdez facilement à vos informations de consommation.</br>
+			</div>
+			<div class="cgu">
+				<a href="cgu.php"> Conditions générales d'utilisation </a>
+			</div>
+			<div class="cgu">
+				<a href= "mentionslegales.php"> Mentions Légales </a>
+			</div>
 		</div>
 
 	</body>

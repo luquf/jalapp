@@ -63,7 +63,7 @@
 ARTICLE 1 : Objet
 <br/><br/>
 
-Les présentes « conditions générales d'utilisation » ont pour objet l'encadrement juridique de l’utilisation du site www.domisep.ovh  et de ses services.
+Les présentes « conditions générales d'utilisation » ont pour objet l'encadrement juridique de l’utilisation du site domisep.ovh  et de ses services.
 <br/>
 Ce contrat est conclu entre :
 <br/>
@@ -78,20 +78,20 @@ ARTICLE 2 : Mentions légales
 <br/><br/>
 Pour les personnes morales :
 <br/>
-Le site www.domisep.ovh est édité par la société Jala, SARL au capital de 1 000 000 €, dont le siège social est situé au 10 rue de Vanves 92130 Issy-les-Moulineaux.
+Le site domisep.ovh est édité par la société Jala, SARL au capital de 1 000 000 €, dont le siège social est situé au 10 rue de Vanves 92130 Issy-les-Moulineaux.
 <br/>
 La société est représentée par Jala Inc.
 <br/>
 
 Pour les personnes physiques :
 <br/>
-Le site www.domisep.ovh est édité par Léo B, Augustin dB, Arthur D & James G.
+Le site domisep.ovh est édité par Léo B, Augustin dB, Arthur D & James G.
 <br/>
 <br/>
 
 ARTICLE 3 : accès aux services
 <br/><br/>
-L’Utilisateur du site www.domisep.ovh a accès aux services suivants :<br/>
+L’Utilisateur du site domisep.ovh a accès aux services suivants :<br/>
 •	Gestion de domiciles<br/>
 •	Gestion de pièces<br/>
 •	Gestion de capteurs<br/>
@@ -117,7 +117,7 @@ L'Utilisateur est responsable des risques liés à l’utilisation de son identi
 <br/>
 Le mot de passe de l’Utilisateur doit rester secret. En cas de divulgation de mot de passe, l’Éditeur décline toute responsabilité.
 <br/>
-L’Utilisateur assume l’entière responsabilité de l’utilisation qu’il fait des informations et contenus présents sur le site www.domisep.ovh.
+L’Utilisateur assume l’entière responsabilité de l’utilisation qu’il fait des informations et contenus présents sur le site domisep.ovh.
 <br/>
 Tout usage du service par l'Utilisateur ayant directement ou indirectement pour conséquence des dommages doit faire l'objet d'une indemnisation au profit du site.
 <br/>
@@ -141,13 +141,13 @@ Tout dysfonctionnement du serveur ou du réseau ne peut engager la responsabilit
 <br/>
 De même, la responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et insurmontable d'un tiers.
 <br/>
-Le site www.domisep.ovh s'engage à mettre en œuvre tous les moyens nécessaires pour garantir la sécurité et la confidentialité des données. Toutefois, il n’apporte pas une garantie de sécurité totale.
+Le site domisep.ovh s'engage à mettre en œuvre tous les moyens nécessaires pour garantir la sécurité et la confidentialité des données. Toutefois, il n’apporte pas une garantie de sécurité totale.
 <br/>
 L’Éditeur se réserve la faculté d’une non-garantie de la fiabilité des sources, bien que les informations diffusées sur le site soient réputées fiables.
 <br/><br/>
 ARTICLE 6 : Propriété intellectuelle
 <br/><br/>
-Les contenus du site www.domisep.ovh (logos, textes, éléments graphiques, vidéos, etc.) sont protégés par le droit d’auteur, en vertu du Code de la propriété intellectuelle.
+Les contenus du site domisep.ovh (logos, textes, éléments graphiques, vidéos, etc.) sont protégés par le droit d’auteur, en vertu du Code de la propriété intellectuelle.
 <br/>
 L’Utilisateur devra obtenir l’autorisation de l’éditeur du site avant toute reproduction, copie ou publication de ces différents contenus.
 <br/>
@@ -162,9 +162,9 @@ ARTICLE 7 : Données personnelles
 <br/><br/>
 L’Utilisateur doit obligatoirement fournir des informations personnelles pour procéder à son inscription sur le site.
 <br/>
-L’adresse électronique (e-mail) de l’utilisateur pourra notamment être utilisée par le site www.domisep.ovh pour la communication d’informations diverses et la gestion du compte.
+L’adresse électronique (e-mail) de l’utilisateur pourra notamment être utilisée par le site domisep.ovh pour la communication d’informations diverses et la gestion du compte.
 <br/>
-www.domisep.ovh garantie le respect de la vie privée de l’utilisateur, conformément à la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés.
+domisep.ovh garantie le respect de la vie privée de l’utilisateur, conformément à la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés.
 <br/>
 Le site est déclaré auprès de la CNIL sous le numéro suivant : 0000.
 <br/>
@@ -178,14 +178,14 @@ En vertu des articles 39 et 40 de la loi en date du 6 janvier 1978, l'Utilisateu
 <br/>
 ARTICLE 8 : Liens hypertextes
 <br/><br/>
-Les domaines vers lesquels mènent les liens hypertextes présents sur le site n’engagent pas la responsabilité de l’Éditeur de www.domisep.ovh, qui n’a pas de contrôle sur ces liens.
+Les domaines vers lesquels mènent les liens hypertextes présents sur le site n’engagent pas la responsabilité de l’Éditeur de domisep.ovh, qui n’a pas de contrôle sur ces liens.
 <br/>
-Il est possible pour un tiers de créer un lien vers une page du site www.domisep.ovh sans autorisation expresse de l’éditeur.
+Il est possible pour un tiers de créer un lien vers une page du site domisep.ovh sans autorisation expresse de l’éditeur.
 <br/>
 <br/>
 ARTICLE 9 : Évolution des conditions générales d’utilisation
 <br/><br/>
-Le site www.domisep.ovh se réserve le droit de modifier les clauses de ces conditions générales d’utilisation à tout moment et sans justification.
+Le site domisep.ovh se réserve le droit de modifier les clauses de ces conditions générales d’utilisation à tout moment et sans justification.
 <br/>
 <br/>
 ARTICLE 10 : Durée du contrat

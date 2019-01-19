@@ -74,6 +74,7 @@ try {
 				<i class="fa fa-user-alt fa-xs"></i> Inscription
 				</h1>
 				<?php
+
 try {
     $error = $_GET['error'];
     if (isset($error) && $error == "alreadyexists") {
@@ -98,7 +99,11 @@ try {
            			<option value="Nantes">Nantes</option>
        				</select>
             		<input class="input" type="tel" name="tel" id="tel" placeholder="+33 (0)6 00 00 00 00" size="30" maxlength="10" required />
-            		<input class="input" type="text" name="cle" id="cle" placeholder="xxxxxx-xxxxxx-xxxxxx-xxxxxx" size="30" maxlength="20" required />
+					<input class="input" type="text" name="cle" id="cle" placeholder="xxxxxx-xxxxxx-xxxxxx-xxxxxx" size="30" maxlength="20" required />
+					<div style='display:inline-block;margin-top:5%;'>
+						<input type="checkbox" required>
+						<label for="scales">En continuant, vous acceptez les <a href='cgu.php' style='text-decoration:none;'>CGU</a></label>
+						</div>
         			<input class="input button" type="submit" value="S'inscrire"/>
 				   </form>
 			   </div>

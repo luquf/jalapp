@@ -33,7 +33,7 @@ if (isset($_GET['selected']) && $_GET['selected'] != '') {
 		<div id="bandeau">
 			<div class="logo">
 
-					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" id="logo"/>
+					<a href="admin_interface.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" id="logo"/>
 
 			</div>
 

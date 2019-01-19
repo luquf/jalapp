@@ -66,13 +66,12 @@
 		font-size: 0.8em;
 		color: white;
 		text-decoration: none;
-		margin-top: 11%;
+		margin-top: auto;
 		margin-bottom: auto;
 		border: none;
 		margin-right: 6%;
-		display: flex;
-		flex-direction: row;
 	}
+
 	#slogan h1 {
 		font-size: 4em;
 		font-weight: bold;
@@ -85,7 +84,7 @@
 		background-color: white;
 		opacity: 0.9;
 		flex-wrap: wrap;
-		text-align: justify;
+
 		padding-left: 4%;
 		padding-right: 4%;
 		padding-bottom: 5%;
@@ -108,13 +107,18 @@
 	}
 	.textdomisep {
 		font-style: normal;
-		margin-left: 12%;
-	}
-	h4 {
-		margin-left: 12%;
 	}
 	.cgu {
-		margin-left: 12%;
+		text-align:center;
+		margin-top: 3%;
+	}
+
+	.cgu a {
+		color: #515659;
+	}
+
+	.bulletpoints {
+		text-align:left
 	}
 	.inf {
 		margin-left: -9.8%;
@@ -225,8 +229,8 @@
 	#apropos {
 		background-color: #ffffff;
 		opacity: 0.9;
-		padding-left: 3%;
-		padding-right: 3%;
+		padding-left: 6%;
+		padding-right: 6%;
 		padding-bottom: 5%;
 		padding-top: 3%;
 		margin-left: 4%;
@@ -242,4 +246,6 @@
 		font-size: 3em;
 		margin-bottom: 3%;
 	}
+
+
 }
