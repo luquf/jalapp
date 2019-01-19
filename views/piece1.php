@@ -85,7 +85,21 @@ if (count($capteurs) == 0) {
     echo "<li class='no-sensors'><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteurs pour cette pièce.</li>";
 } else {
     foreach ($capteurs as $capteur) {
-        echo "<li class=liste id='element-" . $capteur[0] . "'><span id='display-" . $capteur[0] . "'>Nom: " . $capteur[1] . "<br>Type: " . $capteur[2] . "<br>Etat: " . $capteur[3] . "</span>
+		$t = "";
+        switch ($capteur[2]) {
+            case "HUM":
+                $t = "Humidité";
+                break;
+            case "TEMP":
+                $t = "Température";
+                break;
+            case "FUM":
+                $t = "Fumée";
+                break;
+            default:
+                break;
+        }
+        echo "<li class=liste id='element-" . $capteur[0] . "'><span id='display-" . $capteur[0] . "'>Nom: " . $capteur[1] . "<br>Type: " . $t . "<br>Etat: " . $capteur[3] . "</span>
 								</br></br><form method='post' action='../controllers/action.php'>
 								<input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_info' name='action' id='action'/>
@@ -149,7 +163,68 @@ if (count($controleurs) == 0) {
     echo '<li class=\'no-sensors\'><i class=\'fa fa-exclamation-triangle\'></i> Vous n\'avez pas encore de controleurs pour cette pièce.</li>';
 } else {
     foreach ($controleurs as $controleur) {
-        echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: " . $controleur[3] . " %</span>
+		$type = $controleur[2];
+		$t = "";
+        switch ($type) {
+            case "LUM":
+                $t = "Luminosité";
+                break;
+            case "VOL":
+                $t = "Volet électrique";
+                break;
+            case "CH":
+                $t = "Chauffage";
+                break;
+            default:
+                break;
+        }
+		if ($type == "CH") {
+			echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: " . $controleur[3] . " °C</span>
+									</br></br><form method='post' action='../controllers/action.php'>
+									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
+									<input type='hidden' value='cont_info' name='action' id='action'/>
+									<button type='submit'>Informations</button>
+									</form>
+									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
+									<input type='hidden' value='cont_delete' name='action' id='action'/>
+									<button type='button' id='del-" . $controleur[0] . "'>Supprimer</button><br>
+									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
+									<input type='hidden' value='cont_change' name='action' id='action'/>
+									<input type='range' class='cont-val' id='change-" . $controleur[0] . "' name='cont-val' min='10' max='30' step='1' value=" . $controleur[3] . ">
+									</li>
+									<script>
+									$('#change-" . $controleur[0] . "').change(function() {
+										  $.post('../controllers/action.php',
+										  {
+											action: 'cont_change',
+											capteur: '" . $controleur[0] . "',
+											'cont-val': $(this).val()
+										  },
+										  function(data, status){
+											if (status == 'success') {
+												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val()+' °C');
+											}
+										  });
+									});
+
+									$('#del-" . $controleur[0] . "').click(function() {
+										if (confirm('Etes-vous sûr de vouloir supprimer ce controleur ?')) {
+											$.post('../controllers/action.php',
+											{
+											action: 'cont_delete',
+											capteur: '" . $controleur[0] . "',
+											},
+											function(data, status){
+											if (status == 'success') {
+												$('#element-" . $controleur[0] . "').remove();
+											}
+											});
+										}
+								  });
+
+								</script>";
+		} else {
+			echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: " . $controleur[3] . " %</span>
 									</br></br><form method='post' action='../controllers/action.php'>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
@@ -193,6 +268,7 @@ if (count($controleurs) == 0) {
 								  });
 
 								</script>";
+		}
     }
 }
 ?>
