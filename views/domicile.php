@@ -3,7 +3,8 @@
 session_start();
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-    header("Location: views/accueil.php");
+	header("Location: views/accueil.php");
+	return;
 }
 
 require_once __DIR__ . '/../models/domicile.php';
