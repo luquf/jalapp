@@ -208,7 +208,7 @@ foreach ($releve_cont as $k => $releve) {
                         <?php
 foreach ($releve_cont as $k => $releve) {
         echo $releve[4] . ",";
-        if ($k >= 24) {
+        if ($k >= 12) {
             break;
         }
     }

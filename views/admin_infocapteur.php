@@ -13,7 +13,7 @@ if (isset($_GET['capteur'])) {
     $_SESSION['controleur_id'] = $_GET['controleur'];
     $type = 2;
 } else {
-    header("Location: domicile.php");
+    header("Location: admin_interface.php");
 }
 ?>
 
@@ -41,7 +41,6 @@ if (isset($_GET['capteur'])) {
 
 			<div class="bandeau-droite">
 
-					<a href= "aide_accueil.php" class = "aide"> Aide </a>
                     <a href= "inscription.php"  class = "deconnexion" > Déconnexion</a>
 
             </div>
@@ -55,7 +54,7 @@ if (isset($_GET['capteur'])) {
 
 		</div>
 		<div id='tab1'>
-			<?php echo "<a href='capteurs_admin.php?selected=" . $_SESSION['user_id'] . "' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Retour</b></a>"; ?>
+			<?php echo "<a href='capteurs_admin.php?selected=" . $_SESSION['selected_user'] . "' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Retour</b></a>"; ?>
 
 		    <div class="sensor-left">
 

@@ -122,9 +122,9 @@ if (count($capteurs) == 0) {
 										  function(data, status){
 											if (status == 'success') {
 												if ($('#display-" . $capteur[0] . "').text().includes('OFF')) {
-													$('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $capteur[2] . "<br>Etat: ON');
+													$('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $t . "<br>Etat: ON');
 												} else {
-													$('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $capteur[2] . "<br>Etat: OFF');
+													$('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $t . "<br>Etat: OFF');
 												}
 											}
 										  });
@@ -202,7 +202,7 @@ if (count($controleurs) == 0) {
 										  },
 										  function(data, status){
 											if (status == 'success') {
-												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val()+' °C');
+												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val()+' °C');
 											}
 										  });
 									});
@@ -247,7 +247,7 @@ if (count($controleurs) == 0) {
 										  },
 										  function(data, status){
 											if (status == 'success') {
-												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val()+' %');
+												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val()+' %');
 											}
 										  });
 									});

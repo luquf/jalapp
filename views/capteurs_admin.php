@@ -1,13 +1,14 @@
 <?php
 
-if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-    header("Location: inscription.php");
-}
-
 require_once __DIR__ . '/../controllers/admin_capteur.php';
 require_once __DIR__ . '/../controllers/user.php';
 
 session_start();
+
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
+    header("Location: inscription.php");
+}
+
 if (isset($_GET['selected']) && $_GET['selected'] != '') {
     $_SESSION['selected_user'] = testinput($_GET['selected']);
 } else {
@@ -38,8 +39,6 @@ if (isset($_GET['selected']) && $_GET['selected'] != '') {
 
 			<div class="bandeau-droite">
 
-
-                    <a href="admin_reglages.php" class = "preferences" >Préférences</a>
 					<a href= "inscription.php" class= "deconnexion" >Déconnexion </a>
 
 			</div>
@@ -160,50 +159,112 @@ foreach ($data as $domcile) {
         echo "</ul>";
         echo "<ul class='sensors'>";
         foreach ($piece["controleurs"] as $controleur) {
-            echo "<li class='liste' id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: " . $controleur[3] . "</span>
-            </br></br><form method='post' action='../controllers/admin_action.php'>
-            <input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
-            <input type='hidden' value='cont_info' name='action' id='action'/>
-            <button type='submit'>Informations</button>
-            </form><br>
-            <input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
-            <input type='hidden' value='cont_delete' name='action' id='action'/>
-            <button type='button' id='del-" . $controleur[0] . "'>Supprimer</button><br>
-            <input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
-            <input type='hidden' value='cont_change' name='action' id='action'/>
-            <input type='range' class='cont-val' id='change-" . $controleur[0] . "' name='cont-val' min='0' max='100' step='5' value=" . $controleur[3] . ">
-            </li>
-                                <script>
-                                    $('#change-" . $controleur[0] . "').change(function() {
-                                        $.post('../controllers/admin_action.php',
-                                        {
-                                          action: 'cont_change',
-                                          capteur: '" . $controleur[0] . "',
-                                          'cont-val': $(this).val()
-                                        },
-                                        function(data, status){
-                                          if (status == 'success') {
-                                              $('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $controleur[2] . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val());
-                                          }
-                                        });
-                                  });
+            $type = $controleur[2];
+		$t = "";
+        switch ($type) {
+            case "LUM":
+                $t = "Luminosité";
+                break;
+            case "VOL":
+                $t = "Volet électrique";
+                break;
+            case "CH":
+                $t = "Chauffage";
+                break;
+            default:
+                break;
+        }
+		if ($type == "CH") {
+			echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: " . $controleur[3] . " °C</span>
+									</br></br><form method='post' action='../controllers/admin_action.php'>
+									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
+									<input type='hidden' value='cont_info' name='action' id='action'/>
+									<button type='submit'>Informations</button>
+									</form>
+									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
+									<input type='hidden' value='cont_delete' name='action' id='action'/>
+									<button type='button' id='del-" . $controleur[0] . "'>Supprimer</button><br>
+									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
+									<input type='hidden' value='cont_change' name='action' id='action'/>
+									<input type='range' class='cont-val' id='change-" . $controleur[0] . "' name='cont-val' min='10' max='30' step='1' value=" . $controleur[3] . ">
+									</li>
+									<script>
+									$('#change-" . $controleur[0] . "').change(function() {
+										  $.post('../controllers/admin_action.php',
+										  {
+											action: 'cont_change',
+											capteur: '" . $controleur[0] . "',
+											'cont-val': $(this).val()
+										  },
+										  function(data, status){
+											if (status == 'success') {
+												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val()+' °C');
+											}
+										  });
+									});
 
-                                  $('#del-" . $controleur[0] . "').click(function() {
-                                      if (confirm('Etes-vous sûr de vouloir supprimer ce capteur ?')) {
-                                        $.post('../controllers/admin_action.php',
-                                        {
-                                            action: 'cont_delete',
-                                            capteur: '" . $controleur[0] . "',
-                                        },
-                                        function(data, status){
-                                            if (status == 'success') {
-                                            $('#element-" . $controleur[0] . "').remove();
-                                            }
-                                        });
-                                    }
-                                });
+									$('#del-" . $controleur[0] . "').click(function() {
+										if (confirm('Etes-vous sûr de vouloir supprimer ce controleur ?')) {
+											$.post('../controllers/adminaction.php',
+											{
+											action: 'cont_delete',
+											capteur: '" . $controleur[0] . "',
+											},
+											function(data, status){
+											if (status == 'success') {
+												$('#element-" . $controleur[0] . "').remove();
+											}
+											});
+										}
+								  });
 
-                              </script>";
+								</script>";
+		} else {
+			echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: " . $controleur[3] . " %</span>
+									</br></br><form method='post' action='../controllers/admin_action.php'>
+									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
+									<input type='hidden' value='cont_info' name='action' id='action'/>
+									<button type='submit'>Informations</button>
+									</form>
+									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
+									<input type='hidden' value='cont_delete' name='action' id='action'/>
+									<button type='button' id='del-" . $controleur[0] . "'>Supprimer</button><br>
+									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
+									<input type='hidden' value='cont_change' name='action' id='action'/>
+									<input type='range' class='cont-val' id='change-" . $controleur[0] . "' name='cont-val' min='0' max='100' step='5' value=" . $controleur[3] . ">
+									</li>
+									<script>
+									$('#change-" . $controleur[0] . "').change(function() {
+										  $.post('../controllers/admin_action.php',
+										  {
+											action: 'cont_change',
+											capteur: '" . $controleur[0] . "',
+											'cont-val': $(this).val()
+										  },
+										  function(data, status){
+											if (status == 'success') {
+												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val()+' %');
+											}
+										  });
+									});
+
+									$('#del-" . $controleur[0] . "').click(function() {
+										if (confirm('Etes-vous sûr de vouloir supprimer ce controleur ?')) {
+											$.post('../controllers/admin_action.php',
+											{
+											action: 'cont_delete',
+											capteur: '" . $controleur[0] . "',
+											},
+											function(data, status){
+											if (status == 'success') {
+												$('#element-" . $controleur[0] . "').remove();
+											}
+											});
+										}
+								  });
+
+								</script>";
+		}
 
         }
         echo "</ul>";

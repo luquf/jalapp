@@ -63,8 +63,9 @@
         margin-right: 5%;
         margin-top: 2%;
         font-size: 17px;
-        font-style: italic;
         border-bottom: 1px solid #515659;
+        padding: 10px;
+        outline: none;
     }
     #tableau {
         background-color: #ffffff;
@@ -94,8 +95,7 @@
         padding-bottom: 1%;
         background-color: #ffffff;
         width: 15%;
-        border-left: 1px solid #ffffff;
-        border-right: 1px solid #ffffff;
+        border: 1px solid black;
     }
     td {
         padding-top: 1%;

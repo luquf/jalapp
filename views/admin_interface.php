@@ -2,8 +2,15 @@
 
 session_start();
 
+require_once __DIR__ . '/../controllers/admin_interface.php';
+
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
+}
+
+$page = testinput((int) $_GET["page"]);
+if (!isset($page) || $page == "" || $page == 0) {
+    header("Location: admin_interface.php?page=1");
 }
 
 ?>
@@ -55,16 +62,12 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 
                 <tbody id="table">
                 <?php
-require_once __DIR__ . '/../controllers/admin_interface.php';
 $utilisateur = getUsersAdmin();
+$up = getUsersAdmin();
 
 if (count($utilisateur) == 0) {
     echo " ";
 } else {
-    $page = testinput((int) $_GET["page"]);
-    if (!isset($page) || $page == "") {
-        header("Location: admin_interface.php?page=1");
-    }
     foreach (array_slice($utilisateur, ($page * 10) - 10, 10) as $utilisateur) {
         echo "
                                 <tr>
@@ -73,18 +76,18 @@ if (count($utilisateur) == 0) {
                                 <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[2] . "</a></td>
                                 <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[3] . "</a></td>
                                 <td><a href= 'capteurs_admin.php?selected=" . $utilisateur[0] . "' class='lien_ID'>" . $utilisateur[8] . "</a></td>
-                                ";}
+                                <form method='post' action='../controllers/admin_interface.php'>
+								<td class = delete><input type='hidden' value='".$utilisateur[0]."' name='user' id='user'/>
+								<input type='hidden' value='del_user' name='action' id='action'/>
+								<button id= buttondelete  type='submit'><i class='fa fa-trash'></i></button></td>
+                                </form>";
+    }
 }
 ?>
-                                <form method='post' action='../controllers/admin_interface.php' onsubmit="return confirm
-                                ('Etes-vous sûr de vouloir supprimer cet utilisateur ?')">
-								<td class = delete><input type='hidden' value=" <?php $utilisateur[0]?> " name='user' id='user'/>
-								<input type='hidden' value='del_user' name='action' id='action'/>
-								<input id= buttondelete  type='submit' value='X'>
-								</form>
+                </tbody>
+            </table>
 
-
-                    <script>
+            <script>
                             function tri() {
                               var input, filter, table, tr, td, i;
                               input = document.getElementById("rechercher");
@@ -95,33 +98,33 @@ if (count($utilisateur) == 0) {
                                 td1 = tr[i].getElementsByTagName("td")[0];
                                 if (td1) {
                                   if (td1.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                                    tr[i].style.display = "";
+                                    tr[i].style.display = '';
                                   } else {
-                                    tr[i].style.display = "none";
+                                    tr[i].style.display = 'none';
                                   }
                                 }
                                 td2 = tr[i].getElementsByTagName("td")[1];
                                 if (td2) {
                                   if (td2.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                                    tr[i].style.display = "";
+                                    tr[i].style.display = '';
                                   } else {
-                                    tr[i].style.display = "none";
+                                    tr[i].style.display = 'none';
                                   }
                                 }
                                 td3 = tr[i].getElementsByTagName("td")[2];
                                 if (td3) {
                                   if (td3.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                                    tr[i].style.display = "";
+                                    tr[i].style.display = '';
                                   } else {
-                                    tr[i].style.display = "none";
+                                    tr[i].style.display = 'none';
                                   }
                                 }
                                 td4 = tr[i].getElementsByTagName("td")[3];
                                 if (td4) {
                                   if (td4.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                                    tr[i].style.display = "";
+                                    tr[i].style.display = '';
                                   } else {
-                                    tr[i].style.display = "none";
+                                    tr[i].style.display = 'none';
                                   }
                                 }
 
@@ -131,8 +134,6 @@ if (count($utilisateur) == 0) {
                     </script>
 
 
-                </tbody>
-            </table>
           <?php
 $previous = $page - 1;
 $next = $page + 1;
@@ -141,7 +142,9 @@ if ($page == 1) {
 } else {
     echo "<a class='page-button' href='admin_interface.php?page=" . $previous . "' style='margin-right: 1%;'><i class='fa fa-arrow-left'></i></a> ";
 }
-if ((count($utilisateur) / 10) < $page) {
+if (((($page-1)*10)+1>count($up)) || ((($page-1)*10)+10>count($up))) {
+    echo "<p class='page-button' style='margin-left: 1%;color: #96999e;'><i class='fa fa-arrow-right'></i></p> ";
+} else if ((($page-1)*10)+10>=count($up)) {
     echo "<p class='page-button' style='margin-left: 1%;color: #96999e;'><i class='fa fa-arrow-right'></i></p> ";
 } else {
     echo "<a class='page-button' href='admin_interface.php?page=" . $next . "' style='margin-left: 1%;'><i class='fa fa-arrow-right'></i></a>";
