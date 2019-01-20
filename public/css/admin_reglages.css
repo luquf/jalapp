@@ -11,36 +11,72 @@
 		background-color: #ffffff;
 		opacity: 1;
 		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
 		width: 100%;
 		height: 100%;
 		justify-content: space-between;
-		color: #515659;
-		margin-bottom: 2%;
+		margin-bottom: 5%;
 	}
 	.logo {
+		margin-bottom: 0.8%;
 		margin-left: 2%;
 		margin-top: 0.8%;
-		margin-bottom: 0.8%;
 	}
 	#logo {
 		width: 15%;
 		height: auto;
 	}
-	.deconnexion {
-		text-decoration: none;
+	#bandeau_droite {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: nowrap;
+		margin-right: 3%;
+	}
+	.connexion {
+		font-size: 1em;
+		font-size: 1em;
 		color: #515659;
-		font-size: 1.1em;
+		text-decoration: none;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-right: 18%;
 	}
-	.bandeau-droite {
+	.aide {
+		font-size: 1em;
+		margin-right: 4%;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+	.contact {
+		font-size: 1em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right: 6%;
+	}
+	.language {
+		/* background-image: url("../assets/usa.svg"); */
+		font-size: 0.8em;
+		color: white;
+		text-decoration: none;
+		margin-top: 10%;
+		margin-bottom: auto;
+		border: none;
+		margin-right: 6%;
 		display: flex;
-		justify-content: space-around;
 		flex-direction: row;
-		align-items: flex-end;
-		flex-wrap: nowrap;
-		padding: 2%;
+	}
+	.settings {
+		font-size: 1em;
+		color: #515659;
+		text-decoration: none;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right: 3%;
 	}
 	.input {
 		padding: 10px;
@@ -137,3 +173,4 @@
 		background: #3C4459;
 	}
 }
+

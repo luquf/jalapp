@@ -38,19 +38,16 @@ if (isset($_GET['capteur'])) {
 	</head>
 
 	<body>
-		<div id="bandeau">
-			<div class="logo">
-
-					<a href="admin_interface.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"  />
-
-			</div>
-
-			<div class="bandeau-droite">
-
-                    <a href= "inscription.php"  class = "deconnexion" > Déconnexion</a>
-
+    <div id="bandeau">
+		<div class="logo">
+				<a href="admin_interface.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
+        </div>
+        <div id="bandeau_droite">
+            <div class="connexion">
+                <a href= "inscription.php"  style = "text-decoration: none; color: #515659"> Déconnexion </a>
             </div>
 		</div>
+    </div>
 
 		<div id="slogan">
 			<h1>

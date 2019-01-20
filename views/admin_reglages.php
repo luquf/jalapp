@@ -18,23 +18,23 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 <html>
 	<head>
 		<meta charset="utf-8"/>
-        <link rel="stylesheet" href="../public/css/user_settings.css" />
+        <link rel="stylesheet" href="../public/css/admin_reglages.css" />
         <link rel="icon" type="image/png" href="../public/assets/favicon.png" />
         <link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
 		<title>Domisep : Réglages</title>
 	</head>
 
 	<body>
-		<div id="bandeau">
-			<div class="logo">
-
-					<a href="admin_interface.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
-			</div>
-
-			<div class="bandeau-droite">
-				<a href= "inscription.php" class= "deconnexion"> Déconnexion </a>
-			</div>
+    <div id="bandeau">
+		<div class="logo">
+				<a href="admin_interface.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
         </div>
+        <div id="bandeau_droite">
+            <div class="connexion">
+                <a href= "inscription.php"  style = "text-decoration: none; color: #515659"> Déconnexion </a>
+            </div>
+		</div>
+    </div>
 
         <div id="slogan">
 			<h1>
