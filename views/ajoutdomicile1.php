@@ -21,6 +21,7 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="../public/css/ajoutdomicile.css" />
 		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
+		<link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
 		<title>Domisep : Ajout domicile</title>
 	</head>
 

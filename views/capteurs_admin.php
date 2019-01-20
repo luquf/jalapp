@@ -29,7 +29,7 @@ if (isset($_GET['selected']) && $_GET['selected'] != '') {
 		<meta charset="utf-8"/>
         <link rel="stylesheet" href="../public/css/capteurs_admin.css" />
         <link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
         <script src='../public/js/jquery-3.3.1.min.js'></script>
 
 		<title>Domisep : Liste des capteurs</title>
