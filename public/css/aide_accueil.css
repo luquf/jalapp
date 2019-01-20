@@ -107,6 +107,15 @@
 		text-align: justify;
 		font-size: 0.7em;
 	}
+
+	.cgu {
+		text-align:center;
+		margin-top: 3%;
+	}
+
+	.cgu a {
+		color: #515659;
+	}
 	/* width */
 	::-webkit-scrollbar {
 		width: 10px;

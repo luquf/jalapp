@@ -62,13 +62,16 @@
 			<h2 class = "question" >
 			2. J'ai acheté mon(mes) capteur(s) Domisep, que faire ensuite? </h2>
 			<p class = "answer">
-			Il vous faut maintenant vous inscrire
+			Il vous faut maintenant vous inscrire sur notre site web. Pour cela, rien de plus simple ! Remplissez tous les champs et indiquez-nous la clé utilisateur qui vous a été fourni à l'achat de votre premier capteur domisep.
+			<br> Votre mot de passe vous sera immédiatement communiqué par mail. Vous pourrez ensuite vous connecter. 
 			</p>
 			<h2 class = "question" >
 			3. Comment utiliser Domisep ? </h2>
 			<p class = "answer">
-			dem aut ipse doctrinis fuisset instructior est enim, quod tibi ita videri necesse est, non satis politus iis artibus, quas qui tenent, eruditi appellantur aut ne deterruisset alios a studiis. quamquam te quidem video minime esse deterritum.
-Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus appareat, non sunt illae quidem repudiandae, vetustas tamen suo loco conservanda; maxima est enim vis vetustatis et consuetudinis. Quin in ipso equo, cuius modo feci mentionem, si nulla res impediat, nemo est, quin eo, quo consuevit, libentius utatur quam intractato et novo. Nec vero in hoc quod est animal, sed in iis etiam quae sunt inanima, consuetudo valet, cum locis ipsis delectemur, montuosis etiam et silvestribus, in quibus diutius commorati sumus.
+			Lors de votre première connexion à domisep.ovh, il vous faudra créer et nommer un premier domicile. Dans ce domicile, vous allez pouvoir créer et nommer des pièces, celles dans lesquelles vous avez installé des capteurs domisep.
+			Ensuite vous pourrez ajouter, dans chacunes de ces pièces, tous les capteurs domisep que vous avez acheté. Vous pourrez également les nommer afin de personnaliser et faciliter votre navigation sur le site de domisep.
+			<br> Une fois les capteurs ajoutés, vous pourrez les contrôler à l'aide de votre ordinateur, téléphone ou tablette.
+			<br><br> A vous de jouer !
 			</p>
 
 			<div class = "cgu">
