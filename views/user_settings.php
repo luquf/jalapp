@@ -4,7 +4,12 @@ session_start();
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
-    return;
+    exit();
+} else {
+    if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] == 1) {
+        header("Location: admin_interface.php");
+        exit();
+    }
 }
 
 ?>

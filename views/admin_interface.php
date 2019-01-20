@@ -6,7 +6,12 @@ require_once __DIR__ . '/../controllers/admin_interface.php';
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
-    return;
+    exit();
+} else {
+    if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] == 0) {
+        header("Location: domicile.php");
+        exit();
+    }
 }
 
 $page = testinput((int) $_GET["page"]);
