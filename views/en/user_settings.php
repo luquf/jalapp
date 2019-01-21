@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$_SESSION['lang'] = "en";
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
@@ -18,10 +19,10 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 <html>
 	<head>
 		<meta charset="utf-8"/>
-        <link rel="stylesheet" href="../public/css/user_settings.css" />
-        <link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-        <link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
-        <script src='../public/js/jquery-3.3.1.min.js'></script>
+        <link rel="stylesheet" href="../../public/css/user_settings.css" />
+        <link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
+        <link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
+        <script src='../../public/js/jquery-3.3.1.min.js'></script>
 		<title>Domisep : Réglages</title>
 	</head>
 
@@ -29,14 +30,14 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 		<div id="bandeau">
 			<div class="logo">
 
-					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
+					<a href="domicile.php"> <img src="../../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
 			</div>
 
 
 
                 <div id="bandeau_droite">
                 <div class="language">
-                <a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+                <a href= "en/user_Settings.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 						</div>
 
 						<div class="aide">
@@ -66,7 +67,7 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
                     <i class="fa fa-info-circle fa-sm"></i> Informations
                 </h2>
                 <?php
-require __DIR__ . '/../models/user.php';
+require __DIR__ . '/../../models/user.php';
 $user = getUserByID($_SESSION['user_id']);
 ?>
                         <p>
@@ -95,7 +96,7 @@ $user = getUserByID($_SESSION['user_id']);
                         <script>
                             $('#del-button').click(function () {
                                 if (confirm("Voulez vous vraiment supprimer votre compte ? Si oui, vous allez nous manquer...")) {
-                                    $.post('../controllers/user_reglage.php',
+                                    $.post('../../controllers/user_reglage.php',
                                     		{
                                     		  action: 'del_account'
                                     		},
@@ -124,7 +125,7 @@ if (isset($error)) {
 }
 ?>
 
-                <form method="post" action="../controllers/user_reglage.php">
+                <form method="post" action="../../controllers/user_reglage.php">
                             <input class="input" type="text" name="name" id="name" placeholder="Nom" size="30" maxlength="40"/>
                             <input class="input" type="text" name="surname" id="surname" placeholder="Prénom" size="30" maxlength="40"/>
                             <input class="input" type="email" name="email" id="email" placeholder="Email" size="30" maxlength="40" />

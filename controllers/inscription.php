@@ -8,6 +8,8 @@ require 'mail.php';
 $nom = $prenom = $email = $adresse = $pays = $ville = $telephone = $cle_client = ""; 
 $secret_key = "SecretSecret123@";
 
+$lang = $_SESSION['lang'];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = test_input($_POST["nom"]);
     $prenom = test_input($_POST["prénom"]);
@@ -20,12 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mdp = generatePassword(); 
     $exists = emailExistsInDatabase($email);
     if ($exists) {
-        header('Location: ../views/inscription.php?error=alreadyexists');    
+        ($lang == "fr") ? header('Location: ../views/inscription.php?error=alreadyexists') : header('Location: ../views/en/inscription.php?error=alreadyexists');
     } else {
         $utilisateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, false);
         setUser($utilisateur);
         sendPassword($email, $nom, $prenom, $mdp);
-        header('Location: ../views/inscription.php');
+        ($lang == "fr") ? header('Location: ../views/inscription.php') : header('Location: ../views/en/inscription.php');
     }      
 }
 

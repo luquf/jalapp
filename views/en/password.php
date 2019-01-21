@@ -1,10 +1,15 @@
+<?php
+session_start();
+$_SESSION['lang'] = "en";
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../public/css/password.css" />
-		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-		<link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
+		<link rel="stylesheet" href="../../public/css/password.css" />
+		<link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
+		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
 		<title>Domisep : Réinitialiser le Mot de Passe</title>
 	</head>
 
@@ -12,12 +17,11 @@
 		<div id="bandeau">
 			<div class="logo">
 
-					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"/>
+					<a href="domicile.php"> <img src="../../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"/>
 
 			</div>
 
 			<?php
-					session_start();
 					$text = "";
 					if ($_SESSION["connected"] == "true") {
 						$text = "Déconnexion";
@@ -28,7 +32,7 @@
 
 			<div id="bandeau_droite">
 			<div class="language">
-			<a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+			<a href= "../password.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 						</div>
 			<div class="aide">
 							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
@@ -52,7 +56,7 @@
 			</h1>
 		</div>
         <div class="champ-email">
-            <form method="post" action="../controllers/password.php">
+            <form method="post" action="../../controllers/password.php">
 				<?php
 if (isset($_GET['error'])) {
     if ($_GET['error'] == "ok") {

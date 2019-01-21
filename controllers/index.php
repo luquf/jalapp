@@ -1,5 +1,7 @@
 <?php
 
+$lang = $_SESSION['lang'];
+
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
-    header("Location: ../views/inscription.php");
+    ($lang == "fr") ? header("Location: ../views/inscription.php") : header("Location: ../views/en/inscription.php");
 }

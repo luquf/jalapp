@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$_SESSION['lang'] = "en";
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
@@ -27,11 +28,11 @@ if (isset($_GET['capteur'])) {
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../public/css/piece1.css" />
-		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-		<link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
-		<script src='../public/js/jquery-3.3.1.min.js'></script>
-		<script src='../public/js/Chart.min.js'></script>
+		<link rel="stylesheet" href="../../public/css/piece1.css" />
+		<link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
+		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
+		<script src='../../public/js/jquery-3.3.1.min.js'></script>
+		<script src='../../public/js/Chart.min.js'></script>
 		<title>Domisep: Infos Capteur </title>
 
 	</head>
@@ -40,7 +41,7 @@ if (isset($_GET['capteur'])) {
 		<div id="bandeau">
 			<div class="logo">
 
-					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"  />
+					<a href="domicile.php"> <img src="../../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"  />
 
 			</div>
 
@@ -49,7 +50,7 @@ if (isset($_GET['capteur'])) {
 
 				<div id="bandeau_droite">
                 <div class="language">
-                <a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+                <a href= "../infocapteur.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 						</div>
 
 					<div class="aide">
@@ -81,8 +82,8 @@ if (isset($_GET['capteur'])) {
 		    <div class="sensor-left">
 
                         <?php
-require_once __DIR__ . '/../controllers/capteur.php';
-require_once __DIR__ . '/../models/piece.php';
+require_once __DIR__ . '/../../controllers/capteur.php';
+require_once __DIR__ . '/../../models/piece.php';
 $pieces = getPiecesByID($_SESSION['piece_id']);
 $capteurs = getCapteursController($_SESSION['capteur_id']);
 $controleurs = getControleursController($_SESSION['controleur_id']);
@@ -118,7 +119,7 @@ if ($type == 1) {
                             <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du capteur <em>'" . $capteur[1] . "'</em></h1><br/>";
     }
 
-    require __DIR__ . '/../controllers/releve.php';
+    require __DIR__ . '/../../controllers/releve.php';
 
     $releve_capteur = getCapteurDataByID($_SESSION['capteur_id']);
     ?>
@@ -188,7 +189,7 @@ foreach ($releve_capteur as $k => $releve) {
                         <div class ='historique'>
                             <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du controleur <em>'" . $controleurs[1] . "'</em></h1>";
     }
-    require __DIR__ . '/../controllers/releve.php';
+    require __DIR__ . '/../../controllers/releve.php';
     $releve_cont = getControleurDataByID($_SESSION['controleur_id']);
     ?>
 <canvas id="linechart"></canvas>

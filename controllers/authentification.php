@@ -10,6 +10,8 @@ require __DIR__.'/../models/domicile.php';
 
 $secret_key = "SecretSecret123@";
 
+$lang = $_SESSION['lang'];
+
 $email = $mot_de_passe = ""; // connexion
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -27,14 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $_SESSION['is_admin'] = 0;
             if ($domiciles) {
-                header('Location: ../views/domicile.php');
+                ($lang == "fr") ? header('Location: ../views/domicile.php') : header('Location: ../views/en/domicile.php');
             } else {
-                header('Location: ../views/ajoutdomicile1.php');
+                ($lang == "fr") ? header('Location: ../views/ajoutdomicile1.php') : header('Location: ../views/en/ajoutdomicile1.php');
             }
         }
     } else { // credentials are false
         $_SESSION['connected'] = "false";
-        header('Location: ../views/inscription.php?error=credentials');
+        ($lang == "fr") ? header('Location: ../views/inscription.php?error=credentials') : header('Location: ../views/en/inscription.php?error=credentials');
     }
 }
  

@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$_SESSION['lang'] = "fr";
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
@@ -49,7 +50,7 @@ if (isset($_GET['capteur'])) {
 
 				<div id="bandeau_droite">
                 <div class="language">
-                <a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+                <a href= "en/infocapteur.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
 						</div>
 
 					<div class="aide">

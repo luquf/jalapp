@@ -5,12 +5,14 @@ session_start();
 require_once __DIR__.'/../models/capteur.php';
 require_once __DIR__.'/../lib/uuid.php';
 
+$lang = $_SESSION['lang'];
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $action = testinput($_POST['action']);
     $capteur = testinput($_POST['capteur']);
     if (isset($capteur) & isset($action)) {
         if ($action == "capt_info") {
-            header("Location: ../views/infocapteur.php?capteur=".$capteur);
+            ($lang == "fr") ? header("Location: ../views/infocapteur.php?capteur=".$capteur) : header("Location: ../views/en/infocapteur.php?capteur=".$capteur);
         } else if ($action == "capt_delete") {
             removeCapteur($capteur);
         } else if ($action == "capt_change"){
@@ -21,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 setCapteurState($capteur, "ON");
             }
         } else if ($action == "cont_info") {
-            header("Location: ../views/infocapteur.php?controleur=".$capteur);
+            ($lang == "fr") ? header("Location: ../views/infocapteur.php?controleur=".$capteur) : header("Location: ../views/en/infocapteur.php?controleur=".$capteur);
         } else if ($action == "cont_delete") {
             removeControleur($capteur);
         } else if ($action == "cont_change") {

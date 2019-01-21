@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$_SESSION['lang'] = "fr";
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
@@ -44,7 +45,7 @@ if (!isset($dom[0][0])) {
 
 				<div id="bandeau_droite">
 				<div class="language">
-				<a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+				<a href= "en/domicile.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
 						</div>
 					<div class="aide">
 						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
@@ -65,7 +66,6 @@ if (!isset($dom[0][0])) {
 
 
 		</div>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<div>
 		<ul class='tabs'>
 		<?php

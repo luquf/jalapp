@@ -4,6 +4,8 @@ session_start();
 
 require_once __DIR__.'/../models/user.php';
 
+$lang = $_SESSION['lang'];
+
 function getUsersAdmin(){
     $users = getUsers();
     foreach ($users as $user) {
@@ -19,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = testinput($_POST['user']);
     if ($action == "del_user") { // suppression du user
         removeUserByID($id);
-        header('Location: ../views/admin_interface.php');
+        ($lang == "fr") ? header('Location: ../views/admin_interface.php') : header('Location: ../views/en/admin_interface.php');
     }
 }
 

@@ -1,21 +1,16 @@
 <?php
-
 session_start();
-
-// if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-//     header("Location: views/inscription.php");
-// }
-
+$_SESSION['lang'] = "en";
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
-        <link rel="stylesheet" href="../public/css/user_settings.css" />
-        <link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-        <link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
-        <script src='../public/js/jquery-3.3.1.min.js'></script>
+        <link rel="stylesheet" href="../../public/css/user_settings.css" />
+        <link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
+        <link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
+        <script src='../../public/js/jquery-3.3.1.min.js'></script>
 		<title>Domisep : Contact</title>
 	</head>
 
@@ -23,7 +18,7 @@ session_start();
 		<div id="bandeau">
 			<div class="logo">
 
-					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
+					<a href="domicile.php"> <img src="../../public/assets/logo.png" alt = "Logo Domisep" id = "logo" title = "Logo Domisep"/>
             </div>
             
             <?php
@@ -38,7 +33,7 @@ session_start();
 
             <div id="bandeau_droite">
             <div class="language">
-            <a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+            <a href= "../contact.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 						</div>
             <div class="aide">
 							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
@@ -112,7 +107,7 @@ session_start();
                             $('#msg-sending').show();
                             $('#msg-error').hide();
                             $('#msg-sent').hide();
-                            $.post('../controllers/contact.php',
+                            $.post('../../controllers/contact.php',
 										{
 										  name: $('#input-lastname').val(),
                                           surname: $('#input-surname').val(),

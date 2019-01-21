@@ -3,6 +3,8 @@
 require __DIR__.'/../models/user.php';
 require __DIR__.'/../controllers/mail.php';
 
+$lang = $_SESSION['lang'];
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = test_input($_POST['email']);
     $exists = emailExistsInDatabase($email);
@@ -11,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         changePassword($email, $new_pass);
         $user_data = getUserByEmail($email);
         sendForgottenPassword($email, $user_data[0][1], $user_data[0][2], $new_pass);
-        header("Location: ../views/password.php?error=ok");
+        ($lang == "fr") ? header("Location: ../views/password.php?error=ok") : header("Location: ../views/en/password.php?error=ok");
     } else {
-        header("Location: ../views/password.php?error=notfound");
+        ($lang == "fr") ? header("Location: ../views/password.php?error=notfound") : header("Location: ../views/en/password.php?error=notfound");
     }
 
 }

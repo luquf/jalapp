@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$_SESSION['lang'] = "en";
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
@@ -12,7 +13,7 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     }
 }
 
-require_once __DIR__ . "/../controllers/piece.php";
+require_once __DIR__ . "/../../controllers/piece.php";
 
 if (isset($_GET['piece']) && $_GET['piece'] != "") {
     $piece = getPiecesByID($_GET['piece']);
@@ -30,10 +31,10 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../public/css/piece1.css" />
-		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-		<link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
-		<script src='../public/js/jquery-3.3.1.min.js'></script>
+		<link rel="stylesheet" href="../../public/css/piece1.css" />
+		<link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
+		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
+		<script src='../../public/js/jquery-3.3.1.min.js'></script>
 		<title>Domisep: Pièce </title>
 
 	</head>
@@ -42,7 +43,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 		<div id="bandeau">
 			<div class="logo">
 
-					<a href="domicile.php"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"  />
+					<a href="domicile.php"> <img src="../../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep"  />
 
 			</div>
 
@@ -50,7 +51,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 
 			<div id="bandeau_droite">
 					<div class="language">
-					<a href= "eng/aide_accueil.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+					<a href= "../piece1.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 						</div>
 
 					<div class="aide">
@@ -85,7 +86,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 				<h1 class="titre"><i class="fa fa-microchip fa-sm"></i> Capteurs</h1>
 					<ul class="sensor-ul-top" id="capt">
 						<?php
-require_once __DIR__ . '/../controllers/capteur.php';
+require_once __DIR__ . '/../../controllers/capteur.php';
 $capteurs = getCapteursControllerPIECE($_SESSION['piece_id']);
 if (count($capteurs) == 0) {
     echo "<li class='no-sensors'><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteurs pour cette pièce.</li>";
@@ -106,7 +107,7 @@ if (count($capteurs) == 0) {
                 break;
         }
         echo "<li class=liste id='element-" . $capteur[0] . "'><span id='display-" . $capteur[0] . "'>Nom: " . $capteur[1] . "<br>Type: " . $t . "<br>Etat: " . $capteur[3] . "</span>
-								</br></br><form method='post' action='../controllers/action.php'>
+								</br></br><form method='post' action='../../controllers/action.php'>
 								<input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_info' name='action' id='action'/>
 								<button>Informations </button>
@@ -120,7 +121,7 @@ if (count($capteurs) == 0) {
 								</li>
 								<script>
 									$('#change-" . $capteur[0] . "').click(function() {
-										  $.post('../controllers/action.php',
+										  $.post('../../controllers/action.php',
 										  {
 											action: 'capt_change',
 											capteur: '" . $capteur[0] . "'
@@ -138,7 +139,7 @@ if (count($capteurs) == 0) {
 
 									$('#del-" . $capteur[0] . "').click(function() {
 										if (confirm('Etes-vous sûr de vouloir supprimer ce capteur ?')) {
-											$.post('../controllers/action.php',
+											$.post('../../controllers/action.php',
 											{
 											action: 'capt_delete',
 											capteur: '" . $capteur[0] . "'
@@ -186,7 +187,7 @@ if (count($controleurs) == 0) {
         }
 		if ($type == "CH") {
 			echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: " . $controleur[3] . " °C</span>
-									</br></br><form method='post' action='../controllers/action.php'>
+									</br></br><form method='post' action='../../controllers/action.php'>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
 									<button type='submit'>Informations</button>
@@ -200,7 +201,7 @@ if (count($controleurs) == 0) {
 									</li>
 									<script>
 									$('#change-" . $controleur[0] . "').change(function() {
-										  $.post('../controllers/action.php',
+										  $.post('../../controllers/action.php',
 										  {
 											action: 'cont_change',
 											capteur: '" . $controleur[0] . "',
@@ -215,7 +216,7 @@ if (count($controleurs) == 0) {
 
 									$('#del-" . $controleur[0] . "').click(function() {
 										if (confirm('Etes-vous sûr de vouloir supprimer ce controleur ?')) {
-											$.post('../controllers/action.php',
+											$.post('../../controllers/action.php',
 											{
 											action: 'cont_delete',
 											capteur: '" . $controleur[0] . "',
@@ -231,7 +232,7 @@ if (count($controleurs) == 0) {
 								</script>";
 		} else {
 			echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: " . $controleur[3] . " %</span>
-									</br></br><form method='post' action='../controllers/action.php'>
+									</br></br><form method='post' action='../../controllers/action.php'>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
 									<button type='submit'>Informations</button>
@@ -245,7 +246,7 @@ if (count($controleurs) == 0) {
 									</li>
 									<script>
 									$('#change-" . $controleur[0] . "').change(function() {
-										  $.post('../controllers/action.php',
+										  $.post('../../controllers/action.php',
 										  {
 											action: 'cont_change',
 											capteur: '" . $controleur[0] . "',
@@ -260,7 +261,7 @@ if (count($controleurs) == 0) {
 
 									$('#del-" . $controleur[0] . "').click(function() {
 										if (confirm('Etes-vous sûr de vouloir supprimer ce controleur ?')) {
-											$.post('../controllers/action.php',
+											$.post('../../controllers/action.php',
 											{
 											action: 'cont_delete',
 											capteur: '" . $controleur[0] . "',
@@ -289,7 +290,7 @@ if (count($controleurs) == 0) {
 			<div class="modal-content">
 				<span class="close">&times;</span>
     			<h2>Ajouter un capteur</h2>
-				<form method="post" action="../controllers/capteur.php">
+				<form method="post" action="../../controllers/capteur.php">
 						<input class="input" type="text" name="name" id="name" placeholder="Nom du capteur" size="30" maxlength="20"/ required>
                         <input class="input" type="text" name="ref" id="ref" placeholder="Clé du capteur" size="30" maxlength="20" required/>
 						<select class="input input-dropdown" id="capteur" name="capteur">
@@ -306,7 +307,7 @@ if (count($controleurs) == 0) {
 						$("#ref").on('input', function() {
 							ref = $("#ref").val();
 							var regExp = /^[a-z0-9]+$/i;
-							$.post('../controllers/capteur.php',
+							$.post('../../controllers/capteur.php',
 										{
 										  'reference': ref
 										},

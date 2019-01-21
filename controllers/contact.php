@@ -2,6 +2,8 @@
 
 require_once __DIR__.'/mail.php';
 
+$lang = $_SESSION['lang'];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = testinput($_POST["name"]);
     $surname = testinput($_POST["surname"]);

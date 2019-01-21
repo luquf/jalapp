@@ -6,6 +6,8 @@ session_start();
 
 $name = $surname = $email = $password = $address = $ville = "";
 
+$lang = $_SESSION['lang'];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $prenom = test_input($_POST["surname"]);
   $nom = test_input($_POST["name"]);
@@ -62,9 +64,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($err == true) {
-    header("Location: ../views/user_settings.php?error=true");
+    ($lang == "fr") ? header("Location: ../views/admin_reglages.php?error=true") : header("Location: ../views/en/admin_reglages.php?error=true");
   } else {
-    header("Location: ../views/user_settings.php?error=false");
+    ($lang == "fr") ? header("Location: ../views/admin_reglages.php?error=false") : header("Location: ../views/en/admin_reglages.php?error=false");
   }
 }
 

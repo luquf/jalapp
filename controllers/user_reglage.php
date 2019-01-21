@@ -6,6 +6,8 @@ session_start();
 
 $name = $surname = $email = $password = $address = $ville = "";
 
+$lang = $_SESSION['lang'];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['action']) && $_POST['action'] == "del_account") {
     removeUserByID($_SESSION['user_id']);
@@ -67,9 +69,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($err == true) {
-    header("Location: ../views/user_settings.php?error=true");
+    ($lang == "fr") ? header("Location: ../views/user_settings.php?error=true") : header("Location: ../views/en/user_settings.php?error=true");
   } else {
-    header("Location: ../views/user_settings.php?error=false");
+    ($lang == "fr") ? header("Location: ../views/user_settings.php?error=false") : header("Location: ../views/en/user_settings.php?error=false");
   }
 }
 

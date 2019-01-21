@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$_SESSION['lang'] = "fr";
 
 require_once __DIR__ . '/../controllers/admin_interface.php';
 

@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$_SESSION['lang'] = "en";
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
@@ -12,8 +13,8 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     }
 }
 
-require_once __DIR__ . '/../models/domicile.php';
-require_once __DIR__ . '/../models/piece.php';
+require_once __DIR__ . '/../../models/domicile.php';
+require_once __DIR__ . '/../../models/piece.php';
 
 $dom = getDomiciles($_SESSION['user_id']);
 if (!isset($dom[0][0])) {
@@ -26,10 +27,10 @@ if (!isset($dom[0][0])) {
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../public/css/domicile.css" />
-		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-        <script src='../public/js/jquery-3.3.1.min.js'></script>
-		<link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
+		<link rel="stylesheet" href="../../public/css/domicile.css" />
+		<link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
+        <script src='../../public/js/jquery-3.3.1.min.js'></script>
+		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
   		<title>Domisep: Domicile </title>
 
 	</head>
@@ -37,14 +38,14 @@ if (!isset($dom[0][0])) {
 	<body>
 		<div id="bandeau">
 				<div class="logo">
-					<a href="domicile.php"> <img id="logo" src="../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
+					<a href="domicile.php"> <img id="logo" src="../../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
 				</div>
 
 
 
 				<div id="bandeau_droite">
 				<div class="language">
-				<a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+				<a href= "../domicile.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 						</div>
 					<div class="aide">
 						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
@@ -65,11 +66,10 @@ if (!isset($dom[0][0])) {
 
 
 		</div>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<div>
 		<ul class='tabs'>
 		<?php
-require_once __DIR__ . '/../controllers/domicile.php';
+require_once __DIR__ . '/../../controllers/domicile.php';
 if (isset($_GET['dom']) && $_GET['dom'] != "") {
     $domicile = getDomicileByID($_GET['dom']);
     if (count($domicile) == 0) {
@@ -81,7 +81,7 @@ $domiciles = getDomicilesController($_SESSION['user_id']);
 foreach ($domiciles as $val) {
     echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "
 				' id=" . str_replace(' ', '', $val[0]) . "><i class='fa fa-home' ></i> " . $val[1] . "";?>
-				<form id='del-dom-form' method='post' action='../controllers/domicile.php' onsubmit="return confirm
+				<form id='del-dom-form' method='post' action='../../controllers/domicile.php' onsubmit="return confirm
 				('Etes-vous sûr de vouloir supprimer ce domicile ?')">
 				<?php echo "
 						<input type='hidden' value=" . $val[0] . " name='domicile' id='domicile'/>
@@ -98,7 +98,7 @@ foreach ($domiciles as $val) {
 			<div class="modal-content2">
 				<span class="close2">&times;</span>
     			<h2>Ajouter un domicile</h2>
-				<form method="post" action="../controllers/domicile.php">
+				<form method="post" action="../../controllers/domicile.php">
                         <input class="input" type="type" name="name" id="name" placeholder="Nom du domicile" size="20" maxlength="40" required/>
                         <input type='hidden' value='domicile_add' name='action' id='action'/>
 						<button id ="validation2" type="submit" value="ajouter">Valider</button>
@@ -141,7 +141,7 @@ if (count($pieces) == 0) {
 } else {
     foreach ($pieces as $piece) {
         echo "<li class='list-pieces'><a href='piece1.php?piece=" . $piece[0] . "'>" . $piece[1] . "<a>";?>
-		<form method='post' action='../controllers/piece.php' onsubmit="return confirm
+		<form method='post' action='../../controllers/piece.php' onsubmit="return confirm
 		('Etes-vous sûr de vouloir supprimer cet pièce ?')">
 		<?php echo "
 			<input type='hidden' value=" . $piece[0] . " name='piece' id='piece'/>
@@ -169,7 +169,7 @@ if (count($pieces) == 0) {
 			<div class="modal-content">
 				<span class="close">&times;</span>
     			<h2>Ajouter une pièce</h2>
-				<form method="post" action="../controllers/piece.php">
+				<form method="post" action="../../controllers/piece.php">
                         <input class="input" type="type" name="name" id="name" placeholder="Nom de la pièce" size="20" maxlength="20" required/>
 						<input type='hidden' value='piece_add' name='action' id='action'/>
 						<button id ="validation1" type="submit">Valider</button>

@@ -2,6 +2,8 @@
 
 require_once __DIR__.'/../models/releve_capteurs.php';
 
+$lang = $_SESSION['lang'];
+
 function getDataCapteur() {
     return getAllReleveCapteurs();
 }

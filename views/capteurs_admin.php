@@ -4,6 +4,7 @@ require_once __DIR__ . '/../controllers/admin_capteur.php';
 require_once __DIR__ . '/../controllers/user.php';
 
 session_start();
+$_SESSION['lang'] = "fr";
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");

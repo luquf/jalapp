@@ -1,22 +1,26 @@
+<?php
+session_start();
+$_SESSION['lang'] = "en";
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../public/css/accueil.css" />
-		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
-		<link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
+		<link rel="stylesheet" href="../../public/css/accueil.css" />
+		<link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
+		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
 		<title>Domisep : Accueil</title>
 	</head>
 
 	<body>
 		<div id="bandeau">
 				<div class="logo">
-						<a href="domicile.php" style="text-decoration:none"> <img src="../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" />
+						<a href="domicile.php" style="text-decoration:none"> <img src="../../public/assets/logo.png" alt = "Logo Domisep" id="logo" title = "Logo Domisep" />
 
 				</div>
 
 				<?php
-					session_start();
 					$text = "";
 					if ($_SESSION["connected"] == "true") {
 						$text = "Déconnexion";
@@ -27,7 +31,7 @@
 
 				<div id="bandeau_droite">
 				<div class="language">
-							<a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+							<a href= "../../accueil.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 						</div>
 						<div class="aide">
 							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>

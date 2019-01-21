@@ -1,11 +1,6 @@
 <?php
-
 session_start();
-
-// if(!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
-//     header("Location: views/inscription.php");
-// }
-
+$_SESSION['lang'] = "fr";
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +33,7 @@ session_start();
 
             <div id="bandeau_droite">
             <div class="language">
-            <a href= "aide_accueil_ENG.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+            <a href= "en/contact.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
 						</div>
             <div class="aide">
 							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>

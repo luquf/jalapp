@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$_SESSION['lang'] = "fr";
 
 if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
     header("Location: inscription.php");
