@@ -11,7 +11,7 @@ $_SESSION['lang'] = "fr";
 		<link rel="stylesheet" href="../../public/css/aide_accueil.css" />
 		<link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
 		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
-		<title>Domisep : Foire aux Questions</title>
+		<title>Domisep : Frequently asked Questions</title>
 	</head>
 
 	<body>
@@ -36,7 +36,7 @@ $_SESSION['lang'] = "fr";
 					<a href= "../aide_accueil.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 					</div>
 					<div class="aide">
-							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Help </a>
 						</div>
 					<div class="contact">
 						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
@@ -59,19 +59,19 @@ $_SESSION['lang'] = "fr";
 </div>
 			<DIV CLASS = "question">
 			<h2>
-			1. Domisep m'intéresse, comment commencer ? </h2> </div>
+			1. I am interested in Domisep, how can I get started ? </h2> </div>
 			<p class = "answer">
 				Domisep gère uniquement ses propre capteurs et ses propres controlleurs. Il vous faut vous procurer un ou plusieurs des 6 capteurs et/ou contrôleurs disponibles dans la majorité des grandes surfaces High-Tech (Fnac, Darty, Boulanger, etc.).
 				Ces capteurs et ces contrôleurs Domisep sur utilisables exclusivement depuis notre site web (existe également en version mobile) et sont reconus directement grâce à leurs numéro de série uniques.
 			</p>
 			<h2 class = "question" >
-			2. J'ai acheté mon(mes) capteur(s) Domisep, que faire ensuite? </h2>
+			2. I bought my Domisep sensor(s), what's next ? </h2>
 			<p class = "answer">
 			Il vous faut maintenant vous inscrire sur notre site web. Pour cela, rien de plus simple ! Remplissez tous les champs et indiquez-nous la clé utilisateur qui vous a été fourni à l'achat de votre premier capteur domisep.
 			<br> Votre mot de passe vous sera immédiatement communiqué par mail. Vous pourrez ensuite vous connecter. 
 			</p>
 			<h2 class = "question" >
-			3. Comment utiliser Domisep ? </h2>
+			3. How to use Domisep ? </h2>
 			<p class = "answer">
 			Lors de votre première connexion à domisep.ovh, il vous faudra créer et nommer un premier domicile. Dans ce domicile, vous allez pouvoir créer et nommer des pièces, celles dans lesquelles vous avez installé des capteurs domisep.
 			Ensuite vous pourrez ajouter, dans chacunes de ces pièces, tous les capteurs domisep que vous avez acheté. Vous pourrez également les nommer afin de personnaliser et faciliter votre navigation sur le site de domisep.
@@ -81,7 +81,7 @@ $_SESSION['lang'] = "fr";
 
 			<div class = "cgu">
 				<a href= "cgu.php"	> Conditions générales d'utilisation </a>
-				<p>&</p><a href= "mentionslegales.php"	> Mentions Légales </a>
+				<p>&</p><a href= "mentionslegales.php"	> Legal Mentions  </a>
 </div>
 		</div>
 

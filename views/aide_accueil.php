@@ -11,7 +11,7 @@ $_SESSION['lang'] = "fr";
 		<link rel="stylesheet" href="../public/css/aide_accueil.css" />
 		<link rel="icon" type="image/png" href="../public/assets/favicon.png" />
 		<link rel="stylesheet" href="../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
-		<title>Domisep : Foire aux Questions</title>
+		<title>Domisep : Forum aux Questions</title>
 	</head>
 
 	<body>

@@ -53,7 +53,7 @@ $_SESSION['lang'] = "en";
 
 		<div id="slogan">
 			<h1>
-				Domisep : Domotic in on click !
+				Domisep : Domotic in one click !
 			</h1>
 		</div>
 
