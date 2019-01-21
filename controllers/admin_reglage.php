@@ -64,9 +64,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($err == true) {
-    ($lang == "fr") ? header("Location: ../views/admin_reglages.php?error=true") : header("Location: ../views/en/admin_reglages.php?error=true");
+    header("Location: ../views/admin_reglages.php?error=true");
   } else {
-    ($lang == "fr") ? header("Location: ../views/admin_reglages.php?error=false") : header("Location: ../views/en/admin_reglages.php?error=false");
+    header("Location: ../views/admin_reglages.php?error=false");
   }
 }
 

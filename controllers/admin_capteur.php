@@ -5,7 +5,6 @@ require_once __DIR__."/../models/domicile.php";
 require_once __DIR__."/../models/piece.php";
 require_once __DIR__."/../models/capteur.php";
 
-$lang = $_SESSION['lang'];
 
 function getUserData($user_id) {
     $data = array();

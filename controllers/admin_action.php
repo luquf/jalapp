@@ -9,7 +9,6 @@ require_once __DIR__.'/../models/piece.php';
 require_once __DIR__.'/../models/domicile.php';
 require_once __DIR__.'/../lib/uuid.php';
 
-$lang = $_SESSION['lang'];
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $action = testinput($_POST['action']);
@@ -19,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if (isset($capteur) && isset($action)) {
         if ($action == "capt_info") {
-            ($lang == "fr") ? header("Location: ../views/admin_infocapteur.php?capteur=".$capteur) : header("Location: ../views/en/admin_infocapteur.php?capteur=".$capteur);;
+            header("Location: ../views/admin_infocapteur.php?capteur=".$capteur);
         } else if ($action == "capt_delete") {
             removeCapteur($capteur);
         } else if ($action == "capt_change"){
@@ -30,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 setCapteurState($capteur, "ON");
             }
         } else if ($action == "cont_info") {
-            ($lang == "fr") ? header("Location: ../views/admin_infocapteur.php?controleur=".$capteur) : header("Location: ../views/en/admin_infocapteur.php?controleur=".$capteur);
+            header("Location: ../views/admin_infocapteur.php?controleur=".$capteur);
         } else if ($action == "cont_delete") {
             removeControleur($capteur);
         } else if ($action == "cont_change") {
@@ -41,18 +40,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($piece) && isset($action)) {
         if ($action == "piece_del") {
             removePiece($piece);
-            ($lang == "fr") ? header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']) : header("Location: ../views/en/capteurs_admin.php?selected=".$_SESSION['selected_user']);
+            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']);
         }
     }
     if (isset($domicile) && isset($action)) {
         if ($action == "domicile_del") {
             removeDomicileByID($domicile);
-            ($lang == "fr") ? header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']) : header("Location: ../views/en/capteurs_admin.php?selected=".$_SESSION['selected_user']);
+            header("Location: ../views/capteurs_admin.php?selected=".$_SESSION['selected_user']);
         }
     }
 
 } else {
-    ($lang == "fr") ? header("Location: ../views/accueil.php") : header("Location: ../views/en/accueil.php");
+    header("Location: ../views/accueil.php");
 }
 
 
