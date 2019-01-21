@@ -10,7 +10,7 @@ $_SESSION['lang'] = "en";
 		<link rel="stylesheet" href="../../public/css/accueil.css" />
 		<link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
 		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
-		<title>Domisep : Accueil</title>
+		<title>Domisep : Home</title>
 	</head>
 
 	<body>
@@ -23,9 +23,9 @@ $_SESSION['lang'] = "en";
 				<?php
 					$text = "";
 					if ($_SESSION["connected"] == "true") {
-						$text = "Déconnexion";
+						$text = "Logout";
 					} else {
-						$text = "Connexion";
+						$text = "Login";
 					}
 				?>
 
@@ -34,7 +34,7 @@ $_SESSION['lang'] = "en";
 							<a href= "../../accueil.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 						</div>
 						<div class="aide">
-							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Help </a>
 						</div>
 						<div class="contact">
 						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
@@ -53,28 +53,28 @@ $_SESSION['lang'] = "en";
 
 		<div id="slogan">
 			<h1>
-				Domisep : La domotique en un clic !
+				Domisep : Domotic in on click !
 			</h1>
 		</div>
 
 
 		<div id="apropos" style="text-align:center;">
 			<h3 class = "titre_apropos">
-				A propos
+				About
 			</h3>
-			<h4>Bienvenue chez Domisep, un service de domotique intelligent ! </h4>
-			<h4>Cette plateforme est une plateforme réalisée pour un projet étudiant et n'est donc pas un vrai produit !</h4>
+			<h4>Welcome to Domisep, the smart personal domotic service ! </h4>
+			<h4>This platform is educational and was created for our engineering studies !</h4>
 			<div class="bulletpoints">
-					- Contrôlez vos lampes, chauffages, volets à distance depuis un ordinateur ou un smartphone</br>
-					- Choisissez parmi 6 différents controlleurs/capteurs pour toutes vos pièces</br>
-					- Gérez une ou plusieurs maison. </br>
-					- Accèdez facilement à vos informations de consommation.</br>
+					- Contol your lights, temperature and more from your computer or your smartphone.</br>
+					- Choose between 6 sensors/controllers to manage your rooms.</br>
+					- Manage one or more home. </br>
+					- Easly access your consumption data.</br>
 			</div>
 			<div class="cgu">
-				<a href="cgu.php"> Conditions générales d'utilisation </a>
+				<a href="cgu.php"> General usage conditions </a>
 			</div>
 			<div class="cgu">
-				<a href= "mentionslegales.php"> Mentions Légales </a>
+				<a href= "mentionslegales.php"> Legal mentions </a>
 			</div>
 		</div>
 

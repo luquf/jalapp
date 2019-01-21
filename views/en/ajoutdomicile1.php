@@ -23,7 +23,7 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 		<link rel="stylesheet" href="../../public/css/ajoutdomicile.css" />
 		<link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
 		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
-		<title>Domisep : Ajout domicile</title>
+		<title>Domisep : Add home</title>
 	</head>
 
 <body>
@@ -48,13 +48,13 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 						</div>
 
 					<div class="aide">
-						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Help </a>
 					</div>
 					<div class="settings">
-						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Réglages</a>
+						<a href= "user_settings.php" style = "text-decoration: none; color: #515659"> Settings </a>
 					</div>
 					<div class="connexion">
-						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
+						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Logout </a>
 					</div>
 
 
@@ -69,18 +69,18 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 			<button id = "button_modal">+ </button>
 			</div>
 
-			<div class="textboutton"> Ajouter un domicile </div>
+			<div class="textboutton"> Add a home </div>
 
 		</div>
 
 		<div class="modal1" id="myModal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
-    			<h2>Ajouter un domicile</h2>
+    			<h2>Add a home</h2>
 				<form method="post" action="../../controllers/domicile.php">
-                        <input class="input" type="type" name="name" id="name" placeholder="Nom du domicile" maxlength="20" required/>
+                        <input class="input" type="type" name="name" id="name" placeholder="Name" maxlength="20" required/>
                         <input type='hidden' value='domicile_add' name='action' id='action'/>
-						<button id ="validation1" type="submit">Valider</button>
+						<button id ="validation1" type="submit">Add</button>
 				</form>
 			  </div>
 		</div>

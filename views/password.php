@@ -60,7 +60,7 @@ $_SESSION['lang'] = "fr";
 				<?php
 if (isset($_GET['error'])) {
     if ($_GET['error'] == "ok") {
-        echo "<p style='color: green; font-weight: bold; text-align: center;'>Veuillez trouverez votre nouveau mot de passe dans vos emails.</p>";
+        echo "<p style='color: green; font-weight: bold; text-align: center;'>Veuillez trouver votre nouveau mot de passe dans vos emails.</p>";
     } else if ($_GET['error'] == "notfound") {
         echo "<p style='color: red; font-weight: bold; text-align: center;'>Cet email n'existe pas.</p>";
     }

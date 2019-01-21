@@ -23,7 +23,7 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
         <link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
         <link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
         <script src='../../public/js/jquery-3.3.1.min.js'></script>
-		<title>Domisep : Réglages</title>
+		<title>Domisep : Settings</title>
 	</head>
 
 	<body>
@@ -41,15 +41,15 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 						</div>
 
 						<div class="aide">
-							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Help </a>
 						</div>
 
 
 					<div class="settings">
-						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Réglages</a>
+						<a href= "user_settings.php" style = "text-decoration: none; color: #515659"> Settings </a>
                     </div>
                     <div class="connexion">
-                    <a href= "inscription.php"  style = "text-decoration: none; color: #515659"> Déconnexion </a>
+                    <a href= "inscription.php"  style = "text-decoration: none; color: #515659"> Logout </a>
                     </div>
 
 				</div>
@@ -57,51 +57,51 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 
         <div id="slogan">
 			<h1>
-				Réglages
+            Settings
 			</h1>
 		</div>
 
         <div id="tableau" >
             <div class="infos">
                 <h2 class="titre">
-                    <i class="fa fa-info-circle fa-sm"></i> Informations
+                    <i class="fa fa-info-circle fa-sm"></i> Information
                 </h2>
                 <?php
 require __DIR__ . '/../../models/user.php';
 $user = getUserByID($_SESSION['user_id']);
 ?>
                         <p>
-                            <b>Nom: </b><?php echo $user[0][1] ?>
+                            <b>Last Name: </b><?php echo $user[0][1] ?>
                         </p>
                         <p>
-                        <b>Prénom: </b> <?php echo $user[0][2] ?>
+                        <b>First Name: </b> <?php echo $user[0][2] ?>
                         </p>
 
                         <p>
                         <b>Email: </b> <?php echo $user[0][3] ?>
                         </p>
                         <p>
-                        <b>Mot de passe: </b> ********
+                        <b>Password: </b> ********
                         </p>
                         <p>
-                        <b>Adresse: </b> <?php echo $user[0][5] ?>
+                        <b>Address: </b> <?php echo $user[0][5] ?>
                         </p>
                         <p>
-                        <b>Ville: </b><?php echo $user[0][6] ?>
+                        <b>City: </b><?php echo $user[0][6] ?>
                         </p>
                         <h2 class="titre">
-                            <i class="fa fa-trash fa-sm"></i> Compte
+                            <i class="fa fa-trash fa-sm"></i> Account
                         </h2>
-                        <button class='input' id="del-button">Supprimer mon compte</button>
+                        <button class='input' id="del-button">Delete my account</button>
                         <script>
                             $('#del-button').click(function () {
-                                if (confirm("Voulez vous vraiment supprimer votre compte ? Si oui, vous allez nous manquer...")) {
+                                if (confirm("Do you wish to delete your account ?")) {
                                     $.post('../../controllers/user_reglage.php',
                                     		{
                                     		  action: 'del_account'
                                     		},
                                     		function(data, status, req){
-                                                window.location.href = "/views/inscription.php";
+                                                window.location.href = "/views/en/inscription.php";
                                             }
                                     );
                                 }
@@ -110,7 +110,7 @@ $user = getUserByID($_SESSION['user_id']);
                 </div>
             <div class="modif_infos">
                 <h2 class="titre">
-                <i class="fa fa-edit fa-sm"></i> Modifier
+                <i class="fa fa-edit fa-sm"></i> Edit
 
                 </h2>
 
@@ -118,22 +118,22 @@ $user = getUserByID($_SESSION['user_id']);
 $error = $_GET['error'];
 if (isset($error)) {
     if ($error == "true") {
-        echo "<p style='color:red;'>Une erreur s'est produite.</p>";
+        echo "<p style='color:red;'>An error occured.</p>";
     } else {
-        echo "<p style='color:green;'>Vos modifications ont été enregistrées.</p>";
+        echo "<p style='color:green;'Your data has been saved.</p>";
     }
 }
 ?>
 
                 <form method="post" action="../../controllers/user_reglage.php">
-                            <input class="input" type="text" name="name" id="name" placeholder="Nom" size="30" maxlength="40"/>
-                            <input class="input" type="text" name="surname" id="surname" placeholder="Prénom" size="30" maxlength="40"/>
+                            <input class="input" type="text" name="name" id="name" placeholder="Last Name" size="30" maxlength="40"/>
+                            <input class="input" type="text" name="surname" id="surname" placeholder="First Name" size="30" maxlength="40"/>
                             <input class="input" type="email" name="email" id="email" placeholder="Email" size="30" maxlength="40" />
-                            <input class="input" type="password" name="old_pass" id="old_pass" placeholder="Ancien mot de passe" size="30" maxlength="40" />
-                            <input class="input" type="password" name="new_pass" id="new_pass" placeholder="Nouveau mot de passe" size="30" maxlength="40" />
-                            <input class="input" type="text" name="address" id="address" placeholder="Adresse" size="30" maxlength="40"/>
-                            <input class="input" type="text" name="ville" id="ville" placeholder="Ville" size="30" maxlength="40"/>
-                            <input class="input" type="submit" value="Valider"/>
+                            <input class="input" type="password" name="old_pass" id="old_pass" placeholder="Old password" size="30" maxlength="40" />
+                            <input class="input" type="password" name="new_pass" id="new_pass" placeholder="New password" size="30" maxlength="40" />
+                            <input class="input" type="text" name="address" id="address" placeholder="Address" size="30" maxlength="40"/>
+                            <input class="input" type="text" name="ville" id="ville" placeholder="City" size="30" maxlength="40"/>
+                            <input class="input" type="submit" value="Save"/>
                 </form>
             </div>
 </div>

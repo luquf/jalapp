@@ -25,9 +25,9 @@ $_SESSION['lang'] = "en";
 					session_start();
 					$text = "";
 					if ($_SESSION["connected"] == "true") {
-						$text = "Déconnexion";
+						$text = "Logout";
 					} else {
-						$text = "Connexion";
+						$text = "Login";
 					}
 				?>
 
@@ -36,7 +36,7 @@ $_SESSION['lang'] = "en";
             <a href= "../contact.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 						</div>
             <div class="aide">
-							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Help </a>
 						</div>
 
 					<div class="settings">
@@ -52,23 +52,23 @@ $_SESSION['lang'] = "en";
 
         <div id="slogan">
 			<h1>
-				Contactez-nous!
+				Contact us!
 			</h1>
 		</div>
 
         <div id="tableau" >
             <div class="modif_infos">
                 <h2 class="titre">
-                <i class="fa fa-edit fa-sm"></i> Formulaire
+                <i class="fa fa-edit fa-sm"></i> Form
                 </h2>
-                            <span id="msg-sent" style="color:green;" hidden >Votre message bien été envoyé !</span>
-                            <span id="msg-sending" style="color:orange;" hidden >En cours d'envoi...</span>
-                            <span id="msg-error" style="color:red;" hidden >Veuillez vérifier vos informations !</span>
-                            <input class="input" id="input-name" type="text" name="name" id="name" placeholder="Nom *" size="40" maxlength="100"required/>
-                            <input class="input" id="input-surname" type="text" name="surname" id="surname" placeholder="Prénom *" size="40" maxlength="100" required/>
+                            <span id="msg-sent" style="color:green;" hidden >Message sent !</span>
+                            <span id="msg-sending" style="color:orange;" hidden >Message sending...</span>
+                            <span id="msg-error" style="color:red;" hidden >Please check your information !</span>
+                            <input class="input" id="input-name" type="text" name="name" id="name" placeholder="Last name *" size="40" maxlength="100"required/>
+                            <input class="input" id="input-surname" type="text" name="surname" id="surname" placeholder="First name *" size="40" maxlength="100" required/>
                             <input class="input" id="input-email" type="email" name="email" id="email" placeholder="Email *" size="40" maxlength="100" required/>
                             <textarea style="font-family:Arial;" id="input-msg" class="input" name="message" id="message" rows=7 placeholder="Message *" required></textarea>
-                            <input class="input" id="send-button" type="Button" value="Envoyer"/>
+                            <input class="input" id="send-button" type="Button" value="Send"/>
                     <script>
                     $('#input-name').on('input', function() {
                         if (/^[a-zA-Z ]+$/.test($('#input-name').val()) && $('#input-name').val().length > 0) {
