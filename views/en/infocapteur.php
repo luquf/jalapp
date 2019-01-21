@@ -33,7 +33,7 @@ if (isset($_GET['capteur'])) {
 		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
 		<script src='../../public/js/jquery-3.3.1.min.js'></script>
 		<script src='../../public/js/Chart.min.js'></script>
-		<title>Domisep: Infos Capteur </title>
+		<title>Domisep: Sensor Informations </title>
 
 	</head>
 
@@ -54,15 +54,15 @@ if (isset($_GET['capteur'])) {
 						</div>
 
 					<div class="aide">
-						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Help </a>
 					</div>
 
 
 					<div class="settings">
-						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Réglages</a>
+						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">settings</a>
 					</div>
 					<div class="connexion">
-						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
+						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Logout </a>
 					</div>
 
 				</div>
@@ -77,7 +77,7 @@ if (isset($_GET['capteur'])) {
 
 		</div>
 		<div id='tab1'>
-			<?php echo "<a id='back-button' href='piece1.php?piece=" . $_SESSION['piece_id'] . "' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b> Retour</b></a>"; ?>
+			<?php echo "<a id='back-button' href='piece1.php?piece=" . $_SESSION['piece_id'] . "' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b> Back</b></a>"; ?>
 
 		    <div class="sensor-left">
 
@@ -95,28 +95,28 @@ if ($type == 1) {
         $t = "";
         switch ($capteur[2]) {
             case "HUM":
-                $t = "Capteur d'humidité";
+                $t = "Humidity Sensor";
                 break;
             case "TEMP":
-                $t = "Capteur de température";
+                $t = "Temperature Sensor";
                 break;
             case "FUM":
-                $t = "Capteur de fumée";
+                $t = "Smoke Sensor";
                 break;
             default:
                 break;
         }
         echo "
                         <div class='infos'>
-                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du capteur <em>'" . $capteur[1] . "'</em></h1>
+                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Informations about <em>'" . $capteur[1] . "'</em></h1>
                         <br/>
-                            <span>Numéro de série : </span><b>" . $capteur[0] . "</b>
+                            <span>Serial number : </span><b>" . $capteur[0] . "</b>
                             <br/><span>Type : </span><b>" . $t . "</b>
-                            <br/><span>Emplacement : </span><b>" . $pieces[0][1] . "</b>
+                            <br/><span>Location : </span><b>" . $pieces[0][1] . "</b>
                         </div>
 
                         <div class ='historique'>
-                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du capteur <em>'" . $capteur[1] . "'</em></h1><br/>";
+                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historical Data of <em>'" . $capteur[1] . "'</em></h1><br/>";
     }
 
     require __DIR__ . '/../../controllers/releve.php';
@@ -141,7 +141,7 @@ foreach ($releve_capteur as $k => $releve) {
             ],
             datasets: [
                 {
-                    label: 'Relevé horaire',
+                    label: 'Plan per hour',
                     data: [
                         <?php
 foreach ($releve_capteur as $k => $releve) {
@@ -166,13 +166,13 @@ foreach ($releve_capteur as $k => $releve) {
         $t = "";
         switch ($controleurs[2]) {
             case "LUM":
-                $t = "Controleur de luminosité";
+                $t = "Brightness Controller";
                 break;
             case "VOL":
-                $t = "Controleur de volet";
+                $t = "Shutter Controller";
                 break;
             case "CH":
-                $t = "Controleur de chauffage";
+                $t = "Heating Controller";
                 break;
             default:
                 break;
@@ -180,14 +180,14 @@ foreach ($releve_capteur as $k => $releve) {
         echo "
 
                         <div class='infos'>
-                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Infos du controleur <em>'" . $controleurs[1] . "'</em></h1>
-                        <span>Numéro de série : </span><b>" . $controleurs[0] . "</b>
+                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Informations about <em>'" . $controleurs[1] . "'</em></h1>
+                        <span>Serial Number : </span><b>" . $controleurs[0] . "</b>
                         <br/><span>Type : </span><b>" . $t . "</b>
-                        <br/><span>Emplacement : </span><b>" . $pieces[0][1] . "</b>
+                        <br/><span>Location : </span><b>" . $pieces[0][1] . "</b>
                         </div>
 
                         <div class ='historique'>
-                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historique du controleur <em>'" . $controleurs[1] . "'</em></h1>";
+                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historical Data of  <em>'" . $controleurs[1] . "'</em></h1>";
     }
     require __DIR__ . '/../../controllers/releve.php';
     $releve_cont = getControleurDataByID($_SESSION['controleur_id']);
@@ -210,7 +210,7 @@ foreach ($releve_cont as $k => $releve) {
             ],
             datasets: [
                 {
-                    label: 'Relevé horaire',
+                    label: 'Plan per hour',
                     data: [
                         <?php
 foreach ($releve_cont as $k => $releve) {

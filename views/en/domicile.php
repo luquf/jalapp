@@ -31,14 +31,14 @@ if (!isset($dom[0][0])) {
 		<link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
         <script src='../../public/js/jquery-3.3.1.min.js'></script>
 		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
-  		<title>Domisep: Domicile </title>
+  		<title>Domisep: Residence(s) </title>
 
 	</head>
 
 	<body>
 		<div id="bandeau">
 				<div class="logo">
-					<a href="domicile.php"> <img id="logo" src="../../public/assets/logo.png" alt = "Logo Domisep" title = "Logo Domisep" />
+					<a href="domicile.php"> <img id="logo" src="../../public/assets/logo.png" alt = "Domisep's logo" title = "Domisep's Logo" />
 				</div>
 
 
@@ -48,13 +48,13 @@ if (!isset($dom[0][0])) {
 				<a href= "../domicile.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
 						</div>
 					<div class="aide">
-						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Help </a>
 					</div>
 					<div class="settings">
-						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Réglages</a>
+						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Settings</a>
 					</div>
 					<div class="connexion">
-						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
+						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Logout </a>
 					</div>
 
 
@@ -82,7 +82,7 @@ foreach ($domiciles as $val) {
     echo "<li><a href='domicile.php?dom=" . str_replace(' ', '', $val[0]) . "
 				' id=" . str_replace(' ', '', $val[0]) . "><i class='fa fa-home' ></i> " . $val[1] . "";?>
 				<form id='del-dom-form' method='post' action='../../controllers/domicile.php' onsubmit="return confirm
-				('Etes-vous sûr de vouloir supprimer ce domicile ?')">
+				('Do you really want to delete this residence ?')">
 				<?php echo "
 						<input type='hidden' value=" . $val[0] . " name='domicile' id='domicile'/>
 						<input type='hidden' value='domicile_del' name='action' id='action'/>
@@ -97,11 +97,11 @@ foreach ($domiciles as $val) {
         <div class="modal2" id="myModal2">
 			<div class="modal-content2">
 				<span class="close2">&times;</span>
-    			<h2>Ajouter un domicile</h2>
+    			<h2>Add a new residence</h2>
 				<form method="post" action="../../controllers/domicile.php">
-                        <input class="input" type="type" name="name" id="name" placeholder="Nom du domicile" size="20" maxlength="40" required/>
+                        <input class="input" type="type" name="name" id="name" placeholder="Name of the residence" size="20" maxlength="40" required/>
                         <input type='hidden' value='domicile_add' name='action' id='action'/>
-						<button id ="validation2" type="submit" value="ajouter">Valider</button>
+						<button id ="validation2" type="submit" value="ajouter">Add</button>
 				</form>
 			</div>
 		</div>
@@ -137,16 +137,16 @@ echo "<h1 style='text-align:center;'>" . $domicile[0][1] . "</h1>";
 			<ul class="pieces-ul-top" style="list-style-type:none;">
 				<?php
 if (count($pieces) == 0) {
-    echo "<li><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de pièces pour ce domicile.</li>";
+    echo "<li><i class='fa fa-exclamation-triangle'></i> You don't have any room for now.</li>";
 } else {
     foreach ($pieces as $piece) {
         echo "<li class='list-pieces'><a href='piece1.php?piece=" . $piece[0] . "'>" . $piece[1] . "<a>";?>
 		<form method='post' action='../../controllers/piece.php' onsubmit="return confirm
-		('Etes-vous sûr de vouloir supprimer cet pièce ?')">
+		('Do you really want to delete this room ?')">
 		<?php echo "
 			<input type='hidden' value=" . $piece[0] . " name='piece' id='piece'/>
 			<input type='hidden' value='piece_del' name='action' id='action'/>
-			<button type='submit' id='del-piece-button'>Supprimer</button>
+			<button type='submit' id='del-piece-button'>Delete</button>
 			</form>
 			</li>";
     }
@@ -168,11 +168,11 @@ if (count($pieces) == 0) {
 		<div class="modal1" id="myModal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
-    			<h2>Ajouter une pièce</h2>
+    			<h2>Add a new room</h2>
 				<form method="post" action="../../controllers/piece.php">
-                        <input class="input" type="type" name="name" id="name" placeholder="Nom de la pièce" size="20" maxlength="20" required/>
+                        <input class="input" type="type" name="name" id="name" placeholder="Name of the room" size="20" maxlength="20" required/>
 						<input type='hidden' value='piece_add' name='action' id='action'/>
-						<button id ="validation1" type="submit">Valider</button>
+						<button id ="validation1" type="submit">Add</button>
 				</form>
 			  </div>
 			</div>

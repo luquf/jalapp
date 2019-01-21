@@ -35,7 +35,7 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 		<link rel="icon" type="image/png" href="../../public/assets/favicon.png" />
 		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
 		<script src='../../public/js/jquery-3.3.1.min.js'></script>
-		<title>Domisep: Pièce </title>
+		<title>Domisep: Room(s) </title>
 
 	</head>
 
@@ -55,15 +55,15 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 						</div>
 
 					<div class="aide">
-						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+						<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Help </a>
 					</div>
 
 
 					<div class="settings">
-						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Réglages</a>
+						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Settings</a>
 					</div>
 					<div class="connexion">
-						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Déconnexion </a>
+						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Logout </a>
 					</div>
 
 
@@ -73,40 +73,40 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
 
 		<div id="slogan">
 			<h1>
-				Je contrôle mes capteurs !
+				I control my sensors !
 			</h1>
 		</div>
 
 		</div>
 		<div id='tab1'>
-			<?php echo "<a id='back-button' href='domicile.php?dom=" . $_SESSION['domicile_id'] . "' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Retour</b></a>"; ?>
+			<?php echo "<a id='back-button' href='domicile.php?dom=" . $_SESSION['domicile_id'] . "' style='text-decoration: none;color: #515659;'><i class='fa fa-arrow-circle-left fa-lg'></i> <b>Back</b></a>"; ?>
 
 
 			<div class="sensor-left">
-				<h1 class="titre"><i class="fa fa-microchip fa-sm"></i> Capteurs</h1>
+				<h1 class="titre"><i class="fa fa-microchip fa-sm"></i> Sensors</h1>
 					<ul class="sensor-ul-top" id="capt">
 						<?php
 require_once __DIR__ . '/../../controllers/capteur.php';
 $capteurs = getCapteursControllerPIECE($_SESSION['piece_id']);
 if (count($capteurs) == 0) {
-    echo "<li class='no-sensors'><i class='fa fa-exclamation-triangle'></i> Vous n'avez pas encore de capteurs pour cette pièce.</li>";
+    echo "<li class='no-sensors'><i class='fa fa-exclamation-triangle'></i> You don't have any sensor yet.</li>";
 } else {
     foreach ($capteurs as $capteur) {
 		$t = "";
         switch ($capteur[2]) {
             case "HUM":
-                $t = "Humidité";
+                $t = "Humidity";
                 break;
             case "TEMP":
-                $t = "Température";
+                $t = "Temperature";
                 break;
             case "FUM":
-                $t = "Fumée";
+                $t = "Smoke";
                 break;
             default:
                 break;
         }
-        echo "<li class=liste id='element-" . $capteur[0] . "'><span id='display-" . $capteur[0] . "'>Nom: " . $capteur[1] . "<br>Type: " . $t . "<br>Etat: " . $capteur[3] . "</span>
+        echo "<li class=liste id='element-" . $capteur[0] . "'><span id='display-" . $capteur[0] . "'>Name: " . $capteur[1] . "<br>Type: " . $t . "<br>State: " . $capteur[3] . "</span>
 								</br></br><form method='post' action='../../controllers/action.php'>
 								<input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_info' name='action' id='action'/>
@@ -114,10 +114,10 @@ if (count($capteurs) == 0) {
 								</form>
 								<input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_delete' name='action' id='action'/>
-								<button type='submit' id='del-" . $capteur[0] . "'>Supprimer</button>
+								<button type='submit' id='del-" . $capteur[0] . "'>Delete</button>
 								<input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_change' name='action' id='action'/>
-								<button type='submit' id='change-" . $capteur[0] . "'>Changer</button>
+								<button type='submit' id='change-" . $capteur[0] . "'>Change</button>
 								</li>
 								<script>
 									$('#change-" . $capteur[0] . "').click(function() {
@@ -138,7 +138,7 @@ if (count($capteurs) == 0) {
 									});
 
 									$('#del-" . $capteur[0] . "').click(function() {
-										if (confirm('Etes-vous sûr de vouloir supprimer ce capteur ?')) {
+										if (confirm('Do you really want to delete this sensor ?')) {
 											$.post('../../controllers/action.php',
 											{
 											action: 'capt_delete',
@@ -162,31 +162,31 @@ if (count($capteurs) == 0) {
 
 
 			<div class="sensor-right">
-				<h1 class="titre"><i class="fa fa-cogs fa-sm"></i> Controleurs</h1>
+				<h1 class="titre"><i class="fa fa-cogs fa-sm"></i> Controllers</h1>
 					<ul class="sensor-ul-bottom" id="cont">
 						<?php
 $controleurs = getControleursControllerPIECE($_SESSION['piece_id']);
 if (count($controleurs) == 0) {
-    echo '<li class=\'no-sensors\'><i class=\'fa fa-exclamation-triangle\'></i> Vous n\'avez pas encore de controleurs pour cette pièce.</li>';
+    echo '<li class=\'no-sensors\'><i class=\'fa fa-exclamation-triangle\'></i>  You don\'t have any sensor yet.</li>';
 } else {
     foreach ($controleurs as $controleur) {
 		$type = $controleur[2];
 		$t = "";
         switch ($type) {
             case "LUM":
-                $t = "Luminosité";
+                $t = "Brightness";
                 break;
             case "VOL":
-                $t = "Volet électrique";
+                $t = "Electric Shutter";
                 break;
             case "CH":
-                $t = "Chauffage";
+                $t = "Heating";
                 break;
             default:
                 break;
         }
 		if ($type == "CH") {
-			echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: " . $controleur[3] . " °C</span>
+			echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Name: " . $controleur[1] . "<br>Type: " . $t . "<br>Value: " . $controleur[3] . " °C</span>
 									</br></br><form method='post' action='../../controllers/action.php'>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
@@ -194,7 +194,7 @@ if (count($controleurs) == 0) {
 									</form>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_delete' name='action' id='action'/>
-									<button type='button' id='del-" . $controleur[0] . "'>Supprimer</button><br>
+									<button type='button' id='del-" . $controleur[0] . "'>Delete</button><br>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_change' name='action' id='action'/>
 									<input type='range' class='cont-val' id='change-" . $controleur[0] . "' name='cont-val' min='10' max='30' step='1' value=" . $controleur[3] . ">
@@ -209,13 +209,13 @@ if (count($controleurs) == 0) {
 										  },
 										  function(data, status){
 											if (status == 'success') {
-												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val()+' °C');
+												$('#display-" . $controleur[0] . "').html('Name: " . $controleur[1] . "<br>Type: " . $t . "<br>Value: '+$('#change-" . $controleur[0] . "').val()+' °C');
 											}
 										  });
 									});
 
 									$('#del-" . $controleur[0] . "').click(function() {
-										if (confirm('Etes-vous sûr de vouloir supprimer ce controleur ?')) {
+										if (confirm('Do you really want to delete this controller ?')) {
 											$.post('../../controllers/action.php',
 											{
 											action: 'cont_delete',
@@ -239,7 +239,7 @@ if (count($controleurs) == 0) {
 									</form>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_delete' name='action' id='action'/>
-									<button type='button' id='del-" . $controleur[0] . "'>Supprimer</button><br>
+									<button type='button' id='del-" . $controleur[0] . "'>Delete</button><br>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_change' name='action' id='action'/>
 									<input type='range' class='cont-val' id='change-" . $controleur[0] . "' name='cont-val' min='0' max='100' step='5' value=" . $controleur[3] . ">
@@ -260,7 +260,7 @@ if (count($controleurs) == 0) {
 									});
 
 									$('#del-" . $controleur[0] . "').click(function() {
-										if (confirm('Etes-vous sûr de vouloir supprimer ce controleur ?')) {
+										if (confirm('Do you really want to delete this controller ?')) {
 											$.post('../../controllers/action.php',
 											{
 											action: 'cont_delete',
@@ -289,19 +289,19 @@ if (count($controleurs) == 0) {
 		<div class="modal1" id="myModal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
-    			<h2>Ajouter un capteur</h2>
+    			<h2>Add a new sensor</h2>
 				<form method="post" action="../../controllers/capteur.php">
-						<input class="input" type="text" name="name" id="name" placeholder="Nom du capteur" size="30" maxlength="20"/ required>
-                        <input class="input" type="text" name="ref" id="ref" placeholder="Clé du capteur" size="30" maxlength="20" required/>
+						<input class="input" type="text" name="name" id="name" placeholder="Name of the Sensor" size="30" maxlength="20"/ required>
+                        <input class="input" type="text" name="ref" id="ref" placeholder="Key of the sensor" size="30" maxlength="20" required/>
 						<select class="input input-dropdown" id="capteur" name="capteur">
-							<option value="hum">Capteur d'humidité</option>
-							<option value="temp">Capteur de température</option>
-							<option value="fum">Capteur de fumée</option>
-							<option value="lum">Controleur de luminosité</option>
-							<option value="vol">Controleur de volet</option>
-							<option value="ch">Controleur de chauffage</option>
+							<option value="hum">Humidity Sensor</option>
+							<option value="temp">Temperature Sensor</option>
+							<option value="fum">Smoke Sensor</option>
+							<option value="lum">Brightness Controller</option>
+							<option value="vol">Shutter Controller</option>
+							<option value="ch">Heating Controller</option>
 						</select>
-						<button id ="validation1" type="submit">valider</button>
+						<button id ="validation1" type="submit">Add</button>
 				</form>
 						<script>
 						$("#ref").on('input', function() {
