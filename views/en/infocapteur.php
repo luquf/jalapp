@@ -116,7 +116,7 @@ if ($type == 1) {
                         </div>
 
                         <div class ='historique'>
-                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historical Data of <em>'" . $capteur[1] . "'</em></h1><br/>";
+                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historic of <em>'" . $capteur[1] . "'</em></h1><br/>";
     }
 
     require __DIR__ . '/../../controllers/releve.php';
@@ -187,7 +187,7 @@ foreach ($releve_capteur as $k => $releve) {
                         </div>
 
                         <div class ='historique'>
-                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historical Data of  <em>'" . $controleurs[1] . "'</em></h1>";
+                            <h1 class='titre'><i class='fa fa-history fa-sm'></i> Historic of  <em>'" . $controleurs[1] . "'</em></h1>";
     }
     require __DIR__ . '/../../controllers/releve.php';
     $releve_cont = getControleurDataByID($_SESSION['controleur_id']);

@@ -129,9 +129,9 @@ if (count($capteurs) == 0) {
 										  function(data, status){
 											if (status == 'success') {
 												if ($('#display-" . $capteur[0] . "').text().includes('OFF')) {
-													$('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $t . "<br>Etat: ON');
+													$('#display-" . $capteur[0] . "').html('Name: " . $capteur[1] . "<br>Type: " . $t . "<br>State: ON');
 												} else {
-													$('#display-" . $capteur[0] . "').html('Nom: " . $capteur[1] . "<br>Type: " . $t . "<br>Etat: OFF');
+													$('#display-" . $capteur[0] . "').html('Name: " . $capteur[1] . "<br>Type: " . $t . "<br>State: OFF');
 												}
 											}
 										  });
@@ -231,7 +231,7 @@ if (count($controleurs) == 0) {
 
 								</script>";
 		} else {
-			echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: " . $controleur[3] . " %</span>
+			echo "<li class=liste id='element-" . $controleur[0] . "'><span id='display-" . $controleur[0] . "'>Name: " . $controleur[1] . "<br>Type: " . $t . "<br>Value: " . $controleur[3] . " %</span>
 									</br></br><form method='post' action='../../controllers/action.php'>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
@@ -254,7 +254,7 @@ if (count($controleurs) == 0) {
 										  },
 										  function(data, status){
 											if (status == 'success') {
-												$('#display-" . $controleur[0] . "').html('Nom: " . $controleur[1] . "<br>Type: " . $t . "<br>Valeur: '+$('#change-" . $controleur[0] . "').val()+' %');
+												$('#display-" . $controleur[0] . "').html('Name: " . $controleur[1] . "<br>Type: " . $t . "<br>Value: '+$('#change-" . $controleur[0] . "').val()+' %');
 											}
 										  });
 									});
@@ -315,12 +315,12 @@ if (count($controleurs) == 0) {
 											exists = req.getResponseHeader('Sensor-exists');
 											if (exists == "false") {
 												if (regExp.test($('#ref').val()) && ref.length >= 8) {
-													$("#validation1").prop('disabled', false).text("Valider");
+													$("#validation1").prop('disabled', false).text("Add");
 												} else {
-													$("#validation1").prop('disabled', true).text("Code invalide");
+													$("#validation1").prop('disabled', true).text("Invalid code");
 												}
 											} else {
-												$("#validation1").prop('disabled', true).text("Code expiré");
+												$("#validation1").prop('disabled', true).text("Code expired");
 											}
 
 										}
