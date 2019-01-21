@@ -184,6 +184,19 @@
 		justify-content: space-between;
 		margin-bottom: 5%;
 	}
+	label {
+		font-size: 1.5em;
+	}
+
+	input[type='checkbox'] {
+		width:30px;
+		height:30px;
+		background:white;
+		border-radius:5px;
+		border:2px solid #555;
+	}
+
+
 	.logo {
 		margin-bottom: 0.8%;
 		margin-left: 2%;
