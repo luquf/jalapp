@@ -2,14 +2,19 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
+$smtp = 'smtp.gmail.com';
+$addr = 'domisep.no.reply@gmail.com';
+$pass = 'Jala123?';    
+
 function sendPassword($email, $nom, $prenom, $password) {
+    global $smtp, $addr, $pass;
     $mail = new PHPMailer\PHPMailer\PHPMailer;                             
     $mail->isSMTP();   
     $mail->CharSet = 'UTF-8';                                   
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = $smtp;
     $mail->SMTPAuth = true;                               
-    $mail->Username = 'domisep.no.reply@gmail.com';       
-    $mail->Password = 'Jala123?';                          
+    $mail->Username = $addr;
+    $mail->Password = $pass;
     $mail->SMTPSecure = 'tls';                            
     $mail->Port = 587;                                    
     $mail->setFrom('domisep.no.reply@gmail.com', 'Domisep');
@@ -20,13 +25,14 @@ function sendPassword($email, $nom, $prenom, $password) {
 }
 
 function sendForgottenPassword($email, $nom, $prenom, $password) {
+    global $smtp, $addr, $pass;
     $mail = new PHPMailer\PHPMailer\PHPMailer;                             
     $mail->isSMTP();
     $mail->CharSet = 'UTF-8';                                      
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = $smtp;
     $mail->SMTPAuth = true;                               
-    $mail->Username = 'domisep.no.reply@gmail.com';       
-    $mail->Password = 'Jala123?';                          
+    $mail->Username = $addr;
+    $mail->Password = $pass;
     $mail->SMTPSecure = 'tls';                            
     $mail->Port = 587;                                    
     $mail->setFrom('domisep.no.reply@gmail.com', 'Domisep');
@@ -37,19 +43,20 @@ function sendForgottenPassword($email, $nom, $prenom, $password) {
 }
 
 function sendContactFormMail($email, $nom, $prenom, $msg) {
+    global $smtp, $addr, $pass;
     $mail = new PHPMailer\PHPMailer\PHPMailer;                             
     $mail->isSMTP();
     $mail->CharSet = 'UTF-8';                                      
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = $smtp;
     $mail->SMTPAuth = true;                               
-    $mail->Username = 'domisep.no.reply@gmail.com';       
-    $mail->Password = 'Jala123?';                          
+    $mail->Username = $addr;
+    $mail->Password = $pass;
     $mail->SMTPSecure = 'tls';                            
     $mail->Port = 587;                                    
     $mail->setFrom('domisep.no.reply@gmail.com', 'Domisep');
     $mail->addAddress('domisep.no.reply@gmail.com', 'Domisep');     
     $mail->Subject = 'Nouveau message site Domisep';
-    $mail->Body    = 'Email: '.$email.'Nom: '.$nom.'Prénom: '.$prenom.'Message: '.$msg.'';
+    $mail->Body    = 'Email: '.$email.' Nom: '.$nom.' Prénom: '.$prenom.' Message: '.$msg.'';
     $mail->send();   
 }
 

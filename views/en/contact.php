@@ -109,7 +109,7 @@ $_SESSION['lang'] = "en";
                             $('#msg-sent').hide();
                             $.post('../../controllers/contact.php',
 										{
-										  name: $('#input-lastname').val(),
+										  name: $('#input-name').val(),
                                           surname: $('#input-surname').val(),
                                           email: $('#input-email').val(),
                                           msg: $('#input-msg').val()
