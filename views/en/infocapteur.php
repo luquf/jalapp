@@ -59,7 +59,7 @@ if (isset($_GET['capteur'])) {
 
 
 					<div class="settings">
-						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">settings</a>
+						<a href= "user_settings.php" style = "text-decoration: none; color: #515659">Settings</a>
 					</div>
 					<div class="connexion">
 						<a href="inscription.php" style = "text-decoration: none; color: #515659"> Logout </a>
