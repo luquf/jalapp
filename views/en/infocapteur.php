@@ -33,7 +33,7 @@ if (isset($_GET['capteur'])) {
 		<link rel="stylesheet" href="../../public/assets/fontawesome-free-5.6.3-web/css/all.css" />
 		<script src='../../public/js/jquery-3.3.1.min.js'></script>
 		<script src='../../public/js/Chart.min.js'></script>
-		<title>Domisep: Sensor Informations </title>
+		<title>Domisep: Sensor Information </title>
 
 	</head>
 
@@ -108,7 +108,7 @@ if ($type == 1) {
         }
         echo "
                         <div class='infos'>
-                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Informations about <em>'" . $capteur[1] . "'</em></h1>
+                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Information about <em>'" . $capteur[1] . "'</em></h1>
                         <br/>
                             <span>Serial number : </span><b>" . $capteur[0] . "</b>
                             <br/><span>Type : </span><b>" . $t . "</b>
@@ -180,7 +180,7 @@ foreach ($releve_capteur as $k => $releve) {
         echo "
 
                         <div class='infos'>
-                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Informations about <em>'" . $controleurs[1] . "'</em></h1>
+                        <h1 class='titre'><i class='fa fa-microchip fa-sm'></i> Information about <em>'" . $controleurs[1] . "'</em></h1>
                         <span>Serial Number : </span><b>" . $controleurs[0] . "</b>
                         <br/><span>Type : </span><b>" . $t . "</b>
                         <br/><span>Location : </span><b>" . $pieces[0][1] . "</b>

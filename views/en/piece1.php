@@ -110,7 +110,7 @@ if (count($capteurs) == 0) {
 								</br></br><form method='post' action='../../controllers/action.php'>
 								<input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_info' name='action' id='action'/>
-								<button>Informations </button>
+								<button>Information </button>
 								</form>
 								<input type='hidden' value=" . $capteur[0] . " name='capteur' id='capteur'/>
 								<input type='hidden' value='capt_delete' name='action' id='action'/>
@@ -190,7 +190,7 @@ if (count($controleurs) == 0) {
 									</br></br><form method='post' action='../../controllers/action.php'>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_info' name='action' id='action'/>
-									<button type='submit'>Informations</button>
+									<button type='submit'>Information</button>
 									</form>
 									<input type='hidden' value=" . $controleur[0] . " name='capteur' id='capteur'/>
 									<input type='hidden' value='cont_delete' name='action' id='action'/>
