@@ -32,7 +32,10 @@ function removePiece($pieceid) {
 
 function getPiecesByID($pieceid) {
     $db = connectDB();
-    $stmt = $db->prepare("SELECT * from `pieces` WHERE id_piece=?");
+    $stmt = $db->prepare("SELECT *, utilisateurs.cle from `pieces`
+    RIGHT JOIN domiciles ON pieces.id_domicile = domiciles.id_domicile
+    RIGHT JOIN utilisateurs ON domiciles.cle_utilisateur = utilisateurs.cle
+    WHERE id_piece=?");
     $stmt->execute(array($pieceid));
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
     return $data;

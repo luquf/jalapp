@@ -19,7 +19,9 @@ if (isset($_GET['piece']) && $_GET['piece'] != "") {
     $piece = getPiecesByID($_GET['piece']);
     if (count($piece) == 0) {
         header("Location: domicile.php");
-    }
+    } else if ($piece[0][16] != $_SESSION['user_id']) {
+		header("Location: domicile.php");
+	} 
     $_SESSION['piece_id'] = $_GET['piece'];
 } else {
     header("Location: domicile.php");

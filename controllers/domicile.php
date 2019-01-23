@@ -23,6 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+function getPiecesByUID($id, $userid) {
+    return getPieces($id, $userid);
+}
+
 
 
 function getDomicilesController($id) {

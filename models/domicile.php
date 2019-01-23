@@ -1,10 +1,13 @@
 <?php
 
+session_start();
 require_once "db.php";
 
 function getDomiciles($userid) {
     $db = connectDB();
-    $stmt = $db->prepare("SELECT * from `domiciles` WHERE cle_utilisateur=?");
+    $stmt = $db->prepare("SELECT * from `domiciles` 
+    RIGHT JOIN utilisateurs ON domiciles.cle_utilisateur = utilisateurs.cle
+    WHERE cle_utilisateur=? ");
     $stmt->execute(array($userid));
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
     return $data;
@@ -12,7 +15,9 @@ function getDomiciles($userid) {
 
 function getDomicileByID($dom_id) {
     $db = connectDB();
-    $stmt = $db->prepare("SELECT * from `domiciles` WHERE id_domicile=?");
+    $stmt = $db->prepare("SELECT *, utilisateurs.cle from `domiciles`
+    RIGHT JOIN utilisateurs ON domiciles.cle_utilisateur = utilisateurs.cle
+    WHERE id_domicile=?");
     $stmt->execute(array($dom_id));
     $data = $stmt->fetchAll(PDO::FETCH_NUM);
     return $data;
