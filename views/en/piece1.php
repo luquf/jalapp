@@ -16,13 +16,13 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 require_once __DIR__ . "/../../controllers/piece.php";
 
 if (isset($_GET['piece']) && $_GET['piece'] != "") {
-    $piece = getPiecesByID($_GET['piece']);
+    $piece = getPiecesByID(htmlspecialchars($_GET['piece']));
     if (count($piece) == 0) {
         header("Location: domicile.php");
     } else if ($piece[0][16] != $_SESSION['user_id']) {
 		header("Location: domicile.php");
 	} 
-    $_SESSION['piece_id'] = $_GET['piece'];
+    $_SESSION['piece_id'] = htmlspecialchars($_GET['piece']);
 } else {
     header("Location: domicile.php");
 }

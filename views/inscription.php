@@ -60,7 +60,7 @@ $_SESSION['lang'] = "fr";
 				</h1>
 				<?php
 try {
-    $error = $_GET['error'];
+    $error = htmlspecialchars($_GET['error']);
     if (isset($error) && $error == "credentials") {
         echo "<p style='color:red'>Email ou mot de passe erroné.</p>";
     }
@@ -80,7 +80,7 @@ try {
 				<?php
 
 try {
-    $error = $_GET['error'];
+    $error = htmlspecialchars($_GET['error']);
     if (isset($error) && $error == "alreadyexists") {
         echo "<p style='color:red'>Cet email existe déjà.</p>";
     } else if (isset($error) && $error == "false") {

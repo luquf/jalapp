@@ -115,7 +115,7 @@ $user = getUserByID($_SESSION['user_id']);
                 </h2>
 
                 <?php
-$error = $_GET['error'];
+$error = htmlspecialchars($_GET['error']);
 if (isset($error)) {
     if ($error == "true") {
         echo "<p style='color:red;'>Une erreur s'est produite.</p>";

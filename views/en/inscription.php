@@ -57,7 +57,7 @@ $_SESSION['lang'] = "en";
 				</h1>
 				<?php
 try {
-    $error = $_GET['error'];
+    $error = htmlspecialchars($_GET['error']);
     if (isset($error) && $error == "credentials") {
         echo "<p style='color:red'>Email or password is wrong.</p>";
     }
@@ -77,7 +77,7 @@ try {
 				<?php
 
 try {
-    $error = $_GET['error'];
+    $error = htmlspecialchars($_GET['error']);
     if (isset($error) && $error == "alreadyexists") {
         echo "<p style='color:red'>This email already exists.</p>";
     } else if (isset($error) && $error == "false") {

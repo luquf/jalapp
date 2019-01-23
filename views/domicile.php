@@ -71,7 +71,7 @@ if (!isset($dom[0][0])) {
 		<?php
 require_once __DIR__ . '/../controllers/domicile.php';
 if (isset($_GET['dom']) && $_GET['dom'] != "") {
-	$domicile = getDomicileByID($_GET['dom']);
+	$domicile = getDomicileByID(htmlspecialchars($_GET['dom']));
     if (count($domicile) == 0) {
         header("Location: domicile.php");
     } else if ($domicile[0][13] != $_SESSION['user_id']) {

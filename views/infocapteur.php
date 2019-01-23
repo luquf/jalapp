@@ -14,10 +14,10 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 }
 
 if (isset($_GET['capteur'])) {
-    $_SESSION['capteur_id'] = $_GET['capteur'];
+    $_SESSION['capteur_id'] = htmlspecialchars($_GET['capteur']);
     $type = 1;
 } else if (isset($_GET['controleur'])) {
-    $_SESSION['controleur_id'] = $_GET['controleur'];
+    $_SESSION['controleur_id'] = htmlspecialchars($_GET['controleur']);
     $type = 2;
 } else {
     header("Location: domicile.php");
