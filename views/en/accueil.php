@@ -63,12 +63,12 @@ $_SESSION['lang'] = "en";
 				About
 			</h3>
 			<h4>Welcome to Domisep, the smart personal domotic service ! </h4>
-			<h4>This platform is educational and was created for our engineering studies !</h4>
+			<h4>This platform is part of a university project and was created for our engineering studies, it is not made for commercial uses !</h4>
 			<div class="bulletpoints">
-					- Contol your lights, temperature and more from your computer or your smartphone.</br>
+					- Control your lights, temperature and more from your computer or your smartphone.</br>
 					- Choose between 6 sensors/controllers to manage your rooms.</br>
-					- Manage one or more home. </br>
-					- Easly access your consumption data.</br>
+					- Manage one or more house. </br>
+					- Easy access your consumption data.</br>
 			</div>
 			<div class="cgu">
 				<a href="cgu.php"> General usage conditions </a>

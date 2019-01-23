@@ -66,7 +66,7 @@ $_SESSION['lang'] = "fr";
 			<h4>Cette plateforme est une plateforme réalisée pour un projet étudiant et n'est donc pas un vrai produit !</h4>
 			<div class="bulletpoints">
 					- Contrôlez vos lampes, chauffages, volets à distance depuis un ordinateur ou un smartphone</br>
-					- Choisissez parmi 6 différents controlleurs/capteurs pour toutes vos pièces</br>
+					- Choisissez parmi 6 différents contrôleurs/capteurs pour toutes vos pièces</br>
 					- Gérez une ou plusieurs maison. </br>
 					- Accèdez facilement à vos informations de consommation.</br>
 			</div>
