@@ -3,6 +3,8 @@ FROM php:7.2-apache
 
 LABEL Maintainer "Leo Berton"
 
+RUN a2enmod rewrite
+
 # Copie du code php vers l'emplacement du serveur web
 COPY . /var/www/html
 
