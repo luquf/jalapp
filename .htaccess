@@ -4,6 +4,25 @@ Options +FollowSymLinks
 	RewriteEngine On
 	RewriteBase /
 
+	# Remove .php on english version
+	RewriteCond %{THE_REQUEST} en/([^.]+)\.php [NC]
+	RewriteCond %{REQUEST_URI} !^/controllers/.*$ [NC]
+	RewriteRule ^ en/%1 [NC,L,R]
+
+	RewriteCond %{REQUEST_FILENAME}.php -f
+	RewriteCond %{REQUEST_URI} !^/controllers/.*$ [NC]
+	RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+
+	# Remove .php on french version
+	RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+	RewriteCond %{REQUEST_URI} !^/controllers/.*$ [NC]
+	RewriteRule ^ %1 [NC,L,R]
+
+	RewriteCond %{REQUEST_FILENAME}.php -f
+	RewriteCond %{REQUEST_URI} !^/controllers/.*$ [NC]
+	RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+
+	# Remove views/ from URL
 	RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+views/([^\s]+) [NC]
 	RewriteRule ^ %1 [R=301,L]
 
@@ -11,3 +30,4 @@ Options +FollowSymLinks
 	RewriteRule (?!^views/)^(.*)$ /views/$1 [L,NC]	
 
 </IfModule>
+
