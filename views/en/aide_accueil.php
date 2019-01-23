@@ -25,9 +25,9 @@ $_SESSION['lang'] = "fr";
 				<?php
 					$text = "";
 					if ($_SESSION["connected"] == "true") {
-						$text = "Déconnexion";
+						$text = "Logout";
 					} else {
-						$text = "Connexion";
+						$text = "Login";
 					}
 				?>
 

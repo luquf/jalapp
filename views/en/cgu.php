@@ -23,9 +23,9 @@ $_SESSION['lang'] = "en";
 				<?php
 					$text = "";
 					if ($_SESSION["connected"] == "true") {
-						$text = "Déconnexion";
+						$text = "Logout";
 					} else {
-						$text = "Connexion";
+						$text = "Login";
 					}
 				?>
 
@@ -35,7 +35,7 @@ $_SESSION['lang'] = "en";
 						</div>
 
 						<div class="aide">
-							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
+							<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Help </a>
 						</div>
 						<div class="contact">
 						<a href="contact.php" style = "text-decoration: none; color: #515659"> Contact </a>
