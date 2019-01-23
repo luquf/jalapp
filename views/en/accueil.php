@@ -62,7 +62,7 @@ $_SESSION['lang'] = "en";
 			<h3 class = "titre_apropos">
 				About
 			</h3>
-			<h4>Welcome to Domisep, the smart personal domotic service ! </h4>
+			<h4>Welcome to Domisep, a smart personal domotic service ! </h4>
 			<h4>This platform is part of a university project and was created for our engineering studies, it is not made for commercial uses !</h4>
 			<div class="bulletpoints">
 					- Control your lights, temperature and more from your computer or your smartphone.</br>
