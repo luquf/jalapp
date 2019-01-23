@@ -21,14 +21,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cle_client = test_input($_POST["cle"]);
     $mdp = generatePassword(); 
     $exists = emailExistsInDatabase($email);
-    error_log("exists ".$exists);
     if ($exists) {
         ($lang == "fr") ? header('Location: ../views/inscription.php?error=alreadyexists') : header('Location: ../views/en/inscription.php?error=alreadyexists');
     } else {
         $utilisateur = array($cle_client, $nom, $prenom, $email, $mdp, $adresse, $ville, $pays, $telephone, 0);
-        $a = setUser($utilisateur);
+        setUser($utilisateur);
         sendPassword($email, $nom, $prenom, $mdp);
-        ($lang == "fr") ? header('Location: ../views/inscription.php') : header('Location: ../views/en/inscription.php');
+        ($lang == "fr") ? header('Location: ../views/inscription.php?error=false') : header('Location: ../views/en/inscription.php?error=false');
     }      
 }
 

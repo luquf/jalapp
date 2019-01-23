@@ -292,4 +292,8 @@
 		margin-top: 5%;
 		margin-bottom: 10%;
 	}
+
+	#emailinfo {
+		font-size: 1.4em;
+	}
 }

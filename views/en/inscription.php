@@ -68,7 +68,7 @@ try {
             		<input class="input" type="password" name="pass" id="pass" placeholder="********" size="30" maxlength="100" required/>
         			<input class="input button" type="submit" value="Login"/>
 				   </form>
-				   <a href="password.php" style="text-decoration: none; color: #515659;">Forgotten password</a>
+				   <a href="password.php" style="text-decoration: none; color: #515659;">Forgot your password ?</a>
    			</div>
 			<div class="inscription">
 				<h1 class="titre">
@@ -80,7 +80,9 @@ try {
     $error = $_GET['error'];
     if (isset($error) && $error == "alreadyexists") {
         echo "<p style='color:red'>This email already exists.</p>";
-    }
+    } else if (isset($error) && $error == "false") {
+		echo "<p style='color:green'>Your account was created. Check your mailbox.</p>";
+	}
 } catch (Exception $e) {}
 ?>
 				<form method="post" action="../../controllers/inscription.php">
@@ -100,8 +102,9 @@ try {
            			<option value="Nantes">Nantes</option>
        				</select>
             		<input class="input" type="tel" name="tel" id="tel" placeholder="+33 (0)6 00 00 00 00" size="30" maxlength="10" required />
-					<input class="input" type="text" name="cle" id="cle" placeholder="xxxxxx-xxxxxx-xxxxxx-xxxxxx" size="30" maxlength="20" required />
+					<input class="input" type="text" name="cle" id="cle" placeholder="Client code given by the store" size="30" maxlength="20" required />
 					<div style='display:inline-block;margin-top:5%;'>
+					<span id="emailinfo">Password generated and sent by email</span><br><br>
 						<input type="checkbox" id="cguaccept" required>
 						<label for="scales">By staying, you agree with the <a href='cgu.php' style='text-decoration:none;'>CGU</a></label>
 						</div>
