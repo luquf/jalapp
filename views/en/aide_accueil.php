@@ -76,7 +76,7 @@ These sensors and controllers can exclusively be manage from our website (also e
 			When you first connect to domisep.ovh, you will need to create and name a home first. In this home, you will be able to create and name rooms, those in which you installed domisep sensors.
 Then you can add, in each of these rooms, all the sensors domisep you bought. You can also name them to personalize and facilitate your navigation on the domisep site.
 <br> Once the sensors are added, you can control them using your computer, phone or tablet.
-<br> <br> It's up to you!
+<br> <br> You now have all the necessary informations, enjoy DOMISEP !
 			</p>
 
 			<div class = "cgu">
