@@ -31,7 +31,7 @@ $_SESSION['lang'] = "fr";
 
 				<div id="bandeau_droite">
 				<div class="language">
-				<a href= "en/cgu.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
+				<a href= "en/cgu.php" > <img src="../public/assets/usa.png" id = "language"></a>
 						</div>
 
 						<div class="aide">

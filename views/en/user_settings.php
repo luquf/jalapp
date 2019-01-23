@@ -37,7 +37,7 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 
                 <div id="bandeau_droite">
                 <div class="language">
-                <a href= "en/user_Settings.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
+                <a href= "../user_settings.php"> <img src="../../public/assets/france.png" id="language"></a>
 						</div>
 
 						<div class="aide">

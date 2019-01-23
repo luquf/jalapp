@@ -44,7 +44,7 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] == "false") {
 			<div id="bandeau_droite">
 
 					<div class="language">
-					<a href= "../ajoutdomicile1.php" style = "text-decoration: none; color: #fff"	> <img src="../../public/assets/france.svg"> ENG </a>
+					<a href= "../ajoutdomicile1.php"> <img src="../../public/assets/france.png" id="language"></a>
 						</div>
 
 					<div class="aide">

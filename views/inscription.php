@@ -25,9 +25,12 @@ $_SESSION['lang'] = "fr";
 			</div>
 
 				<div id="bandeau_droite">
+
 						<div class="language">
-						<a href= "en/inscription.php" style = "text-decoration: none; color: #fff"	> <img src="../public/assets/usa.svg"> ENG </a>
-							</div>
+						<a href= "en/inscription.php"> <img src="../public/assets/usa.png" id="language"></a>
+						</div>
+						
+						
 						<div class="aide">
 								<a href= "aide_accueil.php" style = "text-decoration: none; color: #515659"	> Aide </a>
 							</div>
