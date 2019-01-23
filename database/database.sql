@@ -36,14 +36,6 @@ CREATE TABLE `capteurs` (
   `id_piece` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Déchargement des données de la table `capteurs`
---
-
-INSERT INTO `capteurs` (`id_capteur`, `nom`, `type`, `etat`, `id_piece`) VALUES
-('123456543456', 'test', 'TEMP', 'ON', 'c4df37ca-c8fc-4c9e-a4b6-5675a474c6c9'),
-('ewrtyjuiklouy', 'test', 'HUM', 'ON', 'cfbc0975-aff8-4ff8-b815-6bcdbfa3d911');
-
 -- --------------------------------------------------------
 
 --
@@ -58,12 +50,6 @@ CREATE TABLE `controleurs` (
   `id_piece` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Déchargement des données de la table `controleurs`
---
-
-INSERT INTO `controleurs` (`id_controleur`, `nom`, `type`, `etat`, `id_piece`) VALUES
-('efrtyujiko8lkujyh', 'test', 'VOL', 0, 'cfbc0975-aff8-4ff8-b815-6bcdbfa3d911');
 
 -- --------------------------------------------------------
 
@@ -78,16 +64,6 @@ CREATE TABLE `domiciles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `domiciles`
---
-
-INSERT INTO `domiciles` (`id_domicile`, `nom`, `cle_utilisateur`) VALUES
-('4e1e30c3-f3b7-4b67-8fca-7debe6763d8d', 'Maison1', 'kjehkyehjvhguiytkdjg'),
-('a8e739de-c75a-4a88-bbb0-aa462a9923da', 'Maison2', 'asdfghtyjuikjytrfed');
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `pieces`
 --
 
@@ -96,17 +72,6 @@ CREATE TABLE `pieces` (
   `nom` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_domicile` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `pieces`
---
-
-INSERT INTO `pieces` (`id_piece`, `nom`, `id_domicile`) VALUES
-('c1e35a48-c695-480e-89af-048e8c99e983', 'Cave', '4e1e30c3-f3b7-4b67-8fca-7debe6763d8d'),
-('c4df37ca-c8fc-4c9e-a4b6-5675a474c6c9', 'Salon', '4e1e30c3-f3b7-4b67-8fca-7debe6763d8d'),
-('cfbc0975-aff8-4ff8-b815-6bcdbfa3d911', 'sdb', 'a8e739de-c75a-4a88-bbb0-aa462a9923da');
-
--- --------------------------------------------------------
 
 --
 -- Structure de la table `releve_capteurs`
@@ -121,17 +86,6 @@ CREATE TABLE `releve_capteurs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `releve_capteurs`
---
-
-INSERT INTO `releve_capteurs` (`id_releve`, `id_capteur`, `heure`, `type`, `donnee`) VALUES
-('568e4a04-01f1-496e-80e9-ff05d7b848b4', '123456543456', '2019-01-23 14:44:05', 'TEMP', 29),
-('ee51b319-86d4-42f7-8645-668ef9a109c5', '123456543456', '2019-01-23 15:44:05', 'TEMP', 23),
-('f8656364-678d-4abc-9dc1-356b8bd7be26', 'ewrtyjuiklouy', '2019-01-23 15:44:05', 'HUM', 19);
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `releve_controleurs`
 --
 
@@ -142,16 +96,6 @@ CREATE TABLE `releve_controleurs` (
   `type` enum('LUM','CH','VOL') COLLATE utf8mb4_unicode_ci NOT NULL,
   `donnee` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `releve_controleurs`
---
-
-INSERT INTO `releve_controleurs` (`id_releve`, `id_controleur`, `heure`, `type`, `donnee`) VALUES
-('94aa2a49-8d8d-4236-be7b-40bda274fb06', 'efrtyujiko8lkujyh', '2019-01-23 15:44:05', 'VOL', 0),
-('eaad044f-4973-4dcf-9638-5b4c6331c1fc', 'efrtyujiko8lkujyh', '2019-01-23 14:44:05', 'VOL', 0);
-
--- --------------------------------------------------------
 
 --
 -- Structure de la table `utilisateurs`
@@ -169,18 +113,6 @@ CREATE TABLE `utilisateurs` (
   `telephone` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `utilisateurs`
---
-
-INSERT INTO `utilisateurs` (`cle`, `nom`, `prenom`, `email`, `mdp`, `adresse`, `ville`, `pays`, `telephone`, `admin`) VALUES
-('asdfghtyjuikjytrfed', 'Michel', 'Michel', 'leoantoineberton@yahoo.com', '$2y$10$1HglNhK16qGQM/SrTMp9MOO.2FpHGmCQcIf6aKwhC2B6FL./92qwq', '14 bis rue de james', 'Paris', 'france', '0651458429', 0),
-('kjehkyehjvhguiytkdjg', 'Berton', 'Leo', 'leoantoineberton@gmail.com', '$2y$10$LXBaI1aqWTNylGa/g2h6luDYv7NLDjeKhlhrE6whZp/sHUi8lQ1gG', '46 rue des lombards', 'Paris', 'france', '0651458429', 0);
-
---
--- Index pour les tables déchargées
---
 
 --
 -- Index pour la table `capteurs`
