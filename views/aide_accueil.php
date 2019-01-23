@@ -61,13 +61,13 @@ $_SESSION['lang'] = "fr";
 			<h2>
 			1. Domisep m'intéresse, comment commencer ? </h2> </div>
 			<p class = "answer">
-				Domisep gère uniquement ses propre capteurs et ses propres controlleurs. Il vous faut vous procurer un ou plusieurs des 6 capteurs et/ou contrôleurs disponibles dans la majorité des grandes surfaces High-Tech (Fnac, Darty, Boulanger, etc.).
-				Ces capteurs et ces contrôleurs Domisep sur utilisables exclusivement depuis notre site web (existe également en version mobile) et sont reconus directement grâce à leurs numéro de série uniques.
+				Domisep gère uniquement ses propre capteurs et ses propres contrôleurs. Il vous faut vous procurer un ou plusieurs des 6 capteurs et/ou contrôleurs disponibles dans la majorité des grandes surfaces High-Tech (Fnac, Darty, Boulanger, etc.).
+				Ces capteurs et ces contrôleurs Domisep sur utilisables exclusivement depuis notre site web (existe également en version mobile) et sont reconnus directement grâce à leurs numéro de série uniques.
 			</p>
 			<h2 class = "question" >
 			2. J'ai acheté mon(mes) capteur(s) Domisep, que faire ensuite? </h2>
 			<p class = "answer">
-			Il vous faut maintenant vous inscrire sur notre site web. Pour cela, rien de plus simple ! Remplissez tous les champs et indiquez-nous la clé utilisateur qui vous a été fourni à l'achat de votre premier capteur domisep.
+			Il vous faut maintenant vous inscrire sur notre site web. Pour cela, rien de plus simple ! Remplissez tous les champs et indiquez-nous la clé utilisateur qui vous a été fournie à l'achat de votre premier capteur domisep.
 			<br> Votre mot de passe vous sera immédiatement communiqué par mail. Vous pourrez ensuite vous connecter. 
 			</p>
 			<h2 class = "question" >

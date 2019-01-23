@@ -57,26 +57,26 @@ $_SESSION['lang'] = "fr";
 				FAQ
 			</h1>
 </div>
-			<DIV CLASS = "question">
+			<div class = "question">
 			<h2>
 			1. I am interested in Domisep, how can I get started ? </h2> </div>
 			<p class = "answer">
-				Domisep gère uniquement ses propre capteurs et ses propres controlleurs. Il vous faut vous procurer un ou plusieurs des 6 capteurs et/ou contrôleurs disponibles dans la majorité des grandes surfaces High-Tech (Fnac, Darty, Boulanger, etc.).
-				Ces capteurs et ces contrôleurs Domisep sur utilisables exclusivement depuis notre site web (existe également en version mobile) et sont reconus directement grâce à leurs numéro de série uniques.
+			Domisep only manages its own sensors and controllers. You need to get one or more of the 6 sensors and / or controllers available in most of all the high-tech supermarkets (Fnac, Darty, Boulanger, etc.).
+These sensors and controllers can exclusively be manage from our website (also exists in mobile version) and are recognized directly through their unique serial numbers.
 			</p>
 			<h2 class = "question" >
 			2. I bought my Domisep sensor(s), what's next ? </h2>
 			<p class = "answer">
-			Il vous faut maintenant vous inscrire sur notre site web. Pour cela, rien de plus simple ! Remplissez tous les champs et indiquez-nous la clé utilisateur qui vous a été fourni à l'achat de votre premier capteur domisep.
-			<br> Votre mot de passe vous sera immédiatement communiqué par mail. Vous pourrez ensuite vous connecter. 
+			You must now register on our website. It could not be easier ! Fill in all the fields and tell us the user key you were given when you bought your first domisep sensor.
+<br> Your password will be immediately communicated to you by email. You can then connect.
 			</p>
 			<h2 class = "question" >
 			3. How to use Domisep ? </h2>
 			<p class = "answer">
-			Lors de votre première connexion à domisep.ovh, il vous faudra créer et nommer un premier domicile. Dans ce domicile, vous allez pouvoir créer et nommer des pièces, celles dans lesquelles vous avez installé des capteurs domisep.
-			Ensuite vous pourrez ajouter, dans chacunes de ces pièces, tous les capteurs domisep que vous avez acheté. Vous pourrez également les nommer afin de personnaliser et faciliter votre navigation sur le site de domisep.
-			<br> Une fois les capteurs ajoutés, vous pourrez les contrôler à l'aide de votre ordinateur, téléphone ou tablette.
-			<br><br> A vous de jouer !
+			When you first connect to domisep.ovh, you will need to create and name a home first. In this home, you will be able to create and name rooms, those in which you installed domisep sensors.
+Then you can add, in each of these rooms, all the sensors domisep you bought. You can also name them to personalize and facilitate your navigation on the domisep site.
+<br> Once the sensors are added, you can control them using your computer, phone or tablet.
+<br> <br> It's up to you!
 			</p>
 
 			<div class = "cgu">

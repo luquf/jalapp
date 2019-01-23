@@ -211,8 +211,7 @@
 		opacity: 0.9;
 		padding-left: 3%;
 		padding-right: 3%;
-		padding-bottom: 5%;
-		padding-top: 3%;
+
 		margin-left: 4%;
 		margin-right: 4%;
 		border-radius: 10px;
@@ -224,8 +223,7 @@
 		text-align: left;
 	}
 	#FAQ h1 {
-		font-size: 5em;
-		padding-bottom: 25px;
+		font-size: 3.5em;
 		text-align: left;
 	}
 	.question {
@@ -234,11 +232,12 @@
 		align-content: left;
 		align-items: left;
 		text-align: left;
+		font-size: 1.5em;
 	}
 	.answer {
 		margin-top: 2%;
 		font-weight: normal;
-		font-size: 0.5em;
+		font-size: 1em;
 	}
 	.inf {
 		margin-left: -9.8%;
