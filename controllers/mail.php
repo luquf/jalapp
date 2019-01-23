@@ -2,9 +2,9 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-$smtp = 'smtp.gmail.com';
-$addr = 'domisep.no.reply@gmail.com';
-$pass = 'Jala123?';    
+$smtp = '';
+$addr = '';
+$pass = '';    
 
 function sendPassword($email, $nom, $prenom, $password) {
     global $smtp, $addr, $pass;
